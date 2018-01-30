@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.User_Controls.Logs_and_Maintenance
+namespace WindowsFormsApplication1
 {
     public partial class ucLogsAndMaintenance : UserControl
     {

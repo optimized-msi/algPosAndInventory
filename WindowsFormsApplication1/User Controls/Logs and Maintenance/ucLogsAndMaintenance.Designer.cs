@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1.User_Controls.Logs_and_Maintenance
+﻿namespace WindowsFormsApplication1
 {
     partial class ucLogsAndMaintenance
     {
@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucLogsAndMaintenance));
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.panel1.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -50,15 +50,6 @@
             this.label5.Size = new System.Drawing.Size(315, 39);
             this.label5.TabIndex = 30;
             this.label5.Text = "Logs and Maintenance";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Firebrick;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(1, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(762, 60);
-            this.panel1.TabIndex = 56;
             // 
             // bunifuCards1
             // 
@@ -73,12 +64,21 @@
             this.bunifuCards1.Font = new System.Drawing.Font("Schwager Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCards1.ForeColor = System.Drawing.Color.Teal;
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(30, 102);
+            this.bunifuCards1.Location = new System.Drawing.Point(56, 96);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(706, 340);
-            this.bunifuCards1.TabIndex = 57;
+            this.bunifuCards1.TabIndex = 59;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(27, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(762, 60);
+            this.panel1.TabIndex = 58;
             // 
             // bunifuThinButton24
             // 
@@ -184,14 +184,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.panel1);
             this.Name = "ucLogsAndMaintenance";
-            this.Size = new System.Drawing.Size(763, 456);
+            this.Size = new System.Drawing.Size(816, 469);
+            this.bunifuCards1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.bunifuCards1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,11 +198,11 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private System.Windows.Forms.Panel panel1;
     }
 }

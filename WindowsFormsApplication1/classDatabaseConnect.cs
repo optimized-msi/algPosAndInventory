@@ -43,7 +43,8 @@ namespace WindowsFormsApplication1
                 return false;
             }
         }
-             public string authenticate(string query)
+
+          public string[] authenticate(string query)
              {
             try
             {
@@ -53,7 +54,7 @@ namespace WindowsFormsApplication1
                 MySqlDataReader reader;
                 reader = myCommand.ExecuteReader();
 
-                string result = "";
+                string[] result = new string[3];
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -61,10 +62,10 @@ namespace WindowsFormsApplication1
                         //the result of select query is in array so thou shalt save it in an array, duh
                         // like this: string[] row = {reader.GetString(0) , reader.GetString(1), ... reader.GetString(n)}
                         //for now, only one record is expected
-                        result = reader.GetString(0);
+                        result = new string[3]{ reader.GetString(0), reader.GetString(1), reader.GetString(2)};
                     }
                 }else{
-                    result = "Invalid";
+                    result = null;
                 }
 
                 mysqlconnect.Close();
@@ -74,7 +75,7 @@ namespace WindowsFormsApplication1
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
                 // return false;   'no result is returned
-                return "empty";
+                return null;
             }
         }
     }

@@ -41,5 +41,29 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            UCInventory ucinventory = new UCInventory();
+            frmMain frmmain = new frmMain();
+            frmmain.Controls.Add(ucinventory);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UCInventory ucinventory = new UCInventory();
+            frmMain frmmain = new frmMain();
+            frmmain.Controls.Add(ucinventory);
+            MessageBox.Show("hello world");
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

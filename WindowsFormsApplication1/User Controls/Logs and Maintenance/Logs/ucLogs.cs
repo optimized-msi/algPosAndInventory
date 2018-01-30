@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1.User_Controls.Logs_and_Maintenance.Logs
         {
             InitializeComponent();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

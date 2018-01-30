@@ -44,6 +44,7 @@
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDropdown5 = new Bunifu.Framework.UI.BunifuDropdown();
@@ -60,8 +61,6 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.bunifuDropdown7 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDropdown8 = new Bunifu.Framework.UI.BunifuDropdown();
@@ -76,14 +75,35 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.bunifuDropdown10 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuDropdown11 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuDropdown12 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabInventory.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabInventory
@@ -91,11 +111,12 @@
             this.tabInventory.Controls.Add(this.tabPage1);
             this.tabInventory.Controls.Add(this.tabPage2);
             this.tabInventory.Controls.Add(this.tabPage3);
+            this.tabInventory.Controls.Add(this.tabPage4);
             this.tabInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabInventory.Location = new System.Drawing.Point(16, 101);
+            this.tabInventory.Location = new System.Drawing.Point(15, 99);
             this.tabInventory.Name = "tabInventory";
             this.tabInventory.SelectedIndex = 0;
-            this.tabInventory.Size = new System.Drawing.Size(704, 391);
+            this.tabInventory.Size = new System.Drawing.Size(781, 391);
             this.tabInventory.TabIndex = 57;
             // 
             // tabPage1
@@ -113,7 +134,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(696, 353);
+            this.tabPage1.Size = new System.Drawing.Size(773, 353);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "User Logs";
             // 
@@ -265,7 +286,7 @@
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.Location = new System.Drawing.Point(6, 114);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(663, 233);
+            this.listView1.Size = new System.Drawing.Size(761, 233);
             this.listView1.TabIndex = 12;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -290,6 +311,11 @@
             this.columnHeader17.Text = "Actions";
             this.columnHeader17.Width = 114;
             // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Transaction No.";
+            this.columnHeader19.Width = 119;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Firebrick;
@@ -304,7 +330,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(696, 353);
+            this.tabPage2.Size = new System.Drawing.Size(773, 353);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Transaction Logs";
             // 
@@ -429,11 +455,12 @@
             this.columnHeader6,
             this.columnHeader9,
             this.columnHeader8,
-            this.columnHeader13});
+            this.columnHeader13,
+            this.columnHeader18});
             this.listView2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.Location = new System.Drawing.Point(6, 115);
+            this.listView2.Location = new System.Drawing.Point(3, 115);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(684, 232);
+            this.listView2.Size = new System.Drawing.Size(764, 232);
             this.listView2.TabIndex = 69;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -454,45 +481,26 @@
             // 
             // columnHeader6
             // 
+            this.columnHeader6.DisplayIndex = 4;
             this.columnHeader6.Text = "Item Name";
-            this.columnHeader6.Width = 103;
+            this.columnHeader6.Width = 88;
             // 
             // columnHeader9
             // 
+            this.columnHeader9.DisplayIndex = 5;
             this.columnHeader9.Text = "Total Amount";
-            this.columnHeader9.Width = 121;
+            this.columnHeader9.Width = 94;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.DisplayIndex = 6;
+            this.columnHeader8.DisplayIndex = 7;
             this.columnHeader8.Text = "Service Rendered";
             this.columnHeader8.Width = 138;
             // 
             // columnHeader13
             // 
-            this.columnHeader13.DisplayIndex = 5;
             this.columnHeader13.Text = "Serviced By";
             this.columnHeader13.Width = 92;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Firebrick;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(3, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(825, 64);
-            this.panel1.TabIndex = 56;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(221, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 39);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Inventory and Sales Reports";
             // 
             // tabPage3
             // 
@@ -508,7 +516,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(696, 353);
+            this.tabPage3.Size = new System.Drawing.Size(773, 353);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Products Logs";
             // 
@@ -633,11 +641,12 @@
             this.columnHeader7,
             this.columnHeader10,
             this.columnHeader11,
-            this.columnHeader18});
+            this.columnHeader23,
+            this.columnHeader29});
             this.listView3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView3.Location = new System.Drawing.Point(6, 116);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(684, 232);
+            this.listView3.Size = new System.Drawing.Size(761, 232);
             this.listView3.TabIndex = 77;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -650,38 +659,263 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Time";
+            this.columnHeader3.Width = 65;
             // 
             // columnHeader4
             // 
+            this.columnHeader4.DisplayIndex = 3;
             this.columnHeader4.Text = "Trans. No.";
-            this.columnHeader4.Width = 82;
+            this.columnHeader4.Width = 89;
             // 
             // columnHeader7
             // 
+            this.columnHeader7.DisplayIndex = 4;
             this.columnHeader7.Text = "Item Name";
-            this.columnHeader7.Width = 103;
+            this.columnHeader7.Width = 105;
             // 
             // columnHeader10
             // 
+            this.columnHeader10.DisplayIndex = 7;
             this.columnHeader10.Text = "Total Amount";
-            this.columnHeader10.Width = 121;
+            this.columnHeader10.Width = 114;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(825, 64);
+            this.panel1.TabIndex = 56;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(368, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 39);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Logs";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage4.Controls.Add(this.bunifuDropdown10);
+            this.tabPage4.Controls.Add(this.bunifuDropdown11);
+            this.tabPage4.Controls.Add(this.bunifuCustomLabel9);
+            this.tabPage4.Controls.Add(this.bunifuCustomLabel10);
+            this.tabPage4.Controls.Add(this.bunifuDropdown12);
+            this.tabPage4.Controls.Add(this.bunifuCustomLabel11);
+            this.tabPage4.Controls.Add(this.bunifuThinButton25);
+            this.tabPage4.Controls.Add(this.listView4);
+            this.tabPage4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(773, 353);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Service Logs";
+            // 
+            // bunifuDropdown10
+            // 
+            this.bunifuDropdown10.BackColor = System.Drawing.Color.White;
+            this.bunifuDropdown10.BorderRadius = 3;
+            this.bunifuDropdown10.DisabledColor = System.Drawing.Color.White;
+            this.bunifuDropdown10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown10.ForeColor = System.Drawing.Color.Firebrick;
+            this.bunifuDropdown10.Items = new string[0];
+            this.bunifuDropdown10.Location = new System.Drawing.Point(144, 5);
+            this.bunifuDropdown10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuDropdown10.Name = "bunifuDropdown10";
+            this.bunifuDropdown10.NomalColor = System.Drawing.Color.White;
+            this.bunifuDropdown10.onHoverColor = System.Drawing.Color.Silver;
+            this.bunifuDropdown10.selectedIndex = -1;
+            this.bunifuDropdown10.Size = new System.Drawing.Size(207, 33);
+            this.bunifuDropdown10.TabIndex = 91;
+            // 
+            // bunifuDropdown11
+            // 
+            this.bunifuDropdown11.BackColor = System.Drawing.Color.White;
+            this.bunifuDropdown11.BorderRadius = 3;
+            this.bunifuDropdown11.DisabledColor = System.Drawing.Color.White;
+            this.bunifuDropdown11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown11.ForeColor = System.Drawing.Color.Firebrick;
+            this.bunifuDropdown11.Items = new string[0];
+            this.bunifuDropdown11.Location = new System.Drawing.Point(144, 77);
+            this.bunifuDropdown11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuDropdown11.Name = "bunifuDropdown11";
+            this.bunifuDropdown11.NomalColor = System.Drawing.Color.White;
+            this.bunifuDropdown11.onHoverColor = System.Drawing.Color.Silver;
+            this.bunifuDropdown11.selectedIndex = -1;
+            this.bunifuDropdown11.Size = new System.Drawing.Size(207, 33);
+            this.bunifuDropdown11.TabIndex = 90;
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(45, 86);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(28, 21);
+            this.bunifuCustomLabel9.TabIndex = 89;
+            this.bunifuCustomLabel9.Text = "To:";
+            // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.AutoSize = true;
+            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(48, 10);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(63, 21);
+            this.bunifuCustomLabel10.TabIndex = 88;
+            this.bunifuCustomLabel10.Text = "Sort By:";
+            // 
+            // bunifuDropdown12
+            // 
+            this.bunifuDropdown12.BackColor = System.Drawing.Color.White;
+            this.bunifuDropdown12.BorderRadius = 3;
+            this.bunifuDropdown12.DisabledColor = System.Drawing.Color.White;
+            this.bunifuDropdown12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown12.ForeColor = System.Drawing.Color.Firebrick;
+            this.bunifuDropdown12.Items = new string[0];
+            this.bunifuDropdown12.Location = new System.Drawing.Point(144, 41);
+            this.bunifuDropdown12.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuDropdown12.Name = "bunifuDropdown12";
+            this.bunifuDropdown12.NomalColor = System.Drawing.Color.White;
+            this.bunifuDropdown12.onHoverColor = System.Drawing.Color.Silver;
+            this.bunifuDropdown12.selectedIndex = -1;
+            this.bunifuDropdown12.Size = new System.Drawing.Size(207, 33);
+            this.bunifuDropdown12.TabIndex = 84;
+            // 
+            // bunifuCustomLabel11
+            // 
+            this.bunifuCustomLabel11.AutoSize = true;
+            this.bunifuCustomLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(48, 48);
+            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(50, 21);
+            this.bunifuCustomLabel11.TabIndex = 86;
+            this.bunifuCustomLabel11.Text = "From:";
+            // 
+            // bunifuThinButton25
+            // 
+            this.bunifuThinButton25.ActiveBorderThickness = 1;
+            this.bunifuThinButton25.ActiveCornerRadius = 20;
+            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.Brown;
+            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton25.BackColor = System.Drawing.Color.Firebrick;
+            this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
+            this.bunifuThinButton25.ButtonText = "Print";
+            this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton25.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.IdleBorderThickness = 2;
+            this.bunifuThinButton25.IdleCornerRadius = 20;
+            this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton25.Location = new System.Drawing.Point(486, 10);
+            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton25.Name = "bunifuThinButton25";
+            this.bunifuThinButton25.Size = new System.Drawing.Size(150, 80);
+            this.bunifuThinButton25.TabIndex = 87;
+            this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listView4
+            // 
+            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader24,
+            this.columnHeader25,
+            this.columnHeader26,
+            this.columnHeader27,
+            this.columnHeader28});
+            this.listView4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView4.Location = new System.Drawing.Point(4, 115);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(766, 232);
+            this.listView4.TabIndex = 85;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Date";
+            this.columnHeader20.Width = 70;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Time";
+            this.columnHeader21.Width = 67;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Trans. No.";
+            this.columnHeader22.Width = 90;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.DisplayIndex = 7;
+            this.columnHeader24.Text = "Total Amount";
+            this.columnHeader24.Width = 109;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.DisplayIndex = 6;
+            this.columnHeader25.Text = "Service Rendered";
+            this.columnHeader25.Width = 141;
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "Serviced By";
+            this.columnHeader26.Width = 92;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.DisplayIndex = 3;
+            this.columnHeader27.Text = "Customer Name";
+            this.columnHeader27.Width = 120;
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.DisplayIndex = 4;
+            this.columnHeader28.Text = "Plate#";
+            this.columnHeader28.Width = 54;
             // 
             // columnHeader11
             // 
-            this.columnHeader11.DisplayIndex = 6;
-            this.columnHeader11.Text = "Service Rendered";
-            this.columnHeader11.Width = 138;
+            this.columnHeader11.DisplayIndex = 2;
+            this.columnHeader11.Text = "Customer Name";
+            this.columnHeader11.Width = 129;
             // 
             // columnHeader18
             // 
-            this.columnHeader18.DisplayIndex = 5;
-            this.columnHeader18.Text = "Serviced By";
-            this.columnHeader18.Width = 92;
+            this.columnHeader18.DisplayIndex = 3;
+            this.columnHeader18.Text = "Customer";
+            this.columnHeader18.Width = 83;
             // 
-            // columnHeader19
+            // columnHeader23
             // 
-            this.columnHeader19.Text = "Transaction No.";
-            this.columnHeader19.Width = 119;
+            this.columnHeader23.Text = "Item Price";
+            this.columnHeader23.Width = 99;
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.DisplayIndex = 5;
+            this.columnHeader29.Text = "Quantity";
+            this.columnHeader29.Width = 68;
             // 
             // ucLogs
             // 
@@ -697,10 +931,12 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -754,8 +990,27 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader29;
+        private System.Windows.Forms.TabPage tabPage4;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown10;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown11;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown12;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.ColumnHeader columnHeader26;
+        private System.Windows.Forms.ColumnHeader columnHeader27;
+        private System.Windows.Forms.ColumnHeader columnHeader28;
     }
 }

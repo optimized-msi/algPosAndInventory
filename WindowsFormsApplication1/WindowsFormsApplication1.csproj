@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,14 +71,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classDatabaseConnect.cs" />
-    <Compile Include="Form2.cs">
+    <Compile Include="clsUser.cs" />
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.Designer.cs">
+      <DependentUpon>ucLogsAndMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Services\ucServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Services\ucServices.Designer.cs">
+      <DependentUpon>ucServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Reports\ucReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Reports\ucReports.Designer.cs">
+      <DependentUpon>ucReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\Logs and Maintenance\Logs\ucLogs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,12 +115,6 @@
     </Compile>
     <Compile Include="User Controls\Logs and Maintenance\ucCustomerRecords.Designer.cs">
       <DependentUpon>ucCustomerRecords.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.Designer.cs">
-      <DependentUpon>ucLogsAndMaintenance.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\Logs and Maintenance\UCManageEmployeeInfo.cs">
       <SubType>UserControl</SubType>
@@ -106,17 +140,11 @@
     <Compile Include="ucUserLogin.Designer.cs">
       <DependentUpon>ucUserLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Reports\ucSalesReport.cs">
+    <Compile Include="User Controls\Point of Sale\ucPosServices.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Reports\ucSalesReport.Designer.cs">
-      <DependentUpon>ucSalesReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Services\UCServices.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Services\UCServices.Designer.cs">
-      <DependentUpon>UCServices.cs</DependentUpon>
+    <Compile Include="User Controls\Point of Sale\ucPosServices.Designer.cs">
+      <DependentUpon>ucPosServices.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\UCFunctions.cs">
       <SubType>UserControl</SubType>
@@ -142,8 +170,11 @@
     <Compile Include="User Controls\Inventory\UCInventory.Designer.cs">
       <DependentUpon>UCInventory.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -155,14 +186,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.resx">
+      <DependentUpon>ucLogsAndMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Services\ucServices.resx">
+      <DependentUpon>ucServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Reports\ucReports.resx">
+      <DependentUpon>ucReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Logs and Maintenance\Logs\ucLogs.resx">
       <DependentUpon>ucLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Logs and Maintenance\ucCustomerRecords.resx">
       <DependentUpon>ucCustomerRecords.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.resx">
-      <DependentUpon>ucLogsAndMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Logs and Maintenance\UCManageEmployeeInfo.resx">
       <DependentUpon>UCManageEmployeeInfo.cs</DependentUpon>
@@ -176,11 +213,8 @@
     <EmbeddedResource Include="ucUserLogin.resx">
       <DependentUpon>ucUserLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Reports\ucSalesReport.resx">
-      <DependentUpon>ucSalesReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Services\UCServices.resx">
-      <DependentUpon>UCServices.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\Point of Sale\ucPosServices.resx">
+      <DependentUpon>ucPosServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCFunctions.resx">
       <DependentUpon>UCFunctions.cs</DependentUpon>
@@ -194,6 +228,7 @@
     <EmbeddedResource Include="User Controls\Inventory\UCInventory.resx">
       <DependentUpon>UCInventory.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -234,7 +269,42 @@
   <ItemGroup>
     <None Include="Resources\inventory1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\inventory2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P-1-34-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\178152.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wtyftqrxsicydvlmyuqa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17066383-logout-blue-glossy-icon-on-white-background-Stock-Photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17066383-logout-blue-glossy-icon-on-white-background-Stock-Photo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17066383-logout-blue-glossy-icon-on-white-background-Stock-Photo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

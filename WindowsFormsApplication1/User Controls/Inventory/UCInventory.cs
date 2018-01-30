@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class UCInventory : UserControl
     {
+
         public UCInventory()
         {
             InitializeComponent();
@@ -25,6 +26,16 @@ namespace WindowsFormsApplication1
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuCustomLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("hello world");
         }
     }
 }

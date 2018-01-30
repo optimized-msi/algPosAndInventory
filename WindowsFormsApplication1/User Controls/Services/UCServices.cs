@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.User_Controls.Services
+namespace WindowsFormsApplication1
 {
-    public partial class UCServices : UserControl
+    public partial class ucServices : UserControl
     {
-        public UCServices()
+        public ucServices()
         {
             InitializeComponent();
         }

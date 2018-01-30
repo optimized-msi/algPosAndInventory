@@ -90,7 +90,7 @@
             this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.DarkGray;
             this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(331, 73);
+            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(312, 78);
             this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
             this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(137, 33);
@@ -312,7 +312,7 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Emp No.";
+            this.columnHeader1.Text = "Emp ID.";
             this.columnHeader1.Width = 65;
             // 
             // columnHeader2
