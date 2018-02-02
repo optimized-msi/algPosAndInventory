@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCFunctions));
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -81,18 +81,6 @@
             this.panel4.Size = new System.Drawing.Size(210, 127);
             this.panel4.TabIndex = 9;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(29, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 57);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // bunifuCustomLabel16
             // 
             this.bunifuCustomLabel16.AutoSize = true;
@@ -115,18 +103,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 109);
             this.panel1.TabIndex = 11;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.inventory2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(26, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 57);
-            this.button2.TabIndex = 13;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // bunifuCustomLabel17
             // 
@@ -151,17 +127,6 @@
             this.panel3.Size = new System.Drawing.Size(209, 118);
             this.panel3.TabIndex = 12;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._178152;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(29, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 57);
-            this.button3.TabIndex = 18;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
@@ -183,18 +148,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(209, 98);
             this.panel7.TabIndex = 16;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.favicon_ico;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.Location = new System.Drawing.Point(26, 13);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 57);
-            this.button5.TabIndex = 20;
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // bunifuCustomLabel5
             // 
@@ -223,18 +176,6 @@
             this.panel2.Size = new System.Drawing.Size(208, 639);
             this.panel2.TabIndex = 16;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._17066383_logout_blue_glossy_icon_on_white_background_Stock_Photo2;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(29, 558);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 57);
-            this.button6.TabIndex = 21;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
@@ -257,17 +198,6 @@
             this.panel5.Size = new System.Drawing.Size(209, 109);
             this.panel5.TabIndex = 17;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.wtyftqrxsicydvlmyuqa;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(26, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 57);
-            this.button4.TabIndex = 19;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
@@ -279,6 +209,76 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(73, 21);
             this.bunifuCustomLabel1.TabIndex = 11;
             this.bunifuCustomLabel1.Text = "Services";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._17066383_logout_blue_glossy_icon_on_white_background_Stock_Photo2;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.Location = new System.Drawing.Point(29, 558);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(156, 57);
+            this.button6.TabIndex = 21;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.wtyftqrxsicydvlmyuqa;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(26, 13);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(156, 57);
+            this.button4.TabIndex = 19;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.favicon_ico;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.Location = new System.Drawing.Point(26, 13);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(156, 57);
+            this.button5.TabIndex = 20;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.inventory2;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(26, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 57);
+            this.button2.TabIndex = 13;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._178152;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(29, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 57);
+            this.button3.TabIndex = 18;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(29, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 57);
+            this.button1.TabIndex = 12;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 

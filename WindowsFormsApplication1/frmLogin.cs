@@ -21,10 +21,38 @@ namespace WindowsFormsApplication1
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            this.txtPW.isPassword = true;
+          // txtPW.isPassword = true;
+            txtUN.Focus();
         }
 
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkBox1.Checked)
+            {
+                txtPW.PasswordChar ='\0' ;
+            }
+            else
+            {
+                txtPW.PasswordChar = '•';
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = System.DateTime.Now.ToString();
+        }
+
+        private void txtPW_OnValueChanged(object sender, EventArgs e)
+        {
+            //txtPW1.isPassword = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            //bunifuThinButton22.Enabled = false;
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
         {
             string un = txtUN.Text;
             string pw = txtPW.Text;
@@ -50,7 +78,7 @@ namespace WindowsFormsApplication1
                 user.SetGName(result[1]);
                 user.SetPrivelge(result[2]);
 
-                MessageBox.Show("Welcome " + user.GetGName());
+                MessageBox.Show("Welcome " + user.GetGName(),"Login");
                 //MessageBox.Show("You are: " + user.getPrivelege());
                 //ths.panel1.Size = new Size(1138, 732);
                 // ths.panel2.Size = new Size(174, 732);
@@ -60,16 +88,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (this.checkBox1.Checked)
-            {
-                txtPW.isPassword = false;
-            }
-            else
-            {
-                txtPW.isPassword = true;
-            }
+            Close();
         }
     }
 }

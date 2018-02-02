@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+
 namespace WindowsFormsApplication1
 {
     class classDatabaseConnect
@@ -24,12 +25,12 @@ namespace WindowsFormsApplication1
                 return false;
             }
         }
-        public bool insertData()
+      
+        public bool ManipulateData(string query)
         {
             try
             {
                 mysqlconnect.Open();
-                string query = "INSERT INTO student(name) VALUES('third')";
                 MySqlCommand myCommand = new MySqlCommand(query, mysqlconnect);
                 myCommand.CommandTimeout = 60;
                 MySqlDataReader reader;
@@ -43,7 +44,6 @@ namespace WindowsFormsApplication1
                 return false;
             }
         }
-
           public string[] authenticate(string query)
              {
             try
@@ -59,10 +59,7 @@ namespace WindowsFormsApplication1
                 {
                     while (reader.Read())
                     {
-                        //the result of select query is in array so thou shalt save it in an array, duh
-                        // like this: string[] row = {reader.GetString(0) , reader.GetString(1), ... reader.GetString(n)}
-                        //for now, only one record is expected
-                        result = new string[3]{ reader.GetString(0), reader.GetString(1), reader.GetString(2)};
+                        result = new string[3] { reader.GetString(0), reader.GetString(1), reader.GetString(2) };
                     }
                 }else{
                     result = null;
@@ -76,6 +73,34 @@ namespace WindowsFormsApplication1
                 System.Windows.Forms.MessageBox.Show(ex.Message);
                 // return false;   'no result is returned
                 return null;
+            }
+        }
+        public bool isDuplicate(string query)
+        {
+            try
+            {
+                mysqlconnect.Open();
+                MySqlCommand myCommand = new MySqlCommand(query, mysqlconnect);
+                myCommand.CommandTimeout = 60;
+                MySqlDataReader reader;
+                reader = myCommand.ExecuteReader();
+                bool res;
+                if (reader.HasRows)
+                {
+                    res= true;
+                }
+                else
+                {
+                    res = false;
+                }
+                mysqlconnect.Close();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                // return false;   'no result is returned
+                return true;
             }
         }
     }

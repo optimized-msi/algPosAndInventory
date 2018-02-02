@@ -28,45 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txtPW = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtUN = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblTime = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnOK = new System.Windows.Forms.Button();
+            this.txtPW = new MyTextBox();
+            this.txtUN = new MyTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnOK);
+            this.panel1.Controls.Add(this.txtPW);
+            this.panel1.Controls.Add(this.txtUN);
             this.panel1.Controls.Add(this.bunifuCustomLabel9);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.bunifuSeparator2);
             this.panel1.Controls.Add(this.bunifuSeparator1);
-            this.panel1.Controls.Add(this.bunifuCustomLabel8);
-            this.panel1.Controls.Add(this.bunifuThinButton21);
-            this.panel1.Controls.Add(this.txtPW);
-            this.panel1.Controls.Add(this.txtUN);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
             this.panel1.Controls.Add(this.bunifuCustomLabel3);
             this.panel1.Controls.Add(this.bunifuCustomLabel2);
-            this.panel1.Controls.Add(this.bunifuCustomLabel5);
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 509);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bunifuCustomLabel9
             // 
@@ -116,87 +119,12 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(79, 369);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(114, 17);
-            this.bunifuCustomLabel8.TabIndex = 88;
-            this.bunifuCustomLabel8.Text = "Forgot password?";
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Ok";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 2;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(212, 321);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(123, 52);
-            this.bunifuThinButton21.TabIndex = 87;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // txtPW
-            // 
-            this.txtPW.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPW.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtPW.ForeColor = System.Drawing.Color.White;
-            this.txtPW.HintForeColor = System.Drawing.Color.White;
-            this.txtPW.HintText = "";
-            this.txtPW.isPassword = true;
-            this.txtPW.LineFocusedColor = System.Drawing.Color.White;
-            this.txtPW.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.txtPW.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtPW.LineThickness = 3;
-            this.txtPW.Location = new System.Drawing.Point(176, 279);
-            this.txtPW.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPW.Name = "txtPW";
-            this.txtPW.Size = new System.Drawing.Size(159, 33);
-            this.txtPW.TabIndex = 85;
-            this.txtPW.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtUN
-            // 
-            this.txtUN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUN.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtUN.ForeColor = System.Drawing.Color.White;
-            this.txtUN.HintForeColor = System.Drawing.Color.White;
-            this.txtUN.HintText = "";
-            this.txtUN.isPassword = false;
-            this.txtUN.LineFocusedColor = System.Drawing.Color.White;
-            this.txtUN.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.txtUN.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtUN.LineThickness = 3;
-            this.txtUN.Location = new System.Drawing.Point(176, 226);
-            this.txtUN.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUN.Name = "txtUN";
-            this.txtUN.Size = new System.Drawing.Size(159, 33);
-            this.txtUN.TabIndex = 83;
-            this.txtUN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox1.Location = new System.Drawing.Point(82, 333);
+            this.checkBox1.Location = new System.Drawing.Point(82, 360);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(122, 21);
             this.checkBox1.TabIndex = 84;
@@ -237,16 +165,71 @@
             this.bunifuCustomLabel2.TabIndex = 78;
             this.bunifuCustomLabel2.Text = "Login";
             // 
-            // bunifuCustomLabel5
+            // lblTime
             // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(96, 427);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(163, 33);
-            this.bunifuCustomLabel5.TabIndex = 82;
-            this.bunifuCustomLabel5.Text = "time - date";
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(80, 427);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(0, 33);
+            this.lblTime.TabIndex = 82;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnOK
+            // 
+            this.btnOK.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK.BackgroundImage")));
+            this.btnOK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(221, 334);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(114, 47);
+            this.btnOK.TabIndex = 105;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // txtPW
+            // 
+            this.txtPW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtPW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPW.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPW.ForeColor = System.Drawing.Color.White;
+            this.txtPW.Location = new System.Drawing.Point(176, 288);
+            this.txtPW.Name = "txtPW";
+            this.txtPW.PasswordChar = '•';
+            this.txtPW.Size = new System.Drawing.Size(159, 25);
+            this.txtPW.TabIndex = 104;
+            // 
+            // txtUN
+            // 
+            this.txtUN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtUN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUN.ForeColor = System.Drawing.Color.White;
+            this.txtUN.Location = new System.Drawing.Point(176, 234);
+            this.txtUN.Name = "txtUN";
+            this.txtUN.Size = new System.Drawing.Size(159, 25);
+            this.txtUN.TabIndex = 103;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+            this.button1.Location = new System.Drawing.Point(411, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 39);
+            this.button1.TabIndex = 106;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogin
             // 
@@ -255,7 +238,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(454, 509);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.frmLogin_Load);
@@ -273,14 +256,15 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.CheckBox checkBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        public Bunifu.Framework.UI.BunifuMaterialTextbox txtPW;
-        public Bunifu.Framework.UI.BunifuMaterialTextbox txtUN;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblTime;
+        private System.Windows.Forms.Timer timer1;
+        public MyTextBox txtUN;
+        public MyTextBox txtPW;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button button1;
     }
 }
