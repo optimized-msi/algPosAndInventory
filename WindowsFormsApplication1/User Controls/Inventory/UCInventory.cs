@@ -22,8 +22,9 @@ namespace WindowsFormsApplication1
         }
         private void UserControl4_Load(object sender, EventArgs e)
         {
-            Clear(); Lock(); LoadListView(); LoadDrp(); LoadSDrp(); LoadStockListView();
-            btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false;
+            Clear(); Lock(); LoadListView(); LoadDrp(); LoadSDrp(); LoadStockListView(); btnSClear.PerformClick();
+            btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false; txtSProdName.BackColor = Color.Firebrick;
+            txtReceived.BackColor = Color.Firebrick;
         }
         private void LoadListView()
         {
@@ -132,7 +133,7 @@ namespace WindowsFormsApplication1
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you wan't to delete this product?", "Inventory", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this product?", "Inventory", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 prod.prodNo = txtProdNo.Text;
@@ -273,6 +274,8 @@ namespace WindowsFormsApplication1
 
 
         //=============== Stocks ============
+        bool sAdd=false, sDeduct=false, sEdit=false;
+        Stocks stock = new Stocks();
         private void LoadStockListView()
         {
             //to do: find a way to use dictionary so retrieving data will be reusable
@@ -295,6 +298,8 @@ namespace WindowsFormsApplication1
                     {
                         if (i == 0)
                             iItem.Text = row.ItemArray[i].ToString();
+                        else if (i == 6)
+                            iItem.SubItems.Add((row.ItemArray[i].ToString()).Substring(0,10));
                         else
                             iItem.SubItems.Add(row.ItemArray[i].ToString());
                     }
@@ -331,9 +336,142 @@ namespace WindowsFormsApplication1
             dbcon.mysqlconnect.Close();
         }
 
+        private void SLock()
+        {
+            drpProd.Enabled = false;
+            txtStockNo.Enabled = false;
+            numQuan.Enabled = false;
+            numDeduct.Enabled = false;
+        }
+        private void SUnLock()
+        {
+            drpProd.Enabled = true;
+            txtStockNo.Enabled = true;
+            numQuan.Enabled = true;
+        }
+        private void SClear()
+        {
+            drpProd.Text = "";
+            txtStockNo.Text = "";
+            numQuan.Minimum = 0;
+            numDeduct.Minimum = 0;
+            numQuan.Value = 0;
+            numDeduct.Value = 0 ;
+            txtSProdName.Text = "";
+            txtReceived.Text = "";
+            txtSProdName.BackColor = Color.Firebrick;
+            txtReceived.BackColor = Color.Firebrick;
+        }
+        private void SButtonLock()
+        {
+            btnSAdd.Enabled = true;
+            btnSDeduct.Enabled = false;
+            btnSEdit.Enabled = false;
+            btnSSave.Enabled = false;
+            btnRemoveStocks.Enabled = false;
+        }
+        private void btnSClear_Click(object sender, EventArgs e)
+        {
+            SClear(); SButtonLock(); SLock();LoadStockListView();
+            sAdd = false; sDeduct = false; sEdit = false;
+        }
+        private void drpProd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string prodID=drpProd.Text;
+
+            string query = "SELECT product_name FROM products WHERE product_ID='"+prodID +"'";
+            dbcon.mysqlconnect.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
+            myCommand.CommandTimeout = 60;
+            MySqlDataReader reader;
+            reader = myCommand.ExecuteReader();
+            //List<string> myCollection = new List<string>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    txtSProdName.Text = reader.GetString(0);
+                }
+            }
+            dbcon.mysqlconnect.Close();
+        }
+
+        private void btnSDeduct_Click(object sender, EventArgs e)
+        {
+            sDeduct = true;
+            numQuan.Enabled = false; numDeduct.Focus(); numDeduct.Maximum = numQuan.Value;btnSSave.Enabled = true; btnSEdit.Enabled = false; btnSDeduct.Enabled = false; numDeduct.Enabled = true;
+        }
+
+        private void lvStocks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvStocks.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lvStocks.SelectedItems[0];
+                txtStockNo.Text = item.SubItems[0].Text;
+                drpProd.Text = item.SubItems[1].Text;
+                txtSProdName.Text = item.SubItems[2].Text;
+                numQuan.Value = Convert.ToDecimal(item.SubItems[5].Text);
+                txtReceived.Text = item.SubItems[6].Text;
+                btnSAdd.Enabled = false; btnSSave.Enabled = false; btnSEdit.Enabled = true;btnRemoveStocks.Enabled = true;btnSDeduct.Enabled = true;
+            }
+            else
+            {
+                Clear();
+            }
+        }
+
+        private void btnSEdit_Click(object sender, EventArgs e)
+        {
+            btnSAdd.Enabled = false; btnSDeduct.Enabled = false;btnRemoveStocks.Enabled = false; sEdit = true;
+            numQuan.Enabled = true; numQuan.Focus(); btnSSave.Enabled=true;btnSEdit.Enabled = false;
+            numQuan.Minimum = numQuan.Value;
+        }
+
+        private void btnRemoveStocks_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this stock?", "Inventory", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                stock.stock_ID = txtStockNo.Text;
+                stock.DeleteStock();
+                LoadStockListView();
+                btnSClear.PerformClick();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+        string dt;
+
         private void btnSAdd_Click(object sender, EventArgs e)
         {
             drpProd.Enabled = true;
+            SUnLock();
+            sAdd = true;
+            dt = System.DateTime.Now.ToString();
+            txtReceived.Text = dt.Substring(0,10);
+            btnSSave.Enabled = true;
+        }
+        private void btnSSave_Click(object sender, EventArgs e)
+        {
+            stock.stock_ID = txtStockNo.Text; stock.product_ID = drpProd.Text;stock.received_date = dt;stock.stock_quantity = numQuan.Value.ToString();stock.deduct = numDeduct.Value.ToString();
+            if (sAdd)
+            {
+                stock.InsertStocks();
+                sAdd = false;
+            }
+            else if (sEdit)
+            {
+                stock.UpdateStock();
+                sEdit = false;
+            }else if (sDeduct)
+            {
+                stock.DeductStock();
+                sDeduct = false;
+            }
+            btnSClear.PerformClick();
         }
     }
 }

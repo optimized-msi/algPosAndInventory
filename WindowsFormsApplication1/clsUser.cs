@@ -8,31 +8,31 @@ namespace WindowsFormsApplication1
 {
    public class clsUser
     {
-        private string userID,gName,privelege;
+        private static string userID,gName,privelege;
 
         public void SetUserID(string userID)
         {
-            this.userID = userID;
+            clsUser.userID = userID;
         }
         public string GetUserID()
         {
-            return this.userID;
+            return userID;
         }
         public void SetGName(string gName)
         {
-            this.gName = gName;
+            clsUser.gName = gName;
         }
         public string GetGName()
         {
-            return this.gName;
+            return gName;
         }
         public void SetPrivelge(string privelege)
         {
-            this.privelege = privelege;
+            clsUser.privelege = privelege;
         }
         public string GetPrivelege()
         {
-            return this.privelege;
+            return privelege;
         }
     }
 }

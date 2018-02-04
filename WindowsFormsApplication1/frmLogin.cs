@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-          // txtPW.isPassword = true;
+            // txtPW.isPassword = true;
             txtUN.Focus();
         }
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            //bunifuThinButton22.Enabled = false;
+           
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -91,6 +91,19 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtPW_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnOK.PerformClick();
+            }
         }
     }
 }
