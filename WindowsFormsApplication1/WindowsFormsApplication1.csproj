@@ -70,8 +70,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classDatabaseConnect.cs" />
-    <Compile Include="clsUser.cs" />
+    <Compile Include="Classes\classDatabaseConnect.cs" />
+    <Compile Include="Classes\clsUser.cs" />
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddStocks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +102,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stocks.cs" />
+    <Compile Include="Classes\Stocks.cs" />
     <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <Compile Include="User Controls\Inventory\UCInventory.Designer.cs">
       <DependentUpon>UCInventory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddStocks.resx">
       <DependentUpon>frmAddStocks.cs</DependentUpon>
     </EmbeddedResource>

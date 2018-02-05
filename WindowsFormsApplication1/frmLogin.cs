@@ -65,25 +65,22 @@ namespace WindowsFormsApplication1
             //byte[] data = System.Text.Encoding.UTF8.GetBytes(pw);
             //byte[] hash = SHA256.Create().ComputeHash(data);
 
-            string query = "SELECT userID,gname,privelegeLevel FROM users WHERE username='" + un + "'  AND password='" + pw + "'";
+            string query = "SELECT userID,gname,user_type,login_status FROM users WHERE username='" + un + "'  AND password='" + pw + "'";
             classDatabaseConnect dbConnObj = new classDatabaseConnect();
             result = dbConnObj.authenticate(query);
             if (result == null)
-            {
-                MessageBox.Show("Please provide a valid credential");
-            }
+                MessageBox.Show("Please provide a valid credential","Login");
+            else if(result[3] == "True")
+                MessageBox.Show("User is logged-in in other computer","Login");
             else
             {
                 user.SetUserID(result[0]);
                 user.SetGName(result[1]);
                 user.SetPrivelge(result[2]);
-
+                user.SetLoginStatus(result[3]);
+                string q = "UPDATE users SET login_status=1 WHERE userID='" + user.GetUserID() + "'";
+                dbConnObj.ManipulateData(q);
                 MessageBox.Show("Welcome " + user.GetGName(),"Login");
-                //MessageBox.Show("You are: " + user.getPrivelege());
-                //ths.panel1.Size = new Size(1138, 732);
-                // ths.panel2.Size = new Size(174, 732);
-                // ths.panel2.Visible = true;
-                //return user.getPrivelege();
                 Close();
             }
         }

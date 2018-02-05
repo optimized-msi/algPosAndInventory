@@ -274,6 +274,7 @@ namespace WindowsFormsApplication1
 
 
         //=============== Stocks ============
+        string dt,sort;
         bool sAdd=false, sDeduct=false, sEdit=false;
         Stocks stock = new Stocks();
         private void LoadStockListView()
@@ -283,9 +284,21 @@ namespace WindowsFormsApplication1
             try
             {
                 dbcon.mysqlconnect.Open();
-                string query;
-                query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID";
-
+                string query="";
+                if (sort== "Product ID")
+                query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID ORDER BY stock.product_ID";
+                else if(sort== "Product Name")
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID ORDER BY product_name";
+                else if(sort== "Stock ID")
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID ORDER BY stock_ID";
+                else if(sort== "Available Stock")
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID ORDER BY stock_quantity";
+                else if(sort == "Date - Desc")
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID ORDER BY received_date DESC";
+                else if(sort== "Date - Asc")
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID ORDER BY received_date ASC";
+                else
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,product_sellingprice,stock_quantity,received_date FROM products,stock WHERE stock.product_ID=products.product_ID";
                 MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
                 DataTable table = new DataTable("myTable");
                 mySqlDataAdapter.Fill(table);
@@ -373,7 +386,7 @@ namespace WindowsFormsApplication1
         private void btnSClear_Click(object sender, EventArgs e)
         {
             SClear(); SButtonLock(); SLock();LoadStockListView();
-            sAdd = false; sDeduct = false; sEdit = false;
+            sAdd = false; sDeduct = false; sEdit = false; btnRemoveZero.Enabled = true;
         }
         private void drpProd_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -413,7 +426,7 @@ namespace WindowsFormsApplication1
                 txtSProdName.Text = item.SubItems[2].Text;
                 numQuan.Value = Convert.ToDecimal(item.SubItems[5].Text);
                 txtReceived.Text = item.SubItems[6].Text;
-                btnSAdd.Enabled = false; btnSSave.Enabled = false; btnSEdit.Enabled = true;btnRemoveStocks.Enabled = true;btnSDeduct.Enabled = true;
+                btnSAdd.Enabled = false; btnSSave.Enabled = false; btnSEdit.Enabled = true;btnRemoveStocks.Enabled = true;btnSDeduct.Enabled = true; btnRemoveZero.Enabled = false;
             }
             else
             {
@@ -443,7 +456,32 @@ namespace WindowsFormsApplication1
                 //do something else
             }
         }
-        string dt;
+
+        private void btnRemoveZero_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete all zero stock?", "Inventory", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                stock.RemoveZero();
+                MessageBox.Show("Deleted all zero stocks.", "Inventory");
+                btnSClear.PerformClick();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sort = cboSort.Text;
+            LoadStockListView();
+        }
 
         private void btnSAdd_Click(object sender, EventArgs e)
         {
@@ -452,13 +490,19 @@ namespace WindowsFormsApplication1
             sAdd = true;
             dt = System.DateTime.Now.ToString();
             txtReceived.Text = dt.Substring(0,10);
-            btnSSave.Enabled = true;
+            btnSSave.Enabled = true; btnRemoveZero.Enabled = false;
         }
         private void btnSSave_Click(object sender, EventArgs e)
         {
             stock.stock_ID = txtStockNo.Text; stock.product_ID = drpProd.Text;stock.received_date = dt;stock.stock_quantity = numQuan.Value.ToString();stock.deduct = numDeduct.Value.ToString();
             if (sAdd)
             {
+                if (numQuan.Value.ToString() == "0")
+                {
+                    MessageBox.Show("Quantity must not be equal to zero", "Inventory");
+                    numQuan.Focus();
+                    
+                }
                 stock.InsertStocks();
                 sAdd = false;
             }
