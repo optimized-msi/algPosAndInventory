@@ -54,12 +54,12 @@ namespace WindowsFormsApplication1
                 MySqlDataReader reader;
                 reader = myCommand.ExecuteReader();
 
-                string[] result = new string[3];
+                string[] result = new string[4];
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        result = new string[3] { reader.GetString(0), reader.GetString(1), reader.GetString(2) };
+                        result = new string[4] { reader.GetString(0), reader.GetString(1), reader.GetString(2),reader.GetString(3) };
                     }
                 }else{
                     result = null;

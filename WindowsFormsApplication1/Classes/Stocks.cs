@@ -20,8 +20,6 @@ namespace WindowsFormsApplication1
             {
                 try
                 {
-                    DateTime time;
-                    DateTime.TryParse(received_date, out time);
                     query = "INSERT INTO stock(stock_ID,product_ID,stock_quantity) VALUES('" + stock_ID + "','" + product_ID + "','" + stock_quantity + "')";
                     dbcon.ManipulateData(query);
                     System.Windows.Forms.MessageBox.Show("Added a stock", "Inventory");
@@ -30,6 +28,18 @@ namespace WindowsFormsApplication1
                 {
                     throw;
                 }
+            }
+        }
+        public void RemoveZero()
+        {
+            try
+            {
+                string query = "DELETE FROM stock WHERE stock_quantity=0";
+                dbcon.ManipulateData(query);
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
         public void UpdateStock()

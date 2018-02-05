@@ -49,6 +49,7 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabInventory = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAddCategory = new System.Windows.Forms.Button();
             this.txtSearch = new MyTextBox();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.drpSearch = new System.Windows.Forms.ComboBox();
@@ -67,10 +68,11 @@
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnRemoveZero = new System.Windows.Forms.Button();
             this.numDeduct = new System.Windows.Forms.NumericUpDown();
             this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.drpProd = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboSort = new System.Windows.Forms.ComboBox();
             this.btnRemoveStocks = new System.Windows.Forms.Button();
             this.btnSClear = new System.Windows.Forms.Button();
             this.btnSSave = new System.Windows.Forms.Button();
@@ -236,7 +238,7 @@
             this.lvProducts.GridLines = true;
             this.lvProducts.Location = new System.Drawing.Point(281, 63);
             this.lvProducts.Name = "lvProducts";
-            this.lvProducts.Size = new System.Drawing.Size(825, 334);
+            this.lvProducts.Size = new System.Drawing.Size(825, 362);
             this.lvProducts.TabIndex = 12;
             this.lvProducts.UseCompatibleStateImageBehavior = false;
             this.lvProducts.View = System.Windows.Forms.View.Details;
@@ -291,6 +293,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage1.Controls.Add(this.btnAddCategory);
             this.tabPage1.Controls.Add(this.txtSearch);
             this.tabPage1.Controls.Add(this.bunifuCustomLabel17);
             this.tabPage1.Controls.Add(this.drpSearch);
@@ -324,6 +327,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Products";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.BackgroundImage")));
+            this.btnAddCategory.ForeColor = System.Drawing.Color.White;
+            this.btnAddCategory.Location = new System.Drawing.Point(250, 189);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(25, 36);
+            this.btnAddCategory.TabIndex = 116;
+            this.btnAddCategory.Text = "+";
+            this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // txtSearch
             // 
@@ -369,7 +384,7 @@
             this.txtPriceAdded.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceAdded.Location = new System.Drawing.Point(116, 275);
             this.txtPriceAdded.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
@@ -383,7 +398,7 @@
             this.txtPriceBuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceBuy.Location = new System.Drawing.Point(116, 237);
             this.txtPriceBuy.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
@@ -398,7 +413,7 @@
             this.drpCat.FormattingEnabled = true;
             this.drpCat.Location = new System.Drawing.Point(116, 192);
             this.drpCat.Name = "drpCat";
-            this.drpCat.Size = new System.Drawing.Size(159, 29);
+            this.drpCat.Size = new System.Drawing.Size(128, 29);
             this.drpCat.TabIndex = 110;
             // 
             // txtPriceSell
@@ -451,7 +466,7 @@
             // 
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(263, 415);
+            this.btnClear.Location = new System.Drawing.Point(281, 431);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(114, 48);
             this.btnClear.TabIndex = 100;
@@ -534,10 +549,11 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage2.Controls.Add(this.btnRemoveZero);
             this.tabPage2.Controls.Add(this.numDeduct);
             this.tabPage2.Controls.Add(this.bunifuCustomLabel18);
             this.tabPage2.Controls.Add(this.drpProd);
-            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.cboSort);
             this.tabPage2.Controls.Add(this.btnRemoveStocks);
             this.tabPage2.Controls.Add(this.btnSClear);
             this.tabPage2.Controls.Add(this.btnSSave);
@@ -562,11 +578,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Stocks";
             // 
+            // btnRemoveZero
+            // 
+            this.btnRemoveZero.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemoveZero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveZero.BackgroundImage")));
+            this.btnRemoveZero.Enabled = false;
+            this.btnRemoveZero.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveZero.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveZero.Location = new System.Drawing.Point(6, 419);
+            this.btnRemoveZero.Name = "btnRemoveZero";
+            this.btnRemoveZero.Size = new System.Drawing.Size(137, 50);
+            this.btnRemoveZero.TabIndex = 127;
+            this.btnRemoveZero.Text = "Remove Zero Stocks";
+            this.btnRemoveZero.UseVisualStyleBackColor = false;
+            this.btnRemoveZero.Click += new System.EventHandler(this.btnRemoveZero_Click);
+            // 
             // numDeduct
             // 
             this.numDeduct.Enabled = false;
             this.numDeduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDeduct.Location = new System.Drawing.Point(70, 351);
+            this.numDeduct.Location = new System.Drawing.Point(72, 315);
             this.numDeduct.Maximum = new decimal(new int[] {
             500,
             0,
@@ -582,7 +613,7 @@
             this.bunifuCustomLabel18.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel18.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(6, 353);
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(8, 317);
             this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
             this.bunifuCustomLabel18.Size = new System.Drawing.Size(62, 21);
             this.bunifuCustomLabel18.TabIndex = 125;
@@ -599,14 +630,22 @@
             this.drpProd.TabIndex = 124;
             this.drpProd.SelectedIndexChanged += new System.EventHandler(this.drpProd_SelectedIndexChanged);
             // 
-            // comboBox1
+            // cboSort
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 29);
-            this.comboBox1.TabIndex = 123;
+            this.cboSort.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSort.FormattingEnabled = true;
+            this.cboSort.Items.AddRange(new object[] {
+            "Product ID",
+            "Product Name",
+            "Stock ID",
+            "Available Stock",
+            "Date - Desc",
+            "Date - Asc"});
+            this.cboSort.Location = new System.Drawing.Point(111, 21);
+            this.cboSort.Name = "cboSort";
+            this.cboSort.Size = new System.Drawing.Size(178, 29);
+            this.cboSort.TabIndex = 123;
+            this.cboSort.SelectedIndexChanged += new System.EventHandler(this.cboSort_SelectedIndexChanged);
             // 
             // btnRemoveStocks
             // 
@@ -615,11 +654,11 @@
             this.btnRemoveStocks.Enabled = false;
             this.btnRemoveStocks.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveStocks.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveStocks.Location = new System.Drawing.Point(6, 412);
+            this.btnRemoveStocks.Location = new System.Drawing.Point(6, 364);
             this.btnRemoveStocks.Name = "btnRemoveStocks";
             this.btnRemoveStocks.Size = new System.Drawing.Size(137, 50);
             this.btnRemoveStocks.TabIndex = 122;
-            this.btnRemoveStocks.Text = "Remove Stocks";
+            this.btnRemoveStocks.Text = "Remove Stock";
             this.btnRemoveStocks.UseVisualStyleBackColor = false;
             this.btnRemoveStocks.Click += new System.EventHandler(this.btnRemoveStocks_Click);
             // 
@@ -629,7 +668,7 @@
             this.btnSClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSClear.BackgroundImage")));
             this.btnSClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSClear.ForeColor = System.Drawing.Color.White;
-            this.btnSClear.Location = new System.Drawing.Point(155, 412);
+            this.btnSClear.Location = new System.Drawing.Point(152, 396);
             this.btnSClear.Name = "btnSClear";
             this.btnSClear.Size = new System.Drawing.Size(137, 50);
             this.btnSClear.TabIndex = 121;
@@ -659,7 +698,7 @@
             this.btnSDeduct.Enabled = false;
             this.btnSDeduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSDeduct.ForeColor = System.Drawing.Color.White;
-            this.btnSDeduct.Location = new System.Drawing.Point(152, 338);
+            this.btnSDeduct.Location = new System.Drawing.Point(152, 315);
             this.btnSDeduct.Name = "btnSDeduct";
             this.btnSDeduct.Size = new System.Drawing.Size(137, 50);
             this.btnSDeduct.TabIndex = 119;
@@ -968,8 +1007,10 @@
         private System.Windows.Forms.Button btnSClear;
         private System.Windows.Forms.Button btnRemoveStocks;
         private System.Windows.Forms.ComboBox drpProd;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboSort;
         private System.Windows.Forms.NumericUpDown numDeduct;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
+        private System.Windows.Forms.Button btnRemoveZero;
+        private System.Windows.Forms.Button btnAddCategory;
     }
 }

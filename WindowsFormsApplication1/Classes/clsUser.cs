@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
 {
    public class clsUser
     {
-        private static string userID,gName,privelege;
+        private static string userID,gName,privelege,loginStatus;
 
         public void SetUserID(string userID)
         {
@@ -33,6 +33,14 @@ namespace WindowsFormsApplication1
         public string GetPrivelege()
         {
             return privelege;
+        }
+        public void SetLoginStatus(string loginStat)
+        {
+            clsUser.loginStatus = loginStat;
+        }
+        public string GetLoginStatus()
+        {
+            return loginStatus;
         }
     }
 }

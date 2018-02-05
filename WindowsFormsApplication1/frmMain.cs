@@ -13,6 +13,8 @@ namespace WindowsFormsApplication1
     public partial class frmMain : Form
     {
         frmLogin frmlogin = new frmLogin();
+        classDatabaseConnect dbcon = new classDatabaseConnect();
+        clsUser user = new clsUser();
         public frmMain()
         {
             InitializeComponent();
@@ -55,9 +57,18 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to exit?", "Logout", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string query = "UPDATE users SET login_status=0 WHERE userID='" + user.GetUserID() + "'";
+                dbcon.ManipulateData(query);
+                Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }      
         }
-
         private void ucFunctions1_Load(object sender, EventArgs e)
         {
 
@@ -70,7 +81,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello World");
+            //MessageBox.Show("Hello World");
             InitializeComponent();
             UCPosPay ucinventory = new UCPosPay();
             this.myPanel.Controls.Clear();
@@ -147,15 +158,25 @@ namespace WindowsFormsApplication1
 
         private void button7_Click(object sender, EventArgs e)
         {
-            myPanel.Controls.Clear();
-            clerkPanel.Controls.Clear();
-            clerkPanel.Visible = true;
-            frmlogin.txtUN.Text = "";
-            frmlogin.txtPW.Text = "";
-            frmlogin.user.SetGName(null);
-            frmlogin.user.SetUserID(null);
-            frmlogin.user.SetPrivelge(null);
-            Login();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string query = "UPDATE users SET login_status=0 WHERE userID='" +user.GetUserID()+ "'";
+                dbcon.ManipulateData(query);
+                myPanel.Controls.Clear();
+                clerkPanel.Controls.Clear();
+                clerkPanel.Visible = true;
+                frmlogin.txtUN.Text = "";
+                frmlogin.txtPW.Text = "";
+                frmlogin.user.SetGName(null);
+                frmlogin.user.SetUserID(null);
+                frmlogin.user.SetPrivelge(null);
+                Login();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
     }
 }

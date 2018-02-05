@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucServices));
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.txtTypeName = new MyTextBox();
+            this.txtTypeID = new MyTextBox();
+            this.btnVClear = new System.Windows.Forms.Button();
+            this.btnVSave = new System.Windows.Forms.Button();
+            this.btnVDelete = new System.Windows.Forms.Button();
+            this.btnVEdit = new System.Windows.Forms.Button();
+            this.btnVAdd = new System.Windows.Forms.Button();
+            this.lvType = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,51 +51,39 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabInventory = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.txtServiceName = new MyTextBox();
+            this.btnSClear = new System.Windows.Forms.Button();
+            this.btnSSave = new System.Windows.Forms.Button();
+            this.btnSDelete = new System.Windows.Forms.Button();
+            this.btnSEdit = new System.Windows.Forms.Button();
+            this.btnSAdd = new System.Windows.Forms.Button();
+            this.txtServiceID = new MyTextBox();
+            this.lvServices = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtUN = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.numFee = new System.Windows.Forms.NumericUpDown();
+            this.cboVehicleType = new System.Windows.Forms.ComboBox();
+            this.cboServiceName = new System.Windows.Forms.ComboBox();
+            this.txtPriceID = new MyTextBox();
+            this.btnPClear = new System.Windows.Forms.Button();
+            this.btnPSave = new System.Windows.Forms.Button();
+            this.btnPDelete = new System.Windows.Forms.Button();
+            this.btnPEdit = new System.Windows.Forms.Button();
+            this.btnPAdd = new System.Windows.Forms.Button();
+            this.lvPrices = new System.Windows.Forms.ListView();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton27 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton28 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton29 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton210 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton211 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton212 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabInventory.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numFee)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuDropdown2
-            // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.DisabledColor = System.Drawing.Color.LightGray;
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Firebrick;
-            this.bunifuDropdown2.Items = new string[0];
-            this.bunifuDropdown2.Location = new System.Drawing.Point(129, 83);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.LightGray;
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(195, 27);
-            this.bunifuDropdown2.TabIndex = 92;
             // 
             // label3
             // 
@@ -106,44 +96,6 @@
             this.label3.TabIndex = 91;
             this.label3.Text = "Vehicle Type:";
             // 
-            // bunifuMaterialTextbox2
-            // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(429, 40);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(150, 33);
-            this.bunifuMaterialTextbox2.TabIndex = 86;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuMaterialTextbox3
-            // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(112, 15);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(52, 25);
-            this.bunifuMaterialTextbox3.TabIndex = 85;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -151,9 +103,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(18, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 19);
+            this.label2.Size = new System.Drawing.Size(122, 19);
             this.label2.TabIndex = 84;
-            this.label2.Text = "Service ID.:";
+            this.label2.Text = "Service Price ID.:";
             // 
             // label4
             // 
@@ -180,89 +132,147 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Firebrick;
-            this.tabPage3.Controls.Add(this.listView3);
-            this.tabPage3.Controls.Add(this.bunifuMaterialTextbox4);
-            this.tabPage3.Controls.Add(this.bunifuMaterialTextbox5);
+            this.tabPage3.Controls.Add(this.txtTypeName);
+            this.tabPage3.Controls.Add(this.txtTypeID);
+            this.tabPage3.Controls.Add(this.btnVClear);
+            this.tabPage3.Controls.Add(this.btnVSave);
+            this.tabPage3.Controls.Add(this.btnVDelete);
+            this.tabPage3.Controls.Add(this.btnVEdit);
+            this.tabPage3.Controls.Add(this.btnVAdd);
+            this.tabPage3.Controls.Add(this.lvType);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.bunifuThinButton29);
-            this.tabPage3.Controls.Add(this.bunifuThinButton210);
-            this.tabPage3.Controls.Add(this.bunifuThinButton211);
-            this.tabPage3.Controls.Add(this.bunifuThinButton212);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(736, 369);
+            this.tabPage3.Size = new System.Drawing.Size(743, 359);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Vehicle Types";
             // 
-            // listView3
+            // txtTypeName
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.txtTypeName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtTypeName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTypeName.Enabled = false;
+            this.txtTypeName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTypeName.ForeColor = System.Drawing.Color.White;
+            this.txtTypeName.Location = new System.Drawing.Point(227, 48);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(161, 25);
+            this.txtTypeName.TabIndex = 135;
+            // 
+            // txtTypeID
+            // 
+            this.txtTypeID.BackColor = System.Drawing.Color.Firebrick;
+            this.txtTypeID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTypeID.Enabled = false;
+            this.txtTypeID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTypeID.ForeColor = System.Drawing.Color.White;
+            this.txtTypeID.Location = new System.Drawing.Point(227, 12);
+            this.txtTypeID.Name = "txtTypeID";
+            this.txtTypeID.Size = new System.Drawing.Size(52, 25);
+            this.txtTypeID.TabIndex = 134;
+            // 
+            // btnVClear
+            // 
+            this.btnVClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVClear.BackgroundImage")));
+            this.btnVClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVClear.ForeColor = System.Drawing.Color.White;
+            this.btnVClear.Location = new System.Drawing.Point(564, 231);
+            this.btnVClear.Name = "btnVClear";
+            this.btnVClear.Size = new System.Drawing.Size(102, 49);
+            this.btnVClear.TabIndex = 132;
+            this.btnVClear.Text = "Clear";
+            this.btnVClear.UseVisualStyleBackColor = true;
+            this.btnVClear.Click += new System.EventHandler(this.btnVClear_Click);
+            // 
+            // btnVSave
+            // 
+            this.btnVSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVSave.BackgroundImage")));
+            this.btnVSave.Enabled = false;
+            this.btnVSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVSave.ForeColor = System.Drawing.Color.White;
+            this.btnVSave.Location = new System.Drawing.Point(564, 163);
+            this.btnVSave.Name = "btnVSave";
+            this.btnVSave.Size = new System.Drawing.Size(102, 49);
+            this.btnVSave.TabIndex = 131;
+            this.btnVSave.Text = "Save";
+            this.btnVSave.UseVisualStyleBackColor = true;
+            this.btnVSave.Click += new System.EventHandler(this.btnVSave_Click);
+            // 
+            // btnVDelete
+            // 
+            this.btnVDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVDelete.BackgroundImage")));
+            this.btnVDelete.Enabled = false;
+            this.btnVDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVDelete.ForeColor = System.Drawing.Color.White;
+            this.btnVDelete.Location = new System.Drawing.Point(564, 99);
+            this.btnVDelete.Name = "btnVDelete";
+            this.btnVDelete.Size = new System.Drawing.Size(102, 49);
+            this.btnVDelete.TabIndex = 130;
+            this.btnVDelete.Text = "Delete";
+            this.btnVDelete.UseVisualStyleBackColor = true;
+            this.btnVDelete.Click += new System.EventHandler(this.btnVDelete_Click);
+            // 
+            // btnVEdit
+            // 
+            this.btnVEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVEdit.BackgroundImage")));
+            this.btnVEdit.Enabled = false;
+            this.btnVEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVEdit.ForeColor = System.Drawing.Color.White;
+            this.btnVEdit.Location = new System.Drawing.Point(445, 163);
+            this.btnVEdit.Name = "btnVEdit";
+            this.btnVEdit.Size = new System.Drawing.Size(102, 49);
+            this.btnVEdit.TabIndex = 129;
+            this.btnVEdit.Text = "Edit";
+            this.btnVEdit.UseVisualStyleBackColor = true;
+            this.btnVEdit.Click += new System.EventHandler(this.btnVEdit_Click);
+            // 
+            // btnVAdd
+            // 
+            this.btnVAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVAdd.BackgroundImage")));
+            this.btnVAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVAdd.ForeColor = System.Drawing.Color.White;
+            this.btnVAdd.Location = new System.Drawing.Point(445, 99);
+            this.btnVAdd.Name = "btnVAdd";
+            this.btnVAdd.Size = new System.Drawing.Size(102, 49);
+            this.btnVAdd.TabIndex = 128;
+            this.btnVAdd.Text = "Add";
+            this.btnVAdd.UseVisualStyleBackColor = true;
+            this.btnVAdd.Click += new System.EventHandler(this.btnVAdd_Click);
+            // 
+            // lvType
+            // 
+            this.lvType.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.listView3.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView3.Location = new System.Drawing.Point(166, 101);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(307, 219);
-            this.listView3.TabIndex = 46;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.lvType.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvType.FullRowSelect = true;
+            this.lvType.GridLines = true;
+            this.lvType.Location = new System.Drawing.Point(118, 95);
+            this.lvType.Name = "lvType";
+            this.lvType.Size = new System.Drawing.Size(307, 219);
+            this.lvType.TabIndex = 46;
+            this.lvType.UseCompatibleStateImageBehavior = false;
+            this.lvType.View = System.Windows.Forms.View.Details;
+            this.lvType.SelectedIndexChanged += new System.EventHandler(this.lvType_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Type ID";
-            this.columnHeader3.Width = 73;
+            this.columnHeader3.Width = 101;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Vehicle Type";
-            this.columnHeader4.Width = 161;
-            // 
-            // bunifuMaterialTextbox4
-            // 
-            this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox4.HintText = "";
-            this.bunifuMaterialTextbox4.isPassword = false;
-            this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(263, 41);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(141, 32);
-            this.bunifuMaterialTextbox4.TabIndex = 41;
-            this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuMaterialTextbox5
-            // 
-            this.bunifuMaterialTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox5.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox5.HintText = "";
-            this.bunifuMaterialTextbox5.isPassword = false;
-            this.bunifuMaterialTextbox5.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox5.LineThickness = 3;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(265, 15);
-            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
-            this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(52, 25);
-            this.bunifuMaterialTextbox5.TabIndex = 40;
-            this.bunifuMaterialTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.columnHeader4.Width = 202;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(169, 24);
+            this.label7.Location = new System.Drawing.Point(121, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 19);
             this.label7.TabIndex = 39;
@@ -273,7 +283,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(168, 54);
+            this.label9.Location = new System.Drawing.Point(121, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 19);
             this.label9.TabIndex = 38;
@@ -289,9 +299,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(37, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(762, 60);
+            this.panel1.Size = new System.Drawing.Size(848, 60);
             this.panel1.TabIndex = 56;
             // 
             // label5
@@ -299,7 +309,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(307, 10);
+            this.label5.Location = new System.Drawing.Point(371, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 39);
             this.label5.TabIndex = 30;
@@ -311,43 +321,140 @@
             this.tabInventory.Controls.Add(this.tabPage2);
             this.tabInventory.Controls.Add(this.tabPage3);
             this.tabInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabInventory.Location = new System.Drawing.Point(46, 89);
+            this.tabInventory.Location = new System.Drawing.Point(41, 89);
             this.tabInventory.Name = "tabInventory";
             this.tabInventory.SelectedIndex = 0;
-            this.tabInventory.Size = new System.Drawing.Size(744, 407);
+            this.tabInventory.Size = new System.Drawing.Size(751, 397);
             this.tabInventory.TabIndex = 57;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Firebrick;
-            this.tabPage1.Controls.Add(this.listView1);
-            this.tabPage1.Controls.Add(this.bunifuThinButton26);
-            this.tabPage1.Controls.Add(this.bunifuThinButton23);
-            this.tabPage1.Controls.Add(this.bunifuThinButton21);
-            this.tabPage1.Controls.Add(this.bunifuThinButton22);
-            this.tabPage1.Controls.Add(this.bunifuMaterialTextbox1);
-            this.tabPage1.Controls.Add(this.txtUN);
+            this.tabPage1.Controls.Add(this.txtServiceName);
+            this.tabPage1.Controls.Add(this.btnSClear);
+            this.tabPage1.Controls.Add(this.btnSSave);
+            this.tabPage1.Controls.Add(this.btnSDelete);
+            this.tabPage1.Controls.Add(this.btnSEdit);
+            this.tabPage1.Controls.Add(this.btnSAdd);
+            this.tabPage1.Controls.Add(this.txtServiceID);
+            this.tabPage1.Controls.Add(this.lvServices);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(736, 369);
+            this.tabPage1.Size = new System.Drawing.Size(743, 359);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Services Offered";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // listView1
+            // txtServiceName
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.txtServiceName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtServiceName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtServiceName.Enabled = false;
+            this.txtServiceName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceName.ForeColor = System.Drawing.Color.White;
+            this.txtServiceName.Location = new System.Drawing.Point(205, 64);
+            this.txtServiceName.Name = "txtServiceName";
+            this.txtServiceName.Size = new System.Drawing.Size(160, 25);
+            this.txtServiceName.TabIndex = 128;
+            // 
+            // btnSClear
+            // 
+            this.btnSClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSClear.BackgroundImage")));
+            this.btnSClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSClear.ForeColor = System.Drawing.Color.White;
+            this.btnSClear.Location = new System.Drawing.Point(596, 254);
+            this.btnSClear.Name = "btnSClear";
+            this.btnSClear.Size = new System.Drawing.Size(102, 49);
+            this.btnSClear.TabIndex = 127;
+            this.btnSClear.Text = "Clear";
+            this.btnSClear.UseVisualStyleBackColor = true;
+            this.btnSClear.Click += new System.EventHandler(this.btnSClear_Click);
+            // 
+            // btnSSave
+            // 
+            this.btnSSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSSave.BackgroundImage")));
+            this.btnSSave.Enabled = false;
+            this.btnSSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSSave.ForeColor = System.Drawing.Color.White;
+            this.btnSSave.Location = new System.Drawing.Point(596, 186);
+            this.btnSSave.Name = "btnSSave";
+            this.btnSSave.Size = new System.Drawing.Size(102, 49);
+            this.btnSSave.TabIndex = 126;
+            this.btnSSave.Text = "Save";
+            this.btnSSave.UseVisualStyleBackColor = true;
+            this.btnSSave.Click += new System.EventHandler(this.btnSSave_Click);
+            // 
+            // btnSDelete
+            // 
+            this.btnSDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSDelete.BackgroundImage")));
+            this.btnSDelete.Enabled = false;
+            this.btnSDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSDelete.ForeColor = System.Drawing.Color.White;
+            this.btnSDelete.Location = new System.Drawing.Point(596, 122);
+            this.btnSDelete.Name = "btnSDelete";
+            this.btnSDelete.Size = new System.Drawing.Size(102, 49);
+            this.btnSDelete.TabIndex = 125;
+            this.btnSDelete.Text = "Delete";
+            this.btnSDelete.UseVisualStyleBackColor = true;
+            this.btnSDelete.Click += new System.EventHandler(this.btnSDelete_Click);
+            // 
+            // btnSEdit
+            // 
+            this.btnSEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSEdit.BackgroundImage")));
+            this.btnSEdit.Enabled = false;
+            this.btnSEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSEdit.ForeColor = System.Drawing.Color.White;
+            this.btnSEdit.Location = new System.Drawing.Point(463, 186);
+            this.btnSEdit.Name = "btnSEdit";
+            this.btnSEdit.Size = new System.Drawing.Size(102, 49);
+            this.btnSEdit.TabIndex = 124;
+            this.btnSEdit.Text = "Edit";
+            this.btnSEdit.UseVisualStyleBackColor = true;
+            this.btnSEdit.Click += new System.EventHandler(this.btnSEdit_Click);
+            // 
+            // btnSAdd
+            // 
+            this.btnSAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSAdd.BackgroundImage")));
+            this.btnSAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSAdd.ForeColor = System.Drawing.Color.White;
+            this.btnSAdd.Location = new System.Drawing.Point(463, 122);
+            this.btnSAdd.Name = "btnSAdd";
+            this.btnSAdd.Size = new System.Drawing.Size(102, 49);
+            this.btnSAdd.TabIndex = 123;
+            this.btnSAdd.Text = "Add";
+            this.btnSAdd.UseVisualStyleBackColor = true;
+            this.btnSAdd.Click += new System.EventHandler(this.btnSAdd_Click);
+            // 
+            // txtServiceID
+            // 
+            this.txtServiceID.BackColor = System.Drawing.Color.Firebrick;
+            this.txtServiceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtServiceID.Enabled = false;
+            this.txtServiceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceID.ForeColor = System.Drawing.Color.White;
+            this.txtServiceID.Location = new System.Drawing.Point(205, 25);
+            this.txtServiceID.Name = "txtServiceID";
+            this.txtServiceID.Size = new System.Drawing.Size(52, 25);
+            this.txtServiceID.TabIndex = 122;
+            // 
+            // lvServices
+            // 
+            this.lvServices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.Location = new System.Drawing.Point(104, 109);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(314, 206);
-            this.listView1.TabIndex = 46;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvServices.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvServices.FullRowSelect = true;
+            this.lvServices.GridLines = true;
+            this.lvServices.Location = new System.Drawing.Point(104, 109);
+            this.lvServices.Name = "lvServices";
+            this.lvServices.Size = new System.Drawing.Size(314, 206);
+            this.lvServices.TabIndex = 46;
+            this.lvServices.UseCompatibleStateImageBehavior = false;
+            this.lvServices.View = System.Windows.Forms.View.Details;
+            this.lvServices.SelectedIndexChanged += new System.EventHandler(this.lvServices_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -357,45 +464,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Service Name";
-            this.columnHeader2.Width = 139;
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(202, 51);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(141, 32);
-            this.bunifuMaterialTextbox1.TabIndex = 41;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtUN
-            // 
-            this.txtUN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUN.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtUN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUN.HintForeColor = System.Drawing.Color.Empty;
-            this.txtUN.HintText = "";
-            this.txtUN.isPassword = false;
-            this.txtUN.LineFocusedColor = System.Drawing.Color.White;
-            this.txtUN.LineIdleColor = System.Drawing.Color.DarkGray;
-            this.txtUN.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtUN.LineThickness = 3;
-            this.txtUN.Location = new System.Drawing.Point(202, 25);
-            this.txtUN.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUN.Name = "txtUN";
-            this.txtUN.Size = new System.Drawing.Size(52, 25);
-            this.txtUN.TabIndex = 40;
-            this.txtUN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.columnHeader2.Width = 221;
             // 
             // label8
             // 
@@ -422,59 +491,165 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Firebrick;
-            this.tabPage2.Controls.Add(this.bunifuDropdown1);
-            this.tabPage2.Controls.Add(this.listView2);
-            this.tabPage2.Controls.Add(this.bunifuDropdown2);
+            this.tabPage2.Controls.Add(this.numFee);
+            this.tabPage2.Controls.Add(this.cboVehicleType);
+            this.tabPage2.Controls.Add(this.cboServiceName);
+            this.tabPage2.Controls.Add(this.txtPriceID);
+            this.tabPage2.Controls.Add(this.btnPClear);
+            this.tabPage2.Controls.Add(this.btnPSave);
+            this.tabPage2.Controls.Add(this.btnPDelete);
+            this.tabPage2.Controls.Add(this.btnPEdit);
+            this.tabPage2.Controls.Add(this.btnPAdd);
+            this.tabPage2.Controls.Add(this.lvPrices);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.bunifuMaterialTextbox2);
-            this.tabPage2.Controls.Add(this.bunifuMaterialTextbox3);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.bunifuThinButton24);
-            this.tabPage2.Controls.Add(this.bunifuThinButton27);
-            this.tabPage2.Controls.Add(this.bunifuThinButton28);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(736, 369);
+            this.tabPage2.Size = new System.Drawing.Size(743, 359);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Services Prices";
             // 
-            // bunifuDropdown1
+            // numFee
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.LightGray;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Firebrick;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(129, 47);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.LightGray;
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(195, 29);
-            this.bunifuDropdown1.TabIndex = 94;
+            this.numFee.Enabled = false;
+            this.numFee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numFee.Location = new System.Drawing.Point(425, 46);
+            this.numFee.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numFee.Name = "numFee";
+            this.numFee.Size = new System.Drawing.Size(159, 29);
+            this.numFee.TabIndex = 137;
             // 
-            // listView2
+            // cboVehicleType
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.cboVehicleType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVehicleType.Enabled = false;
+            this.cboVehicleType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboVehicleType.FormattingEnabled = true;
+            this.cboVehicleType.Location = new System.Drawing.Point(146, 94);
+            this.cboVehicleType.Name = "cboVehicleType";
+            this.cboVehicleType.Size = new System.Drawing.Size(178, 29);
+            this.cboVehicleType.TabIndex = 136;
+            // 
+            // cboServiceName
+            // 
+            this.cboServiceName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboServiceName.Enabled = false;
+            this.cboServiceName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboServiceName.FormattingEnabled = true;
+            this.cboServiceName.Location = new System.Drawing.Point(146, 54);
+            this.cboServiceName.Name = "cboServiceName";
+            this.cboServiceName.Size = new System.Drawing.Size(178, 29);
+            this.cboServiceName.TabIndex = 135;
+            // 
+            // txtPriceID
+            // 
+            this.txtPriceID.BackColor = System.Drawing.Color.Firebrick;
+            this.txtPriceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPriceID.Enabled = false;
+            this.txtPriceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceID.ForeColor = System.Drawing.Color.White;
+            this.txtPriceID.Location = new System.Drawing.Point(146, 22);
+            this.txtPriceID.Name = "txtPriceID";
+            this.txtPriceID.Size = new System.Drawing.Size(52, 25);
+            this.txtPriceID.TabIndex = 133;
+            // 
+            // btnPClear
+            // 
+            this.btnPClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPClear.BackgroundImage")));
+            this.btnPClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPClear.ForeColor = System.Drawing.Color.White;
+            this.btnPClear.Location = new System.Drawing.Point(637, 266);
+            this.btnPClear.Name = "btnPClear";
+            this.btnPClear.Size = new System.Drawing.Size(102, 49);
+            this.btnPClear.TabIndex = 132;
+            this.btnPClear.Text = "Clear";
+            this.btnPClear.UseVisualStyleBackColor = true;
+            this.btnPClear.Click += new System.EventHandler(this.btnPClear_Click);
+            // 
+            // btnPSave
+            // 
+            this.btnPSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPSave.BackgroundImage")));
+            this.btnPSave.Enabled = false;
+            this.btnPSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPSave.ForeColor = System.Drawing.Color.White;
+            this.btnPSave.Location = new System.Drawing.Point(637, 198);
+            this.btnPSave.Name = "btnPSave";
+            this.btnPSave.Size = new System.Drawing.Size(102, 49);
+            this.btnPSave.TabIndex = 131;
+            this.btnPSave.Text = "Save";
+            this.btnPSave.UseVisualStyleBackColor = true;
+            this.btnPSave.Click += new System.EventHandler(this.btnPSave_Click);
+            // 
+            // btnPDelete
+            // 
+            this.btnPDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPDelete.BackgroundImage")));
+            this.btnPDelete.Enabled = false;
+            this.btnPDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPDelete.ForeColor = System.Drawing.Color.White;
+            this.btnPDelete.Location = new System.Drawing.Point(637, 134);
+            this.btnPDelete.Name = "btnPDelete";
+            this.btnPDelete.Size = new System.Drawing.Size(102, 49);
+            this.btnPDelete.TabIndex = 130;
+            this.btnPDelete.Text = "Delete";
+            this.btnPDelete.UseVisualStyleBackColor = true;
+            this.btnPDelete.Click += new System.EventHandler(this.btnPDelete_Click);
+            // 
+            // btnPEdit
+            // 
+            this.btnPEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPEdit.BackgroundImage")));
+            this.btnPEdit.Enabled = false;
+            this.btnPEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPEdit.ForeColor = System.Drawing.Color.White;
+            this.btnPEdit.Location = new System.Drawing.Point(532, 198);
+            this.btnPEdit.Name = "btnPEdit";
+            this.btnPEdit.Size = new System.Drawing.Size(102, 49);
+            this.btnPEdit.TabIndex = 129;
+            this.btnPEdit.Text = "Edit";
+            this.btnPEdit.UseVisualStyleBackColor = true;
+            this.btnPEdit.Click += new System.EventHandler(this.btnPEdit_Click);
+            // 
+            // btnPAdd
+            // 
+            this.btnPAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPAdd.BackgroundImage")));
+            this.btnPAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPAdd.ForeColor = System.Drawing.Color.White;
+            this.btnPAdd.Location = new System.Drawing.Point(532, 134);
+            this.btnPAdd.Name = "btnPAdd";
+            this.btnPAdd.Size = new System.Drawing.Size(102, 49);
+            this.btnPAdd.TabIndex = 128;
+            this.btnPAdd.Text = "Add";
+            this.btnPAdd.UseVisualStyleBackColor = true;
+            this.btnPAdd.Click += new System.EventHandler(this.btnPAdd_Click);
+            // 
+            // lvPrices
+            // 
+            this.lvPrices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader11,
             this.columnHeader10});
-            this.listView2.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.Location = new System.Drawing.Point(22, 129);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(519, 221);
-            this.listView2.TabIndex = 93;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.lvPrices.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvPrices.FullRowSelect = true;
+            this.lvPrices.GridLines = true;
+            this.lvPrices.Location = new System.Drawing.Point(22, 129);
+            this.lvPrices.Name = "lvPrices";
+            this.lvPrices.Size = new System.Drawing.Size(508, 221);
+            this.lvPrices.TabIndex = 93;
+            this.lvPrices.UseCompatibleStateImageBehavior = false;
+            this.lvPrices.View = System.Windows.Forms.View.Details;
+            this.lvPrices.SelectedIndexChanged += new System.EventHandler(this.lvPrices_SelectedIndexChanged);
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Service ID.";
-            this.columnHeader8.Width = 89;
+            this.columnHeader8.Width = 79;
             // 
             // columnHeader9
             // 
@@ -488,289 +663,16 @@
             this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader11.Width = 118;
             // 
-            // bunifuThinButton26
-            // 
-            this.bunifuThinButton26.ActiveBorderThickness = 1;
-            this.bunifuThinButton26.ActiveCornerRadius = 20;
-            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
-            this.bunifuThinButton26.ButtonText = "Save";
-            this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton26.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.IdleBorderThickness = 2;
-            this.bunifuThinButton26.IdleCornerRadius = 20;
-            this.bunifuThinButton26.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton26.Location = new System.Drawing.Point(490, 158);
-            this.bunifuThinButton26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton26.Name = "bunifuThinButton26";
-            this.bunifuThinButton26.Size = new System.Drawing.Size(115, 45);
-            this.bunifuThinButton26.TabIndex = 45;
-            this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton23
-            // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Delete";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 2;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(490, 268);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(115, 45);
-            this.bunifuThinButton23.TabIndex = 44;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Edit";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 2;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(491, 213);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(114, 45);
-            this.bunifuThinButton21.TabIndex = 43;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Add";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 2;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(491, 103);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(114, 45);
-            this.bunifuThinButton22.TabIndex = 42;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton24
-            // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Save";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleBorderThickness = 2;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(560, 198);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(115, 45);
-            this.bunifuThinButton24.TabIndex = 90;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton27
-            // 
-            this.bunifuThinButton27.ActiveBorderThickness = 1;
-            this.bunifuThinButton27.ActiveCornerRadius = 20;
-            this.bunifuThinButton27.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton27.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton27.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton27.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton27.BackgroundImage")));
-            this.bunifuThinButton27.ButtonText = "Edit";
-            this.bunifuThinButton27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton27.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton27.IdleBorderThickness = 2;
-            this.bunifuThinButton27.IdleCornerRadius = 20;
-            this.bunifuThinButton27.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton27.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton27.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton27.Location = new System.Drawing.Point(560, 262);
-            this.bunifuThinButton27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton27.Name = "bunifuThinButton27";
-            this.bunifuThinButton27.Size = new System.Drawing.Size(114, 45);
-            this.bunifuThinButton27.TabIndex = 88;
-            this.bunifuThinButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton28
-            // 
-            this.bunifuThinButton28.ActiveBorderThickness = 1;
-            this.bunifuThinButton28.ActiveCornerRadius = 20;
-            this.bunifuThinButton28.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton28.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton28.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton28.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton28.BackgroundImage")));
-            this.bunifuThinButton28.ButtonText = "Add";
-            this.bunifuThinButton28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton28.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton28.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton28.IdleBorderThickness = 2;
-            this.bunifuThinButton28.IdleCornerRadius = 20;
-            this.bunifuThinButton28.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton28.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton28.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton28.Location = new System.Drawing.Point(559, 143);
-            this.bunifuThinButton28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton28.Name = "bunifuThinButton28";
-            this.bunifuThinButton28.Size = new System.Drawing.Size(114, 45);
-            this.bunifuThinButton28.TabIndex = 87;
-            this.bunifuThinButton28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton29
-            // 
-            this.bunifuThinButton29.ActiveBorderThickness = 1;
-            this.bunifuThinButton29.ActiveCornerRadius = 20;
-            this.bunifuThinButton29.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton29.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton29.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton29.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton29.BackgroundImage")));
-            this.bunifuThinButton29.ButtonText = "Save";
-            this.bunifuThinButton29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton29.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton29.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton29.IdleBorderThickness = 2;
-            this.bunifuThinButton29.IdleCornerRadius = 20;
-            this.bunifuThinButton29.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton29.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton29.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton29.Location = new System.Drawing.Point(493, 147);
-            this.bunifuThinButton29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton29.Name = "bunifuThinButton29";
-            this.bunifuThinButton29.Size = new System.Drawing.Size(115, 45);
-            this.bunifuThinButton29.TabIndex = 45;
-            this.bunifuThinButton29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton210
-            // 
-            this.bunifuThinButton210.ActiveBorderThickness = 1;
-            this.bunifuThinButton210.ActiveCornerRadius = 20;
-            this.bunifuThinButton210.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton210.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton210.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton210.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton210.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton210.BackgroundImage")));
-            this.bunifuThinButton210.ButtonText = "Delete";
-            this.bunifuThinButton210.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton210.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton210.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton210.IdleBorderThickness = 2;
-            this.bunifuThinButton210.IdleCornerRadius = 20;
-            this.bunifuThinButton210.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton210.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton210.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton210.Location = new System.Drawing.Point(493, 239);
-            this.bunifuThinButton210.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton210.Name = "bunifuThinButton210";
-            this.bunifuThinButton210.Size = new System.Drawing.Size(115, 45);
-            this.bunifuThinButton210.TabIndex = 44;
-            this.bunifuThinButton210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton211
-            // 
-            this.bunifuThinButton211.ActiveBorderThickness = 1;
-            this.bunifuThinButton211.ActiveCornerRadius = 20;
-            this.bunifuThinButton211.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton211.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton211.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton211.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton211.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton211.BackgroundImage")));
-            this.bunifuThinButton211.ButtonText = "Edit";
-            this.bunifuThinButton211.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton211.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton211.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton211.IdleBorderThickness = 2;
-            this.bunifuThinButton211.IdleCornerRadius = 20;
-            this.bunifuThinButton211.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton211.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton211.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton211.Location = new System.Drawing.Point(493, 193);
-            this.bunifuThinButton211.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton211.Name = "bunifuThinButton211";
-            this.bunifuThinButton211.Size = new System.Drawing.Size(115, 45);
-            this.bunifuThinButton211.TabIndex = 43;
-            this.bunifuThinButton211.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton212
-            // 
-            this.bunifuThinButton212.ActiveBorderThickness = 1;
-            this.bunifuThinButton212.ActiveCornerRadius = 20;
-            this.bunifuThinButton212.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton212.ActiveForecolor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton212.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton212.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton212.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton212.BackgroundImage")));
-            this.bunifuThinButton212.ButtonText = "Add";
-            this.bunifuThinButton212.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton212.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton212.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton212.IdleBorderThickness = 2;
-            this.bunifuThinButton212.IdleCornerRadius = 20;
-            this.bunifuThinButton212.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton212.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton212.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton212.Location = new System.Drawing.Point(493, 101);
-            this.bunifuThinButton212.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton212.Name = "bunifuThinButton212";
-            this.bunifuThinButton212.Size = new System.Drawing.Size(115, 45);
-            this.bunifuThinButton212.TabIndex = 42;
-            this.bunifuThinButton212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ucServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabInventory);
             this.Name = "ucServices";
             this.Size = new System.Drawing.Size(851, 499);
+            this.Load += new System.EventHandler(this.ucServices_Load);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -780,32 +682,20 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numFee)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton27;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton28;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView lvType;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton29;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton210;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton211;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton212;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
@@ -813,22 +703,38 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabControl tabInventory;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvServices;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton26;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtUN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lvPrices;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        public MyTextBox txtServiceName;
+        private System.Windows.Forms.Button btnSClear;
+        private System.Windows.Forms.Button btnSSave;
+        private System.Windows.Forms.Button btnSDelete;
+        private System.Windows.Forms.Button btnSEdit;
+        private System.Windows.Forms.Button btnSAdd;
+        public MyTextBox txtServiceID;
+        private System.Windows.Forms.Button btnVClear;
+        private System.Windows.Forms.Button btnVSave;
+        private System.Windows.Forms.Button btnVDelete;
+        private System.Windows.Forms.Button btnVEdit;
+        private System.Windows.Forms.Button btnVAdd;
+        private System.Windows.Forms.Button btnPClear;
+        private System.Windows.Forms.Button btnPSave;
+        private System.Windows.Forms.Button btnPDelete;
+        private System.Windows.Forms.Button btnPEdit;
+        private System.Windows.Forms.Button btnPAdd;
+        public MyTextBox txtPriceID;
+        private System.Windows.Forms.ComboBox cboVehicleType;
+        private System.Windows.Forms.ComboBox cboServiceName;
+        private System.Windows.Forms.NumericUpDown numFee;
+        public MyTextBox txtTypeName;
+        public MyTextBox txtTypeID;
     }
 }
