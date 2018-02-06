@@ -16,5 +16,42 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            UCManageUser manage = new UCManageUser();
+            frmMain frmmain = new frmMain();
+            frmmain.myPanel.Controls.Clear();
+            frmmain.myPanel.Controls.Add(manage);
+        }
+
+        private void btnManageEmp_Click(object sender, EventArgs e)
+        {
+            UCEmployeeInfo employee = new UCEmployeeInfo();
+            frmMain frmmain = new frmMain();
+            frmmain.myPanel.Controls.Clear();
+            frmmain.myPanel.Controls.Add(employee);
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            UCCustomerRecord cust = new UCCustomerRecord();
+            frmMain frmmain = new frmMain();
+            frmmain.myPanel.Controls.Clear();
+            frmmain.myPanel.Controls.Add(cust);
+        }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            ucLogs logs = new ucLogs();
+            frmMain frmmain = new frmMain();
+            frmmain.myPanel.Controls.Clear();
+            frmmain.myPanel.Controls.Add(logs);
+        }
     }
 }

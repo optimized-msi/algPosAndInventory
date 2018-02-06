@@ -52,13 +52,28 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.clerkPanel = new System.Windows.Forms.Panel();
+            this.maintenancePanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnManageEmp = new System.Windows.Forms.Button();
+            this.btnManageUsers = new System.Windows.Forms.Button();
+            this.btnLogs = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.sidePanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.myPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.maintenancePanel.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -280,6 +295,7 @@
             this.myPanel.BackColor = System.Drawing.Color.Maroon;
             this.myPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("myPanel.BackgroundImage")));
             this.myPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.myPanel.Controls.Add(this.maintenancePanel);
             this.myPanel.Location = new System.Drawing.Point(209, 114);
             this.myPanel.Name = "myPanel";
             this.myPanel.Size = new System.Drawing.Size(1157, 651);
@@ -334,6 +350,118 @@
             this.clerkPanel.Size = new System.Drawing.Size(1365, 651);
             this.clerkPanel.TabIndex = 83;
             // 
+            // maintenancePanel
+            // 
+            this.maintenancePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.maintenancePanel.Controls.Add(this.panel8);
+            this.maintenancePanel.Controls.Add(this.panel9);
+            this.maintenancePanel.Controls.Add(this.panel6);
+            this.maintenancePanel.Location = new System.Drawing.Point(3, 0);
+            this.maintenancePanel.Name = "maintenancePanel";
+            this.maintenancePanel.Size = new System.Drawing.Size(816, 464);
+            this.maintenancePanel.TabIndex = 135;
+            this.maintenancePanel.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(240, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(315, 39);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Logs and Maintenance";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Firebrick;
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(810, 60);
+            this.panel6.TabIndex = 133;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCustomer.BackgroundImage")));
+            this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Location = new System.Drawing.Point(143, 194);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(213, 113);
+            this.btnCustomer.TabIndex = 128;
+            this.btnCustomer.Text = "Customer Record";
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // btnManageEmp
+            // 
+            this.btnManageEmp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageEmp.BackgroundImage")));
+            this.btnManageEmp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageEmp.ForeColor = System.Drawing.Color.White;
+            this.btnManageEmp.Location = new System.Drawing.Point(451, 32);
+            this.btnManageEmp.Name = "btnManageEmp";
+            this.btnManageEmp.Size = new System.Drawing.Size(213, 113);
+            this.btnManageEmp.TabIndex = 129;
+            this.btnManageEmp.Text = "Manage Employee Information";
+            this.btnManageEmp.UseVisualStyleBackColor = true;
+            this.btnManageEmp.Click += new System.EventHandler(this.btnManageEmp_Click);
+            // 
+            // btnManageUsers
+            // 
+            this.btnManageUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnManageUsers.BackgroundImage")));
+            this.btnManageUsers.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageUsers.ForeColor = System.Drawing.Color.White;
+            this.btnManageUsers.Location = new System.Drawing.Point(143, 32);
+            this.btnManageUsers.Name = "btnManageUsers";
+            this.btnManageUsers.Size = new System.Drawing.Size(213, 113);
+            this.btnManageUsers.TabIndex = 127;
+            this.btnManageUsers.Text = "Manage Users";
+            this.btnManageUsers.UseVisualStyleBackColor = true;
+            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
+            // 
+            // btnLogs
+            // 
+            this.btnLogs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogs.BackgroundImage")));
+            this.btnLogs.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogs.ForeColor = System.Drawing.Color.White;
+            this.btnLogs.Location = new System.Drawing.Point(451, 192);
+            this.btnLogs.Name = "btnLogs";
+            this.btnLogs.Size = new System.Drawing.Size(213, 113);
+            this.btnLogs.TabIndex = 130;
+            this.btnLogs.Text = "Logs";
+            this.btnLogs.UseVisualStyleBackColor = true;
+            this.btnLogs.Click += new System.EventHandler(this.btnLogs_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Firebrick;
+            this.panel8.Controls.Add(this.panel1);
+            this.panel8.Location = new System.Drawing.Point(900, 116);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(189, 286);
+            this.panel8.TabIndex = 134;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(42, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 131;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Firebrick;
+            this.panel9.Controls.Add(this.btnManageEmp);
+            this.panel9.Controls.Add(this.btnLogs);
+            this.panel9.Controls.Add(this.btnCustomer);
+            this.panel9.Controls.Add(this.btnManageUsers);
+            this.panel9.Location = new System.Drawing.Point(9, 95);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(789, 354);
+            this.panel9.TabIndex = 134;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,7 +492,13 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.myPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.maintenancePanel.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,5 +529,15 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button8;
         public System.Windows.Forms.Panel clerkPanel;
+        private System.Windows.Forms.Panel maintenancePanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnManageEmp;
+        private System.Windows.Forms.Button btnManageUsers;
+        private System.Windows.Forms.Button btnLogs;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel9;
     }
 }

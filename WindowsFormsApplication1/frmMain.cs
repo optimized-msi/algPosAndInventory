@@ -146,9 +146,11 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ucLogsAndMaintenance uclogsandmaintenance = new ucLogsAndMaintenance();
+            //ucLogsAndMaintenance uclogsandmaintenance = new ucLogsAndMaintenance();
             myPanel.Controls.Clear();
-            myPanel.Controls.Add(uclogsandmaintenance);
+            maintenancePanel.Visible = true;
+            myPanel.Controls.Add(maintenancePanel);
+            //myPanel.Controls.Add(uclogsandmaintenance);
         }
 
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
@@ -177,6 +179,35 @@ namespace WindowsFormsApplication1
             {
                 //do something else
             }
+        }
+
+        private void btnManageEmp_Click(object sender, EventArgs e)
+        {
+            UCEmployeeInfo employee = new UCEmployeeInfo();
+            myPanel.Controls.Clear();
+            myPanel.Controls.Add(employee);
+        }
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            UCManageUser manage = new UCManageUser();
+            //frmMain frmmain = new frmMain();
+            myPanel.Controls.Clear();
+            myPanel.Controls.Add(manage);
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            UCCustomerRecord cust = new UCCustomerRecord();
+            myPanel.Controls.Clear();
+            myPanel.Controls.Add(cust);
+        }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+            ucLogs logs = new ucLogs();
+            myPanel.Controls.Clear();
+            myPanel.Controls.Add(logs);
         }
     }
 }
