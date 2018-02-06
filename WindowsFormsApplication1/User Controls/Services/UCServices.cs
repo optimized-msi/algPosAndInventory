@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
                 ListViewItem item = lvServices.SelectedItems[0];
                 txtServiceID.Text = item.SubItems[0].Text;
                 txtServiceName.Text = item.SubItems[1].Text;
-                btnSAdd.Enabled = false; btnSEdit.Enabled = true;btnSDelete.Enabled = true;btnSSave.Enabled = false;
+                btnSAdd.Enabled = false; btnSEdit.Enabled = true;btnSDelete.Enabled = true;btnSSave.Enabled = false; sedit = false; sadd = false; txtServiceID.Enabled = false; txtServiceName.Enabled = false;
             }
             else
             {
@@ -93,9 +93,6 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
-     
-
         private void btnSClear_Click(object sender, EventArgs e)
         {
             LoadServicesLV(); txtServiceID.Text = ""; txtServiceName.Text = ""; btnSAdd.Enabled = true; btnSSave.Enabled = false; btnSDelete.Enabled = false;btnSEdit.Enabled = false; txtServiceName.Enabled = false;
@@ -238,7 +235,7 @@ namespace WindowsFormsApplication1
                 ListViewItem item = lvType.SelectedItems[0];
                 txtTypeID.Text = item.SubItems[0].Text;
                 txtTypeName.Text = item.SubItems[1].Text;
-                btnVAdd.Enabled = false; btnVEdit.Enabled = true; btnVDelete.Enabled = true; btnVSave.Enabled = false;
+                btnVAdd.Enabled = false; btnVEdit.Enabled = true; btnVDelete.Enabled = true; btnVSave.Enabled = false;tedit = false;tadd = false;txtTypeID.Enabled = false; txtTypeName.Enabled = false;
             }
             else
             {
@@ -295,11 +292,11 @@ namespace WindowsFormsApplication1
         }
         private void btnPSave_Click(object sender, EventArgs e)
         {
-            if (cboServiceName.Text.Trim() == "" && cboVehicleType.Text.Trim() == "" && numFee.Text.Trim() == "")
+            if (cboServiceName.Text.Trim() == "" ||cboVehicleType.Text.Trim() == "" || numFee.Text.Trim() == "")
             {
                 MessageBox.Show("Please Provide Service, Vehicle Type, and Service Fee", "Services");
                 cboServiceName.Focus();
-            } else if (IsDupServNameType())
+            } else if (IsDupServNameType() && !pedit)
                 MessageBox.Show("Service for a particular vehicle type is existing","Services");
             else
             {
@@ -315,7 +312,7 @@ namespace WindowsFormsApplication1
                     pedit = false;
                     query = "UPDATE service_price SET service_fee='" + numFee.Value.ToString() + "' WHERE service_price_ID='" + txtPriceID.Text + "'";
                     dbcon.ManipulateData(query);
-                    MessageBox.Show("Updated a vehicle type.", "Services");
+                    MessageBox.Show("Updated a service price.", "Services");
                 }
                 btnPClear.PerformClick();
             }
@@ -334,7 +331,7 @@ namespace WindowsFormsApplication1
                 cboServiceName.Text = item.SubItems[1].Text;
                 cboVehicleType.Text = item.SubItems[2].Text;
                 numFee.Value = Convert.ToDecimal(item.SubItems[3].Text);
-                btnPAdd.Enabled = false; btnPEdit.Enabled = true; btnPDelete.Enabled = true; btnPSave.Enabled = false;
+                btnPAdd.Enabled = false; btnPEdit.Enabled = true; btnPDelete.Enabled = true; btnPSave.Enabled = false; padd = false; pedit = false; cboServiceName.Enabled = false; cboVehicleType.Enabled = false; numFee.Enabled = false;
             }
             else
             {

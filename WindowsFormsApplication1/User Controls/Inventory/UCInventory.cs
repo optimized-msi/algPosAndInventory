@@ -63,6 +63,7 @@ namespace WindowsFormsApplication1
         }
         private void LoadDrp()
         {
+            drpCat.Items.Clear();
             string query = "SELECT category_name FROM category";
             dbcon.mysqlconnect.Open();
             MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
@@ -95,7 +96,7 @@ namespace WindowsFormsApplication1
                 txtPriceBuy.Text = item.SubItems[4].Text;
                 txtPriceAdded.Text = item.SubItems[5].Text;
                 txtPriceSell.Text = item.SubItems[6].Text;
-                btnEdit.Enabled = true; btnDelete.Enabled = true; btnAdd.Enabled = false;
+                btnEdit.Enabled = true; btnDelete.Enabled = true; btnAdd.Enabled = false; add = false; Lock();
             }
             else
             {
@@ -426,7 +427,7 @@ namespace WindowsFormsApplication1
                 txtSProdName.Text = item.SubItems[2].Text;
                 numQuan.Value = Convert.ToDecimal(item.SubItems[5].Text);
                 txtReceived.Text = item.SubItems[6].Text;
-                btnSAdd.Enabled = false; btnSSave.Enabled = false; btnSEdit.Enabled = true;btnRemoveStocks.Enabled = true;btnSDeduct.Enabled = true; btnRemoveZero.Enabled = false;
+                btnSAdd.Enabled = false; btnSSave.Enabled = false; btnSEdit.Enabled = true;btnRemoveStocks.Enabled = true;btnSDeduct.Enabled = true; btnRemoveZero.Enabled = false;SLock(); sAdd = false; sEdit = false;
             }
             else
             {
@@ -474,7 +475,9 @@ namespace WindowsFormsApplication1
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-
+            frmCategory frmCat = new frmCategory();
+            frmCat.ShowDialog();
+            LoadDrp();
         }
 
         private void cboSort_SelectedIndexChanged(object sender, EventArgs e)

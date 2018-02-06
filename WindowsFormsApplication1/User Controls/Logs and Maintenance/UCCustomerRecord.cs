@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.User_Controls.Logs_and_Maintenance.Logs
+namespace WindowsFormsApplication1
 {
-    public partial class ucLogs : UserControl
+    public partial class UCCustomerRecord : UserControl
     {
-        public ucLogs()
+        public UCCustomerRecord()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

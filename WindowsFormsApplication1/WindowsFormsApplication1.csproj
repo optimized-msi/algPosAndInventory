@@ -103,6 +103,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Stocks.cs" />
+    <Compile Include="User Controls\Logs and Maintenance\ucLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Logs and Maintenance\ucLogs.Designer.cs">
+      <DependentUpon>ucLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Logs and Maintenance\UCCustomerRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Logs and Maintenance\UCCustomerRecord.Designer.cs">
+      <DependentUpon>UCCustomerRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,18 +132,6 @@
     </Compile>
     <Compile Include="User Controls\Reports\ucReports.Designer.cs">
       <DependentUpon>ucReports.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\Logs\ucLogs.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\Logs\ucLogs.Designer.cs">
-      <DependentUpon>ucLogs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\ucCustomerRecords.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\ucCustomerRecords.Designer.cs">
-      <DependentUpon>ucCustomerRecords.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\Logs and Maintenance\UCManageEmployeeInfo.cs">
       <SubType>UserControl</SubType>
@@ -198,6 +198,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,6 +210,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User Controls\Logs and Maintenance\ucLogs.resx">
+      <DependentUpon>ucLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Logs and Maintenance\UCCustomerRecord.resx">
+      <DependentUpon>UCCustomerRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.resx">
       <DependentUpon>ucLogsAndMaintenance.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,12 +224,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Reports\ucReports.resx">
       <DependentUpon>ucReports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Logs and Maintenance\Logs\ucLogs.resx">
-      <DependentUpon>ucLogs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Logs and Maintenance\ucCustomerRecords.resx">
-      <DependentUpon>ucCustomerRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Logs and Maintenance\UCManageEmployeeInfo.resx">
       <DependentUpon>UCManageEmployeeInfo.cs</DependentUpon>

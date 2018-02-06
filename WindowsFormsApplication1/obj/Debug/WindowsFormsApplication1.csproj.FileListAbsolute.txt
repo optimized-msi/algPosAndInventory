@@ -43,8 +43,6 @@ C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Deb
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCInventory.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmMain.resources
-C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.User_Controls.Logs_and_Maintenance.Logs.ucLogs.resources
-C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.User_Controls.Logs_and_Maintenance.ucCustomerRecords.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmLogin.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.User_Controls.Point_of_Sale.ucPosServices.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ucReports.resources
@@ -52,3 +50,5 @@ C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Deb
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ucServices.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmAddStocks.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmCategory.resources
+C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ucLogs.resources
+C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCCustomerRecord.resources
