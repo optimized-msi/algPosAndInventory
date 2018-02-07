@@ -384,7 +384,36 @@
   <ItemGroup>
     <None Include="Resources\pos3.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\SDSD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1231231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\services_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos_firebrick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos_firebrick1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

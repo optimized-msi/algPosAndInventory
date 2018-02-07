@@ -209,5 +209,22 @@ namespace WindowsFormsApplication1
             myPanel.Controls.Clear();
             myPanel.Controls.Add(logs);
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            UCPointOfSale ucpointofsale = new UCPointOfSale();
+            myPanel.Controls.Clear();
+            myPanel.Controls.Add(ucpointofsale);
+        }
+
+        private void btnPos_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_firebrick));
+        }
+
+        private void btnPos_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_white));
+        }
     }
 }
