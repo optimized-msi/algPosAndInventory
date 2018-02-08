@@ -7,77 +7,198 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace WindowsFormsApplication1
 {
     public partial class UCPointOfSale : UserControl
     {
+        classDatabaseConnect dbcon = new classDatabaseConnect();
+        string query = ""; bool lvclick = false;
         public UCPointOfSale()
         {
             InitializeComponent();
         }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuThinButton23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void UserControl3_Load(object sender, EventArgs e)
         {
+            txtItemCode.Focus();
+        }
+        private void txtItemCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SelectItem();
+                AddTotalItem();
+                //MessageBox.Show("Test");
+            }
+        }
+        //to do for adding and selling a product:
+        //1. select match of the item code entered(add the list in the listview first then save to db if confirmed or paid)
+        //2. default item quantity is 1. if user clicked the item in the listview, focused is on the quantity then the "add item" will become "edit item" then the Total price is multiplied from Price(product_sellingprice) and quantity - loop from all the items. make sure to deduct the stocks from the old stocks, if old  stock is not sufficient then move to the newer
+        //3. for the total item - just add up all the total in the listview
+        //4. add to the quantity if the user scans barcode that is already in the list view
+        //5. result to be printed in the receipt will be based from the listview
+        private void SelectItem()
+        {
+            try
+            {
+                query = "SELECT product_ID,product_name,product_desc,product_sellingprice FROM products WHERE product_ID='"+txtItemCode.Text+"'";
+                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
+                DataTable table = new DataTable("myTable");
+                mySqlDataAdapter.Fill(table);
+                lvItems.View = View.Details;
+                ListViewItem iItem; double total = 0.0; bool isItemExisting = false;
+                //to do: surround w/ if to determine if datatable returns rows
+                if (table != null && table.Rows.Count>0)
+                {
+                    if (!IsSameItem())
+                    {
+                        foreach (DataRow row in table.Rows)
+                        {
+                            iItem = new ListViewItem();
+                            for (int i = 0; i < 6; i++)
+                            {
+                                if (i == 0)
+                                    iItem.Text = row.ItemArray[i].ToString();
+                                else if (i == 3)
+                                {
+                                    total = Convert.ToDouble(row.ItemArray[i].ToString()) * Convert.ToDouble(numQuan.Value.ToString());
+                                    iItem.SubItems.Add(row.ItemArray[i].ToString());
+                                    isItemExisting = true;
+                                }
+                                else if (i == 4)
+                                {
+                                    iItem.SubItems.Add(numQuan.Value.ToString());
+                                }
+                                else if (i == 5)
+                                {
+                                    iItem.SubItems.Add(total.ToString());
+                                }
+                                else
+                                    iItem.SubItems.Add(row.ItemArray[i].ToString());
 
+                            }
+                            lvItems.Items.Add(iItem);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Barcode not existing","Point of Sale");
+                }
+                txtItemCode.Clear(); numQuan.Value = 1;
+                dbcon.mysqlconnect.Close();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+        private bool IsSameItem()
+        {
+            bool same = false;
+            foreach (ListViewItem item in lvItems.Items)
+            {
+                if (txtItemCode.Text == item.Text && !lvclick)
+                {
+                    item.SubItems[4].Text =(Convert.ToInt16(numQuan.Value) + Convert.ToInt16(item.SubItems[4].Text)).ToString();
+                    item.SubItems[5].Text =(Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[4].Text)).ToString();
+                    same = true;
+
+                }else if (txtItemCode.Text == item.Text && lvclick)
+                {
+                    item.SubItems[4].Text = Convert.ToInt16(numQuan.Value).ToString();
+                    item.SubItems[5].Text = (Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[4].Text)).ToString();
+                    lvclick = false;
+                    same = true;
+                }
+            }
+            AddTotalItem();
+            return same;
+        }
+        private void btnAddService_Click(object sender, EventArgs e)
+        {
+            frmPosAddService frmposaddservice = new frmPosAddService();
+            frmposaddservice.ShowDialog();
+            if (clsPosService.plateNo != null)
+            {
+               ListViewItem iItem = new ListViewItem();
+               iItem.Text = clsPosService.plateNo;
+               iItem.SubItems.Add(clsPosService.vehicleType);
+               iItem.SubItems.Add(clsPosService.serviceName);
+               iItem.SubItems.Add(clsPosService.serviceFee);
+               iItem.SubItems.Add(clsPosService.servicedBy);
+
+                lvServices.Items.Add(iItem);
+            }
+            double total = 0.0;
+            foreach (ListViewItem item in lvServices.Items)
+            {
+                total = Convert.ToDouble(lblTotalService.Text) + (Convert.ToDouble(item.SubItems[3].Text.ToString()));
+            }
+            lblTotalService.Text = total.ToString();
+            lblTotalAmount.Text = (Convert.ToDouble(lblTotalService.Text) + Convert.ToDouble(lblTotalItems.Text)).ToString();
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void btnViewOngoing_Click(object sender, EventArgs e)
+        {
+            frmPosOngoing frmposonging = new frmPosOngoing();
+            frmposonging.ShowDialog();
+        }
+
+        private void lvItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvItems.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lvItems.SelectedItems[0];
+                txtItemCode.Text = item.SubItems[0].Text;
+                numQuan.Text = item.SubItems[4].Text;
+                lvclick = true;
+            }
+        }
+        private void AddTotalItem()
+        {
+            double total = 0.0;
+            foreach (ListViewItem item in lvItems.Items)
+            {
+                total = Convert.ToDouble(lblTotalItems.Text) + (Convert.ToDouble(item.SubItems[5].Text.ToString()));
+            }
+            lblTotalItems.Text = total.ToString();
+            lblTotalAmount.Text = (Convert.ToDouble(lblTotalService.Text) + Convert.ToDouble(lblTotalItems.Text)).ToString();
+        }
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            SelectItem();
+            AddTotalItem();
+        }
+
+        private void lblTotalAmount_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void numDiscount_ValueChanged(object sender, EventArgs e)
+        {
+            if (numDiscount.Value == 0)
+            {
+                lblDiscAmount.Text = lblTotalAmount.Text;
+            }
+            else
+            {
+                lblDiscAmount.Text = (Convert.ToDouble(lblTotalAmount.Text) - (Convert.ToDouble(lblTotalAmount.Text) * ((Convert.ToDouble(numDiscount.Value))/100))).ToString();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            numDiscount.Enabled = true;
+        }
+
+        private void txtItemCode_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void bunifuMaterialTextbox4_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuDropdown6_onItemSelected(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuDropdown7_onItemSelected(object sender, EventArgs e)
+        private void lvServices_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
