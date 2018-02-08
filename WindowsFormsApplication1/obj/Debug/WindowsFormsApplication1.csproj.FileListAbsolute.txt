@@ -52,3 +52,5 @@ C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Deb
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmCategory.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ucLogs.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCCustomerRecord.resources
+C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmPosAddService.resources
+C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmPosOngoing.resources

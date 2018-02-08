@@ -33,6 +33,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.txtPosition = new MyTextBox();
+            this.txtMI = new MyTextBox();
+            this.txtGN = new MyTextBox();
+            this.txtAddress = new MyTextBox();
+            this.txtFN = new MyTextBox();
+            this.txtEmpNo = new MyTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,12 +56,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtPosition = new MyTextBox();
-            this.txtMI = new MyTextBox();
-            this.txtGN = new MyTextBox();
-            this.txtAddress = new MyTextBox();
-            this.txtFN = new MyTextBox();
-            this.txtEmpNo = new MyTextBox();
             this.panel1.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
@@ -124,6 +124,78 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(714, 370);
             this.bunifuCards1.TabIndex = 35;
+            // 
+            // txtPosition
+            // 
+            this.txtPosition.BackColor = System.Drawing.Color.Firebrick;
+            this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPosition.Enabled = false;
+            this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPosition.ForeColor = System.Drawing.Color.White;
+            this.txtPosition.Location = new System.Drawing.Point(107, 88);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(158, 25);
+            this.txtPosition.TabIndex = 149;
+            // 
+            // txtMI
+            // 
+            this.txtMI.BackColor = System.Drawing.Color.Firebrick;
+            this.txtMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMI.Enabled = false;
+            this.txtMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMI.ForeColor = System.Drawing.Color.White;
+            this.txtMI.Location = new System.Drawing.Point(600, 48);
+            this.txtMI.Name = "txtMI";
+            this.txtMI.Size = new System.Drawing.Size(53, 25);
+            this.txtMI.TabIndex = 148;
+            // 
+            // txtGN
+            // 
+            this.txtGN.BackColor = System.Drawing.Color.Firebrick;
+            this.txtGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGN.Enabled = false;
+            this.txtGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGN.ForeColor = System.Drawing.Color.White;
+            this.txtGN.Location = new System.Drawing.Point(399, 49);
+            this.txtGN.Name = "txtGN";
+            this.txtGN.Size = new System.Drawing.Size(168, 25);
+            this.txtGN.TabIndex = 147;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.Color.Firebrick;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Enabled = false;
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.White;
+            this.txtAddress.Location = new System.Drawing.Point(396, 92);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(189, 25);
+            this.txtAddress.TabIndex = 145;
+            // 
+            // txtFN
+            // 
+            this.txtFN.BackColor = System.Drawing.Color.Firebrick;
+            this.txtFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFN.Enabled = false;
+            this.txtFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFN.ForeColor = System.Drawing.Color.White;
+            this.txtFN.Location = new System.Drawing.Point(107, 49);
+            this.txtFN.Name = "txtFN";
+            this.txtFN.Size = new System.Drawing.Size(189, 25);
+            this.txtFN.TabIndex = 144;
+            // 
+            // txtEmpNo
+            // 
+            this.txtEmpNo.BackColor = System.Drawing.Color.Firebrick;
+            this.txtEmpNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmpNo.Enabled = false;
+            this.txtEmpNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpNo.ForeColor = System.Drawing.Color.White;
+            this.txtEmpNo.Location = new System.Drawing.Point(114, 7);
+            this.txtEmpNo.Name = "txtEmpNo";
+            this.txtEmpNo.Size = new System.Drawing.Size(53, 25);
+            this.txtEmpNo.TabIndex = 143;
             // 
             // label8
             // 
@@ -258,6 +330,7 @@
             this.columnHeader6,
             this.columnHeader5});
             this.lvEmp.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvEmp.FullRowSelect = true;
             this.lvEmp.Location = new System.Drawing.Point(11, 131);
             this.lvEmp.Name = "lvEmp";
             this.lvEmp.Size = new System.Drawing.Size(574, 228);
@@ -294,78 +367,6 @@
             // 
             this.columnHeader5.Text = "Address";
             this.columnHeader5.Width = 89;
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.BackColor = System.Drawing.Color.Firebrick;
-            this.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPosition.Enabled = false;
-            this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.ForeColor = System.Drawing.Color.White;
-            this.txtPosition.Location = new System.Drawing.Point(107, 88);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(158, 25);
-            this.txtPosition.TabIndex = 149;
-            // 
-            // txtMI
-            // 
-            this.txtMI.BackColor = System.Drawing.Color.Firebrick;
-            this.txtMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMI.Enabled = false;
-            this.txtMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMI.ForeColor = System.Drawing.Color.White;
-            this.txtMI.Location = new System.Drawing.Point(600, 48);
-            this.txtMI.Name = "txtMI";
-            this.txtMI.Size = new System.Drawing.Size(53, 25);
-            this.txtMI.TabIndex = 148;
-            // 
-            // txtGN
-            // 
-            this.txtGN.BackColor = System.Drawing.Color.Firebrick;
-            this.txtGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGN.Enabled = false;
-            this.txtGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGN.ForeColor = System.Drawing.Color.White;
-            this.txtGN.Location = new System.Drawing.Point(399, 49);
-            this.txtGN.Name = "txtGN";
-            this.txtGN.Size = new System.Drawing.Size(168, 25);
-            this.txtGN.TabIndex = 147;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.Firebrick;
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Enabled = false;
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(396, 92);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(189, 25);
-            this.txtAddress.TabIndex = 145;
-            // 
-            // txtFN
-            // 
-            this.txtFN.BackColor = System.Drawing.Color.Firebrick;
-            this.txtFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFN.Enabled = false;
-            this.txtFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFN.ForeColor = System.Drawing.Color.White;
-            this.txtFN.Location = new System.Drawing.Point(107, 49);
-            this.txtFN.Name = "txtFN";
-            this.txtFN.Size = new System.Drawing.Size(189, 25);
-            this.txtFN.TabIndex = 144;
-            // 
-            // txtEmpNo
-            // 
-            this.txtEmpNo.BackColor = System.Drawing.Color.Firebrick;
-            this.txtEmpNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmpNo.Enabled = false;
-            this.txtEmpNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpNo.ForeColor = System.Drawing.Color.White;
-            this.txtEmpNo.Location = new System.Drawing.Point(114, 7);
-            this.txtEmpNo.Name = "txtEmpNo";
-            this.txtEmpNo.Size = new System.Drawing.Size(53, 25);
-            this.txtEmpNo.TabIndex = 143;
             // 
             // UCEmployeeInfo
             // 

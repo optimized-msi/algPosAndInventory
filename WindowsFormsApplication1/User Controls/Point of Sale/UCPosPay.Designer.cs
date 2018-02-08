@@ -32,6 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuDropdown5 = new Bunifu.Framework.UI.BunifuDropdown();
@@ -43,11 +48,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,61 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(384, 264);
             this.bunifuCards1.TabIndex = 75;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(161, 82);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 19);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(161, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 19);
+            this.label5.TabIndex = 96;
+            this.label5.Text = "Total Amount:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(161, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 19);
+            this.label6.TabIndex = 95;
+            this.label6.Text = "VAT:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(161, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 19);
+            this.label7.TabIndex = 94;
+            this.label7.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(161, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(17, 19);
+            this.label8.TabIndex = 93;
+            this.label8.Text = "0";
             // 
             // bunifuDropdown1
             // 
@@ -159,9 +214,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(47, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 19);
+            this.label1.Size = new System.Drawing.Size(47, 19);
             this.label1.TabIndex = 87;
-            this.label1.Text = "Total Amount:";
+            this.label1.Text = "Total:";
             // 
             // label17
             // 
@@ -256,61 +311,6 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(106, 55);
             this.bunifuThinButton21.TabIndex = 76;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(161, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 19);
-            this.label4.TabIndex = 97;
-            this.label4.Text = "Total Amount:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(161, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 19);
-            this.label5.TabIndex = 96;
-            this.label5.Text = "Total Amount:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(161, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 19);
-            this.label6.TabIndex = 95;
-            this.label6.Text = "VAT:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(161, 51);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 19);
-            this.label7.TabIndex = 94;
-            this.label7.Text = "Total Service:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(161, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 19);
-            this.label8.TabIndex = 93;
-            this.label8.Text = "Total Items:";
             // 
             // UCPosPay
             // 
