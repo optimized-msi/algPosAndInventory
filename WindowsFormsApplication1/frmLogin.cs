@@ -102,5 +102,11 @@ namespace WindowsFormsApplication1
                 btnOK.PerformClick();
             }
         }
+
+        private void frmLogin_DoubleClick(object sender, EventArgs e)
+        {
+            frmAddress frm = new frmAddress();
+            frm.ShowDialog();
+        }
     }
 }

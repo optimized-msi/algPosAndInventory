@@ -72,12 +72,25 @@
   <ItemGroup>
     <Compile Include="Classes\classDatabaseConnect.cs" />
     <Compile Include="Classes\clsUser.cs" />
+    <Compile Include="clsPosItems.cs" />
     <Compile Include="clsPosService.cs" />
+    <Compile Include="frmAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddress.Designer.cs">
+      <DependentUpon>frmAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Point of Sale\frmPosPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\Point of Sale\frmPosPay.Designer.cs">
+      <DependentUpon>frmPosPay.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\Point of Sale\frmAddStocks.cs">
       <SubType>Form</SubType>
@@ -200,8 +213,14 @@
     <Compile Include="User Controls\Inventory\UCInventory.Designer.cs">
       <DependentUpon>UCInventory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAddress.resx">
+      <DependentUpon>frmAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Point of Sale\frmPosPay.resx">
+      <DependentUpon>frmPosPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Point of Sale\frmAddStocks.resx">
       <DependentUpon>frmAddStocks.cs</DependentUpon>

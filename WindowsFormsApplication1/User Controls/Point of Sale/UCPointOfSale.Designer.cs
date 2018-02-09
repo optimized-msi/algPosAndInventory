@@ -30,30 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPointOfSale));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txtAddress = new MyTextBox();
-            this.txtContact = new MyTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCustMI = new MyTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCustGN = new MyTextBox();
-            this.txtCustFN = new MyTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtInvoiceNo = new MyTextBox();
             this.lvServices = new System.Windows.Forms.ListView();
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lvItems = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,16 +65,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnViewOngoing = new System.Windows.Forms.Button();
-            this.btnAddService = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.numQuan = new System.Windows.Forms.NumericUpDown();
-            this.btnAddItem = new System.Windows.Forms.Button();
-            this.txtItemCode = new MyTextBox();
             this.numDiscount = new System.Windows.Forms.NumericUpDown();
             this.label21 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblTotalItems = new System.Windows.Forms.Label();
             this.lblTotalService = new System.Windows.Forms.Label();
             this.lblTotalAmount = new System.Windows.Forms.Label();
@@ -92,6 +77,21 @@
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblDiscAmount = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.txtItemCode = new MyTextBox();
+            this.txtAddress = new MyTextBox();
+            this.txtContact = new MyTextBox();
+            this.txtCustMI = new MyTextBox();
+            this.txtCustGN = new MyTextBox();
+            this.txtCustFN = new MyTextBox();
+            this.txtInvoiceNo = new MyTextBox();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.btnViewOngoing = new System.Windows.Forms.Button();
+            this.btnAddService = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCards1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -108,9 +108,9 @@
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Maroon;
             this.bunifuCards1.Controls.Add(this.button3);
-            this.bunifuCards1.Controls.Add(this.button2);
+            this.bunifuCards1.Controls.Add(this.btnPay);
             this.bunifuCards1.Controls.Add(this.button1);
-            this.bunifuCards1.Controls.Add(this.btnSave);
+            this.bunifuCards1.Controls.Add(this.btnRemove);
             this.bunifuCards1.Controls.Add(this.txtAddress);
             this.bunifuCards1.Controls.Add(this.txtContact);
             this.bunifuCards1.Controls.Add(this.label18);
@@ -132,77 +132,6 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(1353, 467);
             this.bunifuCards1.TabIndex = 17;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1034, 404);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 52);
-            this.button3.TabIndex = 119;
-            this.button3.Text = "New Transaction";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(916, 404);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 52);
-            this.button2.TabIndex = 118;
-            this.button2.Text = "Pay Transaction";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(741, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 52);
-            this.button1.TabIndex = 117;
-            this.button1.Text = "Adjust Discount";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(620, 404);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(114, 52);
-            this.btnSave.TabIndex = 113;
-            this.btnSave.Text = "Remove";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.Firebrick;
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(1089, 30);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(189, 25);
-            this.txtAddress.TabIndex = 113;
-            // 
-            // txtContact
-            // 
-            this.txtContact.BackColor = System.Drawing.Color.Firebrick;
-            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContact.ForeColor = System.Drawing.Color.White;
-            this.txtContact.Location = new System.Drawing.Point(766, 34);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(188, 25);
-            this.txtContact.TabIndex = 112;
             // 
             // label18
             // 
@@ -232,17 +161,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Name";
             // 
-            // txtCustMI
-            // 
-            this.txtCustMI.BackColor = System.Drawing.Color.Firebrick;
-            this.txtCustMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCustMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustMI.ForeColor = System.Drawing.Color.White;
-            this.txtCustMI.Location = new System.Drawing.Point(341, 24);
-            this.txtCustMI.Name = "txtCustMI";
-            this.txtCustMI.Size = new System.Drawing.Size(39, 25);
-            this.txtCustMI.TabIndex = 113;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -253,28 +171,6 @@
             this.label3.Size = new System.Drawing.Size(31, 19);
             this.label3.TabIndex = 112;
             this.label3.Text = "MI:";
-            // 
-            // txtCustGN
-            // 
-            this.txtCustGN.BackColor = System.Drawing.Color.Firebrick;
-            this.txtCustGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCustGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustGN.ForeColor = System.Drawing.Color.White;
-            this.txtCustGN.Location = new System.Drawing.Point(108, 52);
-            this.txtCustGN.Name = "txtCustGN";
-            this.txtCustGN.Size = new System.Drawing.Size(189, 25);
-            this.txtCustGN.TabIndex = 111;
-            // 
-            // txtCustFN
-            // 
-            this.txtCustFN.BackColor = System.Drawing.Color.Firebrick;
-            this.txtCustFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCustFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustFN.ForeColor = System.Drawing.Color.White;
-            this.txtCustFN.Location = new System.Drawing.Point(109, 22);
-            this.txtCustFN.Name = "txtCustFN";
-            this.txtCustFN.Size = new System.Drawing.Size(188, 25);
-            this.txtCustFN.TabIndex = 110;
             // 
             // label15
             // 
@@ -297,17 +193,6 @@
             this.label16.Size = new System.Drawing.Size(96, 19);
             this.label16.TabIndex = 108;
             this.label16.Text = "Given Name:";
-            // 
-            // txtInvoiceNo
-            // 
-            this.txtInvoiceNo.BackColor = System.Drawing.Color.Firebrick;
-            this.txtInvoiceNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInvoiceNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoiceNo.ForeColor = System.Drawing.Color.White;
-            this.txtInvoiceNo.Location = new System.Drawing.Point(88, 15);
-            this.txtInvoiceNo.Name = "txtInvoiceNo";
-            this.txtInvoiceNo.Size = new System.Drawing.Size(127, 25);
-            this.txtInvoiceNo.TabIndex = 106;
             // 
             // lvServices
             // 
@@ -333,6 +218,11 @@
             this.columnHeader14.Text = "Plate#";
             this.columnHeader14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader14.Width = 85;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Vehicle Type";
+            this.columnHeader8.Width = 148;
             // 
             // columnHeader18
             // 
@@ -383,31 +273,6 @@
             this.label4.Size = new System.Drawing.Size(78, 19);
             this.label4.TabIndex = 52;
             this.label4.Text = "Contact #:";
-            // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.Brown;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.Firebrick;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Adjust Discount";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 2;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(700, -102);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(105, 60);
-            this.bunifuThinButton22.TabIndex = 64;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lvItems
             // 
@@ -619,32 +484,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Services";
             // 
-            // btnViewOngoing
-            // 
-            this.btnViewOngoing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewOngoing.BackgroundImage")));
-            this.btnViewOngoing.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewOngoing.ForeColor = System.Drawing.Color.White;
-            this.btnViewOngoing.Location = new System.Drawing.Point(141, 24);
-            this.btnViewOngoing.Name = "btnViewOngoing";
-            this.btnViewOngoing.Size = new System.Drawing.Size(132, 68);
-            this.btnViewOngoing.TabIndex = 112;
-            this.btnViewOngoing.Text = "View Ongoing Services";
-            this.btnViewOngoing.UseVisualStyleBackColor = true;
-            this.btnViewOngoing.Click += new System.EventHandler(this.btnViewOngoing_Click);
-            // 
-            // btnAddService
-            // 
-            this.btnAddService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddService.BackgroundImage")));
-            this.btnAddService.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddService.ForeColor = System.Drawing.Color.White;
-            this.btnAddService.Location = new System.Drawing.Point(5, 24);
-            this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(132, 68);
-            this.btnAddService.TabIndex = 111;
-            this.btnAddService.Text = "Add Service";
-            this.btnAddService.UseVisualStyleBackColor = true;
-            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.numQuan);
@@ -677,32 +516,6 @@
             0,
             0,
             0});
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddItem.BackgroundImage")));
-            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Location = new System.Drawing.Point(235, 52);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(132, 48);
-            this.btnAddItem.TabIndex = 110;
-            this.btnAddItem.Text = "Add Item";
-            this.btnAddItem.UseVisualStyleBackColor = true;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
-            // 
-            // txtItemCode
-            // 
-            this.txtItemCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtItemCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtItemCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemCode.ForeColor = System.Drawing.Color.White;
-            this.txtItemCode.Location = new System.Drawing.Point(115, 21);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(252, 25);
-            this.txtItemCode.TabIndex = 105;
-            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
-            this.txtItemCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemCode_KeyDown);
             // 
             // numDiscount
             // 
@@ -740,11 +553,6 @@
             this.label23.Size = new System.Drawing.Size(43, 19);
             this.label23.TabIndex = 119;
             this.label23.Text = "Paid:";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Vehicle Type";
-            this.columnHeader8.Width = 148;
             // 
             // lblTotalItems
             // 
@@ -823,6 +631,202 @@
             this.label19.Size = new System.Drawing.Size(173, 23);
             this.label19.TabIndex = 126;
             this.label19.Text = "Discounted Amount:";
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtItemCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtItemCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemCode.ForeColor = System.Drawing.Color.White;
+            this.txtItemCode.Location = new System.Drawing.Point(115, 21);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(252, 25);
+            this.txtItemCode.TabIndex = 105;
+            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
+            this.txtItemCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemCode_KeyDown);
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.Color.Firebrick;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.White;
+            this.txtAddress.Location = new System.Drawing.Point(1089, 30);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(189, 25);
+            this.txtAddress.TabIndex = 113;
+            // 
+            // txtContact
+            // 
+            this.txtContact.BackColor = System.Drawing.Color.Firebrick;
+            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.ForeColor = System.Drawing.Color.White;
+            this.txtContact.Location = new System.Drawing.Point(766, 34);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(188, 25);
+            this.txtContact.TabIndex = 112;
+            // 
+            // txtCustMI
+            // 
+            this.txtCustMI.BackColor = System.Drawing.Color.Firebrick;
+            this.txtCustMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustMI.ForeColor = System.Drawing.Color.White;
+            this.txtCustMI.Location = new System.Drawing.Point(341, 24);
+            this.txtCustMI.Name = "txtCustMI";
+            this.txtCustMI.Size = new System.Drawing.Size(39, 25);
+            this.txtCustMI.TabIndex = 113;
+            // 
+            // txtCustGN
+            // 
+            this.txtCustGN.BackColor = System.Drawing.Color.Firebrick;
+            this.txtCustGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustGN.ForeColor = System.Drawing.Color.White;
+            this.txtCustGN.Location = new System.Drawing.Point(108, 52);
+            this.txtCustGN.Name = "txtCustGN";
+            this.txtCustGN.Size = new System.Drawing.Size(189, 25);
+            this.txtCustGN.TabIndex = 111;
+            // 
+            // txtCustFN
+            // 
+            this.txtCustFN.BackColor = System.Drawing.Color.Firebrick;
+            this.txtCustFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustFN.ForeColor = System.Drawing.Color.White;
+            this.txtCustFN.Location = new System.Drawing.Point(109, 22);
+            this.txtCustFN.Name = "txtCustFN";
+            this.txtCustFN.Size = new System.Drawing.Size(188, 25);
+            this.txtCustFN.TabIndex = 110;
+            // 
+            // txtInvoiceNo
+            // 
+            this.txtInvoiceNo.BackColor = System.Drawing.Color.Firebrick;
+            this.txtInvoiceNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtInvoiceNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInvoiceNo.ForeColor = System.Drawing.Color.White;
+            this.txtInvoiceNo.Location = new System.Drawing.Point(88, 15);
+            this.txtInvoiceNo.Name = "txtInvoiceNo";
+            this.txtInvoiceNo.Size = new System.Drawing.Size(127, 25);
+            this.txtInvoiceNo.TabIndex = 106;
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddItem.BackgroundImage")));
+            this.btnAddItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
+            this.btnAddItem.Location = new System.Drawing.Point(235, 52);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(132, 48);
+            this.btnAddItem.TabIndex = 110;
+            this.btnAddItem.Text = "Add Item";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            // 
+            // btnViewOngoing
+            // 
+            this.btnViewOngoing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnViewOngoing.BackgroundImage")));
+            this.btnViewOngoing.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewOngoing.ForeColor = System.Drawing.Color.White;
+            this.btnViewOngoing.Location = new System.Drawing.Point(141, 24);
+            this.btnViewOngoing.Name = "btnViewOngoing";
+            this.btnViewOngoing.Size = new System.Drawing.Size(132, 68);
+            this.btnViewOngoing.TabIndex = 112;
+            this.btnViewOngoing.Text = "View Ongoing Services";
+            this.btnViewOngoing.UseVisualStyleBackColor = true;
+            this.btnViewOngoing.Click += new System.EventHandler(this.btnViewOngoing_Click);
+            // 
+            // btnAddService
+            // 
+            this.btnAddService.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddService.BackgroundImage")));
+            this.btnAddService.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddService.ForeColor = System.Drawing.Color.White;
+            this.btnAddService.Location = new System.Drawing.Point(5, 24);
+            this.btnAddService.Name = "btnAddService";
+            this.btnAddService.Size = new System.Drawing.Size(132, 68);
+            this.btnAddService.TabIndex = 111;
+            this.btnAddService.Text = "Add Service";
+            this.btnAddService.UseVisualStyleBackColor = true;
+            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(1034, 404);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 52);
+            this.button3.TabIndex = 119;
+            this.button3.Text = "New Transaction";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPay.BackgroundImage")));
+            this.btnPay.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(916, 404);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(114, 52);
+            this.btnPay.TabIndex = 118;
+            this.btnPay.Text = "Pay Transaction";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(741, 404);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 52);
+            this.button1.TabIndex = 117;
+            this.button1.Text = "Adjust Discount";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemove.BackgroundImage")));
+            this.btnRemove.Enabled = false;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(620, 404);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(114, 52);
+            this.btnRemove.TabIndex = 113;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.Brown;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.Firebrick;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Adjust Discount";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleBorderThickness = 2;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(700, -102);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(105, 60);
+            this.bunifuThinButton22.TabIndex = 64;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCPointOfSale
             // 
@@ -909,13 +913,13 @@
         private System.Windows.Forms.Label label16;
         public MyTextBox txtInvoiceNo;
         public MyTextBox txtItemCode;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnViewOngoing;
         private System.Windows.Forms.Button btnAddService;
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numDiscount;
         private System.Windows.Forms.Label label21;
@@ -925,10 +929,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.Label lblTotalItems;
         private System.Windows.Forms.Label lblTotalService;
-        private System.Windows.Forms.Label lblTotalAmount;
         private System.Windows.Forms.Label lblPaid;
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblDiscAmount;
         private System.Windows.Forms.Label label19;
+        public System.Windows.Forms.Label lblTotalAmount;
     }
 }

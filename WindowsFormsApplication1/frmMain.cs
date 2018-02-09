@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
         frmLogin frmlogin = new frmLogin();
         classDatabaseConnect dbcon = new classDatabaseConnect();
+            bool f = false;
         clsUser user = new clsUser();
         public frmMain()
         {
@@ -38,12 +39,14 @@ namespace WindowsFormsApplication1
                 //this.clerkPanel.SendToBack();
                 this.clerkPanel.Visible = false;
                 this.sidePanel.Visible = true;
+                //this.btnCollapse.Visible = true;
             }
             else if (frmlogin.user.GetPrivelege() == "clerk")
             {
                 UCPointOfSale ucpointofsale = new UCPointOfSale();
                 this.clerkPanel.Controls.Clear();
                 this.clerkPanel.Controls.Add(ucpointofsale);
+                this.btnCollapse.Visible = false;
             }
             else
             {
@@ -225,6 +228,26 @@ namespace WindowsFormsApplication1
         private void btnPos_MouseLeave(object sender, EventArgs e)
         {
             this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_white));
+        }
+
+        private void btnCollapse_Click(object sender, EventArgs e)
+        {
+            if (f == false)
+            {
+                sidePanel.Visible = false;
+                sidePanel.Width = 0;
+                myPanel.Width = 1366;
+                f = true;
+            }
+            else
+            {
+                sidePanel.Visible = true;
+                sidePanel.Width = 208;
+                myPanel.Width = 1157;
+                
+                f = false;
+            }
+           
         }
     }
 }

@@ -70,6 +70,7 @@
             this.panel1.Size = new System.Drawing.Size(454, 509);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.DoubleClick += new System.EventHandler(this.frmLogin_DoubleClick);
             // 
             // button1
             // 

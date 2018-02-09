@@ -457,6 +457,7 @@
             this.txtProdNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProdNo.ForeColor = System.Drawing.Color.White;
             this.txtProdNo.Location = new System.Drawing.Point(116, 75);
+            this.txtProdNo.MaxLength = 100000000;
             this.txtProdNo.Name = "txtProdNo";
             this.txtProdNo.Size = new System.Drawing.Size(159, 25);
             this.txtProdNo.TabIndex = 104;
