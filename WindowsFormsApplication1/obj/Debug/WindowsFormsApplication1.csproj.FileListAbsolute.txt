@@ -37,7 +37,6 @@ C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Deb
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCPosOngoingServices.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCPosPay.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ucUserLogin.resources
-C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCFunctions.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCManageUser.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCPointOfSale.resources
 C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCInventory.resources

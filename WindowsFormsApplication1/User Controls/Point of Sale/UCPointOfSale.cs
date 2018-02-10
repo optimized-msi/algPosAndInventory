@@ -258,6 +258,65 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void btnRemove_Click_1(object sender, EventArgs e)
+        {
+            if (lvItems.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem eachItem in lvItems.SelectedItems)
+                {
+                    lvItems.Items.Remove(eachItem);
+                }
+            }
+            else if (lvServices.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem eachItem in lvServices.SelectedItems)
+                {
+                    lvServices.Items.Remove(eachItem);
+                }
+            }
+            AddTotalItem(); AddTotalService();
+            btnRemove.Enabled = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            numDiscount.Enabled = true;
+        }
+
+        private void btnPay_Click_1(object sender, EventArgs e)
+        {
+            if (lvServices.Items.Count > 0 || lvItems.Items.Count > 0)
+            {
+                frmPosPay frmpospay = new frmPosPay();
+                if (lvServices.Items.Count > 0 && (txtCustFN.Text == "" || txtCustGN.Text == "" || txtAddress.Text == "" || txtContact.Text == ""))
+                {
+                    MessageBox.Show("Please input name,address, and contact number", "Point of Sale");
+                }
+                else
+                {
+                    clsPosItems.total = lblTotalAmount.Text;
+                    clsPosItems.totalItems = lblTotalItems.Text;
+                    clsPosItems.totalServices = lblTotalService.Text;
+                    clsPosItems.discount = numDiscount.Value.ToString();
+                    clsPosItems.totalDisc = lblDiscAmount.Text;
+                    clsPosItems.lvItems = lvItems;
+                    clsPosItems.lvServices = lvServices;
+
+                    frmpospay.ShowDialog();
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0"; lblDiscAmount.Text = "0"; lblPaid.Text = "0"; lblTotalItems.Text = "0"; lblTotalService.Text = "0"; txtInvoiceNo.Text = ""; txtCustFN.Text = ""; txtCustGN.Text = ""; txtCustMI.Text = ""; txtAddress.Text = ""; txtContact.Text = "";
+            lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             txtItemCode.Clear();numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0";lblDiscAmount.Text = "0";lblPaid.Text = "0";lblTotalItems.Text = "0";lblTotalService.Text = "0";txtInvoiceNo.Text = "";txtCustFN.Text = "";txtCustGN.Text = "";txtCustMI.Text = ""; txtAddress.Text = "";txtContact.Text = "";

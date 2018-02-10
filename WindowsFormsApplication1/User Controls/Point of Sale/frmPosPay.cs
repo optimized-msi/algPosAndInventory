@@ -47,6 +47,11 @@ namespace WindowsFormsApplication1
 
         private void numCash_ValueChanged(object sender, EventArgs e)
         {
+           
+        }
+
+        private void numCash_ValueChanged_1(object sender, EventArgs e)
+        {
             try
             {
                 if ((Convert.ToDouble(numCash.Value)) >= (Convert.ToDouble(lblTotalAmount.Text)))

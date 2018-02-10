@@ -136,6 +136,85 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            btnAdd.Enabled = false; btnSave.Enabled = true; Unlock(); add = true;
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = false; btnSave.Enabled = true; edit = true; btnDelete.Enabled = false; Unlock();
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this User?", "Manage Users", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                query = "DELETE FROM users WHERE userID='" + txtUserNo.Text + "'";
+                dbcon.ManipulateData(query);
+                MessageBox.Show("Deleted a user", "Manage Users");
+                btnClear.PerformClick();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            if (txtAddress.Text.Trim() == "" || txtFN.Text.Trim() == "" || txtGN.Text.Trim() == "" || txtMI.Text.Trim() == "" || txtPW.Text.Trim() == "" || txtUN.Text.Trim() == "" || cboType.Text.Trim() == "")
+            {
+                MessageBox.Show("Please fill-up all fields", "Manage Users");
+            }
+            else
+            {
+                string id = txtUserNo.Text;
+                if (add)
+                {
+                    add = false;
+                    query = "INSERT INTO users(fName,gName,mInitial,username,password,user_type,user_address) VALUES ('" + txtFN.Text + "','" + txtGN.Text + "','" + txtMI.Text + "','" + txtUN.Text + "','" + txtPW.Text + "','" + cboType.Text + "','" + txtAddress.Text + "')";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Added a new User", "Manage Users");
+                }
+                else if (edit)
+                {
+                    edit = false;
+                    query = "UPDATE users SET fName='" + txtFN.Text + "',gName='" + txtGN.Text + "',mInitial='" + txtMI.Text + "',username='" + txtUN.Text + "',password='" + txtPW.Text + "',user_type='" + cboType.Text + "',user_address='" + txtAddress.Text + "' WHERE userID='" + id + "'";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Updated User information", "Manage Users");
+                }
+                btnClear.PerformClick();
+            }
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            LoadLV(); btnSave.Enabled = false; btnAdd.Enabled = true; btnEdit.Enabled = false; btnDelete.Enabled = false; txtGN.Text = ""; txtFN.Text = ""; txtMI.Text = ""; txtUN.Text = ""; txtPW.Text = ""; txtAddress.Text = ""; txtUserNo.Text = ""; cboType.Text = ""; Lock();
+        }
+
+        private void lvUsers_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (lvUsers.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lvUsers.SelectedItems[0];
+                txtUserNo.Text = item.SubItems[0].Text;
+                txtFN.Text = item.SubItems[1].Text;
+                txtGN.Text = item.SubItems[2].Text;
+                txtMI.Text = item.SubItems[3].Text;
+                txtAddress.Text = item.SubItems[4].Text;
+                txtUN.Text = item.SubItems[5].Text;
+                txtPW.Text = item.SubItems[6].Text;
+                cboType.Text = item.SubItems[7].Text;
+                btnAdd.Enabled = false; btnEdit.Enabled = true; btnDelete.Enabled = true; btnSave.Enabled = false; add = false; edit = false; Lock();
+            }
+            else
+            {
+                //
+            }
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             btnEdit.Enabled = false; btnSave.Enabled = true; edit = true; btnDelete.Enabled = false; Unlock();

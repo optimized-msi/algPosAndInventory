@@ -480,6 +480,11 @@ namespace WindowsFormsApplication1
             LoadDrp();
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cboSort_SelectedIndexChanged(object sender, EventArgs e)
         {
             sort = cboSort.Text;
