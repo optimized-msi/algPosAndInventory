@@ -51,9 +51,6 @@
     <StartupObject>WindowsFormsApplication1.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -91,12 +88,6 @@
     </Compile>
     <Compile Include="User Controls\Point of Sale\frmPosPay.Designer.cs">
       <DependentUpon>frmPosPay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\frmAddStocks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\frmAddStocks.Designer.cs">
-      <DependentUpon>frmAddStocks.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -185,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Point of Sale\frmPosPay.resx">
       <DependentUpon>frmPosPay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Point of Sale\frmAddStocks.resx">
-      <DependentUpon>frmAddStocks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

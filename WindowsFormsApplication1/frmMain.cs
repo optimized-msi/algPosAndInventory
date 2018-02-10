@@ -88,11 +88,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Hello World");
-            InitializeComponent();
-            UCPosPay ucinventory = new UCPosPay();
-            this.splitCont.Panel2.Controls.Clear();
-            this.splitCont.Panel2.Controls.Add(ucinventory);
+ 
         }
 
         private void button3_Click(object sender, EventArgs e)
