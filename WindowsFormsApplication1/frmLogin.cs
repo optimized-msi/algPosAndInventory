@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblTime.Text = System.DateTime.Now.ToString();
+            lblDateTime.Text = System.DateTime.Now.ToString();
         }
 
         private void txtPW_OnValueChanged(object sender, EventArgs e)
@@ -101,6 +101,17 @@ namespace WindowsFormsApplication1
             {
                 btnOK.PerformClick();
             }
+        }
+
+        private void frmLogin_DoubleClick(object sender, EventArgs e)
+        {
+            frmAddress frm = new frmAddress();
+            frm.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

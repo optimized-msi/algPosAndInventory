@@ -108,6 +108,82 @@ namespace WindowsFormsApplication1
             btnClear.PerformClick();
         }
 
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            btnAdd.Enabled = false; btnSave.Enabled = true; Unlock(); add = true;
+        }
+
+        private void lvEmp_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (lvEmp.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lvEmp.SelectedItems[0];
+                txtEmpNo.Text = item.SubItems[0].Text;
+                txtFN.Text = item.SubItems[1].Text;
+                txtGN.Text = item.SubItems[2].Text;
+                txtMI.Text = item.SubItems[3].Text;
+                txtPosition.Text = item.SubItems[4].Text;
+                txtAddress.Text = item.SubItems[5].Text;
+                btnAdd.Enabled = false; btnEdit.Enabled = true; btnDelete.Enabled = true; btnSave.Enabled = false; add = false; edit = false; Lock();
+            }
+            else
+            {
+                //
+            }
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = false; btnSave.Enabled = true; edit = true; btnDelete.Enabled = false; Unlock();
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this employee?", "Manage Employee", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                query = "DELETE FROM employee WHERE emp_ID='" + txtEmpNo.Text + "'";
+                dbcon.ManipulateData(query);
+                MessageBox.Show("Deleted an employee", "Manage Employee");
+                btnClear.PerformClick();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            if (txtAddress.Text.Trim() == "" || txtFN.Text.Trim() == "" || txtGN.Text.Trim() == "" || txtMI.Text.Trim() == "" || txtPosition.Text.Trim() == "")
+            {
+                MessageBox.Show("Please fill-up all fields", "Manage Employee");
+            }
+            else
+            {
+                string id = txtEmpNo.Text;
+                if (add)
+                {
+                    add = false;
+                    query = "INSERT INTO employee(emp_fName,emp_gName,emp_mInitial,emp_position,emp_address) VALUES ('" + txtFN.Text + "','" + txtGN.Text + "','" + txtMI.Text + "','" + txtPosition.Text + "','" + txtAddress.Text + "')";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Added a new employee", "Manage Employee");
+                }
+                else if (edit)
+                {
+                    edit = false;
+                    query = "UPDATE employee SET emp_fName='" + txtFN.Text + "',emp_gName='" + txtGN.Text + "',emp_mInitial='" + txtMI.Text + "',emp_position='" + txtPosition.Text + "',emp_address='" + txtAddress.Text + "' WHERE emp_ID='" + id + "'";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Updated User information", "Manage Users");
+                }
+                btnClear.PerformClick();
+            }
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            LoadLV(); btnSave.Enabled = false; btnAdd.Enabled = true; btnEdit.Enabled = false; btnDelete.Enabled = false; txtGN.Text = ""; txtFN.Text = ""; txtMI.Text = ""; txtAddress.Text = ""; txtEmpNo.Text = ""; txtPosition.Text = ""; Lock();
+        }
+
         private void LoadLV()
         {
             lvEmp.Items.Clear();

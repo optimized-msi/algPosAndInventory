@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     public partial class UCPointOfSale : UserControl
     {
         classDatabaseConnect dbcon = new classDatabaseConnect();
-        string query = ""; bool lvclick = false;
+        string query = ""; bool lvIclick = false, lvSclick=false;
         public UCPointOfSale()
         {
             InitializeComponent();
@@ -98,21 +98,20 @@ namespace WindowsFormsApplication1
             bool same = false;
             foreach (ListViewItem item in lvItems.Items)
             {
-                if (txtItemCode.Text == item.Text && !lvclick)
+                if (txtItemCode.Text == item.Text && !lvIclick)
                 {
                     item.SubItems[4].Text =(Convert.ToInt16(numQuan.Value) + Convert.ToInt16(item.SubItems[4].Text)).ToString();
                     item.SubItems[5].Text =(Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[4].Text)).ToString();
                     same = true;
 
-                }else if (txtItemCode.Text == item.Text && lvclick)
+                }else if (txtItemCode.Text == item.Text && lvIclick)
                 {
                     item.SubItems[4].Text = Convert.ToInt16(numQuan.Value).ToString();
                     item.SubItems[5].Text = (Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[4].Text)).ToString();
-                    lvclick = false;
+                    lvIclick = false;
                     same = true;
                 }
             }
-            AddTotalItem();
             return same;
         }
         private void btnAddService_Click(object sender, EventArgs e)
@@ -130,15 +129,19 @@ namespace WindowsFormsApplication1
 
                 lvServices.Items.Add(iItem);
             }
+            AddTotalService();
+        }
+        private void AddTotalService() {
             double total = 0.0;
             foreach (ListViewItem item in lvServices.Items)
             {
-                total = Convert.ToDouble(lblTotalService.Text) + (Convert.ToDouble(item.SubItems[3].Text.ToString()));
+                total = total+ (Convert.ToDouble(item.SubItems[3].Text.ToString()));
             }
             lblTotalService.Text = total.ToString();
             lblTotalAmount.Text = (Convert.ToDouble(lblTotalService.Text) + Convert.ToDouble(lblTotalItems.Text)).ToString();
+            //if (numDiscount.Value == 0)
+            lblDiscAmount.Text = lblTotalAmount.Text;
         }
-
         private void btnViewOngoing_Click(object sender, EventArgs e)
         {
             frmPosOngoing frmposonging = new frmPosOngoing();
@@ -152,7 +155,8 @@ namespace WindowsFormsApplication1
                 ListViewItem item = lvItems.SelectedItems[0];
                 txtItemCode.Text = item.SubItems[0].Text;
                 numQuan.Text = item.SubItems[4].Text;
-                lvclick = true;
+                lvIclick = true;
+                btnRemove.Enabled = true;
             }
         }
         private void AddTotalItem()
@@ -160,10 +164,12 @@ namespace WindowsFormsApplication1
             double total = 0.0;
             foreach (ListViewItem item in lvItems.Items)
             {
-                total = Convert.ToDouble(lblTotalItems.Text) + (Convert.ToDouble(item.SubItems[5].Text.ToString()));
+                total = total + (Convert.ToDouble(item.SubItems[5].Text.ToString()));
             }
             lblTotalItems.Text = total.ToString();
             lblTotalAmount.Text = (Convert.ToDouble(lblTotalService.Text) + Convert.ToDouble(lblTotalItems.Text)).ToString();
+            if (numDiscount.Value == 0)
+                lblDiscAmount.Text = lblTotalAmount.Text;
         }
         private void btnAddItem_Click(object sender, EventArgs e)
         {
@@ -200,7 +206,122 @@ namespace WindowsFormsApplication1
 
         private void lvServices_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            lvSclick = true ;
+            btnRemove.Enabled = true;
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (lvItems.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem eachItem in lvItems.SelectedItems)
+                {
+                    lvItems.Items.Remove(eachItem);
+                }
+            }
+            else if (lvServices.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem eachItem in lvServices.SelectedItems)
+                {
+                    lvServices.Items.Remove(eachItem);
+                }
+            }
+            AddTotalItem(); AddTotalService();
+            btnRemove.Enabled = false;
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            if (lvServices.Items.Count > 0 || lvItems.Items.Count > 0)
+            {
+                frmPosPay frmpospay = new frmPosPay();
+                if (lvServices.Items.Count>0 &&( txtCustFN.Text == "" || txtCustGN.Text == "" || txtAddress.Text == "" || txtContact.Text == ""))
+                {
+                    MessageBox.Show("Please input name,address, and contact number","Point of Sale");
+                }
+                else
+                {
+                    clsPosItems.total = lblTotalAmount.Text;
+                    clsPosItems.totalItems = lblTotalItems.Text;
+                    clsPosItems.totalServices = lblTotalService.Text;
+                    clsPosItems.discount = numDiscount.Value.ToString();
+                    clsPosItems.totalDisc = lblDiscAmount.Text;
+                    clsPosItems.lvItems = lvItems;
+                    clsPosItems.lvServices = lvServices;
+                    
+                    frmpospay.ShowDialog();
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnRemove_Click_1(object sender, EventArgs e)
+        {
+            if (lvItems.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem eachItem in lvItems.SelectedItems)
+                {
+                    lvItems.Items.Remove(eachItem);
+                }
+            }
+            else if (lvServices.SelectedItems.Count > 0)
+            {
+                foreach (ListViewItem eachItem in lvServices.SelectedItems)
+                {
+                    lvServices.Items.Remove(eachItem);
+                }
+            }
+            AddTotalItem(); AddTotalService();
+            btnRemove.Enabled = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            numDiscount.Enabled = true;
+        }
+
+        private void btnPay_Click_1(object sender, EventArgs e)
+        {
+            if (lvServices.Items.Count > 0 || lvItems.Items.Count > 0)
+            {
+                frmPosPay frmpospay = new frmPosPay();
+                if (lvServices.Items.Count > 0 && (txtCustFN.Text == "" || txtCustGN.Text == "" || txtAddress.Text == "" || txtContact.Text == ""))
+                {
+                    MessageBox.Show("Please input name,address, and contact number", "Point of Sale");
+                }
+                else
+                {
+                    clsPosItems.total = lblTotalAmount.Text;
+                    clsPosItems.totalItems = lblTotalItems.Text;
+                    clsPosItems.totalServices = lblTotalService.Text;
+                    clsPosItems.discount = numDiscount.Value.ToString();
+                    clsPosItems.totalDisc = lblDiscAmount.Text;
+                    clsPosItems.lvItems = lvItems;
+                    clsPosItems.lvServices = lvServices;
+
+                    frmpospay.ShowDialog();
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0"; lblDiscAmount.Text = "0"; lblPaid.Text = "0"; lblTotalItems.Text = "0"; lblTotalService.Text = "0"; txtInvoiceNo.Text = ""; txtCustFN.Text = ""; txtCustGN.Text = ""; txtCustMI.Text = ""; txtAddress.Text = ""; txtContact.Text = "";
+            lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtItemCode.Clear();numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0";lblDiscAmount.Text = "0";lblPaid.Text = "0";lblTotalItems.Text = "0";lblTotalService.Text = "0";txtInvoiceNo.Text = "";txtCustFN.Text = "";txtCustGN.Text = "";txtCustMI.Text = ""; txtAddress.Text = "";txtContact.Text = "";
+            lvItems.Items.Clear(); lvServices.Items.Clear();btnRemove.Enabled = false;
+        }
+
     }
 }

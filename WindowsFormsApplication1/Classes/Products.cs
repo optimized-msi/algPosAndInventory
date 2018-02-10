@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
             {
                 try
                 {
-                    query = "INSERT INTO products(product_ID,product_name,product_desc,product_price,product_addedprice,product_sellingprice,category_ID) VALUES('" + prodNo + "','" + prodName + "','" + prodDesc + "','" + buyPrice + "','" + addPrice + "','" + sellPrice + "',(SELECT category.category_ID FROM category WHERE category_name='"+category+"'))";
+                    query = "INSERT INTO products(product_ID,product_name,product_desc,product_price,product_addedprice,product_sellingprice,category_ID) VALUES('" + prodNo.ToString() + "','" + prodName + "','" + prodDesc + "','" + buyPrice + "','" + addPrice + "','" + sellPrice + "',(SELECT category.category_ID FROM category WHERE category_name='"+category+"'))";
                     dbcon.ManipulateData(query);
                     System.Windows.Forms.MessageBox.Show("Added a product", "Inventory");
                 }

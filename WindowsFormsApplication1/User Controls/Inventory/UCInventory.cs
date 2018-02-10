@@ -182,7 +182,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                txtPriceSell.Text = (Convert.ToDouble(txtPriceBuy.Text) + Convert.ToDouble(txtPriceAdded.Text)).ToString();
+                txtPriceSell.Text = (Convert.ToDouble(txtPriceBuy.Value) + Convert.ToDouble(txtPriceAdded.Value)).ToString();
             }
             catch (Exception)
             {
@@ -200,7 +200,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                txtPriceSell.Text = (Convert.ToDouble(txtPriceBuy.Value) + Convert.ToDouble(txtPriceAdded.Text)).ToString();
+                txtPriceSell.Text = (Convert.ToDouble(txtPriceBuy.Value)+ Convert.ToDouble(txtPriceAdded.Value)).ToString();
             }
             catch (Exception)
             {
@@ -213,7 +213,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                txtPriceSell.Text = (Convert.ToDouble(txtPriceBuy.Value) + Convert.ToDouble(txtPriceAdded.Text)).ToString();
+                txtPriceSell.Text = (Convert.ToDouble(txtPriceBuy.Value) + Convert.ToDouble(txtPriceAdded.Value)).ToString();
             }
             catch (Exception)
             {
@@ -478,6 +478,11 @@ namespace WindowsFormsApplication1
             frmCategory frmCat = new frmCategory();
             frmCat.ShowDialog();
             LoadDrp();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void cboSort_SelectedIndexChanged(object sender, EventArgs e)

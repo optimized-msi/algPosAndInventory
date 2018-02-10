@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
         frmLogin frmlogin = new frmLogin();
         classDatabaseConnect dbcon = new classDatabaseConnect();
+            bool f = false;
         clsUser user = new clsUser();
         public frmMain()
         {
@@ -37,13 +38,19 @@ namespace WindowsFormsApplication1
             {
                 //this.clerkPanel.SendToBack();
                 this.clerkPanel.Visible = false;
-                this.sidePanel.Visible = true;
+                this.splitCont.Visible = true;
+                this.btnCollapse.Visible = true;
+               // this.sidePanel.Visible = true;
+                //this.btnCollapse.Visible = true;
             }
             else if (frmlogin.user.GetPrivelege() == "clerk")
             {
+                this.btnCollapse.Visible = false;
                 UCPointOfSale ucpointofsale = new UCPointOfSale();
                 this.clerkPanel.Controls.Clear();
                 this.clerkPanel.Controls.Add(ucpointofsale);
+                this.btnCollapse.Visible = false;
+                this.splitCont.Visible = false;
             }
             else
             {
@@ -81,11 +88,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Hello World");
-            InitializeComponent();
-            UCPosPay ucinventory = new UCPosPay();
-            this.myPanel.Controls.Clear();
-            this.myPanel.Controls.Add(ucinventory);
+ 
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -96,8 +99,8 @@ namespace WindowsFormsApplication1
         private void button4_Click(object sender, EventArgs e)
         {
             UCInventory ucinventory = new UCInventory();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(ucinventory);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(ucinventory);
         }
 
         private void ucFunctions2_Load_1(object sender, EventArgs e)
@@ -114,8 +117,8 @@ namespace WindowsFormsApplication1
         {
             //for  point of sale
             UCPointOfSale ucpointofsale = new UCPointOfSale();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(ucpointofsale);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(ucpointofsale);
            
         }
 
@@ -123,39 +126,34 @@ namespace WindowsFormsApplication1
         {
             //for inventory
             UCInventory ucinventory = new UCInventory();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(ucinventory);
-       
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(ucinventory);
+            ucinventory.Dock = DockStyle.Fill;
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             //for reports
-
             ucReports rep = new ucReports();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(rep);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(rep);
+            rep.Dock = DockStyle.Fill;
         }
 
         private void button4_Click_2(object sender, EventArgs e)
         {
             ucServices ucservices = new ucServices();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(ucservices);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(ucservices);
+            ucservices.Dock = DockStyle.Fill;
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             //ucLogsAndMaintenance uclogsandmaintenance = new ucLogsAndMaintenance();
-            myPanel.Controls.Clear();
-            maintenancePanel.Visible = true;
-            myPanel.Controls.Add(maintenancePanel);
+            
             //myPanel.Controls.Add(uclogsandmaintenance);
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -165,11 +163,13 @@ namespace WindowsFormsApplication1
             {
                 string query = "UPDATE users SET login_status=0 WHERE userID='" +user.GetUserID()+ "'";
                 dbcon.ManipulateData(query);
-                myPanel.Controls.Clear();
+                splitCont.Panel2.Controls.Clear();
                 clerkPanel.Controls.Clear();
                 clerkPanel.Visible = true;
+                splitCont.Visible = false;
                 frmlogin.txtUN.Text = "";
                 frmlogin.txtPW.Text = "";
+                btnCollapse.Visible = false;
                 frmlogin.user.SetGName(null);
                 frmlogin.user.SetUserID(null);
                 frmlogin.user.SetPrivelge(null);
@@ -184,47 +184,117 @@ namespace WindowsFormsApplication1
         private void btnManageEmp_Click(object sender, EventArgs e)
         {
             UCEmployeeInfo employee = new UCEmployeeInfo();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(employee);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(employee);
         }
 
         private void btnManageUsers_Click(object sender, EventArgs e)
         {
             UCManageUser manage = new UCManageUser();
             //frmMain frmmain = new frmMain();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(manage);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(manage);
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             UCCustomerRecord cust = new UCCustomerRecord();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(cust);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(cust);
         }
 
         private void btnLogs_Click(object sender, EventArgs e)
         {
             ucLogs logs = new ucLogs();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(logs);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(logs);
         }
 
         private void button6_Click_1(object sender, EventArgs e)
         {
             UCPointOfSale ucpointofsale = new UCPointOfSale();
-            myPanel.Controls.Clear();
-            myPanel.Controls.Add(ucpointofsale);
+            splitCont.Panel2.Controls.Clear();
+            splitCont.Panel2.Controls.Add(ucpointofsale);
+            //ucpointofsale.Dock = DockStyle.Fill;
         }
 
         private void btnPos_MouseEnter(object sender, EventArgs e)
         {
-            this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_firebrick));
+            //this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_firebrick));
+            //btnPOS.UseVisualStyleBackColor = false;
+            btnPOS.BackColor= Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))); 
         }
 
         private void btnPos_MouseLeave(object sender, EventArgs e)
         {
-            this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_white));
+            //this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_white));
+            btnPOS.BackColor = Color.Transparent;
+        }
+
+        private void btnCollapse_Click(object sender, EventArgs e)
+        {
+            if (f == false)
+            {
+                splitCont.Panel1Collapsed = true;
+                f = true;
+            }
+            else
+            {
+                splitCont.Panel1Collapsed = false;
+                
+                f = false;
+            }
+           
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            splitCont.Panel2.Controls.Clear();
+            maintenancePanel.Visible = true;
+            splitCont.Panel2.Controls.Add(maintenancePanel);
+            maintenancePanel.Dock = DockStyle.Fill;
+        }
+
+        private void btnInventory_MouseEnter(object sender, EventArgs e)
+        {
+            //btnInventory.UseVisualStyleBackColor = false;
+            btnInventory.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        }
+
+        private void btnInventory_MouseLeave(object sender, EventArgs e)
+        {
+            btnInventory.BackColor = Color.Transparent;
+        }
+
+        private void btnReports_MouseEnter(object sender, EventArgs e)
+        {
+            btnReports.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        }
+
+        private void btnReports_MouseLeave(object sender, EventArgs e)
+        {
+            btnReports.BackColor = Color.Transparent;
+        }
+
+        private void btnServices_MouseEnter(object sender, EventArgs e)
+        {
+            btnServices.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+
+        }
+
+        private void btnServices_MouseLeave(object sender, EventArgs e)
+        {
+            btnServices.BackColor = Color.Transparent;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Transparent;
         }
     }
 }

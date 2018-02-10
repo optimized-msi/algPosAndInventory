@@ -51,9 +51,6 @@
     <StartupObject>WindowsFormsApplication1.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -72,18 +69,25 @@
   <ItemGroup>
     <Compile Include="Classes\classDatabaseConnect.cs" />
     <Compile Include="Classes\clsUser.cs" />
+    <Compile Include="clsPosItems.cs" />
     <Compile Include="clsPosService.cs" />
+    <Compile Include="frmAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddress.Designer.cs">
+      <DependentUpon>frmAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Point of Sale\frmAddStocks.cs">
+    <Compile Include="User Controls\Point of Sale\frmPosPay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User Controls\Point of Sale\frmAddStocks.Designer.cs">
-      <DependentUpon>frmAddStocks.cs</DependentUpon>
+    <Compile Include="User Controls\Point of Sale\frmPosPay.Designer.cs">
+      <DependentUpon>frmPosPay.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -128,12 +132,6 @@
     <Compile Include="User Controls\Logs and Maintenance\UCCustomerRecord.Designer.cs">
       <DependentUpon>UCCustomerRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.Designer.cs">
-      <DependentUpon>ucLogsAndMaintenance.cs</DependentUpon>
-    </Compile>
     <Compile Include="User Controls\Services\ucServices.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,36 +149,6 @@
     </Compile>
     <Compile Include="User Controls\Logs and Maintenance\UCManageEmployeeInfo.Designer.cs">
       <DependentUpon>UCManageEmployeeInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\UCPosOngoingServices.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\UCPosOngoingServices.Designer.cs">
-      <DependentUpon>UCPosOngoingServices.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\UCPosPay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\UCPosPay.Designer.cs">
-      <DependentUpon>UCPosPay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucUserLogin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucUserLogin.Designer.cs">
-      <DependentUpon>ucUserLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\ucPosServices.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\Point of Sale\ucPosServices.Designer.cs">
-      <DependentUpon>ucPosServices.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\UCFunctions.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\UCFunctions.Designer.cs">
-      <DependentUpon>UCFunctions.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\Logs and Maintenance\UCManageUser.cs">
       <SubType>UserControl</SubType>
@@ -200,11 +168,14 @@
     <Compile Include="User Controls\Inventory\UCInventory.Designer.cs">
       <DependentUpon>UCInventory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAddress.resx">
+      <DependentUpon>frmAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Point of Sale\frmAddStocks.resx">
-      <DependentUpon>frmAddStocks.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\Point of Sale\frmPosPay.resx">
+      <DependentUpon>frmPosPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -235,9 +206,6 @@
     <EmbeddedResource Include="User Controls\Logs and Maintenance\UCCustomerRecord.resx">
       <DependentUpon>UCCustomerRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Logs and Maintenance\ucLogsAndMaintenance.resx">
-      <DependentUpon>ucLogsAndMaintenance.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Services\ucServices.resx">
       <DependentUpon>ucServices.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,21 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Logs and Maintenance\UCManageEmployeeInfo.resx">
       <DependentUpon>UCManageEmployeeInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Point of Sale\UCPosOngoingServices.resx">
-      <DependentUpon>UCPosOngoingServices.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Point of Sale\UCPosPay.resx">
-      <DependentUpon>UCPosPay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucUserLogin.resx">
-      <DependentUpon>ucUserLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Point of Sale\ucPosServices.resx">
-      <DependentUpon>ucPosServices.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\UCFunctions.resx">
-      <DependentUpon>UCFunctions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Logs and Maintenance\UCManageUser.resx">
       <DependentUpon>UCManageUser.cs</DependentUpon>

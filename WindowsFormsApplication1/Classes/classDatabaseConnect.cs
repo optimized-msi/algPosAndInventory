@@ -9,6 +9,7 @@ namespace WindowsFormsApplication1
 {
     class classDatabaseConnect
     {
+        //public static string address;
         public MySql.Data.MySqlClient.MySqlConnection mysqlconnect = new MySql.Data.MySqlClient.MySqlConnection ("Server=127.0.0.1; User Id=root; Password= ;Database=algdb");
         public string x { set; get; }       
         public bool connectDatabase()
@@ -21,7 +22,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
                 return false;
             }
         }
@@ -40,7 +41,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
                 return false;
             }
         }
@@ -70,7 +71,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                System.Windows.Forms.MessageBox.Show("Please Provide Ip Address of the Server");
                 // return false;   'no result is returned
                 return null;
             }
