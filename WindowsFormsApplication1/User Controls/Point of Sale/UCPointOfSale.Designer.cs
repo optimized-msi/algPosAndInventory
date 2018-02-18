@@ -678,6 +678,7 @@
             this.lvServices.TabIndex = 125;
             this.lvServices.UseCompatibleStateImageBehavior = false;
             this.lvServices.View = System.Windows.Forms.View.Details;
+            this.lvServices.SelectedIndexChanged += new System.EventHandler(this.lvServices_SelectedIndexChanged_1);
             // 
             // columnHeader14
             // 
@@ -758,6 +759,7 @@
             this.lvItems.TabIndex = 121;
             this.lvItems.UseCompatibleStateImageBehavior = false;
             this.lvItems.View = System.Windows.Forms.View.Details;
+            this.lvItems.SelectedIndexChanged += new System.EventHandler(this.lvItems_SelectedIndexChanged_1);
             // 
             // columnHeader1
             // 
@@ -901,6 +903,7 @@
             this.Name = "UCPointOfSale";
             this.Size = new System.Drawing.Size(1364, 690);
             this.Load += new System.EventHandler(this.UserControl3_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UCPointOfSale_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

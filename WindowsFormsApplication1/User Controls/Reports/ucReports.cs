@@ -21,5 +21,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void ucReports_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
     }
 }

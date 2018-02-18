@@ -25,5 +25,10 @@ namespace WindowsFormsApplication1
         {
             Close();
         }
+
+        private void frmPosOngoing_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
     }
 }

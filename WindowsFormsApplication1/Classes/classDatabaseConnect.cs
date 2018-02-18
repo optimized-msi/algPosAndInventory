@@ -9,8 +9,8 @@ namespace WindowsFormsApplication1
 {
     class classDatabaseConnect
     {
-        //public static string address;
-        public MySql.Data.MySqlClient.MySqlConnection mysqlconnect = new MySql.Data.MySqlClient.MySqlConnection ("Server=127.0.0.1; User Id=root; Password= ;Database=algdb");
+        public static string address=Properties.Settings.Default.DbAddress;
+        public MySql.Data.MySqlClient.MySqlConnection mysqlconnect = new MySql.Data.MySqlClient.MySqlConnection ("Server='"+address+"'; User Id=root; Password= ;Database=algdb");
         public string x { set; get; }       
         public bool connectDatabase()
         {
@@ -45,19 +45,21 @@ namespace WindowsFormsApplication1
                 return false;
             }
         }
-          public string[] authenticate(string query)
+          public string[] authenticate(string un,string pw)
              {
             try
             {
                 mysqlconnect.Open();
-                MySqlCommand myCommand = new MySqlCommand(query, mysqlconnect);
+                string query = @"SELECT userID,gname,user_type,login_status FROM users WHERE username=@un AND password=@pw";
+                MySqlCommand myCommand = new MySqlCommand(query,mysqlconnect);
+                myCommand.Parameters.AddWithValue("@un", un);
+                myCommand.Parameters.AddWithValue("@pw", pw);
                 myCommand.CommandTimeout = 60;
                 MySqlDataReader reader;
                 reader = myCommand.ExecuteReader();
 
                 string[] result = new string[4];
-                if (reader.HasRows)
-                {
+                if (reader.HasRows) {
                     while (reader.Read())
                     {
                         result = new string[4] { reader.GetString(0), reader.GetString(1), reader.GetString(2),reader.GetString(3) };
@@ -71,7 +73,8 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show("Please Provide Ip Address of the Server");
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show("Please Provide Ip Address of the Server");
                 // return false;   'no result is returned
                 return null;
             }

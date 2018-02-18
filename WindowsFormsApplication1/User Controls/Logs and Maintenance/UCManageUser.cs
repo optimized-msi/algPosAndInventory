@@ -215,6 +215,11 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void UCManageUser_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             btnEdit.Enabled = false; btnSave.Enabled = true; edit = true; btnDelete.Enabled = false; Unlock();

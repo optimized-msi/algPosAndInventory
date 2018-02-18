@@ -65,9 +65,8 @@ namespace WindowsFormsApplication1
             //byte[] data = System.Text.Encoding.UTF8.GetBytes(pw);
             //byte[] hash = SHA256.Create().ComputeHash(data);
 
-            string query = "SELECT userID,gname,user_type,login_status FROM users WHERE username='" + un + "'  AND password='" + pw + "'";
             classDatabaseConnect dbConnObj = new classDatabaseConnect();
-            result = dbConnObj.authenticate(query);
+            result = dbConnObj.authenticate(un,pw);
             if (result == null)
                 MessageBox.Show("Please provide a valid credential","Login");
             else if(result[3] == "True")

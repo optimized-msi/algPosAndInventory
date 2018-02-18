@@ -370,6 +370,7 @@
             this.Name = "UCEmployeeInfo";
             this.Size = new System.Drawing.Size(1186, 694);
             this.Load += new System.EventHandler(this.UCEmployeeInfo_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UCEmployeeInfo_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

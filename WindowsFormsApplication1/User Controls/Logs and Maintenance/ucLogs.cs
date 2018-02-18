@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void ucLogs_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
     }
 }

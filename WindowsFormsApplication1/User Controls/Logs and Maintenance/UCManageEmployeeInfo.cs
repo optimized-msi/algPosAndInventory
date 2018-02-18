@@ -184,6 +184,11 @@ namespace WindowsFormsApplication1
             LoadLV(); btnSave.Enabled = false; btnAdd.Enabled = true; btnEdit.Enabled = false; btnDelete.Enabled = false; txtGN.Text = ""; txtFN.Text = ""; txtMI.Text = ""; txtAddress.Text = ""; txtEmpNo.Text = ""; txtPosition.Text = ""; Lock();
         }
 
+        private void UCEmployeeInfo_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
+
         private void LoadLV()
         {
             lvEmp.Items.Clear();
