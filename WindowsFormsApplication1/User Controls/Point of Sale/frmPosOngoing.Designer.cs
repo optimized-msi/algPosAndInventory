@@ -192,6 +192,7 @@
             this.Name = "frmPosOngoing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPosOngoing";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPosOngoing_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

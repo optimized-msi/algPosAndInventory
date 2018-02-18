@@ -123,7 +123,8 @@
             this.cboType.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboType.FormattingEnabled = true;
             this.cboType.Items.AddRange(new object[] {
-            "clerk",
+            "cashier",
+            "encoder",
             "admin"});
             this.cboType.Location = new System.Drawing.Point(447, 105);
             this.cboType.Name = "cboType";
@@ -443,6 +444,7 @@
             this.Name = "UCManageUser";
             this.Size = new System.Drawing.Size(1186, 694);
             this.Load += new System.EventHandler(this.UserControl2_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UCManageUser_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

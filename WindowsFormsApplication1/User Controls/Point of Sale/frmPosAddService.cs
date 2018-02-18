@@ -225,5 +225,10 @@ namespace WindowsFormsApplication1
                 lblFee.Text = "";
             }
         }
+
+        private void frmPosAddService_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
     }
 }

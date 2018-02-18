@@ -32,6 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.myTextBox2 = new MyTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.myTextBox1 = new MyTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblFee = new System.Windows.Forms.Label();
             this.cboVehicleType = new System.Windows.Forms.ComboBox();
             this.cboServiceName = new System.Windows.Forms.ComboBox();
@@ -45,10 +49,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.myTextBox1 = new MyTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.myTextBox2 = new MyTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +61,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(619, 49);
+            this.panel1.Size = new System.Drawing.Size(804, 49);
             this.panel1.TabIndex = 83;
             // 
             // label9
@@ -76,6 +78,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.checkedListBox1);
             this.panel2.Controls.Add(this.myTextBox2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.myTextBox1);
@@ -95,8 +99,52 @@
             this.panel2.Controls.Add(this.label24);
             this.panel2.Location = new System.Drawing.Point(10, 89);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(602, 302);
+            this.panel2.Size = new System.Drawing.Size(670, 389);
             this.panel2.TabIndex = 85;
+            // 
+            // myTextBox2
+            // 
+            this.myTextBox2.BackColor = System.Drawing.Color.Firebrick;
+            this.myTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myTextBox2.ForeColor = System.Drawing.Color.White;
+            this.myTextBox2.Location = new System.Drawing.Point(86, 83);
+            this.myTextBox2.Name = "myTextBox2";
+            this.myTextBox2.Size = new System.Drawing.Size(127, 25);
+            this.myTextBox2.TabIndex = 142;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(11, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 19);
+            this.label4.TabIndex = 141;
+            this.label4.Text = "Car Color:";
+            // 
+            // myTextBox1
+            // 
+            this.myTextBox1.BackColor = System.Drawing.Color.Firebrick;
+            this.myTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myTextBox1.ForeColor = System.Drawing.Color.White;
+            this.myTextBox1.Location = new System.Drawing.Point(87, 46);
+            this.myTextBox1.Name = "myTextBox1";
+            this.myTextBox1.Size = new System.Drawing.Size(127, 25);
+            this.myTextBox1.TabIndex = 140;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(11, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 19);
+            this.label3.TabIndex = 139;
+            this.label3.Text = "Model:";
             // 
             // lblFee
             // 
@@ -133,7 +181,7 @@
             this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
             this.btnSelect.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.ForeColor = System.Drawing.Color.White;
-            this.btnSelect.Location = new System.Drawing.Point(350, 231);
+            this.btnSelect.Location = new System.Drawing.Point(361, 317);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(105, 52);
             this.btnSelect.TabIndex = 134;
@@ -146,7 +194,7 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(473, 231);
+            this.button3.Location = new System.Drawing.Point(484, 317);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(105, 52);
             this.button3.TabIndex = 135;
@@ -242,56 +290,34 @@
             this.label24.TabIndex = 126;
             this.label24.Text = "Service Name:";
             // 
-            // myTextBox1
+            // checkedListBox1
             // 
-            this.myTextBox1.BackColor = System.Drawing.Color.Firebrick;
-            this.myTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox1.ForeColor = System.Drawing.Color.White;
-            this.myTextBox1.Location = new System.Drawing.Point(87, 46);
-            this.myTextBox1.Name = "myTextBox1";
-            this.myTextBox1.Size = new System.Drawing.Size(127, 25);
-            this.myTextBox1.TabIndex = 140;
+            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.HorizontalScrollbar = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(399, 221);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(181, 70);
+            this.checkedListBox1.TabIndex = 143;
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(11, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 19);
-            this.label3.TabIndex = 139;
-            this.label3.Text = "Model:";
-            // 
-            // myTextBox2
-            // 
-            this.myTextBox2.BackColor = System.Drawing.Color.Firebrick;
-            this.myTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox2.ForeColor = System.Drawing.Color.White;
-            this.myTextBox2.Location = new System.Drawing.Point(86, 83);
-            this.myTextBox2.Name = "myTextBox2";
-            this.myTextBox2.Size = new System.Drawing.Size(127, 25);
-            this.myTextBox2.TabIndex = 142;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(11, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 19);
-            this.label4.TabIndex = 141;
-            this.label4.Text = "Car Color:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(28, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(345, 57);
+            this.label5.TabIndex = 144;
+            this.label5.Text = "to do: add table for additional service charge for \r\na particular service\r\nthen l" +
+    "oad those additional in this checkListBox";
             // 
             // frmPosAddService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(621, 406);
+            this.ClientSize = new System.Drawing.Size(805, 532);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -299,6 +325,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPosAddService";
             this.Load += new System.EventHandler(this.frmPosAddService_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPosAddService_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -329,5 +356,7 @@
         private System.Windows.Forms.Label label24;
         public MyTextBox myTextBox2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

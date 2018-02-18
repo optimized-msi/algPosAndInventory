@@ -318,6 +318,11 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void ucServices_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
+
         private void btnPClear_Click(object sender, EventArgs e)
         {
             LoadPriceLV(); txtPriceID.Text = ""; cboServiceName.Text = ""; cboVehicleType.Text = ""; numFee.Text = ""; btnPAdd.Enabled = true; btnPSave.Enabled = false; btnPDelete.Enabled = false; btnPEdit.Enabled = false; LoadServiceCbo(); LoadTypeCbo(); cboServiceName.Enabled = false; cboVehicleType.Enabled = false; numFee.Enabled = false;

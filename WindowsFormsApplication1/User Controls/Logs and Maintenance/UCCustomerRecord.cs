@@ -21,5 +21,9 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void UCCustomerRecord_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+        }
     }
 }

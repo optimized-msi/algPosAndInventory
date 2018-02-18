@@ -208,6 +208,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UCCustomerRecord";
             this.Size = new System.Drawing.Size(1186, 694);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UCCustomerRecord_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

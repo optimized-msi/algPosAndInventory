@@ -45,6 +45,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(159, 25);
             this.txtAddress.TabIndex = 107;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // btnOK
             // 
@@ -94,6 +95,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddress";
             this.Text = "frmAddress";
+            this.Load += new System.EventHandler(this.frmAddress_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

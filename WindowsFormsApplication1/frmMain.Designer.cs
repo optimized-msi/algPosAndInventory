@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.button1 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             this.btnManageUsers = new System.Windows.Forms.Button();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitCont)).BeginInit();
             this.splitCont.Panel1.SuspendLayout();
@@ -118,10 +120,11 @@
             this.clerkPanel.BackColor = System.Drawing.Color.Maroon;
             this.clerkPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clerkPanel.BackgroundImage")));
             this.clerkPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.clerkPanel.Location = new System.Drawing.Point(3, 72);
+            this.clerkPanel.Location = new System.Drawing.Point(-1, 72);
             this.clerkPanel.Name = "clerkPanel";
-            this.clerkPanel.Size = new System.Drawing.Size(1368, 692);
+            this.clerkPanel.Size = new System.Drawing.Size(1366, 692);
             this.clerkPanel.TabIndex = 83;
+            this.clerkPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.clerkPanel_MouseMove);
             // 
             // label1
             // 
@@ -136,7 +139,7 @@
             // 
             // splitCont
             // 
-            this.splitCont.Location = new System.Drawing.Point(1, 72);
+            this.splitCont.Location = new System.Drawing.Point(1, 70);
             this.splitCont.Name = "splitCont";
             // 
             // splitCont.Panel1
@@ -147,6 +150,7 @@
             this.splitCont.Panel1.Controls.Add(this.btnServices);
             this.splitCont.Panel1.Controls.Add(this.btnInventory);
             this.splitCont.Panel1.Controls.Add(this.btnReports);
+            this.splitCont.Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.splitCont_Panel1_MouseMove);
             // 
             // splitCont.Panel2
             // 
@@ -160,6 +164,7 @@
             this.splitCont.SplitterWidth = 1;
             this.splitCont.TabIndex = 135;
             this.splitCont.Visible = false;
+            this.splitCont.MouseMove += new System.Windows.Forms.MouseEventHandler(this.splitCont_MouseMove);
             // 
             // button2
             // 
@@ -252,6 +257,7 @@
             this.maintenancePanel.Size = new System.Drawing.Size(1186, 694);
             this.maintenancePanel.TabIndex = 135;
             this.maintenancePanel.Visible = false;
+            this.maintenancePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.maintenancePanel_MouseMove);
             // 
             // panel9
             // 
@@ -337,6 +343,11 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Logs and Maintenance";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,10 +362,13 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.clerkPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "frmMain";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmMain_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitCont.Panel1.ResumeLayout(false);
             this.splitCont.Panel2.ResumeLayout(false);
@@ -390,5 +404,6 @@
         private System.Windows.Forms.Button btnManageUsers;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer1;
     }
 }

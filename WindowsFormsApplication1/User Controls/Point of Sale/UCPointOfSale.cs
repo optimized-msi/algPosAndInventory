@@ -317,6 +317,25 @@ namespace WindowsFormsApplication1
             lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
         }
 
+        private void lvItems_SelectedIndexChanged_1(object sender, EventArgs e) {
+            if (lvItems.SelectedItems.Count > 0) {
+                ListViewItem item = lvItems.SelectedItems[0];
+                txtItemCode.Text = item.SubItems[0].Text;
+                numQuan.Text = item.SubItems[4].Text;
+                lvIclick = true;
+                btnRemove.Enabled = true;
+            }
+        }
+
+        private void lvServices_SelectedIndexChanged_1(object sender, EventArgs e) {
+
+        }
+
+        private void UCPointOfSale_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             txtItemCode.Clear();numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0";lblDiscAmount.Text = "0";lblPaid.Text = "0";lblTotalItems.Text = "0";lblTotalService.Text = "0";txtInvoiceNo.Text = "";txtCustFN.Text = "";txtCustGN.Text = "";txtCustMI.Text = ""; txtAddress.Text = "";txtContact.Text = "";

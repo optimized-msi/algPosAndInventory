@@ -65,5 +65,10 @@ namespace WindowsFormsApplication1
                 throw;
             }
         }
+
+        private void frmPosPay_MouseMove(object sender, MouseEventArgs e) {
+            frmMain.count = 0;
+
+        }
     }
 }
