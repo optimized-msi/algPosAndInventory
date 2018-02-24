@@ -323,6 +323,29 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void btnPrint_Click(object sender, EventArgs e) {
+
+            try {
+                string query = "SELECT service_price_ID,service_name,vehicle_type,service_fee FROM service_price,service,vehicle_type WHERE service_price.service_ID=service.service_ID AND service_price.vehicletype_ID=vehicle_type.vehicletype_ID";
+                dbcon.mysqlconnect.Open();
+                MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                MySqlDataAdapter adp = new MySqlDataAdapter();
+                DataSet dt = new DataSet();
+                adp.SelectCommand = cmd;
+                adp.Fill(dt, "service_price");
+                CrystalReport1 reporting = new CrystalReport1();
+                reporting.SetDataSource(dt);
+                frmReports frmreports = new frmReports();
+                frmreports.crystalReportViewer.ReportSource = reporting;
+                frmreports.crystalReportViewer.Refresh();
+                cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                frmreports.ShowDialog();
+            } catch (Exception) {
+                throw;
+            }
+           
+        }
+
         private void btnPClear_Click(object sender, EventArgs e)
         {
             LoadPriceLV(); txtPriceID.Text = ""; cboServiceName.Text = ""; cboVehicleType.Text = ""; numFee.Text = ""; btnPAdd.Enabled = true; btnPSave.Enabled = false; btnPDelete.Enabled = false; btnPEdit.Enabled = false; LoadServiceCbo(); LoadTypeCbo(); cboServiceName.Enabled = false; cboVehicleType.Enabled = false; numFee.Enabled = false;

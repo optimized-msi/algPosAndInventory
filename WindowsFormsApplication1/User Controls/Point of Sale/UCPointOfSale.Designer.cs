@@ -59,11 +59,11 @@
             this.lblDiscAmount = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboBarangay = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.txtAddress = new MyTextBox();
             this.txtContact = new MyTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -88,6 +88,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
@@ -97,6 +98,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -461,11 +463,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.Controls.Add(this.label29);
+            this.panel2.Controls.Add(this.cboBarangay);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btnPay);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnRemove);
-            this.panel2.Controls.Add(this.txtAddress);
             this.panel2.Controls.Add(this.txtContact);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.groupBox1);
@@ -480,13 +483,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1353, 464);
             this.panel2.TabIndex = 120;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // cboBarangay
+            // 
+            this.cboBarangay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBarangay.FormattingEnabled = true;
+            this.cboBarangay.Location = new System.Drawing.Point(1088, 31);
+            this.cboBarangay.Name = "cboBarangay";
+            this.cboBarangay.Size = new System.Drawing.Size(125, 33);
+            this.cboBarangay.TabIndex = 135;
+            this.cboBarangay.SelectedIndexChanged += new System.EventHandler(this.cboBarangay_SelectedIndexChanged);
             // 
             // button3
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1043, 403);
+            this.button3.Location = new System.Drawing.Point(1235, 302);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 52);
             this.button3.TabIndex = 134;
@@ -499,7 +513,7 @@
             this.btnPay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPay.BackgroundImage")));
             this.btnPay.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(925, 403);
+            this.btnPay.Location = new System.Drawing.Point(1117, 302);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(114, 52);
             this.btnPay.TabIndex = 133;
@@ -512,7 +526,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(750, 403);
+            this.button1.Location = new System.Drawing.Point(1235, 122);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 52);
             this.button1.TabIndex = 132;
@@ -526,24 +540,13 @@
             this.btnRemove.Enabled = false;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(629, 403);
+            this.btnRemove.Location = new System.Drawing.Point(1114, 122);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(114, 52);
             this.btnRemove.TabIndex = 130;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click_1);
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.Firebrick;
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(1098, 29);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(189, 25);
-            this.txtAddress.TabIndex = 131;
             // 
             // txtContact
             // 
@@ -672,9 +675,9 @@
             this.lvServices.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvServices.FullRowSelect = true;
             this.lvServices.GridLines = true;
-            this.lvServices.Location = new System.Drawing.Point(627, 122);
+            this.lvServices.Location = new System.Drawing.Point(11, 332);
             this.lvServices.Name = "lvServices";
-            this.lvServices.Size = new System.Drawing.Size(714, 276);
+            this.lvServices.Size = new System.Drawing.Size(1096, 120);
             this.lvServices.TabIndex = 125;
             this.lvServices.UseCompatibleStateImageBehavior = false;
             this.lvServices.View = System.Windows.Forms.View.Details;
@@ -713,7 +716,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(630, 84);
+            this.label8.Location = new System.Drawing.Point(13, 296);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 33);
             this.label8.TabIndex = 124;
@@ -748,14 +751,15 @@
             this.columnHeader2,
             this.columnHeader7,
             this.columnHeader4,
+            this.columnHeader9,
             this.columnHeader3,
             this.columnHeader5});
             this.lvItems.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvItems.FullRowSelect = true;
             this.lvItems.GridLines = true;
-            this.lvItems.Location = new System.Drawing.Point(12, 122);
+            this.lvItems.Location = new System.Drawing.Point(3, 122);
             this.lvItems.Name = "lvItems";
-            this.lvItems.Size = new System.Drawing.Size(609, 276);
+            this.lvItems.Size = new System.Drawing.Size(1096, 162);
             this.lvItems.TabIndex = 121;
             this.lvItems.UseCompatibleStateImageBehavior = false;
             this.lvItems.View = System.Windows.Forms.View.Details;
@@ -764,35 +768,41 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Item Code";
-            this.columnHeader1.Width = 132;
+            this.columnHeader1.Width = 181;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Item Name";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 129;
+            this.columnHeader2.Width = 203;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Description";
-            this.columnHeader7.Width = 95;
+            this.columnHeader7.Width = 223;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Price";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 88;
+            this.columnHeader4.Width = 104;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Discount";
+            this.columnHeader9.Width = 70;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Quantity";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 70;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Total";
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 101;
+            this.columnHeader5.Width = 237;
             // 
             // label2
             // 
@@ -870,6 +880,18 @@
             this.label28.Size = new System.Drawing.Size(20, 23);
             this.label28.TabIndex = 133;
             this.label28.Text = "P";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Location = new System.Drawing.Point(1215, 41);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(140, 23);
+            this.label29.TabIndex = 136;
+            this.label29.Text = ",Zamboanga City";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // UCPointOfSale
             // 
@@ -955,7 +977,6 @@
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRemove;
-        public MyTextBox txtAddress;
         public MyTextBox txtContact;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -989,5 +1010,8 @@
         public System.Windows.Forms.Label label26;
         public System.Windows.Forms.Label label27;
         public System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ComboBox cboBarangay;
+        private System.Windows.Forms.Label label29;
     }
 }

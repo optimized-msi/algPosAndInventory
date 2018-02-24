@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.clbAddedService = new System.Windows.Forms.CheckedListBox();
             this.myTextBox2 = new MyTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.myTextBox1 = new MyTextBox();
@@ -44,13 +45,11 @@
             this.txtPlateNo = new MyTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox = new System.Windows.Forms.CheckedListBox();
+            this.clbEmployee = new System.Windows.Forms.CheckedListBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +68,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(205, 4);
+            this.label9.Location = new System.Drawing.Point(298, 8);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(197, 39);
             this.label9.TabIndex = 24;
@@ -78,8 +77,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Firebrick;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.checkedListBox1);
+            this.panel2.Controls.Add(this.clbAddedService);
             this.panel2.Controls.Add(this.myTextBox2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.myTextBox1);
@@ -92,15 +90,26 @@
             this.panel2.Controls.Add(this.txtPlateNo);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.checkedListBox);
+            this.panel2.Controls.Add(this.clbEmployee);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label24);
-            this.panel2.Location = new System.Drawing.Point(10, 89);
+            this.panel2.Location = new System.Drawing.Point(80, 75);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(670, 389);
             this.panel2.TabIndex = 85;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // clbAddedService
+            // 
+            this.clbAddedService.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clbAddedService.FormattingEnabled = true;
+            this.clbAddedService.HorizontalScrollbar = true;
+            this.clbAddedService.Location = new System.Drawing.Point(399, 199);
+            this.clbAddedService.Name = "clbAddedService";
+            this.clbAddedService.Size = new System.Drawing.Size(181, 92);
+            this.clbAddedService.TabIndex = 143;
             // 
             // myTextBox2
             // 
@@ -235,16 +244,16 @@
             this.label1.TabIndex = 131;
             this.label1.Text = "Serviced by:";
             // 
-            // checkedListBox
+            // clbEmployee
             // 
-            this.checkedListBox.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox.FormattingEnabled = true;
-            this.checkedListBox.HorizontalScrollbar = true;
-            this.checkedListBox.Location = new System.Drawing.Point(399, 46);
-            this.checkedListBox.Name = "checkedListBox";
-            this.checkedListBox.Size = new System.Drawing.Size(181, 136);
-            this.checkedListBox.TabIndex = 130;
-            this.checkedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
+            this.clbEmployee.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clbEmployee.FormattingEnabled = true;
+            this.clbEmployee.HorizontalScrollbar = true;
+            this.clbEmployee.Location = new System.Drawing.Point(399, 46);
+            this.clbEmployee.Name = "clbEmployee";
+            this.clbEmployee.Size = new System.Drawing.Size(181, 136);
+            this.clbEmployee.TabIndex = 130;
+            this.clbEmployee.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
             // 
             // label21
             // 
@@ -290,34 +299,12 @@
             this.label24.TabIndex = 126;
             this.label24.Text = "Service Name:";
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.HorizontalScrollbar = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(399, 221);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(181, 70);
-            this.checkedListBox1.TabIndex = 143;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(345, 57);
-            this.label5.TabIndex = 144;
-            this.label5.Text = "to do: add table for additional service charge for \r\na particular service\r\nthen l" +
-    "oad those additional in this checkListBox";
-            // 
             // frmPosAddService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(805, 532);
+            this.ClientSize = new System.Drawing.Size(805, 483);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -349,14 +336,13 @@
         public MyTextBox txtPlateNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox;
+        private System.Windows.Forms.CheckedListBox clbEmployee;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         public MyTextBox myTextBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox clbAddedService;
     }
 }

@@ -22,9 +22,15 @@ namespace WindowsFormsApplication1
         }
         private void UserControl4_Load(object sender, EventArgs e)
         {
-            Clear(); Lock(); LoadListView(); LoadDrp(); LoadSDrp(); LoadStockListView(); btnSClear.PerformClick(); LoadSupCbo(); btnSupClear.PerformClick(); buttonSupClear(); PriceClear();
-            btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false; txtSProdName.BackColor = Color.Firebrick;
-            txtReceived.BackColor = Color.Firebrick;
+            //products
+            Clear(); Lock(); LoadListView(); LoadDrp(); LoadSDrp();
+            //stocks
+            LoadStockListView(); btnSClear.PerformClick(); LoadSupCbo(); btnSupClear.PerformClick();
+            //supplier
+            buttonSupClear(); 
+            //product price
+
+            btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false; ProductPriceClear();
         }
         private void LoadListView()
         {
@@ -34,7 +40,7 @@ namespace WindowsFormsApplication1
             {
                 dbcon.mysqlconnect.Open();
                 string query;
-                query = "SELECT product_ID,product_name,product_desc,category.category_name,oil_type FROM products,category WHERE products.category_ID=category.category_ID";
+                query = "SELECT product_ID,product_name,brand_name,product_desc,viscosity_name,oil_type, wheel_type, volume,unit FROM products,viscosity,brand WHERE products.viscosity_ID=viscosity.viscosity_ID AND products.brand_ID=brand.brand_ID";
 
                 MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
                 DataTable table = new DataTable("myTable");
@@ -61,10 +67,9 @@ namespace WindowsFormsApplication1
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
-        private void LoadDrp()
-        {
-            drpCat.Items.Clear();
-            string query = "SELECT category_name FROM category";
+        private void LoadDrp() {
+            cboVisc.Items.Clear();
+            string query = "SELECT viscosity_name FROM viscosity";
             dbcon.mysqlconnect.Open();
             MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
             myCommand.CommandTimeout = 60;
@@ -77,13 +82,35 @@ namespace WindowsFormsApplication1
                 while (reader.Read())
                 {
 
-                    drpCat.Items.Add(reader.GetString(0));
+                    cboVisc.Items.Add(reader.GetString(0));
+                }
+                //drpCat.Items = myCollection.ToArray();
+            }
+            dbcon.mysqlconnect.Close();
+
+            cboBrand.Items.Clear();
+            string query1 = "SELECT brand_name FROM brand";
+            dbcon.mysqlconnect.Open();
+            MySqlCommand cmd1 = new MySqlCommand(query1, dbcon.mysqlconnect);
+            cmd1.CommandTimeout = 60;
+            MySqlDataReader reader1;
+            reader1 = cmd1.ExecuteReader();
+            //List<string> myCollection = new List<string>();
+
+            if (reader1.HasRows) {
+                while (reader1.Read()) {
+
+                    cboBrand.Items.Add(reader1.GetString(0));
                 }
                 //drpCat.Items = myCollection.ToArray();
             }
             dbcon.mysqlconnect.Close();
         }
-
+        private void btnAddBrand_Click(object sender, EventArgs e) {
+            frmBrands frmBrand = new frmBrands();
+            frmBrand.ShowDialog();
+            LoadDrp();LoadListView();
+        }
         private void lvProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lvProducts.SelectedItems.Count > 0)
@@ -91,10 +118,25 @@ namespace WindowsFormsApplication1
                 ListViewItem item = lvProducts.SelectedItems[0];
                 txtProdNo.Text = item.SubItems[0].Text;
                 txtProdName.Text = item.SubItems[1].Text;
-                txtProdDesc.Text = item.SubItems[2].Text;
-                drpCat.Text = item.SubItems[3].Text;
-                if (item.SubItems[4].Text == "4-Wheel") { rdSemi.Checked = true; rdFull.Checked = false; }else if (item.SubItems[4].Text == "2-Wheel") { rdFull.Checked = true; rdSemi.Checked = false; }
+                cboBrand.Text = item.SubItems[2].Text;
+                txtProdDesc.Text = item.SubItems[3].Text;
+                cboVisc.Text = item.SubItems[4].Text;
+                if (item.SubItems[5].Text == "Semi Synthetic") {
+                    rdSemi.Checked = true; rdFull.Checked = false; rdOrd.Checked = false;
+                } else if (item.SubItems[5].Text == "Fully Synthetic") {
+                    rdFull.Checked = true; rdSemi.Checked = false; rdOrd.Checked = false;
+                } else if (item.SubItems[5].Text == "Ordinary") {
+                    rdOrd.Checked = true; rdSemi.Checked = false; rdFull.Checked = false;
+                }
+
+                if (item.SubItems[6].Text == "4-Wheel") {
+                    rd4.Checked = true; rd2.Checked = false;
+                } else if (item.SubItems[6].Text == "2-Wheel") {
+                    rd2.Checked = true; rd4.Checked = false;
+                }
+                numVolume.Value = Convert.ToDecimal(item.SubItems[7].Text);
                 btnEdit.Enabled = true; btnDelete.Enabled = true; btnAdd.Enabled = false; add = false; Lock();
+                oldID = txtProdNo.Text; oldName = txtProdName.Text;
             }
             else
             {
@@ -103,31 +145,32 @@ namespace WindowsFormsApplication1
         }
         private void CheckInput()
         {
-            if (txtProdNo.Text == "" || txtProdName.Text == "" || txtProdDesc.Text == "" || drpCat.Text == "")
+            if (txtProdNo.Text == "" || txtProdName.Text == "" || txtProdDesc.Text == "" || cboVisc.Text == "")
                 filled = false;
             else
                 filled = true;
         }
         private void Clear()
         {
-            txtProdNo.Text = ""; txtProdName.Text = ""; txtProdDesc.Text = ""; drpCat.Text = ""; rdFull.Checked = false; rdSemi.Checked = false;
+            txtProdNo.Text = ""; txtProdName.Text = ""; txtProdDesc.Text = ""; cboVisc.Text = ""; cboBrand.Text = ""; rdFull.Checked = false; rdSemi.Checked = false; rdOrd.Checked = false; rd4.Checked = false; rd2.Checked = false; cboBrand.Text = ""; numVolume.Value =1 ; cboVol.Text = ""; cboVisc.Text = "";
         }
         private void Lock()
         {
-            txtProdNo.Enabled = false; txtProdName.Enabled = false; txtProdDesc.Enabled = false; drpCat.Enabled = false; grpOil.Enabled = false;
+            txtProdNo.Enabled = false; txtProdName.Enabled = false; txtProdDesc.Enabled = false; cboVisc.Enabled = false; cboBrand.Enabled = false; grpOil.Enabled = false; grpWheel.Enabled = false; cboBrand.Enabled = false; numVolume.Enabled = false; cboVol.Enabled = false; cboVisc.Enabled = false; btnAddBrand.Enabled = false; btnAddViscosity.Enabled = false;
         }
         private void UnLock()
         {
-            txtProdNo.Enabled = true; txtProdName.Enabled = true; txtProdDesc.Enabled = true; drpCat.Enabled = true; grpOil.Enabled = true;
+            txtProdNo.Enabled = true; txtProdName.Enabled = true; txtProdDesc.Enabled = true; cboVisc.Enabled = true; cboBrand.Enabled = true; grpOil.Enabled = true; grpWheel.Enabled = true; cboBrand.Enabled = true; numVolume.Enabled = true; cboVol.Enabled = true; cboVisc.Enabled = true; btnAddBrand.Enabled = true; btnAddViscosity.Enabled = true;
         }
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
             UnLock(); add = true; btnSave.Enabled = true; btnAdd.Enabled = false; btnDelete.Enabled = false; btnEdit.Enabled = false;
+            txtProdNo.Focus();
         }
-
+        private string oldID, oldName;
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            UnLock(); add = false; btnSave.Enabled = true; btnAdd.Enabled = false; btnDelete.Enabled = false; btnEdit.Enabled = false; txtProdNo.Enabled = false;
+            UnLock(); add = false; btnSave.Enabled = true; btnAdd.Enabled = false; btnDelete.Enabled = false; btnEdit.Enabled = false; txtProdNo.Enabled = false; txtProdNo.Enabled = false;
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
@@ -148,18 +191,35 @@ namespace WindowsFormsApplication1
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            prod.prodNo = txtProdNo.Text; prod.prodName = txtProdName.Text; prod.prodDesc = txtProdDesc.Text; prod.category = drpCat.Text;
-            if (rdSemi.Checked == true) { prod.oilType = "Semi Synthetic"; } else if (rdFull.Checked == true) { prod.oilType = "Full Synthetic"; }
+            prod.prodNo = txtProdNo.Text; prod.prodName = txtProdName.Text; prod.prodDesc = txtProdDesc.Text; prod.viscosity = cboVisc.Text; prod.brand = cboBrand.Text; prod.volume = numVolume.Value.ToString(); prod.unit = cboVol.Text;
+            if (rdSemi.Checked == true)
+                prod.oilType = "Semi Synthetic";
+            else if (rdFull.Checked == true)
+                prod.oilType = "Full Synthetic";
+            else if (rdOrd.Checked == true)
+                prod.oilType = "Ordinary";
+
+            if (rd4.Checked == true)
+                prod.wheelType = "4-Wheel";
+            else if (rd2.Checked == true)
+                prod.wheelType = "2-Wheel";
+
             CheckInput();
             if (filled)
             {
-                if (add)
-                    prod.InsertProduct();
-                else
-                    prod.UpdateProduct();
-                Clear(); Lock(); LoadListView();
-                btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false;
-                LoadSDrp();
+                if (add) {
+                    if (prod.InsertedProduct()) {
+                        Clear(); Lock(); LoadListView();
+                        btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false;
+                        LoadSDrp();
+                    }
+                } else {
+                    if (prod.UpdatedProduct()) {
+                        Clear(); Lock(); LoadListView();
+                        btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false;
+                        LoadSDrp();
+                    }
+                }
             }
             else
             {
@@ -167,9 +227,9 @@ namespace WindowsFormsApplication1
             }
         }
         private void btnAddCategory_Click(object sender, EventArgs e) {
-            frmCategory frmCat = new frmCategory();
+            frmViscosity frmCat = new frmViscosity();
             frmCat.ShowDialog();
-            LoadDrp();
+            LoadDrp(); LoadListView();
         }
         private void btnClear_Click_1(object sender, EventArgs e)
         {
@@ -328,7 +388,7 @@ namespace WindowsFormsApplication1
         }
         private void SUnLock()
         {
-            cboProd.Enabled = true; txtStockNo.Enabled = true; numQuan.Enabled = true; cboSuppliers.Enabled = true; numSupPrice.Enabled = true;
+            cboProd.Enabled = true; txtStockNo.Enabled = false; numQuan.Enabled = true; cboSuppliers.Enabled = true; numSupPrice.Enabled = true;
         }
         private void SClear()
         {
@@ -438,6 +498,7 @@ namespace WindowsFormsApplication1
         }
 
         private void btnSAdd_Click(object sender, EventArgs e) {
+            txtStockNo.Text = stock.SetStockID();
             cboProd.Enabled = true;
             SUnLock();
             sAdd = true;
@@ -451,20 +512,26 @@ namespace WindowsFormsApplication1
                 if (numQuan.Value.ToString() == "0") {
                     MessageBox.Show("Quantity must not be equal to zero", "Inventory");
                     numQuan.Focus();
+                } else if(txtStockNo.Text=="" || cboProd.Text == "" || cboSuppliers.Text == "" || numSupPrice.Text == "0") {
+                    MessageBox.Show("Please fill-up all fields", "Inventory");
+                } else {
+                    stock.InsertStocks();
+                     sAdd = false;
+                    btnSClear.PerformClick();
                 }
-                stock.InsertStocks();
-                sAdd = false;
             } else if (sEdit) {
                 stock.UpdateStock();
                 sEdit = false;
+                btnSClear.PerformClick();
             } else if (sDeduct) {
                 stock.DeductStock();
                 sDeduct = false;
+                btnSClear.PerformClick();
             }else if (cChange) {
                 stock.ChangePrice();
                 cChange = false;
+                btnSClear.PerformClick();
             }
-            btnSClear.PerformClick();
         }
 
         //================ Supplier ==============
@@ -484,7 +551,7 @@ namespace WindowsFormsApplication1
         }
 
         private void btnSupDelete_Click(object sender, EventArgs e) {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this employee?", "Manage Employee", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this supplier?", "Manage Supplier", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes) {
                 clsSupplier.supplierID = txtSupplierID.Text;
                 clsSupplier.DeleteSupplier();
@@ -531,9 +598,6 @@ namespace WindowsFormsApplication1
                 btnSupClear.PerformClick();
             }
         }
-
-      
-
         private void btnSupClear_Click(object sender, EventArgs e) {
             buttonSupClear(); LoadSupLV(); LoadSupCbo();
         }
@@ -572,8 +636,8 @@ namespace WindowsFormsApplication1
         clsItems item = new clsItems();
         bool isPriceSet = false;
         private void cboPriceProductName_SelectedIndexChanged(object sender, EventArgs e) {
-            LoadSupplierPrice(cboPriceProductName.Text);
             btnPriceSetPrice.Enabled = true; numPriceDiscount.Enabled = true; numPriceSelling.Enabled = true;
+            LoadSupplierPrice(cboPriceProductName.Text);
         }
         private void lvPriceProduct_SelectedIndexChanged(object sender, EventArgs e) {
 
@@ -590,30 +654,40 @@ namespace WindowsFormsApplication1
 
         private void numPriceSelling_ValueChanged(object sender, EventArgs e) {
             try {
+                lblPriceProductPrice.Text = numPriceSelling.Value.ToString();
                 discountedPrice = (Convert.ToDouble(numPriceSelling.Value) - (Convert.ToDouble(numPriceSelling.Value) * ((Convert.ToDouble(numPriceDiscount.Value)) / 100)));
+                lblPriceDiscounted.Text = discountedPrice.ToString();
             } catch (Exception) {
-
+                throw;
             }
         }
 
         private void numPriceDiscount_ValueChanged(object sender, EventArgs e) {
             try {
+                lblPriceDiscount.Text = numPriceDiscount.Value.ToString();
                 discountedPrice = (Convert.ToDouble(numPriceSelling.Value) - (Convert.ToDouble(numPriceSelling.Value) * ((Convert.ToDouble(numPriceDiscount.Value)) / 100)));
+                lblPriceDiscounted.Text = discountedPrice.ToString();
             } catch (Exception) {
 
             }
         }
 
-        private void btnPriceUpdate_Click(object sender, EventArgs e) {
+        private void tabPage1_Click(object sender, EventArgs e) {
+          
+        }
 
+        private void txtProdNo_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter) {
+                txtProdName.Focus();
+            }
         }
 
         private void btnPriceClear_Click(object sender, EventArgs e) {
-            PriceClear(); lvPriceSupplier.Items.Clear(); cboPriceProductName.Text = ""; btnPriceSetPrice.Enabled = false; isPriceSet = false; LoadProductPrice(); lblPriceDiscount.Text = "0.00"; lblPriceProductID.Text=
+            ProductPriceClear(); 
         }
         
-        private void PriceClear() {
-            LoadCboProductPrice();   
+        private void ProductPriceClear() {
+            LoadCboProductPrice(); lvPriceSupplier.Items.Clear(); cboPriceProductName.Text = ""; btnPriceSetPrice.Enabled = false; isPriceSet = false; LoadProductPrice(); lblPriceDiscount.Text = "0.00"; LoadProductPrice();
         }
         private void LoadCboProductPrice() {
             cboPriceProductName.Items.Clear();
@@ -631,21 +705,25 @@ namespace WindowsFormsApplication1
                 mySqlDataAdapter.Fill(table);
                 lvPriceSupplier.View = View.Details;
                 ListViewItem iItem;
-                foreach (DataRow row in table.Rows) {
-                    iItem = new ListViewItem();
-                    for (int i = 0; i < row.ItemArray.Length; i++) {
-                        if (i == 0)
-                            iItem.Text = row.ItemArray[i].ToString();
-                        else if(i==3)
-                            iItem.SubItems.Add((row.ItemArray[i].ToString()).Substring(0, 10));
-                        else if (i == 4) {
-                            iItem.SubItems.Add(row.ItemArray[i].ToString());
-                            totalStocks += Convert.ToInt32(row.ItemArray[i].ToString());
+                if (table.Rows.Count != 0) {
+                    foreach (DataRow row in table.Rows) {
+                        iItem = new ListViewItem();
+                        for (int i = 0; i < row.ItemArray.Length; i++) {
+                            if (i == 0)
+                                iItem.Text = row.ItemArray[i].ToString();
+                            else if (i == 3)
+                                iItem.SubItems.Add((row.ItemArray[i].ToString()).Substring(0, 10));
+                            else if (i == 4) {
+                                iItem.SubItems.Add(row.ItemArray[i].ToString());
+                                totalStocks += Convert.ToInt32(row.ItemArray[i].ToString());
+                            } else
+                                iItem.SubItems.Add(row.ItemArray[i].ToString());
                         }
-                        else
-                            iItem.SubItems.Add(row.ItemArray[i].ToString());
+                        lvPriceSupplier.Items.Add(iItem);
                     }
-                    lvPriceSupplier.Items.Add(iItem);
+                    numPriceDiscount.Enabled = true; numPriceSelling.Enabled = true;
+                } else {
+                    lblPriceDiscount.Text = ""; lblPriceDiscounted.Text = ""; lblPriceProductPrice.Text = ""; btnPriceSetPrice.Enabled = false; numPriceDiscount.Value = 0; numPriceDiscount.Enabled = false; numPriceSelling.Value = 0; numPriceSelling.Enabled = false;
                 }
                 lblPriceTotalStocks.Text = totalStocks.ToString();
                 dbcon.mysqlconnect.Close();

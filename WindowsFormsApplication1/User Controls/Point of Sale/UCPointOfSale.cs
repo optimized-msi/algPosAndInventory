@@ -21,6 +21,9 @@ namespace WindowsFormsApplication1
         private void UserControl3_Load(object sender, EventArgs e)
         {
             txtItemCode.Focus();
+            LoadBarangay();
+
+
         }
         private void txtItemCode_KeyDown(object sender, KeyEventArgs e)
         {
@@ -41,7 +44,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                query = "SELECT product_ID,product_name,product_desc,product_sellingprice FROM products WHERE product_ID='"+txtItemCode.Text+"'";
+                query = "SELECT products.product_ID,product_name,product_desc,TRUNCATE(discounted_price,2),discount FROM products,product_price WHERE products.product_ID=product_price.product_ID AND products.product_ID='"+txtItemCode.Text+"'";
                 MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
                 DataTable table = new DataTable("myTable");
                 mySqlDataAdapter.Fill(table);
@@ -55,25 +58,21 @@ namespace WindowsFormsApplication1
                         foreach (DataRow row in table.Rows)
                         {
                             iItem = new ListViewItem();
-                            for (int i = 0; i < 6; i++)
+                            for (int i = 0; i < 7; i++)
                             {
                                 if (i == 0)
                                     iItem.Text = row.ItemArray[i].ToString();
-                                else if (i == 3)
-                                {
+                                else if (i == 3) {
                                     total = Convert.ToDouble(row.ItemArray[i].ToString()) * Convert.ToDouble(numQuan.Value.ToString());
-                                    iItem.SubItems.Add(row.ItemArray[i].ToString());
+                                    iItem.SubItems.Add((Math.Truncate(Convert.ToDouble(row.ItemArray[i]) * 100) / 100).ToString("F"));
                                     isItemExisting = true;
-                                }
-                                else if (i == 4)
-                                {
+                                } else if (i == 4)
+                                    iItem.SubItems.Add(row.ItemArray[i].ToString() + "%");
+                                else if (i == 5) {
                                     iItem.SubItems.Add(numQuan.Value.ToString());
-                                }
-                                else if (i == 5)
-                                {
-                                    iItem.SubItems.Add(total.ToString());
-                                }
-                                else
+                                } else if (i == 6) {
+                                    iItem.SubItems.Add(total.ToString("F"));
+                                } else
                                     iItem.SubItems.Add(row.ItemArray[i].ToString());
 
                             }
@@ -100,14 +99,14 @@ namespace WindowsFormsApplication1
             {
                 if (txtItemCode.Text == item.Text && !lvIclick)
                 {
-                    item.SubItems[4].Text =(Convert.ToInt16(numQuan.Value) + Convert.ToInt16(item.SubItems[4].Text)).ToString();
-                    item.SubItems[5].Text =(Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[4].Text)).ToString();
+                    item.SubItems[5].Text =(Convert.ToInt16(numQuan.Value) + Convert.ToInt16(item.SubItems[5].Text)).ToString();
+                    item.SubItems[6].Text =(Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[5].Text)).ToString();
                     same = true;
 
                 }else if (txtItemCode.Text == item.Text && lvIclick)
                 {
-                    item.SubItems[4].Text = Convert.ToInt16(numQuan.Value).ToString();
-                    item.SubItems[5].Text = (Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[4].Text)).ToString();
+                    item.SubItems[5].Text = Convert.ToInt16(numQuan.Value).ToString();
+                    item.SubItems[6].Text = (Convert.ToDouble(item.SubItems[3].Text) * Convert.ToDouble(item.SubItems[5].Text)).ToString();
                     lvIclick = false;
                     same = true;
                 }
@@ -164,10 +163,10 @@ namespace WindowsFormsApplication1
             double total = 0.0;
             foreach (ListViewItem item in lvItems.Items)
             {
-                total = total + (Convert.ToDouble(item.SubItems[5].Text.ToString()));
+                total = total + (Convert.ToDouble(item.SubItems[6].Text.ToString()));
             }
-            lblTotalItems.Text = total.ToString();
-            lblTotalAmount.Text = (Convert.ToDouble(lblTotalService.Text) + Convert.ToDouble(lblTotalItems.Text)).ToString();
+            lblTotalItems.Text = total.ToString("F");
+            lblTotalAmount.Text = (Convert.ToDouble(lblTotalService.Text) + Convert.ToDouble(lblTotalItems.Text)).ToString("F");
             if (numDiscount.Value == 0)
                 lblDiscAmount.Text = lblTotalAmount.Text;
         }
@@ -235,7 +234,7 @@ namespace WindowsFormsApplication1
             if (lvServices.Items.Count > 0 || lvItems.Items.Count > 0)
             {
                 frmPosPay frmpospay = new frmPosPay();
-                if (lvServices.Items.Count>0 &&( txtCustFN.Text == "" || txtCustGN.Text == "" || txtAddress.Text == "" || txtContact.Text == ""))
+                if (lvServices.Items.Count>0 &&( txtCustFN.Text == "" || txtCustGN.Text == "" || cboBarangay.Text == "" || txtContact.Text == ""))
                 {
                     MessageBox.Show("Please input name,address, and contact number","Point of Sale");
                 }
@@ -288,7 +287,7 @@ namespace WindowsFormsApplication1
             if (lvServices.Items.Count > 0 || lvItems.Items.Count > 0)
             {
                 frmPosPay frmpospay = new frmPosPay();
-                if (lvServices.Items.Count > 0 && (txtCustFN.Text == "" || txtCustGN.Text == "" || txtAddress.Text == "" || txtContact.Text == ""))
+                if (lvServices.Items.Count > 0 && (txtCustFN.Text == "" || txtCustGN.Text == "" || cboBarangay.Text == "" || txtContact.Text == ""))
                 {
                     MessageBox.Show("Please input name,address, and contact number", "Point of Sale");
                 }
@@ -313,7 +312,7 @@ namespace WindowsFormsApplication1
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0"; lblDiscAmount.Text = "0"; lblPaid.Text = "0"; lblTotalItems.Text = "0"; lblTotalService.Text = "0"; txtInvoiceNo.Text = ""; txtCustFN.Text = ""; txtCustGN.Text = ""; txtCustMI.Text = ""; txtAddress.Text = ""; txtContact.Text = "";
+            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0"; lblDiscAmount.Text = "0"; lblPaid.Text = "0"; lblTotalItems.Text = "0"; lblTotalService.Text = "0"; txtInvoiceNo.Text = ""; txtCustFN.Text = ""; txtCustGN.Text = ""; txtCustMI.Text = ""; cboBarangay.Text = ""; txtContact.Text = "";
             lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
         }
 
@@ -336,10 +335,37 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void cboBarangay_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            txtItemCode.Clear();numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0";lblDiscAmount.Text = "0";lblPaid.Text = "0";lblTotalItems.Text = "0";lblTotalService.Text = "0";txtInvoiceNo.Text = "";txtCustFN.Text = "";txtCustGN.Text = "";txtCustMI.Text = ""; txtAddress.Text = "";txtContact.Text = "";
+            txtItemCode.Clear();numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0";lblDiscAmount.Text = "0";lblPaid.Text = "0";lblTotalItems.Text = "0";lblTotalService.Text = "0";txtInvoiceNo.Text = "";txtCustFN.Text = "";txtCustGN.Text = "";txtCustMI.Text = ""; cboBarangay.Text = "";txtContact.Text = "";
             lvItems.Items.Clear(); lvServices.Items.Clear();btnRemove.Enabled = false;
+        }
+
+        private void label29_Click(object sender, EventArgs e) {
+
+        }
+
+        private void LoadBarangay() {
+            string query = "SELECT Barangay FROM Address ORDER BY Barangay";
+            dbcon.mysqlconnect.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
+            myCommand.CommandTimeout = 60;
+            MySqlDataReader reader;
+            reader = myCommand.ExecuteReader();
+            if (reader.HasRows) {
+                while (reader.Read()) {
+                    cboBarangay.Items.Add(reader.GetString(0));
+                }
+            }
+            dbcon.mysqlconnect.Close();
         }
 
     }

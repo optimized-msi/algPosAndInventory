@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
         }
         private void LoadCheckList()
         {
-            checkedListBox.Items.Clear();
+            clbEmployee.Items.Clear();
             string query = "SELECT CONCAT(emp_fName, ', ',emp_gName,' ,',emp_mInitial) FROM employee";
             dbcon.mysqlconnect.Open();
             MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
@@ -42,7 +42,7 @@ namespace WindowsFormsApplication1
             {
                 while (reader.Read())
                 {
-                    checkedListBox.Items.Add(reader.GetString(0));
+                    clbEmployee.Items.Add(reader.GetString(0));
                 }
             }
             dbcon.mysqlconnect.Close();
@@ -102,7 +102,7 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("Please input the plate number of the vehicle", "Point of sale");
                 txtPlateNo.Focus();
-            }else if (checkedListBox.CheckedItems.Count == 0)
+            }else if (clbEmployee.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select the employee/s that will service the vehicle", "Point of sale");
             }
@@ -118,13 +118,13 @@ namespace WindowsFormsApplication1
         private void Checked()
         {
             // Determine if there are any items checked.  
-            if (checkedListBox.CheckedItems.Count != 0)
+            if (clbEmployee.CheckedItems.Count != 0)
             {
                 clsPosService.servicedBy = "";
                 // If so, loop through all checked items and print results.  
-                for (int x = 0; x <= checkedListBox.CheckedItems.Count - 1; x++)
+                for (int x = 0; x <= clbEmployee.CheckedItems.Count - 1; x++)
                 {
-                    clsPosService.servicedBy=clsPosService.servicedBy + checkedListBox.CheckedItems[x].ToString() + "/";
+                    clsPosService.servicedBy=clsPosService.servicedBy + clbEmployee.CheckedItems[x].ToString() + "/";
                 }
                 //essageBox.Show(s);
             }
@@ -132,13 +132,13 @@ namespace WindowsFormsApplication1
 
         private void checkedListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checkedListBox.CheckedItems.Count != 0)
+            if (clbEmployee.CheckedItems.Count != 0)
             {
                 clsPosService.servicedBy = "";
                 // If so, loop through all checked items and print results.  
-                for (int x = 0; x <= checkedListBox.CheckedItems.Count - 1; x++)
+                for (int x = 0; x <= clbEmployee.CheckedItems.Count - 1; x++)
                 {
-                    clsPosService.servicedBy = clsPosService.servicedBy + checkedListBox.CheckedItems[x].ToString() + "/";
+                    clsPosService.servicedBy = clsPosService.servicedBy + clbEmployee.CheckedItems[x].ToString() + "/";
                 }
                 //essageBox.Show(s);
             }
@@ -154,7 +154,7 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Please input the plate number of the vehicle", "Point of sale");
                 txtPlateNo.Focus();
             }
-            else if (checkedListBox.CheckedItems.Count == 0)
+            else if (clbEmployee.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select the employee/s that will service the vehicle", "Point of sale");
             }
@@ -191,6 +191,10 @@ namespace WindowsFormsApplication1
                 else
                     lblFee.Text = "";
                 dbcon.mysqlconnect.Close();
+                if (cboServiceName.Text == "Carwash") {
+                    clbAddedService.Items.Add("Wax - P100.00");
+                    clbAddedService.Items.Add("Soap - P200.00");
+                }
             }
             catch (Exception)
             {
@@ -228,6 +232,10 @@ namespace WindowsFormsApplication1
 
         private void frmPosAddService_MouseMove(object sender, MouseEventArgs e) {
             frmMain.count = 0;
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e) {
 
         }
     }
