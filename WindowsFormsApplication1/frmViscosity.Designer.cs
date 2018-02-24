@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmCategory
+    partial class frmViscosity
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViscosity));
             this.button1 = new System.Windows.Forms.Button();
-            this.txtCatName = new MyTextBox();
-            this.txtCatNum = new MyTextBox();
-            this.lvCat = new System.Windows.Forms.ListView();
+            this.txtViscName = new MyTextBox();
+            this.txtViscNum = new MyTextBox();
+            this.lvVisc = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSave = new System.Windows.Forms.Button();
@@ -59,54 +59,54 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtCatName
+            // txtViscName
             // 
-            this.txtCatName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtCatName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCatName.Enabled = false;
-            this.txtCatName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCatName.ForeColor = System.Drawing.Color.White;
-            this.txtCatName.Location = new System.Drawing.Point(162, 123);
-            this.txtCatName.Name = "txtCatName";
-            this.txtCatName.Size = new System.Drawing.Size(144, 25);
-            this.txtCatName.TabIndex = 115;
+            this.txtViscName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtViscName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViscName.Enabled = false;
+            this.txtViscName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViscName.ForeColor = System.Drawing.Color.White;
+            this.txtViscName.Location = new System.Drawing.Point(171, 123);
+            this.txtViscName.Name = "txtViscName";
+            this.txtViscName.Size = new System.Drawing.Size(144, 25);
+            this.txtViscName.TabIndex = 115;
             // 
-            // txtCatNum
+            // txtViscNum
             // 
-            this.txtCatNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtCatNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCatNum.Enabled = false;
-            this.txtCatNum.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCatNum.ForeColor = System.Drawing.Color.White;
-            this.txtCatNum.Location = new System.Drawing.Point(162, 92);
-            this.txtCatNum.Name = "txtCatNum";
-            this.txtCatNum.Size = new System.Drawing.Size(56, 25);
-            this.txtCatNum.TabIndex = 114;
+            this.txtViscNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtViscNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtViscNum.Enabled = false;
+            this.txtViscNum.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtViscNum.ForeColor = System.Drawing.Color.White;
+            this.txtViscNum.Location = new System.Drawing.Point(171, 92);
+            this.txtViscNum.Name = "txtViscNum";
+            this.txtViscNum.Size = new System.Drawing.Size(56, 25);
+            this.txtViscNum.TabIndex = 114;
             // 
-            // lvCat
+            // lvVisc
             // 
-            this.lvCat.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvVisc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.lvCat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvCat.FullRowSelect = true;
-            this.lvCat.GridLines = true;
-            this.lvCat.Location = new System.Drawing.Point(170, 154);
-            this.lvCat.Name = "lvCat";
-            this.lvCat.Size = new System.Drawing.Size(196, 160);
-            this.lvCat.TabIndex = 116;
-            this.lvCat.UseCompatibleStateImageBehavior = false;
-            this.lvCat.View = System.Windows.Forms.View.Details;
-            this.lvCat.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lvVisc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvVisc.FullRowSelect = true;
+            this.lvVisc.GridLines = true;
+            this.lvVisc.Location = new System.Drawing.Point(170, 154);
+            this.lvVisc.Name = "lvVisc";
+            this.lvVisc.Size = new System.Drawing.Size(196, 160);
+            this.lvVisc.TabIndex = 116;
+            this.lvVisc.UseCompatibleStateImageBehavior = false;
+            this.lvVisc.View = System.Windows.Forms.View.Details;
+            this.lvVisc.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Cat. Num";
+            this.columnHeader1.Text = "Visc Num";
             this.columnHeader1.Width = 69;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Cat Name";
+            this.columnHeader2.Text = "Viscosity Name";
             this.columnHeader2.Width = 121;
             // 
             // btnSave
@@ -184,33 +184,33 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(91, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 45);
+            this.label2.Size = new System.Drawing.Size(151, 45);
             this.label2.TabIndex = 132;
-            this.label2.Text = "Categories";
+            this.label2.Text = "Viscosity";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 127);
+            this.label1.Location = new System.Drawing.Point(53, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 21);
+            this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 131;
-            this.label1.Text = "Password:";
+            this.label1.Text = "Viscosity:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(45, 92);
+            this.label7.Location = new System.Drawing.Point(54, 92);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 21);
             this.label7.TabIndex = 130;
-            this.label7.Text = "Category:";
+            this.label7.Text = "Visc Num:";
             // 
-            // frmCategory
+            // frmViscosity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,12 +224,12 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lvCat);
-            this.Controls.Add(this.txtCatName);
-            this.Controls.Add(this.txtCatNum);
+            this.Controls.Add(this.lvVisc);
+            this.Controls.Add(this.txtViscName);
+            this.Controls.Add(this.txtViscNum);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCategory";
+            this.Name = "frmViscosity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmCategory_Load);
@@ -241,9 +241,9 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        public MyTextBox txtCatName;
-        public MyTextBox txtCatNum;
-        private System.Windows.Forms.ListView lvCat;
+        public MyTextBox txtViscName;
+        public MyTextBox txtViscNum;
+        private System.Windows.Forms.ListView lvVisc;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button btnSave;

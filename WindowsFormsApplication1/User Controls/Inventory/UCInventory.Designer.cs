@@ -34,22 +34,26 @@
             this.lvProducts = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabInventory = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label29 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnAddBrand = new System.Windows.Forms.Button();
+            this.cboBrand = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.numVolume = new System.Windows.Forms.NumericUpDown();
+            this.cboVol = new System.Windows.Forms.ComboBox();
             this.grpWheel = new System.Windows.Forms.GroupBox();
             this.rd2 = new System.Windows.Forms.RadioButton();
             this.rd4 = new System.Windows.Forms.RadioButton();
             this.grpOil = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdOrd = new System.Windows.Forms.RadioButton();
             this.rdFull = new System.Windows.Forms.RadioButton();
             this.rdSemi = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,13 +64,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddCategory = new System.Windows.Forms.Button();
-            this.txtSearch = new MyTextBox();
+            this.btnAddViscosity = new System.Windows.Forms.Button();
             this.drpSearch = new System.Windows.Forms.ComboBox();
-            this.drpCat = new System.Windows.Forms.ComboBox();
-            this.txtProdDesc = new MyTextBox();
-            this.txtProdName = new MyTextBox();
-            this.txtProdNo = new MyTextBox();
+            this.cboVisc = new System.Windows.Forms.ComboBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -85,20 +85,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnRemoveZero = new System.Windows.Forms.Button();
             this.numDeduct = new System.Windows.Forms.NumericUpDown();
             this.cboProd = new System.Windows.Forms.ComboBox();
             this.cboSort = new System.Windows.Forms.ComboBox();
+            this.numQuan = new System.Windows.Forms.NumericUpDown();
+            this.btnRemoveZero = new System.Windows.Forms.Button();
             this.btnRemoveStocks = new System.Windows.Forms.Button();
             this.btnSClear = new System.Windows.Forms.Button();
             this.btnSSave = new System.Windows.Forms.Button();
             this.btnSDeduct = new System.Windows.Forms.Button();
             this.btnSEdit = new System.Windows.Forms.Button();
-            this.numQuan = new System.Windows.Forms.NumericUpDown();
             this.btnSAdd = new System.Windows.Forms.Button();
-            this.txtSProdName = new MyTextBox();
-            this.txtStockNo = new MyTextBox();
-            this.txtReceived = new MyTextBox();
             this.lvStocks = new System.Windows.Forms.ListView();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -110,7 +107,6 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtSupplierContact = new MyTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.btnSupClear = new System.Windows.Forms.Button();
@@ -118,9 +114,6 @@
             this.btnSupDelete = new System.Windows.Forms.Button();
             this.btnSupEdit = new System.Windows.Forms.Button();
             this.btnSupAdd = new System.Windows.Forms.Button();
-            this.txtSupplierAddress = new MyTextBox();
-            this.txtSupplierName = new MyTextBox();
-            this.txtSupplierID = new MyTextBox();
             this.lvSupplier = new System.Windows.Forms.ListView();
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -140,7 +133,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.lblPriceTotalStocks = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.btnPriceSetPrice = new System.Windows.Forms.Button();
             this.lblPriceProductName = new System.Windows.Forms.Label();
             this.lblPriceProductID = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -148,6 +140,7 @@
             this.numPriceDiscount = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.numPriceSelling = new System.Windows.Forms.NumericUpDown();
+            this.btnPriceSetPrice = new System.Windows.Forms.Button();
             this.lvPriceProduct = new System.Windows.Forms.ListView();
             this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -164,10 +157,21 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtSearch = new MyTextBox();
+            this.txtProdDesc = new MyTextBox();
+            this.txtProdName = new MyTextBox();
+            this.txtProdNo = new MyTextBox();
+            this.txtSProdName = new MyTextBox();
+            this.txtStockNo = new MyTextBox();
+            this.txtReceived = new MyTextBox();
+            this.txtSupplierContact = new MyTextBox();
+            this.txtSupplierAddress = new MyTextBox();
+            this.txtSupplierName = new MyTextBox();
+            this.txtSupplierID = new MyTextBox();
             this.panel1.SuspendLayout();
             this.tabInventory.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numVolume)).BeginInit();
             this.grpWheel.SuspendLayout();
             this.grpOil.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -205,15 +209,19 @@
             this.lvProducts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader3,
+            this.columnHeader25,
             this.columnHeader4,
             this.columnHeader2,
-            this.columnHeader22});
+            this.columnHeader22,
+            this.columnHeader27,
+            this.columnHeader13,
+            this.columnHeader24});
             this.lvProducts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvProducts.FullRowSelect = true;
             this.lvProducts.GridLines = true;
-            this.lvProducts.Location = new System.Drawing.Point(367, 66);
+            this.lvProducts.Location = new System.Drawing.Point(16, 254);
             this.lvProducts.Name = "lvProducts";
-            this.lvProducts.Size = new System.Drawing.Size(860, 442);
+            this.lvProducts.Size = new System.Drawing.Size(1297, 287);
             this.lvProducts.TabIndex = 12;
             this.lvProducts.UseCompatibleStateImageBehavior = false;
             this.lvProducts.View = System.Windows.Forms.View.Details;
@@ -222,27 +230,47 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Product ID.";
-            this.columnHeader1.Width = 146;
+            this.columnHeader1.Width = 175;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Product Name";
-            this.columnHeader3.Width = 176;
+            this.columnHeader3.Width = 219;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Brand";
+            this.columnHeader25.Width = 175;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Description";
-            this.columnHeader4.Width = 190;
+            this.columnHeader4.Width = 174;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Category";
-            this.columnHeader2.Width = 114;
+            this.columnHeader2.Text = "Viscosity";
+            this.columnHeader2.Width = 126;
             // 
             // columnHeader22
             // 
             this.columnHeader22.Text = "Oil Type";
-            this.columnHeader22.Width = 126;
+            this.columnHeader22.Width = 121;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Wheel Type";
+            this.columnHeader27.Width = 117;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Volume";
+            this.columnHeader13.Width = 106;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Unit";
+            this.columnHeader24.Width = 79;
             // 
             // tabInventory
             // 
@@ -261,11 +289,11 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Firebrick;
             this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.btnAddBrand);
+            this.tabPage1.Controls.Add(this.cboBrand);
             this.tabPage1.Controls.Add(this.label26);
-            this.tabPage1.Controls.Add(this.numericUpDown2);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.numVolume);
+            this.tabPage1.Controls.Add(this.cboVol);
             this.tabPage1.Controls.Add(this.grpWheel);
             this.tabPage1.Controls.Add(this.grpOil);
             this.tabPage1.Controls.Add(this.label12);
@@ -276,10 +304,10 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.btnAddCategory);
+            this.tabPage1.Controls.Add(this.btnAddViscosity);
             this.tabPage1.Controls.Add(this.txtSearch);
             this.tabPage1.Controls.Add(this.drpSearch);
-            this.tabPage1.Controls.Add(this.drpCat);
+            this.tabPage1.Controls.Add(this.cboVisc);
             this.tabPage1.Controls.Add(this.txtProdDesc);
             this.tabPage1.Controls.Add(this.txtProdName);
             this.tabPage1.Controls.Add(this.txtProdNo);
@@ -295,83 +323,75 @@
             this.tabPage1.Size = new System.Drawing.Size(1330, 565);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Products";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(9, 196);
+            this.label29.Location = new System.Drawing.Point(333, 152);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(57, 21);
             this.label29.TabIndex = 138;
             this.label29.Text = "Brand:";
             // 
-            // button1
+            // btnAddBrand
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(257, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 36);
-            this.button1.TabIndex = 137;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddBrand.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddBrand.BackgroundImage")));
+            this.btnAddBrand.ForeColor = System.Drawing.Color.White;
+            this.btnAddBrand.Location = new System.Drawing.Point(613, 152);
+            this.btnAddBrand.Name = "btnAddBrand";
+            this.btnAddBrand.Size = new System.Drawing.Size(25, 36);
+            this.btnAddBrand.TabIndex = 137;
+            this.btnAddBrand.Text = "+";
+            this.btnAddBrand.UseVisualStyleBackColor = true;
+            this.btnAddBrand.Click += new System.EventHandler(this.btnAddBrand_Click);
             // 
-            // comboBox2
+            // cboBrand
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(123, 196);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 29);
-            this.comboBox2.TabIndex = 136;
+            this.cboBrand.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBrand.FormattingEnabled = true;
+            this.cboBrand.Location = new System.Drawing.Point(437, 152);
+            this.cboBrand.Name = "cboBrand";
+            this.cboBrand.Size = new System.Drawing.Size(170, 29);
+            this.cboBrand.TabIndex = 136;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(12, 371);
+            this.label26.Location = new System.Drawing.Point(348, 196);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(69, 21);
             this.label26.TabIndex = 135;
             this.label26.Text = "Volume:";
             // 
-            // numericUpDown2
+            // numVolume
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(95, 366);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            10000,
+            this.numVolume.Location = new System.Drawing.Point(437, 196);
+            this.numVolume.Maximum = new decimal(new int[] {
+            100000,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(111, 33);
-            this.numericUpDown2.TabIndex = 134;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.numVolume.Name = "numVolume";
+            this.numVolume.Size = new System.Drawing.Size(111, 33);
+            this.numVolume.TabIndex = 134;
             // 
-            // comboBox1
+            // cboVol
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboVol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboVol.FormattingEnabled = true;
+            this.cboVol.Items.AddRange(new object[] {
             "mL",
             "L",
             "gL"});
-            this.comboBox1.Location = new System.Drawing.Point(212, 368);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(73, 29);
-            this.comboBox1.TabIndex = 133;
+            this.cboVol.Location = new System.Drawing.Point(554, 198);
+            this.cboVol.Name = "cboVol";
+            this.cboVol.Size = new System.Drawing.Size(73, 29);
+            this.cboVol.TabIndex = 133;
             // 
             // grpWheel
             // 
@@ -379,7 +399,7 @@
             this.grpWheel.Controls.Add(this.rd4);
             this.grpWheel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpWheel.ForeColor = System.Drawing.Color.White;
-            this.grpWheel.Location = new System.Drawing.Point(6, 296);
+            this.grpWheel.Location = new System.Drawing.Point(655, 152);
             this.grpWheel.Name = "grpWheel";
             this.grpWheel.Size = new System.Drawing.Size(355, 53);
             this.grpWheel.TabIndex = 132;
@@ -389,7 +409,7 @@
             // rd2
             // 
             this.rd2.AutoSize = true;
-            this.rd2.Location = new System.Drawing.Point(149, 21);
+            this.rd2.Location = new System.Drawing.Point(191, 21);
             this.rd2.Name = "rd2";
             this.rd2.Size = new System.Drawing.Size(86, 24);
             this.rd2.TabIndex = 1;
@@ -399,7 +419,7 @@
             // rd4
             // 
             this.rd4.AutoSize = true;
-            this.rd4.Location = new System.Drawing.Point(17, 21);
+            this.rd4.Location = new System.Drawing.Point(60, 18);
             this.rd4.Name = "rd4";
             this.rd4.Size = new System.Drawing.Size(86, 24);
             this.rd4.TabIndex = 0;
@@ -408,32 +428,32 @@
             // 
             // grpOil
             // 
-            this.grpOil.Controls.Add(this.radioButton1);
+            this.grpOil.Controls.Add(this.rdOrd);
             this.grpOil.Controls.Add(this.rdFull);
             this.grpOil.Controls.Add(this.rdSemi);
             this.grpOil.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpOil.ForeColor = System.Drawing.Color.White;
-            this.grpOil.Location = new System.Drawing.Point(6, 231);
+            this.grpOil.Location = new System.Drawing.Point(653, 87);
             this.grpOil.Name = "grpOil";
             this.grpOil.Size = new System.Drawing.Size(357, 59);
             this.grpOil.TabIndex = 131;
             this.grpOil.TabStop = false;
             this.grpOil.Text = "Oil Type";
             // 
-            // radioButton1
+            // rdOrd
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(266, 23);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 24);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.Text = "Ordinary";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdOrd.AutoSize = true;
+            this.rdOrd.Location = new System.Drawing.Point(266, 23);
+            this.rdOrd.Name = "rdOrd";
+            this.rdOrd.Size = new System.Drawing.Size(89, 24);
+            this.rdOrd.TabIndex = 2;
+            this.rdOrd.Text = "Ordinary";
+            this.rdOrd.UseVisualStyleBackColor = true;
             // 
             // rdFull
             // 
             this.rdFull.AutoSize = true;
-            this.rdFull.Location = new System.Drawing.Point(139, 23);
+            this.rdFull.Location = new System.Drawing.Point(137, 23);
             this.rdFull.Name = "rdFull";
             this.rdFull.Size = new System.Drawing.Size(129, 24);
             this.rdFull.TabIndex = 1;
@@ -455,7 +475,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(628, 36);
+            this.label12.Location = new System.Drawing.Point(638, 19);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 21);
             this.label12.TabIndex = 127;
@@ -466,7 +486,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(375, 36);
+            this.label11.Location = new System.Drawing.Point(385, 19);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 21);
             this.label11.TabIndex = 126;
@@ -477,18 +497,18 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 153);
+            this.label7.Location = new System.Drawing.Point(336, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 21);
+            this.label7.Size = new System.Drawing.Size(78, 21);
             this.label7.TabIndex = 122;
-            this.label7.Text = "Category:";
+            this.label7.Text = "Viscosity:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(7, 126);
+            this.label6.Location = new System.Drawing.Point(331, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 21);
             this.label6.TabIndex = 121;
@@ -499,7 +519,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(13, 66);
+            this.label4.Location = new System.Drawing.Point(17, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 120;
@@ -510,7 +530,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 91);
+            this.label3.Location = new System.Drawing.Point(3, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 21);
             this.label3.TabIndex = 119;
@@ -521,7 +541,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 45);
+            this.label2.Location = new System.Drawing.Point(6, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 21);
             this.label2.TabIndex = 118;
@@ -538,29 +558,17 @@
             this.label1.TabIndex = 117;
             this.label1.Text = "PRODUCT DETAILS";
             // 
-            // btnAddCategory
+            // btnAddViscosity
             // 
-            this.btnAddCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.BackgroundImage")));
-            this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.Location = new System.Drawing.Point(257, 153);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(25, 36);
-            this.btnAddCategory.TabIndex = 116;
-            this.btnAddCategory.Text = "+";
-            this.btnAddCategory.UseVisualStyleBackColor = true;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(444, 30);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(159, 25);
-            this.txtSearch.TabIndex = 115;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.btnAddViscosity.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddViscosity.BackgroundImage")));
+            this.btnAddViscosity.ForeColor = System.Drawing.Color.White;
+            this.btnAddViscosity.Location = new System.Drawing.Point(613, 109);
+            this.btnAddViscosity.Name = "btnAddViscosity";
+            this.btnAddViscosity.Size = new System.Drawing.Size(25, 36);
+            this.btnAddViscosity.TabIndex = 116;
+            this.btnAddViscosity.Text = "+";
+            this.btnAddViscosity.UseVisualStyleBackColor = true;
+            this.btnAddViscosity.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // drpSearch
             // 
@@ -570,61 +578,29 @@
             "All",
             "Product ID",
             "Product Name",
-            "Category"});
-            this.drpSearch.Location = new System.Drawing.Point(719, 28);
+            "Viscosity",
+            "Brand",
+            "Volume"});
+            this.drpSearch.Location = new System.Drawing.Point(729, 11);
             this.drpSearch.Name = "drpSearch";
             this.drpSearch.Size = new System.Drawing.Size(174, 29);
             this.drpSearch.TabIndex = 113;
             this.drpSearch.SelectedIndexChanged += new System.EventHandler(this.drpSearch_SelectedIndexChanged);
             // 
-            // drpCat
+            // cboVisc
             // 
-            this.drpCat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drpCat.FormattingEnabled = true;
-            this.drpCat.Location = new System.Drawing.Point(123, 153);
-            this.drpCat.Name = "drpCat";
-            this.drpCat.Size = new System.Drawing.Size(128, 29);
-            this.drpCat.TabIndex = 110;
-            // 
-            // txtProdDesc
-            // 
-            this.txtProdDesc.BackColor = System.Drawing.Color.Firebrick;
-            this.txtProdDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProdDesc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdDesc.ForeColor = System.Drawing.Color.White;
-            this.txtProdDesc.Location = new System.Drawing.Point(116, 122);
-            this.txtProdDesc.Name = "txtProdDesc";
-            this.txtProdDesc.Size = new System.Drawing.Size(198, 25);
-            this.txtProdDesc.TabIndex = 106;
-            // 
-            // txtProdName
-            // 
-            this.txtProdName.BackColor = System.Drawing.Color.Firebrick;
-            this.txtProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdName.ForeColor = System.Drawing.Color.White;
-            this.txtProdName.Location = new System.Drawing.Point(116, 91);
-            this.txtProdName.Name = "txtProdName";
-            this.txtProdName.Size = new System.Drawing.Size(198, 25);
-            this.txtProdName.TabIndex = 105;
-            // 
-            // txtProdNo
-            // 
-            this.txtProdNo.BackColor = System.Drawing.Color.Firebrick;
-            this.txtProdNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProdNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdNo.ForeColor = System.Drawing.Color.White;
-            this.txtProdNo.Location = new System.Drawing.Point(116, 45);
-            this.txtProdNo.MaxLength = 100000000;
-            this.txtProdNo.Name = "txtProdNo";
-            this.txtProdNo.Size = new System.Drawing.Size(198, 25);
-            this.txtProdNo.TabIndex = 104;
+            this.cboVisc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboVisc.FormattingEnabled = true;
+            this.cboVisc.Location = new System.Drawing.Point(437, 109);
+            this.cboVisc.Name = "cboVisc";
+            this.cboVisc.Size = new System.Drawing.Size(170, 29);
+            this.cboVisc.TabIndex = 110;
             // 
             // btnClear
             // 
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(80, 517);
+            this.btnClear.Location = new System.Drawing.Point(1101, 195);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(114, 48);
             this.btnClear.TabIndex = 100;
@@ -636,7 +612,7 @@
             // 
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(145, 463);
+            this.btnSave.Location = new System.Drawing.Point(1166, 141);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 48);
             this.btnSave.TabIndex = 99;
@@ -648,7 +624,7 @@
             // 
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(25, 463);
+            this.btnDelete.Location = new System.Drawing.Point(1046, 141);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(114, 48);
             this.btnDelete.TabIndex = 98;
@@ -660,7 +636,7 @@
             // 
             this.btnEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.BackgroundImage")));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(145, 409);
+            this.btnEdit.Location = new System.Drawing.Point(1166, 87);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(114, 48);
             this.btnEdit.TabIndex = 97;
@@ -672,7 +648,7 @@
             // 
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(25, 409);
+            this.btnAdd.Location = new System.Drawing.Point(1046, 87);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(114, 48);
             this.btnAdd.TabIndex = 96;
@@ -695,16 +671,16 @@
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.btnRemoveZero);
             this.tabPage2.Controls.Add(this.numDeduct);
             this.tabPage2.Controls.Add(this.cboProd);
             this.tabPage2.Controls.Add(this.cboSort);
+            this.tabPage2.Controls.Add(this.numQuan);
+            this.tabPage2.Controls.Add(this.btnRemoveZero);
             this.tabPage2.Controls.Add(this.btnRemoveStocks);
             this.tabPage2.Controls.Add(this.btnSClear);
             this.tabPage2.Controls.Add(this.btnSSave);
             this.tabPage2.Controls.Add(this.btnSDeduct);
             this.tabPage2.Controls.Add(this.btnSEdit);
-            this.tabPage2.Controls.Add(this.numQuan);
             this.tabPage2.Controls.Add(this.btnSAdd);
             this.tabPage2.Controls.Add(this.txtSProdName);
             this.tabPage2.Controls.Add(this.txtStockNo);
@@ -724,7 +700,7 @@
             this.btnChangePrice.Enabled = false;
             this.btnChangePrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePrice.ForeColor = System.Drawing.Color.White;
-            this.btnChangePrice.Location = new System.Drawing.Point(299, 188);
+            this.btnChangePrice.Location = new System.Drawing.Point(642, 83);
             this.btnChangePrice.Name = "btnChangePrice";
             this.btnChangePrice.Size = new System.Drawing.Size(87, 50);
             this.btnChangePrice.TabIndex = 140;
@@ -736,7 +712,7 @@
             // 
             this.numSupPrice.Enabled = false;
             this.numSupPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSupPrice.Location = new System.Drawing.Point(130, 199);
+            this.numSupPrice.Location = new System.Drawing.Point(473, 94);
             this.numSupPrice.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -751,7 +727,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(-1, 201);
+            this.label25.Location = new System.Drawing.Point(342, 96);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(115, 21);
             this.label25.TabIndex = 138;
@@ -762,7 +738,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(9, 160);
+            this.label22.Location = new System.Drawing.Point(352, 55);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(76, 21);
             this.label22.TabIndex = 136;
@@ -773,7 +749,7 @@
             this.cboSuppliers.Enabled = false;
             this.cboSuppliers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSuppliers.FormattingEnabled = true;
-            this.cboSuppliers.Location = new System.Drawing.Point(114, 157);
+            this.cboSuppliers.Location = new System.Drawing.Point(457, 52);
             this.cboSuppliers.Name = "cboSuppliers";
             this.cboSuppliers.Size = new System.Drawing.Size(178, 29);
             this.cboSuppliers.TabIndex = 135;
@@ -783,7 +759,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(3, 361);
+            this.label19.Location = new System.Drawing.Point(1048, 28);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 21);
             this.label19.TabIndex = 134;
@@ -794,7 +770,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(1, 241);
+            this.label18.Location = new System.Drawing.Point(365, 136);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(76, 21);
             this.label18.TabIndex = 133;
@@ -855,25 +831,11 @@
             this.label13.TabIndex = 128;
             this.label13.Text = "Sort By:";
             // 
-            // btnRemoveZero
-            // 
-            this.btnRemoveZero.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemoveZero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveZero.BackgroundImage")));
-            this.btnRemoveZero.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveZero.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveZero.Location = new System.Drawing.Point(6, 457);
-            this.btnRemoveZero.Name = "btnRemoveZero";
-            this.btnRemoveZero.Size = new System.Drawing.Size(137, 50);
-            this.btnRemoveZero.TabIndex = 127;
-            this.btnRemoveZero.Text = "Remove Zero Stocks";
-            this.btnRemoveZero.UseVisualStyleBackColor = false;
-            this.btnRemoveZero.Click += new System.EventHandler(this.btnRemoveZero_Click);
-            // 
             // numDeduct
             // 
             this.numDeduct.Enabled = false;
             this.numDeduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDeduct.Location = new System.Drawing.Point(72, 353);
+            this.numDeduct.Location = new System.Drawing.Point(1117, 26);
             this.numDeduct.Maximum = new decimal(new int[] {
             500,
             0,
@@ -911,6 +873,34 @@
             this.cboSort.TabIndex = 123;
             this.cboSort.SelectedIndexChanged += new System.EventHandler(this.cboSort_SelectedIndexChanged);
             // 
+            // numQuan
+            // 
+            this.numQuan.Enabled = false;
+            this.numQuan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numQuan.Location = new System.Drawing.Point(473, 134);
+            this.numQuan.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numQuan.Name = "numQuan";
+            this.numQuan.Size = new System.Drawing.Size(70, 29);
+            this.numQuan.TabIndex = 112;
+            // 
+            // btnRemoveZero
+            // 
+            this.btnRemoveZero.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemoveZero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveZero.BackgroundImage")));
+            this.btnRemoveZero.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveZero.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveZero.Location = new System.Drawing.Point(1050, 86);
+            this.btnRemoveZero.Name = "btnRemoveZero";
+            this.btnRemoveZero.Size = new System.Drawing.Size(137, 50);
+            this.btnRemoveZero.TabIndex = 127;
+            this.btnRemoveZero.Text = "Remove Zero Stocks";
+            this.btnRemoveZero.UseVisualStyleBackColor = false;
+            this.btnRemoveZero.Click += new System.EventHandler(this.btnRemoveZero_Click);
+            // 
             // btnRemoveStocks
             // 
             this.btnRemoveStocks.BackColor = System.Drawing.Color.Transparent;
@@ -918,7 +908,7 @@
             this.btnRemoveStocks.Enabled = false;
             this.btnRemoveStocks.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveStocks.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveStocks.Location = new System.Drawing.Point(6, 402);
+            this.btnRemoveStocks.Location = new System.Drawing.Point(1193, 83);
             this.btnRemoveStocks.Name = "btnRemoveStocks";
             this.btnRemoveStocks.Size = new System.Drawing.Size(137, 50);
             this.btnRemoveStocks.TabIndex = 122;
@@ -932,7 +922,7 @@
             this.btnSClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSClear.BackgroundImage")));
             this.btnSClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSClear.ForeColor = System.Drawing.Color.White;
-            this.btnSClear.Location = new System.Drawing.Point(152, 471);
+            this.btnSClear.Location = new System.Drawing.Point(893, 83);
             this.btnSClear.Name = "btnSClear";
             this.btnSClear.Size = new System.Drawing.Size(137, 50);
             this.btnSClear.TabIndex = 121;
@@ -947,7 +937,7 @@
             this.btnSSave.Enabled = false;
             this.btnSSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSSave.ForeColor = System.Drawing.Color.White;
-            this.btnSSave.Location = new System.Drawing.Point(5, 297);
+            this.btnSSave.Location = new System.Drawing.Point(750, 23);
             this.btnSSave.Name = "btnSSave";
             this.btnSSave.Size = new System.Drawing.Size(137, 50);
             this.btnSSave.TabIndex = 120;
@@ -962,7 +952,7 @@
             this.btnSDeduct.Enabled = false;
             this.btnSDeduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSDeduct.ForeColor = System.Drawing.Color.White;
-            this.btnSDeduct.Location = new System.Drawing.Point(152, 390);
+            this.btnSDeduct.Location = new System.Drawing.Point(1193, 26);
             this.btnSDeduct.Name = "btnSDeduct";
             this.btnSDeduct.Size = new System.Drawing.Size(137, 50);
             this.btnSDeduct.TabIndex = 119;
@@ -977,7 +967,7 @@
             this.btnSEdit.Enabled = false;
             this.btnSEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSEdit.Location = new System.Drawing.Point(152, 334);
+            this.btnSEdit.Location = new System.Drawing.Point(750, 81);
             this.btnSEdit.Name = "btnSEdit";
             this.btnSEdit.Size = new System.Drawing.Size(137, 50);
             this.btnSEdit.TabIndex = 118;
@@ -985,69 +975,19 @@
             this.btnSEdit.UseVisualStyleBackColor = false;
             this.btnSEdit.Click += new System.EventHandler(this.btnSEdit_Click);
             // 
-            // numQuan
-            // 
-            this.numQuan.Enabled = false;
-            this.numQuan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numQuan.Location = new System.Drawing.Point(81, 247);
-            this.numQuan.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numQuan.Name = "numQuan";
-            this.numQuan.Size = new System.Drawing.Size(70, 29);
-            this.numQuan.TabIndex = 112;
-            // 
             // btnSAdd
             // 
             this.btnSAdd.BackColor = System.Drawing.Color.Transparent;
             this.btnSAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSAdd.BackgroundImage")));
             this.btnSAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSAdd.ForeColor = System.Drawing.Color.White;
-            this.btnSAdd.Location = new System.Drawing.Point(155, 278);
+            this.btnSAdd.Location = new System.Drawing.Point(893, 23);
             this.btnSAdd.Name = "btnSAdd";
             this.btnSAdd.Size = new System.Drawing.Size(137, 50);
             this.btnSAdd.TabIndex = 109;
             this.btnSAdd.Text = "Add New Stocks";
             this.btnSAdd.UseVisualStyleBackColor = false;
             this.btnSAdd.Click += new System.EventHandler(this.btnSAdd_Click);
-            // 
-            // txtSProdName
-            // 
-            this.txtSProdName.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSProdName.Enabled = false;
-            this.txtSProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSProdName.ForeColor = System.Drawing.Color.White;
-            this.txtSProdName.Location = new System.Drawing.Point(130, 48);
-            this.txtSProdName.Name = "txtSProdName";
-            this.txtSProdName.Size = new System.Drawing.Size(159, 25);
-            this.txtSProdName.TabIndex = 116;
-            // 
-            // txtStockNo
-            // 
-            this.txtStockNo.BackColor = System.Drawing.Color.Firebrick;
-            this.txtStockNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStockNo.Enabled = false;
-            this.txtStockNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStockNo.ForeColor = System.Drawing.Color.White;
-            this.txtStockNo.Location = new System.Drawing.Point(130, 82);
-            this.txtStockNo.Name = "txtStockNo";
-            this.txtStockNo.Size = new System.Drawing.Size(159, 25);
-            this.txtStockNo.TabIndex = 113;
-            // 
-            // txtReceived
-            // 
-            this.txtReceived.BackColor = System.Drawing.Color.Firebrick;
-            this.txtReceived.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtReceived.Enabled = false;
-            this.txtReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceived.ForeColor = System.Drawing.Color.White;
-            this.txtReceived.Location = new System.Drawing.Point(130, 114);
-            this.txtReceived.Name = "txtReceived";
-            this.txtReceived.Size = new System.Drawing.Size(159, 25);
-            this.txtReceived.TabIndex = 110;
             // 
             // lvStocks
             // 
@@ -1064,9 +1004,9 @@
             this.lvStocks.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvStocks.FullRowSelect = true;
             this.lvStocks.GridLines = true;
-            this.lvStocks.Location = new System.Drawing.Point(392, 48);
+            this.lvStocks.Location = new System.Drawing.Point(6, 179);
             this.lvStocks.Name = "lvStocks";
-            this.lvStocks.Size = new System.Drawing.Size(932, 414);
+            this.lvStocks.Size = new System.Drawing.Size(1311, 365);
             this.lvStocks.TabIndex = 75;
             this.lvStocks.UseCompatibleStateImageBehavior = false;
             this.lvStocks.View = System.Windows.Forms.View.Details;
@@ -1079,15 +1019,15 @@
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Poduct ID.";
+            this.columnHeader8.Text = "Product ID.";
             this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader8.Width = 96;
+            this.columnHeader8.Width = 158;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Product Name";
             this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader9.Width = 106;
+            this.columnHeader9.Width = 155;
             // 
             // columnHeader10
             // 
@@ -1098,22 +1038,22 @@
             // columnHeader20
             // 
             this.columnHeader20.Text = "Total Stocks";
-            this.columnHeader20.Width = 102;
+            this.columnHeader20.Width = 145;
             // 
             // columnHeader11
             // 
             this.columnHeader11.Text = "Remaining Stocks";
-            this.columnHeader11.Width = 134;
+            this.columnHeader11.Width = 179;
             // 
             // columnHeader12
             // 
             this.columnHeader12.Text = "Receiving Date";
-            this.columnHeader12.Width = 118;
+            this.columnHeader12.Width = 151;
             // 
             // columnHeader17
             // 
             this.columnHeader17.Text = "Supplier";
-            this.columnHeader17.Width = 75;
+            this.columnHeader17.Width = 131;
             // 
             // columnHeader21
             // 
@@ -1143,18 +1083,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1330, 565);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Suppliers";
-            // 
-            // txtSupplierContact
-            // 
-            this.txtSupplierContact.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierContact.Enabled = false;
-            this.txtSupplierContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierContact.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierContact.Location = new System.Drawing.Point(286, 148);
-            this.txtSupplierContact.Name = "txtSupplierContact";
-            this.txtSupplierContact.Size = new System.Drawing.Size(160, 25);
-            this.txtSupplierContact.TabIndex = 142;
             // 
             // label24
             // 
@@ -1246,42 +1174,6 @@
             this.btnSupAdd.UseVisualStyleBackColor = true;
             this.btnSupAdd.Click += new System.EventHandler(this.btnSupAdd_Click);
             // 
-            // txtSupplierAddress
-            // 
-            this.txtSupplierAddress.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierAddress.Enabled = false;
-            this.txtSupplierAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierAddress.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierAddress.Location = new System.Drawing.Point(286, 104);
-            this.txtSupplierAddress.Name = "txtSupplierAddress";
-            this.txtSupplierAddress.Size = new System.Drawing.Size(160, 25);
-            this.txtSupplierAddress.TabIndex = 140;
-            // 
-            // txtSupplierName
-            // 
-            this.txtSupplierName.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierName.Enabled = false;
-            this.txtSupplierName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierName.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierName.Location = new System.Drawing.Point(286, 65);
-            this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(160, 25);
-            this.txtSupplierName.TabIndex = 138;
-            // 
-            // txtSupplierID
-            // 
-            this.txtSupplierID.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierID.Enabled = false;
-            this.txtSupplierID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierID.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierID.Location = new System.Drawing.Point(286, 26);
-            this.txtSupplierID.Name = "txtSupplierID";
-            this.txtSupplierID.Size = new System.Drawing.Size(52, 25);
-            this.txtSupplierID.TabIndex = 132;
-            // 
             // lvSupplier
             // 
             this.lvSupplier.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -1356,7 +1248,6 @@
             this.tabPage4.Controls.Add(this.label33);
             this.tabPage4.Controls.Add(this.lblPriceTotalStocks);
             this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.btnPriceSetPrice);
             this.tabPage4.Controls.Add(this.lblPriceProductName);
             this.tabPage4.Controls.Add(this.lblPriceProductID);
             this.tabPage4.Controls.Add(this.label9);
@@ -1364,6 +1255,7 @@
             this.tabPage4.Controls.Add(this.numPriceDiscount);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.numPriceSelling);
+            this.tabPage4.Controls.Add(this.btnPriceSetPrice);
             this.tabPage4.Controls.Add(this.lvPriceProduct);
             this.tabPage4.Controls.Add(this.label28);
             this.tabPage4.Controls.Add(this.cboPriceProductName);
@@ -1496,20 +1388,6 @@
             this.label31.TabIndex = 168;
             this.label31.Text = "Total Stocks:";
             // 
-            // btnPriceSetPrice
-            // 
-            this.btnPriceSetPrice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPriceSetPrice.BackgroundImage")));
-            this.btnPriceSetPrice.Enabled = false;
-            this.btnPriceSetPrice.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPriceSetPrice.ForeColor = System.Drawing.Color.White;
-            this.btnPriceSetPrice.Location = new System.Drawing.Point(378, 365);
-            this.btnPriceSetPrice.Name = "btnPriceSetPrice";
-            this.btnPriceSetPrice.Size = new System.Drawing.Size(102, 49);
-            this.btnPriceSetPrice.TabIndex = 167;
-            this.btnPriceSetPrice.Text = "Set Price";
-            this.btnPriceSetPrice.UseVisualStyleBackColor = true;
-            this.btnPriceSetPrice.Click += new System.EventHandler(this.btnPriceSetPrice_Click);
-            // 
             // lblPriceProductName
             // 
             this.lblPriceProductName.AutoSize = true;
@@ -1592,6 +1470,20 @@
             this.numPriceSelling.Size = new System.Drawing.Size(159, 31);
             this.numPriceSelling.TabIndex = 155;
             this.numPriceSelling.ValueChanged += new System.EventHandler(this.numPriceSelling_ValueChanged);
+            // 
+            // btnPriceSetPrice
+            // 
+            this.btnPriceSetPrice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPriceSetPrice.BackgroundImage")));
+            this.btnPriceSetPrice.Enabled = false;
+            this.btnPriceSetPrice.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPriceSetPrice.ForeColor = System.Drawing.Color.White;
+            this.btnPriceSetPrice.Location = new System.Drawing.Point(378, 365);
+            this.btnPriceSetPrice.Name = "btnPriceSetPrice";
+            this.btnPriceSetPrice.Size = new System.Drawing.Size(102, 49);
+            this.btnPriceSetPrice.TabIndex = 167;
+            this.btnPriceSetPrice.Text = "Set Price";
+            this.btnPriceSetPrice.UseVisualStyleBackColor = true;
+            this.btnPriceSetPrice.Click += new System.EventHandler(this.btnPriceSetPrice_Click);
             // 
             // lvPriceProduct
             // 
@@ -1726,6 +1618,138 @@
             this.columnHeader7.Text = "Available Stocks";
             this.columnHeader7.Width = 183;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(454, 13);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(159, 25);
+            this.txtSearch.TabIndex = 115;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // txtProdDesc
+            // 
+            this.txtProdDesc.BackColor = System.Drawing.Color.Firebrick;
+            this.txtProdDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProdDesc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdDesc.ForeColor = System.Drawing.Color.White;
+            this.txtProdDesc.Location = new System.Drawing.Point(440, 78);
+            this.txtProdDesc.Name = "txtProdDesc";
+            this.txtProdDesc.Size = new System.Drawing.Size(198, 25);
+            this.txtProdDesc.TabIndex = 106;
+            // 
+            // txtProdName
+            // 
+            this.txtProdName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProdName.Enabled = false;
+            this.txtProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdName.ForeColor = System.Drawing.Color.White;
+            this.txtProdName.Location = new System.Drawing.Point(127, 137);
+            this.txtProdName.Name = "txtProdName";
+            this.txtProdName.Size = new System.Drawing.Size(198, 25);
+            this.txtProdName.TabIndex = 105;
+            // 
+            // txtProdNo
+            // 
+            this.txtProdNo.BackColor = System.Drawing.Color.Firebrick;
+            this.txtProdNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProdNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdNo.ForeColor = System.Drawing.Color.White;
+            this.txtProdNo.Location = new System.Drawing.Point(125, 91);
+            this.txtProdNo.MaxLength = 100000000;
+            this.txtProdNo.Name = "txtProdNo";
+            this.txtProdNo.Size = new System.Drawing.Size(198, 25);
+            this.txtProdNo.TabIndex = 104;
+            this.txtProdNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProdNo_KeyDown);
+            // 
+            // txtSProdName
+            // 
+            this.txtSProdName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSProdName.Enabled = false;
+            this.txtSProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSProdName.ForeColor = System.Drawing.Color.White;
+            this.txtSProdName.Location = new System.Drawing.Point(130, 48);
+            this.txtSProdName.Name = "txtSProdName";
+            this.txtSProdName.Size = new System.Drawing.Size(159, 25);
+            this.txtSProdName.TabIndex = 116;
+            // 
+            // txtStockNo
+            // 
+            this.txtStockNo.BackColor = System.Drawing.Color.Firebrick;
+            this.txtStockNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStockNo.Enabled = false;
+            this.txtStockNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStockNo.ForeColor = System.Drawing.Color.White;
+            this.txtStockNo.Location = new System.Drawing.Point(130, 82);
+            this.txtStockNo.Name = "txtStockNo";
+            this.txtStockNo.Size = new System.Drawing.Size(159, 25);
+            this.txtStockNo.TabIndex = 113;
+            // 
+            // txtReceived
+            // 
+            this.txtReceived.BackColor = System.Drawing.Color.Firebrick;
+            this.txtReceived.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReceived.Enabled = false;
+            this.txtReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceived.ForeColor = System.Drawing.Color.White;
+            this.txtReceived.Location = new System.Drawing.Point(130, 114);
+            this.txtReceived.Name = "txtReceived";
+            this.txtReceived.Size = new System.Drawing.Size(159, 25);
+            this.txtReceived.TabIndex = 110;
+            // 
+            // txtSupplierContact
+            // 
+            this.txtSupplierContact.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierContact.Enabled = false;
+            this.txtSupplierContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierContact.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierContact.Location = new System.Drawing.Point(286, 148);
+            this.txtSupplierContact.Name = "txtSupplierContact";
+            this.txtSupplierContact.Size = new System.Drawing.Size(160, 25);
+            this.txtSupplierContact.TabIndex = 142;
+            // 
+            // txtSupplierAddress
+            // 
+            this.txtSupplierAddress.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierAddress.Enabled = false;
+            this.txtSupplierAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierAddress.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierAddress.Location = new System.Drawing.Point(286, 104);
+            this.txtSupplierAddress.Name = "txtSupplierAddress";
+            this.txtSupplierAddress.Size = new System.Drawing.Size(160, 25);
+            this.txtSupplierAddress.TabIndex = 140;
+            // 
+            // txtSupplierName
+            // 
+            this.txtSupplierName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierName.Enabled = false;
+            this.txtSupplierName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierName.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierName.Location = new System.Drawing.Point(286, 65);
+            this.txtSupplierName.Name = "txtSupplierName";
+            this.txtSupplierName.Size = new System.Drawing.Size(160, 25);
+            this.txtSupplierName.TabIndex = 138;
+            // 
+            // txtSupplierID
+            // 
+            this.txtSupplierID.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierID.Enabled = false;
+            this.txtSupplierID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierID.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierID.Location = new System.Drawing.Point(286, 26);
+            this.txtSupplierID.Name = "txtSupplierID";
+            this.txtSupplierID.Size = new System.Drawing.Size(52, 25);
+            this.txtSupplierID.TabIndex = 132;
+            // 
             // UCInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1742,7 +1766,7 @@
             this.tabInventory.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numVolume)).EndInit();
             this.grpWheel.ResumeLayout(false);
             this.grpWheel.PerformLayout();
             this.grpOil.ResumeLayout(false);
@@ -1788,7 +1812,7 @@
         private System.Windows.Forms.Button btnClear;
         public MyTextBox txtProdNo;
         public MyTextBox txtProdName;
-        private System.Windows.Forms.ComboBox drpCat;
+        private System.Windows.Forms.ComboBox cboVisc;
         public MyTextBox txtProdDesc;
         private System.Windows.Forms.NumericUpDown numQuan;
         public MyTextBox txtReceived;
@@ -1806,7 +1830,7 @@
         private System.Windows.Forms.ComboBox cboSort;
         private System.Windows.Forms.NumericUpDown numDeduct;
         private System.Windows.Forms.Button btnRemoveZero;
-        private System.Windows.Forms.Button btnAddCategory;
+        private System.Windows.Forms.Button btnAddViscosity;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
@@ -1870,11 +1894,11 @@
         private System.Windows.Forms.RadioButton rd2;
         private System.Windows.Forms.RadioButton rd4;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnAddBrand;
+        private System.Windows.Forms.ComboBox cboBrand;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown numVolume;
+        private System.Windows.Forms.ComboBox cboVol;
         private System.Windows.Forms.Button btnPriceSetPrice;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label lblPriceTotalStocks;
@@ -1898,6 +1922,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader32;
         private System.Windows.Forms.ColumnHeader columnHeader33;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdOrd;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader27;
     }
 }

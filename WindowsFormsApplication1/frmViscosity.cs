@@ -10,21 +10,21 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 namespace WindowsFormsApplication1
 {
-    public partial class frmCategory : Form
+    public partial class frmViscosity : Form
     {
         classDatabaseConnect dbcon = new classDatabaseConnect(); bool add=false, edit=false; string query;
-        public frmCategory()
+        public frmViscosity()
         {
             InitializeComponent();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lvCat.SelectedItems.Count > 0)
+            if (lvVisc.SelectedItems.Count > 0)
             {
-                ListViewItem item = lvCat.SelectedItems[0];
-                txtCatNum.Text = item.SubItems[0].Text;
-                txtCatName.Text = item.SubItems[1].Text;
+                ListViewItem item = lvVisc.SelectedItems[0];
+                txtViscNum.Text = item.SubItems[0].Text;
+                txtViscName.Text = item.SubItems[1].Text;
                 btnAdd.Enabled = false; btnEdit.Enabled = true;btnDelete.Enabled = true;btnSave.Enabled = false;
             }
             else
@@ -35,11 +35,11 @@ namespace WindowsFormsApplication1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            btnAdd.Enabled = false; btnSave.Enabled = true; txtCatName.Enabled = true;
+            btnAdd.Enabled = false; btnSave.Enabled = true; txtViscName.Enabled = true;
             string res=""; add = true;
             try
             {
-                query = "SELECT MAX(category_ID) FROM category";
+                query = "SELECT MAX(viscosity_ID) FROM viscosity";
                 dbcon.mysqlconnect.Open();
                 MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
                 myCommand.CommandTimeout = 60;
@@ -60,22 +60,22 @@ namespace WindowsFormsApplication1
                 System.Windows.Forms.MessageBox.Show(ex.Message);
                 // return false;   'no result is returned
             }
-            txtCatNum.Text = res;
+            txtViscNum.Text = res;
          }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            btnEdit.Enabled = false; btnSave.Enabled = true; edit = true;btnDelete.Enabled = false; txtCatName.Enabled = true;
+            btnEdit.Enabled = false; btnSave.Enabled = true; edit = true;btnDelete.Enabled = false; txtViscName.Enabled = true;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this category?", "Inventory", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this viscosity?", "Inventory", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                query = "DELETE FROM category WHERE category_ID='"+ txtCatNum.Text+"'";
+                query = "DELETE FROM viscosity WHERE viscosity_ID='" + txtViscNum.Text+"'";
                 dbcon.ManipulateData(query);
-                MessageBox.Show("Deleted a category", "Inventory");
+                MessageBox.Show("Deleted a viscosity", "Inventory");
                 btnClear.PerformClick();
             }
             else if (dialogResult == DialogResult.No)
@@ -85,13 +85,13 @@ namespace WindowsFormsApplication1
         }
         private void LoadLV()
         {
-            lvCat.Items.Clear();
+            lvVisc.Items.Clear();
             try { 
-                query = "SELECT category_ID,category_name FROM category";
+                query = "SELECT viscosity_ID,viscosity_name FROM viscosity";
                 MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
                 DataTable table = new DataTable("myTable");
                 mySqlDataAdapter.Fill(table);
-                lvCat.View = View.Details;
+                lvVisc.View = View.Details;
                 ListViewItem iItem;
                 foreach (DataRow row in table.Rows)
                 {
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1
                         else
                             iItem.SubItems.Add(row.ItemArray[i].ToString());
                     }
-                    lvCat.Items.Add(iItem);
+                    lvVisc.Items.Add(iItem);
                 }
 
             dbcon.mysqlconnect.Close();
@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
-            LoadLV(); btnSave.Enabled = false; btnAdd.Enabled = true; btnEdit.Enabled = false; btnDelete.Enabled = false; txtCatName.Text = ""; txtCatNum.Text = ""; txtCatName.Enabled = false;
+            LoadLV(); btnSave.Enabled = false; btnAdd.Enabled = true; btnEdit.Enabled = false; btnDelete.Enabled = false; txtViscName.Text = ""; txtViscNum.Text = ""; txtViscName.Enabled = false;
         }
 
         private void frmCategory_Load(object sender, EventArgs e)
@@ -130,25 +130,37 @@ namespace WindowsFormsApplication1
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtCatName.Text.Trim() == "")
+            if (txtViscName.Text.Trim() == "")
             {
-                MessageBox.Show("Please Provide a category name");
-                txtCatName.Focus();
+                MessageBox.Show("Please Provide a viscosity name");
+                txtViscName.Focus();
             }
             else {
-                string id = txtCatNum.Text, name = txtCatName.Text;
+                string id = txtViscNum.Text, name = txtViscName.Text;
                 if (add)
                 {
                     add = false;
-                    query = "INSERT INTO category(category_ID,category_name) VALUES ('"+id+"','"+name+"')";
-                    dbcon.ManipulateData(query);
-                    MessageBox.Show("Added a new product category", "Inventory");
+                    dbcon.mysqlconnect.Open();
+                    query = "INSERT INTO viscosity SET viscosity_ID=@viscID, viscosity_name=@viscName";
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    cmd.Parameters.AddWithValue("@viscID", id);
+                    cmd.Parameters.AddWithValue("@viscName", name);
+                    cmd.CommandTimeout = 60;
+                    cmd.ExecuteReader();
+                    dbcon.mysqlconnect.Close();
+                    MessageBox.Show("Added a new product viscosity", "Inventory");
                 }else if (edit)
                 {
                     edit = false;
-                    query = "UPDATE category SET category_name='" + name + "' WHERE category_ID='" + id + "'";
-                    dbcon.ManipulateData(query);
-                    MessageBox.Show("Updated a product category", "Inventory");
+                    dbcon.mysqlconnect.Open();
+                    query = "UPDATE viscosity SET viscosity_name=@viscName WHERE viscosity_ID=@viscID";
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    cmd.Parameters.AddWithValue("@viscID", id);
+                    cmd.Parameters.AddWithValue("@viscName", name);
+                    cmd.CommandTimeout = 60;
+                    cmd.ExecuteReader();
+                    dbcon.mysqlconnect.Close();
+                    MessageBox.Show("Updated a product viscosity", "Inventory");
                 }
                 btnClear.PerformClick();
             }

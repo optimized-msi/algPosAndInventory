@@ -77,7 +77,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLogout.BackColor = System.Drawing.Color.IndianRed;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
@@ -87,14 +87,15 @@
             this.btnLogout.TabIndex = 82;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnCollapse
             // 
-            this.btnCollapse.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCollapse.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnCollapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCollapse.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCollapse.ForeColor = System.Drawing.Color.Snow;
+            this.btnCollapse.ForeColor = System.Drawing.Color.Black;
             this.btnCollapse.Location = new System.Drawing.Point(1, 35);
             this.btnCollapse.Name = "btnCollapse";
             this.btnCollapse.Size = new System.Drawing.Size(53, 36);
@@ -173,9 +174,9 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Firebrick;
-            this.button2.Location = new System.Drawing.Point(0, 256);
+            this.button2.Location = new System.Drawing.Point(1, 564);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 64);
+            this.button2.Size = new System.Drawing.Size(176, 122);
             this.button2.TabIndex = 21;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_2);
@@ -189,9 +190,9 @@
             this.btnPOS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPOS.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnPOS.Location = new System.Drawing.Point(0, 1);
+            this.btnPOS.Location = new System.Drawing.Point(0, 0);
             this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Size = new System.Drawing.Size(176, 65);
+            this.btnPOS.Size = new System.Drawing.Size(176, 145);
             this.btnPOS.TabIndex = 12;
             this.btnPOS.UseVisualStyleBackColor = false;
             this.btnPOS.Click += new System.EventHandler(this.button6_Click_1);
@@ -205,9 +206,9 @@
             this.btnServices.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServices.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnServices.Location = new System.Drawing.Point(0, 194);
+            this.btnServices.Location = new System.Drawing.Point(0, 417);
             this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(176, 64);
+            this.btnServices.Size = new System.Drawing.Size(176, 166);
             this.btnServices.TabIndex = 19;
             this.btnServices.UseVisualStyleBackColor = false;
             this.btnServices.Click += new System.EventHandler(this.button4_Click_2);
@@ -221,9 +222,9 @@
             this.btnInventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventory.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnInventory.Location = new System.Drawing.Point(-1, 66);
+            this.btnInventory.Location = new System.Drawing.Point(0, 142);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(176, 71);
+            this.btnInventory.Size = new System.Drawing.Size(176, 142);
             this.btnInventory.TabIndex = 13;
             this.btnInventory.UseVisualStyleBackColor = false;
             this.btnInventory.Click += new System.EventHandler(this.button2_Click_1);
@@ -237,9 +238,9 @@
             this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnReports.Location = new System.Drawing.Point(0, 134);
+            this.btnReports.Location = new System.Drawing.Point(0, 279);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(176, 64);
+            this.btnReports.Size = new System.Drawing.Size(176, 143);
             this.btnReports.TabIndex = 18;
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.button3_Click_1);
@@ -248,7 +249,7 @@
             // 
             // maintenancePanel
             // 
-            this.maintenancePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.maintenancePanel.BackColor = System.Drawing.SystemColors.HotTrack;
             this.maintenancePanel.Controls.Add(this.panel9);
             this.maintenancePanel.Controls.Add(this.pnlTitle);
             this.maintenancePanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -261,7 +262,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.Firebrick;
+            this.panel9.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel9.Controls.Add(this.btnManageEmp);
             this.panel9.Controls.Add(this.btnLogs);
             this.panel9.Controls.Add(this.btnCustomer);
@@ -325,7 +326,7 @@
             // 
             // pnlTitle
             // 
-            this.pnlTitle.BackColor = System.Drawing.Color.Firebrick;
+            this.pnlTitle.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnlTitle.Controls.Add(this.label5);
             this.pnlTitle.Location = new System.Drawing.Point(3, 3);
             this.pnlTitle.Name = "pnlTitle";
@@ -336,7 +337,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(436, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(315, 39);
@@ -352,7 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.splitCont);
             this.Controls.Add(this.label1);

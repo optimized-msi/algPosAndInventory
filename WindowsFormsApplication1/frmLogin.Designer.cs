@@ -138,9 +138,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(64, 254);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 21);
+            this.label7.Size = new System.Drawing.Size(87, 21);
             this.label7.TabIndex = 127;
-            this.label7.Text = "Category:";
+            this.label7.Text = "Username:";
             // 
             // button1
             // 

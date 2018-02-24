@@ -77,16 +77,34 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.myTextBox2 = new MyTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.myTextBox1 = new MyTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnPrint = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabInventory.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFee)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -149,7 +167,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(743, 359);
+            this.tabPage3.Size = new System.Drawing.Size(935, 359);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Vehicle Types";
             // 
@@ -324,6 +342,7 @@
             this.tabInventory.Controls.Add(this.tabPage1);
             this.tabInventory.Controls.Add(this.tabPage2);
             this.tabInventory.Controls.Add(this.tabPage3);
+            this.tabInventory.Controls.Add(this.tabPage4);
             this.tabInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabInventory.Location = new System.Drawing.Point(41, 89);
             this.tabInventory.Name = "tabInventory";
@@ -334,7 +353,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Firebrick;
-            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.txtServiceName);
             this.tabPage1.Controls.Add(this.btnSClear);
             this.tabPage1.Controls.Add(this.btnSSave);
@@ -496,6 +514,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage2.Controls.Add(this.btnPrint);
             this.tabPage2.Controls.Add(this.numFee);
             this.tabPage2.Controls.Add(this.cboVehicleType);
             this.tabPage2.Controls.Add(this.cboServiceName);
@@ -668,21 +687,208 @@
             this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader11.Width = 118;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage4.Controls.Add(this.myTextBox2);
+            this.tabPage4.Controls.Add(this.label13);
+            this.tabPage4.Controls.Add(this.numericUpDown1);
+            this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.myTextBox1);
+            this.tabPage4.Controls.Add(this.label10);
+            this.tabPage4.Controls.Add(this.label11);
+            this.tabPage4.Controls.Add(this.label12);
+            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Controls.Add(this.button2);
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.button4);
+            this.tabPage4.Controls.Add(this.button5);
+            this.tabPage4.Controls.Add(this.listView1);
+            this.tabPage4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(935, 359);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Additional Charges";
+            // 
+            // myTextBox2
+            // 
+            this.myTextBox2.BackColor = System.Drawing.Color.Firebrick;
+            this.myTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.myTextBox2.Enabled = false;
+            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myTextBox2.ForeColor = System.Drawing.Color.White;
+            this.myTextBox2.Location = new System.Drawing.Point(236, 91);
+            this.myTextBox2.Name = "myTextBox2";
+            this.myTextBox2.Size = new System.Drawing.Size(178, 25);
+            this.myTextBox2.TabIndex = 152;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(47, 91);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(155, 19);
+            this.label13.TabIndex = 151;
+            this.label13.Text = "Additional Fee Name:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Enabled = false;
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(610, 49);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(159, 29);
+            this.numericUpDown1.TabIndex = 150;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Enabled = false;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(241, 49);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(178, 29);
+            this.comboBox1.TabIndex = 149;
+            // 
+            // myTextBox1
+            // 
+            this.myTextBox1.BackColor = System.Drawing.Color.Firebrick;
+            this.myTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.myTextBox1.Enabled = false;
+            this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myTextBox1.ForeColor = System.Drawing.Color.White;
+            this.myTextBox1.Location = new System.Drawing.Point(175, 16);
+            this.myTextBox1.Name = "myTextBox1";
+            this.myTextBox1.Size = new System.Drawing.Size(52, 25);
+            this.myTextBox1.TabIndex = 148;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(47, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 19);
+            this.label10.TabIndex = 147;
+            this.label10.Text = "Add. Charge ID.:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(440, 53);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(164, 19);
+            this.label11.TabIndex = 146;
+            this.label11.Text = "Additional Service Fee:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(46, 48);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 19);
+            this.label12.TabIndex = 145;
+            this.label12.Text = "Service Name:";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(684, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 49);
+            this.button1.TabIndex = 144;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.Enabled = false;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(684, 189);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 49);
+            this.button2.TabIndex = 143;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.Enabled = false;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(684, 125);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 49);
+            this.button3.TabIndex = 142;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.Enabled = false;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(565, 189);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 49);
+            this.button4.TabIndex = 141;
+            this.button4.Text = "Edit";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(565, 125);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 49);
+            this.button5.TabIndex = 140;
+            this.button5.Text = "Add";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader12,
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
             this.listView1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(372, 85);
+            this.listView1.Location = new System.Drawing.Point(51, 120);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(324, 206);
-            this.listView1.TabIndex = 129;
+            this.listView1.Size = new System.Drawing.Size(474, 206);
+            this.listView1.TabIndex = 130;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Add. Charge ID";
+            this.columnHeader12.Width = 99;
             // 
             // columnHeader5
             // 
@@ -697,7 +903,20 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Additional Fee";
-            this.columnHeader7.Width = 109;
+            this.columnHeader7.Width = 136;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(749, 43);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(102, 49);
+            this.btnPrint.TabIndex = 138;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // ucServices
             // 
@@ -720,6 +939,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFee)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -773,9 +995,25 @@
         private System.Windows.Forms.NumericUpDown numFee;
         public MyTextBox txtTypeName;
         public MyTextBox txtTypeID;
+        private System.Windows.Forms.TabPage tabPage4;
+        public MyTextBox myTextBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        public MyTextBox myTextBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

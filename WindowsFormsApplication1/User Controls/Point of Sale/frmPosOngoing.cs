@@ -30,5 +30,9 @@ namespace WindowsFormsApplication1
             frmMain.count = 0;
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
     }
 }

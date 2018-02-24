@@ -39,6 +39,7 @@ namespace WindowsFormsApplication1
                 // this.sidePanel.Visible = true;
                 //this.btnCollapse.Visible = true;
                 timer1.Enabled = true;
+                btnLogout.Visible = true;
             } else if (user.GetPrivelege() == "cashier") {
                 btnCollapse.Visible = false;
                 UCPointOfSale ucpointofsale = new UCPointOfSale();
@@ -47,6 +48,7 @@ namespace WindowsFormsApplication1
                 btnCollapse.Visible = false;
                 splitCont.Visible = false;
                 timer1.Enabled = true;
+                btnLogout.Visible = true;
             } else if (user.GetPrivelege() == "encoder") {
                 btnCollapse.Visible = false;
                 UCInventory ucinventory = new UCInventory();
@@ -55,6 +57,7 @@ namespace WindowsFormsApplication1
                 btnCollapse.Visible = false;
                 splitCont.Visible = false;
                 timer1.Enabled = true;
+                btnLogout.Visible = true;
             } else {
                 Close();
             }
@@ -163,6 +166,7 @@ namespace WindowsFormsApplication1
                     frmlogin.user.SetGName(null);
                     frmlogin.user.SetUserID(null);
                     frmlogin.user.SetPrivelge(null);
+                    btnLogout.Visible = false;
                     Login();
                 } else if (dialogResult == DialogResult.No) {
                     //do something else

@@ -88,6 +88,24 @@ namespace WindowsFormsApplication1
                 throw;
             }
         }
+        public string SetStockID() {
+            query = "SELECT MAX(stock_ID) FROM stock";
+            dbcon.mysqlconnect.Open();
+            MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+            cmd.CommandTimeout = 60;
+            MySqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            string res=""; int id;
+            if (reader.HasRows) {
+                while (reader.Read()) {
+                    id = Convert.ToInt32(reader.GetString(0).Substring(4, 7)) + 1;
+                    res ="STK-" + id.ToString();
+                }
+            } else
+                res = "STK-1000001";
+            dbcon.mysqlconnect.Close();
+            return res;
+        }
         public void ChangePrice() {
             try {
                 dbcon.mysqlconnect.Open();

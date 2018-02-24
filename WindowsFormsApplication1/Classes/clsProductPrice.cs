@@ -23,10 +23,11 @@ namespace WindowsFormsApplication1 {
                     cmd.Parameters.AddWithValue("@discountedPrice", discountedPrice);
                     cmd.CommandTimeout = 60;
                     cmd.ExecuteReader();
-                    dbcon.mysqlconnect.Close();
                     System.Windows.Forms.MessageBox.Show("Added product Price", "Inventory");
                 } catch (Exception) {
-                    throw;
+                    System.Windows.Forms.MessageBox.Show("Error on setting price");
+                } finally {
+                    dbcon.mysqlconnect.Close();
                 }
             } else {
                 //====== UPDATE product price
@@ -40,10 +41,11 @@ namespace WindowsFormsApplication1 {
                     cmd.Parameters.AddWithValue("@discountedPrice", discountedPrice);
                     cmd.CommandTimeout = 60;
                     cmd.ExecuteReader();
-                    dbcon.mysqlconnect.Close();
                     System.Windows.Forms.MessageBox.Show("Added product Price", "Inventory");
                 } catch (Exception) {
                     throw;
+                } finally {
+                    dbcon.mysqlconnect.Close();
                 }
             }
                 
