@@ -676,6 +676,162 @@ namespace WindowsFormsApplication1
           
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "SELECT product_ID,product_name,brand_name,product_desc,viscosity_name,oil_type, wheel_type, volume,unit FROM products,viscosity,brand WHERE products.viscosity_ID=viscosity.viscosity_ID AND products.brand_ID=brand.brand_ID";
+                dbcon.mysqlconnect.Open();
+                MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                MySqlDataAdapter adp = new MySqlDataAdapter();
+                DataSet dt = new DataSet();
+                adp.SelectCommand = cmd;
+                adp.Fill(dt, "Products");
+                CrystalReportProduct reporting = new CrystalReportProduct();
+                reporting.SetDataSource(dt);
+                frmReports frmreports = new frmReports();
+                frmreports.crystalReportViewer.ReportSource = reporting;
+                frmreports.crystalReportViewer.Refresh();
+                cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                frmreports.ShowDialog();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "";
+                if (sort == "Product ID")
+                {
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,total_stocks,remaining_stocks,received_date,supplier_name,supplier_price FROM products,stock,supplier WHERE stock.product_ID=products.product_ID AND supplier.supplier_ID=stock.supplier_ID ORDER BY stock.product_ID";
+                    dbcon.mysqlconnect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    DataSet dt = new DataSet();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(dt, "Stocks");
+                    CrystalReportStock reporting = new CrystalReportStock();
+                    reporting.SetDataSource(dt);
+                    frmReports frmreports = new frmReports();
+                    frmreports.crystalReportViewer.ReportSource = reporting;
+                    frmreports.crystalReportViewer.Refresh();
+                    cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                    frmreports.ShowDialog();
+                }
+                else if (sort == "Product Name")
+                {
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,total_stocks,remaining_stocks,received_date,supplier_name,supplier_price FROM products,stock,supplier WHERE stock.product_ID=products.product_ID AND supplier.supplier_ID=stock.supplier_ID ORDER BY product_name";
+                    dbcon.mysqlconnect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    DataSet dt = new DataSet();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(dt, "Stocks");
+                    CrystalReportStock reporting = new CrystalReportStock();
+                    reporting.SetDataSource(dt);
+                    frmReports frmreports = new frmReports();
+                    frmreports.crystalReportViewer.ReportSource = reporting;
+                    frmreports.crystalReportViewer.Refresh();
+                    cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                    frmreports.ShowDialog();
+                }
+                else if (sort == "Stock ID")
+                {
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,total_stocks,remaining_stocks,received_date,supplier_name,supplier_price FROM products,stock,supplier WHERE stock.product_ID=products.product_ID AND supplier.supplier_ID=stock.supplier_ID ORDER BY stock_ID";
+                    dbcon.mysqlconnect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    DataSet dt = new DataSet();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(dt, "Stocks");
+                    CrystalReportStock reporting = new CrystalReportStock();
+                    reporting.SetDataSource(dt);
+                    frmReports frmreports = new frmReports();
+                    frmreports.crystalReportViewer.ReportSource = reporting;
+                    frmreports.crystalReportViewer.Refresh();
+                    cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                    frmreports.ShowDialog();
+                }
+                else if (sort == "Available Stock")
+                {
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,total_stocks,remaining_stocks,received_date,supplier_name,supplier_price FROM products,stock,supplier WHERE stock.product_ID=products.product_ID AND supplier.supplier_ID=stock.supplier_ID ORDER BY stock_quantity";
+                    dbcon.mysqlconnect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    DataSet dt = new DataSet();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(dt, "Stocks");
+                    CrystalReportStock reporting = new CrystalReportStock();
+                    reporting.SetDataSource(dt);
+                    frmReports frmreports = new frmReports();
+                    frmreports.crystalReportViewer.ReportSource = reporting;
+                    frmreports.crystalReportViewer.Refresh();
+                    cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                    frmreports.ShowDialog();
+                }
+                else if (sort == "Date - Desc")
+                {
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,total_stocks,remaining_stocks,received_date,supplier_name,supplier_price FROM products,stock,supplier WHERE stock.product_ID=products.product_ID AND supplier.supplier_ID=stock.supplier_ID ORDER BY received_date DESC";
+                    dbcon.mysqlconnect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    DataSet dt = new DataSet();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(dt, "Stocks");
+                    CrystalReportStock reporting = new CrystalReportStock();
+                    reporting.SetDataSource(dt);
+                    frmReports frmreports = new frmReports();
+                    frmreports.crystalReportViewer.ReportSource = reporting;
+                    frmreports.crystalReportViewer.Refresh();
+                    cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                    frmreports.ShowDialog();
+                }
+                else if (sort == "Date - Asc")
+                {
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,total_stocks,remaining_stocks,received_date,supplier_name,supplier_price FROM products,stock,supplier WHERE stock.product_ID=products.product_ID AND supplier.supplier_ID=stock.supplier_ID ORDER BY received_date ASC";
+                    dbcon.mysqlconnect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    DataSet dt = new DataSet();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(dt, "Stocks");
+                    CrystalReportStock reporting = new CrystalReportStock();
+                    reporting.SetDataSource(dt);
+                    frmReports frmreports = new frmReports();
+                    frmreports.crystalReportViewer.ReportSource = reporting;
+                    frmreports.crystalReportViewer.Refresh();
+                    cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                    frmreports.ShowDialog();
+                }
+                else
+                {
+                    query = "SELECT stock_ID,products.product_ID,product_name,product_desc,total_stocks,remaining_stocks,received_date,supplier_name,supplier_price FROM products,stock,supplier WHERE stock.product_ID=products.product_ID AND supplier.supplier_ID=stock.supplier_ID";
+                    dbcon.mysqlconnect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                    MySqlDataAdapter adp = new MySqlDataAdapter();
+                    DataSet dt = new DataSet();
+                    adp.SelectCommand = cmd;
+                    adp.Fill(dt, "Stocks");
+                    CrystalReportStock reporting = new CrystalReportStock();
+                    reporting.SetDataSource(dt);
+                    frmReports frmreports = new frmReports();
+                    frmreports.crystalReportViewer.ReportSource = reporting;
+                    frmreports.crystalReportViewer.Refresh();
+                    cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                    frmreports.ShowDialog();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         private void txtProdNo_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyCode == Keys.Enter) {
                 txtProdName.Focus();

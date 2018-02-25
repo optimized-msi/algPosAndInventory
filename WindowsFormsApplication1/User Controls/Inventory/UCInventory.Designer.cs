@@ -43,6 +43,7 @@
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabInventory = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Print = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.btnAddBrand = new System.Windows.Forms.Button();
             this.cboBrand = new System.Windows.Forms.ComboBox();
@@ -65,14 +66,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddViscosity = new System.Windows.Forms.Button();
+            this.txtSearch = new MyTextBox();
             this.drpSearch = new System.Windows.Forms.ComboBox();
             this.cboVisc = new System.Windows.Forms.ComboBox();
+            this.txtProdDesc = new MyTextBox();
+            this.txtProdName = new MyTextBox();
+            this.txtProdNo = new MyTextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.PrintStock = new System.Windows.Forms.Button();
             this.btnChangePrice = new System.Windows.Forms.Button();
             this.numSupPrice = new System.Windows.Forms.NumericUpDown();
             this.label25 = new System.Windows.Forms.Label();
@@ -96,6 +102,9 @@
             this.btnSDeduct = new System.Windows.Forms.Button();
             this.btnSEdit = new System.Windows.Forms.Button();
             this.btnSAdd = new System.Windows.Forms.Button();
+            this.txtSProdName = new MyTextBox();
+            this.txtStockNo = new MyTextBox();
+            this.txtReceived = new MyTextBox();
             this.lvStocks = new System.Windows.Forms.ListView();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -107,6 +116,7 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtSupplierContact = new MyTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.btnSupClear = new System.Windows.Forms.Button();
@@ -114,6 +124,9 @@
             this.btnSupDelete = new System.Windows.Forms.Button();
             this.btnSupEdit = new System.Windows.Forms.Button();
             this.btnSupAdd = new System.Windows.Forms.Button();
+            this.txtSupplierAddress = new MyTextBox();
+            this.txtSupplierName = new MyTextBox();
+            this.txtSupplierID = new MyTextBox();
             this.lvSupplier = new System.Windows.Forms.ListView();
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -157,17 +170,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtSearch = new MyTextBox();
-            this.txtProdDesc = new MyTextBox();
-            this.txtProdName = new MyTextBox();
-            this.txtProdNo = new MyTextBox();
-            this.txtSProdName = new MyTextBox();
-            this.txtStockNo = new MyTextBox();
-            this.txtReceived = new MyTextBox();
-            this.txtSupplierContact = new MyTextBox();
-            this.txtSupplierAddress = new MyTextBox();
-            this.txtSupplierName = new MyTextBox();
-            this.txtSupplierID = new MyTextBox();
             this.panel1.SuspendLayout();
             this.tabInventory.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -288,6 +290,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage1.Controls.Add(this.Print);
             this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.btnAddBrand);
             this.tabPage1.Controls.Add(this.cboBrand);
@@ -324,6 +327,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Products";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // Print
+            // 
+            this.Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Print.BackgroundImage")));
+            this.Print.ForeColor = System.Drawing.Color.White;
+            this.Print.Location = new System.Drawing.Point(1166, 196);
+            this.Print.Name = "Print";
+            this.Print.Size = new System.Drawing.Size(114, 48);
+            this.Print.TabIndex = 139;
+            this.Print.Text = "Print";
+            this.Print.UseVisualStyleBackColor = true;
+            this.Print.Click += new System.EventHandler(this.button1_Click);
             // 
             // label29
             // 
@@ -570,6 +585,18 @@
             this.btnAddViscosity.UseVisualStyleBackColor = true;
             this.btnAddViscosity.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(454, 13);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(159, 25);
+            this.txtSearch.TabIndex = 115;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // drpSearch
             // 
             this.drpSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -596,11 +623,47 @@
             this.cboVisc.Size = new System.Drawing.Size(170, 29);
             this.cboVisc.TabIndex = 110;
             // 
+            // txtProdDesc
+            // 
+            this.txtProdDesc.BackColor = System.Drawing.Color.Firebrick;
+            this.txtProdDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProdDesc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdDesc.ForeColor = System.Drawing.Color.White;
+            this.txtProdDesc.Location = new System.Drawing.Point(440, 78);
+            this.txtProdDesc.Name = "txtProdDesc";
+            this.txtProdDesc.Size = new System.Drawing.Size(198, 25);
+            this.txtProdDesc.TabIndex = 106;
+            // 
+            // txtProdName
+            // 
+            this.txtProdName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProdName.Enabled = false;
+            this.txtProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdName.ForeColor = System.Drawing.Color.White;
+            this.txtProdName.Location = new System.Drawing.Point(127, 137);
+            this.txtProdName.Name = "txtProdName";
+            this.txtProdName.Size = new System.Drawing.Size(198, 25);
+            this.txtProdName.TabIndex = 105;
+            // 
+            // txtProdNo
+            // 
+            this.txtProdNo.BackColor = System.Drawing.Color.Firebrick;
+            this.txtProdNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProdNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdNo.ForeColor = System.Drawing.Color.White;
+            this.txtProdNo.Location = new System.Drawing.Point(125, 91);
+            this.txtProdNo.MaxLength = 100000000;
+            this.txtProdNo.Name = "txtProdNo";
+            this.txtProdNo.Size = new System.Drawing.Size(198, 25);
+            this.txtProdNo.TabIndex = 104;
+            this.txtProdNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProdNo_KeyDown);
+            // 
             // btnClear
             // 
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(1101, 195);
+            this.btnClear.Location = new System.Drawing.Point(1046, 195);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(114, 48);
             this.btnClear.TabIndex = 100;
@@ -659,6 +722,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Firebrick;
+            this.tabPage2.Controls.Add(this.PrintStock);
             this.tabPage2.Controls.Add(this.btnChangePrice);
             this.tabPage2.Controls.Add(this.numSupPrice);
             this.tabPage2.Controls.Add(this.label25);
@@ -692,6 +756,20 @@
             this.tabPage2.Size = new System.Drawing.Size(1330, 565);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Stocks";
+            // 
+            // PrintStock
+            // 
+            this.PrintStock.BackColor = System.Drawing.Color.Transparent;
+            this.PrintStock.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PrintStock.BackgroundImage")));
+            this.PrintStock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintStock.ForeColor = System.Drawing.Color.White;
+            this.PrintStock.Location = new System.Drawing.Point(641, 13);
+            this.PrintStock.Name = "PrintStock";
+            this.PrintStock.Size = new System.Drawing.Size(87, 50);
+            this.PrintStock.TabIndex = 141;
+            this.PrintStock.Text = "Print";
+            this.PrintStock.UseVisualStyleBackColor = false;
+            this.PrintStock.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnChangePrice
             // 
@@ -825,7 +903,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(423, 13);
+            this.label13.Location = new System.Drawing.Point(347, 15);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 21);
             this.label13.TabIndex = 128;
@@ -867,7 +945,7 @@
             "Available Stock",
             "Date - Desc",
             "Date - Asc"});
-            this.cboSort.Location = new System.Drawing.Point(533, 13);
+            this.cboSort.Location = new System.Drawing.Point(457, 15);
             this.cboSort.Name = "cboSort";
             this.cboSort.Size = new System.Drawing.Size(178, 29);
             this.cboSort.TabIndex = 123;
@@ -989,6 +1067,42 @@
             this.btnSAdd.UseVisualStyleBackColor = false;
             this.btnSAdd.Click += new System.EventHandler(this.btnSAdd_Click);
             // 
+            // txtSProdName
+            // 
+            this.txtSProdName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSProdName.Enabled = false;
+            this.txtSProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSProdName.ForeColor = System.Drawing.Color.White;
+            this.txtSProdName.Location = new System.Drawing.Point(130, 48);
+            this.txtSProdName.Name = "txtSProdName";
+            this.txtSProdName.Size = new System.Drawing.Size(159, 25);
+            this.txtSProdName.TabIndex = 116;
+            // 
+            // txtStockNo
+            // 
+            this.txtStockNo.BackColor = System.Drawing.Color.Firebrick;
+            this.txtStockNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStockNo.Enabled = false;
+            this.txtStockNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStockNo.ForeColor = System.Drawing.Color.White;
+            this.txtStockNo.Location = new System.Drawing.Point(130, 82);
+            this.txtStockNo.Name = "txtStockNo";
+            this.txtStockNo.Size = new System.Drawing.Size(159, 25);
+            this.txtStockNo.TabIndex = 113;
+            // 
+            // txtReceived
+            // 
+            this.txtReceived.BackColor = System.Drawing.Color.Firebrick;
+            this.txtReceived.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReceived.Enabled = false;
+            this.txtReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceived.ForeColor = System.Drawing.Color.White;
+            this.txtReceived.Location = new System.Drawing.Point(130, 114);
+            this.txtReceived.Name = "txtReceived";
+            this.txtReceived.Size = new System.Drawing.Size(159, 25);
+            this.txtReceived.TabIndex = 110;
+            // 
             // lvStocks
             // 
             this.lvStocks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -1084,6 +1198,18 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Suppliers";
             // 
+            // txtSupplierContact
+            // 
+            this.txtSupplierContact.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierContact.Enabled = false;
+            this.txtSupplierContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierContact.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierContact.Location = new System.Drawing.Point(286, 148);
+            this.txtSupplierContact.Name = "txtSupplierContact";
+            this.txtSupplierContact.Size = new System.Drawing.Size(160, 25);
+            this.txtSupplierContact.TabIndex = 142;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -1173,6 +1299,42 @@
             this.btnSupAdd.Text = "Add";
             this.btnSupAdd.UseVisualStyleBackColor = true;
             this.btnSupAdd.Click += new System.EventHandler(this.btnSupAdd_Click);
+            // 
+            // txtSupplierAddress
+            // 
+            this.txtSupplierAddress.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierAddress.Enabled = false;
+            this.txtSupplierAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierAddress.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierAddress.Location = new System.Drawing.Point(286, 104);
+            this.txtSupplierAddress.Name = "txtSupplierAddress";
+            this.txtSupplierAddress.Size = new System.Drawing.Size(160, 25);
+            this.txtSupplierAddress.TabIndex = 140;
+            // 
+            // txtSupplierName
+            // 
+            this.txtSupplierName.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierName.Enabled = false;
+            this.txtSupplierName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierName.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierName.Location = new System.Drawing.Point(286, 65);
+            this.txtSupplierName.Name = "txtSupplierName";
+            this.txtSupplierName.Size = new System.Drawing.Size(160, 25);
+            this.txtSupplierName.TabIndex = 138;
+            // 
+            // txtSupplierID
+            // 
+            this.txtSupplierID.BackColor = System.Drawing.Color.Firebrick;
+            this.txtSupplierID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSupplierID.Enabled = false;
+            this.txtSupplierID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSupplierID.ForeColor = System.Drawing.Color.White;
+            this.txtSupplierID.Location = new System.Drawing.Point(286, 26);
+            this.txtSupplierID.Name = "txtSupplierID";
+            this.txtSupplierID.Size = new System.Drawing.Size(52, 25);
+            this.txtSupplierID.TabIndex = 132;
             // 
             // lvSupplier
             // 
@@ -1618,138 +1780,6 @@
             this.columnHeader7.Text = "Available Stocks";
             this.columnHeader7.Width = 183;
             // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(454, 13);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(159, 25);
-            this.txtSearch.TabIndex = 115;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // txtProdDesc
-            // 
-            this.txtProdDesc.BackColor = System.Drawing.Color.Firebrick;
-            this.txtProdDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProdDesc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdDesc.ForeColor = System.Drawing.Color.White;
-            this.txtProdDesc.Location = new System.Drawing.Point(440, 78);
-            this.txtProdDesc.Name = "txtProdDesc";
-            this.txtProdDesc.Size = new System.Drawing.Size(198, 25);
-            this.txtProdDesc.TabIndex = 106;
-            // 
-            // txtProdName
-            // 
-            this.txtProdName.BackColor = System.Drawing.Color.Firebrick;
-            this.txtProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProdName.Enabled = false;
-            this.txtProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdName.ForeColor = System.Drawing.Color.White;
-            this.txtProdName.Location = new System.Drawing.Point(127, 137);
-            this.txtProdName.Name = "txtProdName";
-            this.txtProdName.Size = new System.Drawing.Size(198, 25);
-            this.txtProdName.TabIndex = 105;
-            // 
-            // txtProdNo
-            // 
-            this.txtProdNo.BackColor = System.Drawing.Color.Firebrick;
-            this.txtProdNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProdNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdNo.ForeColor = System.Drawing.Color.White;
-            this.txtProdNo.Location = new System.Drawing.Point(125, 91);
-            this.txtProdNo.MaxLength = 100000000;
-            this.txtProdNo.Name = "txtProdNo";
-            this.txtProdNo.Size = new System.Drawing.Size(198, 25);
-            this.txtProdNo.TabIndex = 104;
-            this.txtProdNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProdNo_KeyDown);
-            // 
-            // txtSProdName
-            // 
-            this.txtSProdName.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSProdName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSProdName.Enabled = false;
-            this.txtSProdName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSProdName.ForeColor = System.Drawing.Color.White;
-            this.txtSProdName.Location = new System.Drawing.Point(130, 48);
-            this.txtSProdName.Name = "txtSProdName";
-            this.txtSProdName.Size = new System.Drawing.Size(159, 25);
-            this.txtSProdName.TabIndex = 116;
-            // 
-            // txtStockNo
-            // 
-            this.txtStockNo.BackColor = System.Drawing.Color.Firebrick;
-            this.txtStockNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStockNo.Enabled = false;
-            this.txtStockNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStockNo.ForeColor = System.Drawing.Color.White;
-            this.txtStockNo.Location = new System.Drawing.Point(130, 82);
-            this.txtStockNo.Name = "txtStockNo";
-            this.txtStockNo.Size = new System.Drawing.Size(159, 25);
-            this.txtStockNo.TabIndex = 113;
-            // 
-            // txtReceived
-            // 
-            this.txtReceived.BackColor = System.Drawing.Color.Firebrick;
-            this.txtReceived.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtReceived.Enabled = false;
-            this.txtReceived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceived.ForeColor = System.Drawing.Color.White;
-            this.txtReceived.Location = new System.Drawing.Point(130, 114);
-            this.txtReceived.Name = "txtReceived";
-            this.txtReceived.Size = new System.Drawing.Size(159, 25);
-            this.txtReceived.TabIndex = 110;
-            // 
-            // txtSupplierContact
-            // 
-            this.txtSupplierContact.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierContact.Enabled = false;
-            this.txtSupplierContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierContact.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierContact.Location = new System.Drawing.Point(286, 148);
-            this.txtSupplierContact.Name = "txtSupplierContact";
-            this.txtSupplierContact.Size = new System.Drawing.Size(160, 25);
-            this.txtSupplierContact.TabIndex = 142;
-            // 
-            // txtSupplierAddress
-            // 
-            this.txtSupplierAddress.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierAddress.Enabled = false;
-            this.txtSupplierAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierAddress.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierAddress.Location = new System.Drawing.Point(286, 104);
-            this.txtSupplierAddress.Name = "txtSupplierAddress";
-            this.txtSupplierAddress.Size = new System.Drawing.Size(160, 25);
-            this.txtSupplierAddress.TabIndex = 140;
-            // 
-            // txtSupplierName
-            // 
-            this.txtSupplierName.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierName.Enabled = false;
-            this.txtSupplierName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierName.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierName.Location = new System.Drawing.Point(286, 65);
-            this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(160, 25);
-            this.txtSupplierName.TabIndex = 138;
-            // 
-            // txtSupplierID
-            // 
-            this.txtSupplierID.BackColor = System.Drawing.Color.Firebrick;
-            this.txtSupplierID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSupplierID.Enabled = false;
-            this.txtSupplierID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierID.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierID.Location = new System.Drawing.Point(286, 26);
-            this.txtSupplierID.Name = "txtSupplierID";
-            this.txtSupplierID.Size = new System.Drawing.Size(52, 25);
-            this.txtSupplierID.TabIndex = 132;
-            // 
             // UCInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1927,5 +1957,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader27;
+        private System.Windows.Forms.Button Print;
+        private System.Windows.Forms.Button PrintStock;
     }
 }

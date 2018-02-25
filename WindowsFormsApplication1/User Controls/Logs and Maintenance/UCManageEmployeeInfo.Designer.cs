@@ -56,6 +56,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
+            this.Print = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +84,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.Controls.Add(this.Print);
             this.panel2.Controls.Add(this.txtPosition);
             this.panel2.Controls.Add(this.txtMI);
             this.panel2.Controls.Add(this.txtGN);
@@ -360,6 +362,19 @@
             this.label6.TabIndex = 150;
             this.label6.Text = "Position:";
             // 
+            // Print
+            // 
+            this.Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Print.BackgroundImage")));
+            this.Print.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Print.ForeColor = System.Drawing.Color.White;
+            this.Print.Location = new System.Drawing.Point(748, 81);
+            this.Print.Name = "Print";
+            this.Print.Size = new System.Drawing.Size(106, 38);
+            this.Print.TabIndex = 168;
+            this.Print.Text = "Print";
+            this.Print.UseVisualStyleBackColor = true;
+            this.Print.Click += new System.EventHandler(this.Print_Click);
+            // 
             // UCEmployeeInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,5 +422,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button Print;
     }
 }

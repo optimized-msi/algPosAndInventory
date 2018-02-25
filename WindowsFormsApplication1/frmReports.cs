@@ -13,5 +13,10 @@ namespace WindowsFormsApplication1 {
         public frmReports() {
             InitializeComponent();
         }
+
+        private void crystalReportViewer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
