@@ -34,18 +34,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPW = new MyTextBox();
-            this.txtMI = new MyTextBox();
-            this.txtGN = new MyTextBox();
-            this.txtUN = new MyTextBox();
-            this.txtAddress = new MyTextBox();
-            this.txtFN = new MyTextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtUserNo = new MyTextBox();
             this.lvUsers = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,6 +55,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Print = new System.Windows.Forms.Button();
+            this.txtPW = new MyTextBox();
+            this.txtMI = new MyTextBox();
+            this.txtGN = new MyTextBox();
+            this.txtUN = new MyTextBox();
+            this.txtAddress = new MyTextBox();
+            this.txtFN = new MyTextBox();
+            this.txtUserNo = new MyTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +90,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.Controls.Add(this.Print);
             this.panel2.Controls.Add(this.cboType);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtPW);
@@ -141,78 +143,6 @@
             this.label9.Size = new System.Drawing.Size(80, 19);
             this.label9.TabIndex = 156;
             this.label9.Text = "User Type:";
-            // 
-            // txtPW
-            // 
-            this.txtPW.BackColor = System.Drawing.Color.Firebrick;
-            this.txtPW.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPW.Enabled = false;
-            this.txtPW.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPW.ForeColor = System.Drawing.Color.White;
-            this.txtPW.Location = new System.Drawing.Point(447, 142);
-            this.txtPW.Name = "txtPW";
-            this.txtPW.Size = new System.Drawing.Size(168, 25);
-            this.txtPW.TabIndex = 155;
-            // 
-            // txtMI
-            // 
-            this.txtMI.BackColor = System.Drawing.Color.Firebrick;
-            this.txtMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMI.Enabled = false;
-            this.txtMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMI.ForeColor = System.Drawing.Color.White;
-            this.txtMI.Location = new System.Drawing.Point(648, 69);
-            this.txtMI.Name = "txtMI";
-            this.txtMI.Size = new System.Drawing.Size(53, 25);
-            this.txtMI.TabIndex = 154;
-            // 
-            // txtGN
-            // 
-            this.txtGN.BackColor = System.Drawing.Color.Firebrick;
-            this.txtGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGN.Enabled = false;
-            this.txtGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGN.ForeColor = System.Drawing.Color.White;
-            this.txtGN.Location = new System.Drawing.Point(447, 70);
-            this.txtGN.Name = "txtGN";
-            this.txtGN.Size = new System.Drawing.Size(168, 25);
-            this.txtGN.TabIndex = 153;
-            // 
-            // txtUN
-            // 
-            this.txtUN.BackColor = System.Drawing.Color.Firebrick;
-            this.txtUN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUN.Enabled = false;
-            this.txtUN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUN.ForeColor = System.Drawing.Color.White;
-            this.txtUN.Location = new System.Drawing.Point(152, 142);
-            this.txtUN.Name = "txtUN";
-            this.txtUN.Size = new System.Drawing.Size(168, 25);
-            this.txtUN.TabIndex = 152;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.Firebrick;
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Enabled = false;
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(155, 107);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(168, 25);
-            this.txtAddress.TabIndex = 151;
-            // 
-            // txtFN
-            // 
-            this.txtFN.BackColor = System.Drawing.Color.Firebrick;
-            this.txtFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFN.Enabled = false;
-            this.txtFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFN.ForeColor = System.Drawing.Color.White;
-            this.txtFN.Location = new System.Drawing.Point(155, 70);
-            this.txtFN.Name = "txtFN";
-            this.txtFN.Size = new System.Drawing.Size(168, 25);
-            this.txtFN.TabIndex = 150;
             // 
             // btnClear
             // 
@@ -281,18 +211,6 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // txtUserNo
-            // 
-            this.txtUserNo.BackColor = System.Drawing.Color.Firebrick;
-            this.txtUserNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserNo.Enabled = false;
-            this.txtUserNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserNo.ForeColor = System.Drawing.Color.White;
-            this.txtUserNo.Location = new System.Drawing.Point(132, 28);
-            this.txtUserNo.Name = "txtUserNo";
-            this.txtUserNo.Size = new System.Drawing.Size(53, 25);
-            this.txtUserNo.TabIndex = 144;
             // 
             // lvUsers
             // 
@@ -433,6 +351,103 @@
             this.label1.TabIndex = 136;
             this.label1.Text = "Family Name:";
             // 
+            // Print
+            // 
+            this.Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Print.BackgroundImage")));
+            this.Print.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Print.ForeColor = System.Drawing.Color.White;
+            this.Print.Location = new System.Drawing.Point(802, 95);
+            this.Print.Name = "Print";
+            this.Print.Size = new System.Drawing.Size(106, 38);
+            this.Print.TabIndex = 158;
+            this.Print.Text = "Print";
+            this.Print.UseVisualStyleBackColor = true;
+            this.Print.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtPW
+            // 
+            this.txtPW.BackColor = System.Drawing.Color.Firebrick;
+            this.txtPW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPW.Enabled = false;
+            this.txtPW.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPW.ForeColor = System.Drawing.Color.White;
+            this.txtPW.Location = new System.Drawing.Point(447, 142);
+            this.txtPW.Name = "txtPW";
+            this.txtPW.Size = new System.Drawing.Size(168, 25);
+            this.txtPW.TabIndex = 155;
+            // 
+            // txtMI
+            // 
+            this.txtMI.BackColor = System.Drawing.Color.Firebrick;
+            this.txtMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMI.Enabled = false;
+            this.txtMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMI.ForeColor = System.Drawing.Color.White;
+            this.txtMI.Location = new System.Drawing.Point(648, 69);
+            this.txtMI.Name = "txtMI";
+            this.txtMI.Size = new System.Drawing.Size(53, 25);
+            this.txtMI.TabIndex = 154;
+            // 
+            // txtGN
+            // 
+            this.txtGN.BackColor = System.Drawing.Color.Firebrick;
+            this.txtGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGN.Enabled = false;
+            this.txtGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGN.ForeColor = System.Drawing.Color.White;
+            this.txtGN.Location = new System.Drawing.Point(447, 70);
+            this.txtGN.Name = "txtGN";
+            this.txtGN.Size = new System.Drawing.Size(168, 25);
+            this.txtGN.TabIndex = 153;
+            // 
+            // txtUN
+            // 
+            this.txtUN.BackColor = System.Drawing.Color.Firebrick;
+            this.txtUN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUN.Enabled = false;
+            this.txtUN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUN.ForeColor = System.Drawing.Color.White;
+            this.txtUN.Location = new System.Drawing.Point(152, 142);
+            this.txtUN.Name = "txtUN";
+            this.txtUN.Size = new System.Drawing.Size(168, 25);
+            this.txtUN.TabIndex = 152;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.BackColor = System.Drawing.Color.Firebrick;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Enabled = false;
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.White;
+            this.txtAddress.Location = new System.Drawing.Point(155, 107);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(168, 25);
+            this.txtAddress.TabIndex = 151;
+            // 
+            // txtFN
+            // 
+            this.txtFN.BackColor = System.Drawing.Color.Firebrick;
+            this.txtFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFN.Enabled = false;
+            this.txtFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFN.ForeColor = System.Drawing.Color.White;
+            this.txtFN.Location = new System.Drawing.Point(155, 70);
+            this.txtFN.Name = "txtFN";
+            this.txtFN.Size = new System.Drawing.Size(168, 25);
+            this.txtFN.TabIndex = 150;
+            // 
+            // txtUserNo
+            // 
+            this.txtUserNo.BackColor = System.Drawing.Color.Firebrick;
+            this.txtUserNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserNo.Enabled = false;
+            this.txtUserNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserNo.ForeColor = System.Drawing.Color.White;
+            this.txtUserNo.Location = new System.Drawing.Point(132, 28);
+            this.txtUserNo.Name = "txtUserNo";
+            this.txtUserNo.Size = new System.Drawing.Size(53, 25);
+            this.txtUserNo.TabIndex = 144;
+            // 
             // UCManageUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,5 +502,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Print;
     }
 }

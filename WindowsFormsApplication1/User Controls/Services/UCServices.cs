@@ -333,14 +333,15 @@ namespace WindowsFormsApplication1
                 DataSet dt = new DataSet();
                 adp.SelectCommand = cmd;
                 adp.Fill(dt, "service_price");
-                CrystalReport1 reporting = new CrystalReport1();
+                CrystalReportVehiclePrice reporting = new CrystalReportVehiclePrice();
                 reporting.SetDataSource(dt);
                 frmReports frmreports = new frmReports();
                 frmreports.crystalReportViewer.ReportSource = reporting;
                 frmreports.crystalReportViewer.Refresh();
                 cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
                 frmreports.ShowDialog();
-            } catch (Exception) {
+                }
+            catch (Exception) {
                 throw;
             }
            

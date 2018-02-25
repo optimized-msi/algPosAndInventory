@@ -189,6 +189,31 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void Print_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "SELECT emp_ID, emp_fName,emp_gName,emp_mInitial,emp_position,emp_address FROM employee";
+                dbcon.mysqlconnect.Open();
+                MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+                MySqlDataAdapter adp = new MySqlDataAdapter();
+                DataSet dt = new DataSet();
+                adp.SelectCommand = cmd;
+                adp.Fill(dt, "Employee");
+                CrystalReportEmployee reporting = new CrystalReportEmployee();
+                reporting.SetDataSource(dt);
+                frmReports frmreports = new frmReports();
+                frmreports.crystalReportViewer.ReportSource = reporting;
+                frmreports.crystalReportViewer.Refresh();
+                cmd.Dispose(); adp.Dispose(); dt.Dispose(); dbcon.mysqlconnect.Close();
+                frmreports.ShowDialog();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         private void LoadLV()
         {
             lvEmp.Items.Clear();

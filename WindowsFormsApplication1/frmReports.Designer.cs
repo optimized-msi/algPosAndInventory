@@ -36,6 +36,7 @@
             this.crystalReportViewer.Name = "crystalReportViewer";
             this.crystalReportViewer.Size = new System.Drawing.Size(823, 475);
             this.crystalReportViewer.TabIndex = 0;
+            this.crystalReportViewer.Load += new System.EventHandler(this.crystalReportViewer_Load);
             // 
             // frmReports
             // 
@@ -44,7 +45,9 @@
             this.ClientSize = new System.Drawing.Size(823, 475);
             this.Controls.Add(this.crystalReportViewer);
             this.Name = "frmReports";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReports";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
