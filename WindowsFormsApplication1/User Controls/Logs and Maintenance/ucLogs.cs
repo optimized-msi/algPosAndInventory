@@ -21,5 +21,10 @@ namespace WindowsFormsApplication1
             frmMain.count = 0;
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

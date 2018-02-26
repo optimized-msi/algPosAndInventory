@@ -106,10 +106,10 @@
       <DependentUpon>CrystalReportStock.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReportVehiclePrice.cs">
+    <Compile Include="CrystalReportServicePrice.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReportVehiclePrice.rpt</DependentUpon>
+      <DependentUpon>CrystalReportServicePrice.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSet.cs">
@@ -246,9 +246,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportStock.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReportVehiclePrice.rpt">
+    <EmbeddedResource Include="CrystalReportServicePrice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReportVehiclePrice.cs</LastGenOutput>
+      <LastGenOutput>CrystalReportServicePrice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddress.resx">
       <DependentUpon>frmAddress.cs</DependentUpon>
@@ -487,6 +487,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos_whites.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

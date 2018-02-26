@@ -333,7 +333,7 @@ namespace WindowsFormsApplication1
                 DataSet dt = new DataSet();
                 adp.SelectCommand = cmd;
                 adp.Fill(dt, "service_price");
-                CrystalReportVehiclePrice reporting = new CrystalReportVehiclePrice();
+                CrystalReportServicePrice reporting = new CrystalReportServicePrice();
                 reporting.SetDataSource(dt);
                 frmReports frmreports = new frmReports();
                 frmreports.crystalReportViewer.ReportSource = reporting;

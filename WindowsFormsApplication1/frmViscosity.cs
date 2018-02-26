@@ -128,6 +128,11 @@ namespace WindowsFormsApplication1
             Close();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtViscName.Text.Trim() == "")

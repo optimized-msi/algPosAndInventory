@@ -233,7 +233,7 @@ namespace WindowsFormsApplication1
         private void btnPos_MouseEnter(object sender, EventArgs e) {
             //this.btnPOS.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.pos_firebrick));
             //btnPOS.UseVisualStyleBackColor = false;
-            btnPOS.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            //btnPOS.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         }
 
         private void btnPos_MouseLeave(object sender, EventArgs e) {
@@ -260,9 +260,10 @@ namespace WindowsFormsApplication1
             maintenancePanel.Dock = DockStyle.Fill;
         }
 
-        private void btnInventory_MouseEnter(object sender, EventArgs e) {
-            //btnInventory.UseVisualStyleBackColor = false;
-            btnInventory.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        private void btnInventory_MouseEnter(object sender, EventArgs e)
+        {
+            btnInventory.UseVisualStyleBackColor = false;
+            //btnInventory.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         }
 
         private void btnInventory_MouseLeave(object sender, EventArgs e) {
@@ -270,7 +271,7 @@ namespace WindowsFormsApplication1
         }
 
         private void btnReports_MouseEnter(object sender, EventArgs e) {
-            btnReports.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            //btnReports.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         }
 
         private void btnReports_MouseLeave(object sender, EventArgs e) {
@@ -278,7 +279,7 @@ namespace WindowsFormsApplication1
         }
 
         private void btnServices_MouseEnter(object sender, EventArgs e) {
-            btnServices.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            //btnServices.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
 
         }
 
@@ -287,7 +288,7 @@ namespace WindowsFormsApplication1
         }
 
         private void button2_MouseEnter(object sender, EventArgs e) {
-            button2.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            //button2.BackColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
         }
 
         private void button2_MouseLeave(object sender, EventArgs e) {
@@ -312,6 +313,26 @@ namespace WindowsFormsApplication1
 
         private void clerkPanel_MouseMove(object sender, MouseEventArgs e) {
             count = 0;
+
+        }
+
+        private void maintenancePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitCont_Panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
