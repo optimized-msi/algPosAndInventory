@@ -191,14 +191,33 @@ namespace WindowsFormsApplication1
                 else
                     lblFee.Text = "";
                 dbcon.mysqlconnect.Close();
-                if (cboServiceName.Text == "Carwash") {
-                    clbAddedService.Items.Add("Wax - P100.00");
-                    clbAddedService.Items.Add("Soap - P200.00");
-                }
             }
             catch (Exception)
             {
                 lblFee.Text = "";
+            }
+        }
+        private void LoadclAdded()
+        {
+            clbAddedService.Items.Clear();
+            string query = "SELECT CONCAT(serv_added_name,'---- P',serv_added_price) FROM serv_added_charges WHERE service_ID = '" + cboServiceName.Text + "'";
+            dbcon.mysqlconnect.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
+            myCommand.CommandTimeout = 60;
+            MySqlDataReader reader;
+            reader = myCommand.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    clbAddedService.Items.Add(reader.GetString(0));
+                }
+            }
+            dbcon.mysqlconnect.Close();
+            if (cboServiceName.Text == "Carwash")
+            {
+                clbAddedService.Items.Add("Wax - P100.00");
+                clbAddedService.Items.Add("Soap - P200.00");
             }
         }
 
@@ -236,6 +255,11 @@ namespace WindowsFormsApplication1
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void clbAddedService_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

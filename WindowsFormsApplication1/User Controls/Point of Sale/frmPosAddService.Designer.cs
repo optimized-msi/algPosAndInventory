@@ -111,6 +111,7 @@
             this.clbAddedService.Name = "clbAddedService";
             this.clbAddedService.Size = new System.Drawing.Size(181, 92);
             this.clbAddedService.TabIndex = 143;
+            this.clbAddedService.SelectedIndexChanged += new System.EventHandler(this.clbAddedService_SelectedIndexChanged);
             // 
             // myTextBox2
             // 

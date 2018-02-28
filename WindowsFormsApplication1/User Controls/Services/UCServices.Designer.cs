@@ -33,8 +33,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtTypeName = new MyTextBox();
-            this.txtTypeID = new MyTextBox();
             this.btnVClear = new System.Windows.Forms.Button();
             this.btnVSave = new System.Windows.Forms.Button();
             this.btnVDelete = new System.Windows.Forms.Button();
@@ -50,13 +48,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabInventory = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtServiceName = new MyTextBox();
             this.btnSClear = new System.Windows.Forms.Button();
             this.btnSSave = new System.Windows.Forms.Button();
             this.btnSDelete = new System.Windows.Forms.Button();
             this.btnSEdit = new System.Windows.Forms.Button();
             this.btnSAdd = new System.Windows.Forms.Button();
-            this.txtServiceID = new MyTextBox();
             this.lvServices = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -67,7 +63,6 @@
             this.numFee = new System.Windows.Forms.NumericUpDown();
             this.cboVehicleType = new System.Windows.Forms.ComboBox();
             this.cboServiceName = new System.Windows.Forms.ComboBox();
-            this.txtPriceID = new MyTextBox();
             this.btnPClear = new System.Windows.Forms.Button();
             this.btnPSave = new System.Windows.Forms.Button();
             this.btnPDelete = new System.Windows.Forms.Button();
@@ -78,24 +73,29 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.myTextBox2 = new MyTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.myTextBox1 = new MyTextBox();
+            this.addedprice = new System.Windows.Forms.NumericUpDown();
+            this.cboservname = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnasclear = new System.Windows.Forms.Button();
+            this.btnassave = new System.Windows.Forms.Button();
+            this.btnasdelete = new System.Windows.Forms.Button();
+            this.btnasedit = new System.Windows.Forms.Button();
+            this.btnasadd = new System.Windows.Forms.Button();
+            this.lvadded = new System.Windows.Forms.ListView();
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtServiceName = new MyTextBox();
+            this.txtServiceID = new MyTextBox();
+            this.txtPriceID = new MyTextBox();
+            this.txtTypeName = new MyTextBox();
+            this.txtTypeID = new MyTextBox();
+            this.addedname = new MyTextBox();
+            this.addedID = new MyTextBox();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabInventory.SuspendLayout();
@@ -103,7 +103,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFee)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addedprice)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -170,30 +170,6 @@
             this.tabPage3.Size = new System.Drawing.Size(784, 389);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Vehicle Types";
-            // 
-            // txtTypeName
-            // 
-            this.txtTypeName.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtTypeName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTypeName.Enabled = false;
-            this.txtTypeName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTypeName.ForeColor = System.Drawing.Color.Black;
-            this.txtTypeName.Location = new System.Drawing.Point(227, 48);
-            this.txtTypeName.Name = "txtTypeName";
-            this.txtTypeName.Size = new System.Drawing.Size(161, 25);
-            this.txtTypeName.TabIndex = 135;
-            // 
-            // txtTypeID
-            // 
-            this.txtTypeID.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtTypeID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTypeID.Enabled = false;
-            this.txtTypeID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTypeID.ForeColor = System.Drawing.Color.Black;
-            this.txtTypeID.Location = new System.Drawing.Point(227, 12);
-            this.txtTypeID.Name = "txtTypeID";
-            this.txtTypeID.Size = new System.Drawing.Size(52, 25);
-            this.txtTypeID.TabIndex = 134;
             // 
             // btnVClear
             // 
@@ -376,18 +352,6 @@
             this.tabPage1.Text = "Services Offered";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // txtServiceName
-            // 
-            this.txtServiceName.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtServiceName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtServiceName.Enabled = false;
-            this.txtServiceName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServiceName.ForeColor = System.Drawing.Color.Black;
-            this.txtServiceName.Location = new System.Drawing.Point(133, 63);
-            this.txtServiceName.Name = "txtServiceName";
-            this.txtServiceName.Size = new System.Drawing.Size(160, 25);
-            this.txtServiceName.TabIndex = 128;
-            // 
             // btnSClear
             // 
             this.btnSClear.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -461,18 +425,6 @@
             this.btnSAdd.UseVisualStyleBackColor = false;
             this.btnSAdd.Click += new System.EventHandler(this.btnSAdd_Click);
             // 
-            // txtServiceID
-            // 
-            this.txtServiceID.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtServiceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtServiceID.Enabled = false;
-            this.txtServiceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServiceID.ForeColor = System.Drawing.Color.Black;
-            this.txtServiceID.Location = new System.Drawing.Point(133, 24);
-            this.txtServiceID.Name = "txtServiceID";
-            this.txtServiceID.Size = new System.Drawing.Size(52, 25);
-            this.txtServiceID.TabIndex = 122;
-            // 
             // lvServices
             // 
             this.lvServices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -528,12 +480,12 @@
             this.tabPage2.Controls.Add(this.numFee);
             this.tabPage2.Controls.Add(this.cboVehicleType);
             this.tabPage2.Controls.Add(this.cboServiceName);
-            this.tabPage2.Controls.Add(this.txtPriceID);
             this.tabPage2.Controls.Add(this.btnPClear);
             this.tabPage2.Controls.Add(this.btnPSave);
             this.tabPage2.Controls.Add(this.btnPDelete);
             this.tabPage2.Controls.Add(this.btnPEdit);
             this.tabPage2.Controls.Add(this.btnPAdd);
+            this.tabPage2.Controls.Add(this.txtPriceID);
             this.tabPage2.Controls.Add(this.lvPrices);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
@@ -603,18 +555,6 @@
             this.cboServiceName.Name = "cboServiceName";
             this.cboServiceName.Size = new System.Drawing.Size(178, 29);
             this.cboServiceName.TabIndex = 135;
-            // 
-            // txtPriceID
-            // 
-            this.txtPriceID.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtPriceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPriceID.Enabled = false;
-            this.txtPriceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceID.ForeColor = System.Drawing.Color.Black;
-            this.txtPriceID.Location = new System.Drawing.Point(146, 22);
-            this.txtPriceID.Name = "txtPriceID";
-            this.txtPriceID.Size = new System.Drawing.Size(52, 25);
-            this.txtPriceID.TabIndex = 133;
             // 
             // btnPClear
             // 
@@ -727,20 +667,20 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.tabPage4.Controls.Add(this.myTextBox2);
+            this.tabPage4.Controls.Add(this.addedname);
             this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.numericUpDown1);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.myTextBox1);
+            this.tabPage4.Controls.Add(this.addedprice);
+            this.tabPage4.Controls.Add(this.cboservname);
+            this.tabPage4.Controls.Add(this.addedID);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.label11);
             this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.button1);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.button5);
-            this.tabPage4.Controls.Add(this.listView1);
+            this.tabPage4.Controls.Add(this.btnasclear);
+            this.tabPage4.Controls.Add(this.btnassave);
+            this.tabPage4.Controls.Add(this.btnasdelete);
+            this.tabPage4.Controls.Add(this.btnasedit);
+            this.tabPage4.Controls.Add(this.btnasadd);
+            this.tabPage4.Controls.Add(this.lvadded);
             this.tabPage4.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
@@ -748,18 +688,7 @@
             this.tabPage4.Size = new System.Drawing.Size(784, 389);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Additional Charges";
-            // 
-            // myTextBox2
-            // 
-            this.myTextBox2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.myTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.myTextBox2.Enabled = false;
-            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.myTextBox2.Location = new System.Drawing.Point(236, 91);
-            this.myTextBox2.Name = "myTextBox2";
-            this.myTextBox2.Size = new System.Drawing.Size(178, 25);
-            this.myTextBox2.TabIndex = 152;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // label13
             // 
@@ -772,47 +701,35 @@
             this.label13.TabIndex = 151;
             this.label13.Text = "Additional Fee Name:";
             // 
-            // numericUpDown1
+            // addedprice
             // 
-            this.numericUpDown1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown1.Location = new System.Drawing.Point(610, 49);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.addedprice.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addedprice.Enabled = false;
+            this.addedprice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedprice.ForeColor = System.Drawing.Color.Black;
+            this.addedprice.Location = new System.Drawing.Point(610, 49);
+            this.addedprice.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(159, 29);
-            this.numericUpDown1.TabIndex = 150;
+            this.addedprice.Name = "addedprice";
+            this.addedprice.Size = new System.Drawing.Size(159, 29);
+            this.addedprice.TabIndex = 150;
             // 
-            // comboBox1
+            // cboservname
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(241, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 29);
-            this.comboBox1.TabIndex = 149;
-            // 
-            // myTextBox1
-            // 
-            this.myTextBox1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.myTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.myTextBox1.Enabled = false;
-            this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.myTextBox1.Location = new System.Drawing.Point(175, 16);
-            this.myTextBox1.Name = "myTextBox1";
-            this.myTextBox1.Size = new System.Drawing.Size(52, 25);
-            this.myTextBox1.TabIndex = 148;
+            this.cboservname.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cboservname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboservname.Enabled = false;
+            this.cboservname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboservname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboservname.ForeColor = System.Drawing.Color.Black;
+            this.cboservname.FormattingEnabled = true;
+            this.cboservname.Location = new System.Drawing.Point(241, 49);
+            this.cboservname.Name = "cboservname";
+            this.cboservname.Size = new System.Drawing.Size(178, 29);
+            this.cboservname.TabIndex = 149;
             // 
             // label10
             // 
@@ -847,90 +764,96 @@
             this.label12.TabIndex = 145;
             this.label12.Text = "Service Name:";
             // 
-            // button1
+            // btnasclear
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(665, 252);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 49);
-            this.button1.TabIndex = 144;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnasclear.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnasclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasclear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasclear.ForeColor = System.Drawing.Color.Black;
+            this.btnasclear.Location = new System.Drawing.Point(665, 252);
+            this.btnasclear.Name = "btnasclear";
+            this.btnasclear.Size = new System.Drawing.Size(102, 49);
+            this.btnasclear.TabIndex = 144;
+            this.btnasclear.Text = "Clear";
+            this.btnasclear.UseVisualStyleBackColor = false;
+            this.btnasclear.Click += new System.EventHandler(this.btnasclear_Click);
             // 
-            // button2
+            // btnassave
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(665, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 49);
-            this.button2.TabIndex = 143;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnassave.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnassave.Enabled = false;
+            this.btnassave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnassave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnassave.ForeColor = System.Drawing.Color.Black;
+            this.btnassave.Location = new System.Drawing.Point(665, 184);
+            this.btnassave.Name = "btnassave";
+            this.btnassave.Size = new System.Drawing.Size(102, 49);
+            this.btnassave.TabIndex = 143;
+            this.btnassave.Text = "Save";
+            this.btnassave.UseVisualStyleBackColor = false;
+            this.btnassave.Click += new System.EventHandler(this.btnassave_Click);
             // 
-            // button3
+            // btnasdelete
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button3.Enabled = false;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(665, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 49);
-            this.button3.TabIndex = 142;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnasdelete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnasdelete.Enabled = false;
+            this.btnasdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasdelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasdelete.ForeColor = System.Drawing.Color.Black;
+            this.btnasdelete.Location = new System.Drawing.Point(665, 120);
+            this.btnasdelete.Name = "btnasdelete";
+            this.btnasdelete.Size = new System.Drawing.Size(102, 49);
+            this.btnasdelete.TabIndex = 142;
+            this.btnasdelete.Text = "Delete";
+            this.btnasdelete.UseVisualStyleBackColor = false;
+            this.btnasdelete.Click += new System.EventHandler(this.btnasdelete_Click);
             // 
-            // button4
+            // btnasedit
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button4.Enabled = false;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(546, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 49);
-            this.button4.TabIndex = 141;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnasedit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnasedit.Enabled = false;
+            this.btnasedit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasedit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasedit.ForeColor = System.Drawing.Color.Black;
+            this.btnasedit.Location = new System.Drawing.Point(546, 184);
+            this.btnasedit.Name = "btnasedit";
+            this.btnasedit.Size = new System.Drawing.Size(102, 49);
+            this.btnasedit.TabIndex = 141;
+            this.btnasedit.Text = "Edit";
+            this.btnasedit.UseVisualStyleBackColor = false;
+            this.btnasedit.Click += new System.EventHandler(this.btnasedit_Click);
             // 
-            // button5
+            // btnasadd
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(546, 120);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 49);
-            this.button5.TabIndex = 140;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnasadd.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnasadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasadd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasadd.ForeColor = System.Drawing.Color.Black;
+            this.btnasadd.Location = new System.Drawing.Point(546, 120);
+            this.btnasadd.Name = "btnasadd";
+            this.btnasadd.Size = new System.Drawing.Size(102, 49);
+            this.btnasadd.TabIndex = 140;
+            this.btnasadd.Text = "Add";
+            this.btnasadd.UseVisualStyleBackColor = false;
+            this.btnasadd.Click += new System.EventHandler(this.button5_Click);
             // 
-            // listView1
+            // lvadded
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvadded.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader12,
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
-            this.listView1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(51, 120);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(477, 250);
-            this.listView1.TabIndex = 130;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvadded.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvadded.FullRowSelect = true;
+            this.lvadded.GridLines = true;
+            this.lvadded.Location = new System.Drawing.Point(51, 120);
+            this.lvadded.Name = "lvadded";
+            this.lvadded.Size = new System.Drawing.Size(477, 250);
+            this.lvadded.TabIndex = 130;
+            this.lvadded.UseCompatibleStateImageBehavior = false;
+            this.lvadded.View = System.Windows.Forms.View.Details;
+            this.lvadded.SelectedIndexChanged += new System.EventHandler(this.AddedLV_SelectedIndexChanged);
             // 
             // columnHeader12
             // 
@@ -951,6 +874,90 @@
             // 
             this.columnHeader7.Text = "Additional Fee";
             this.columnHeader7.Width = 136;
+            // 
+            // txtServiceName
+            // 
+            this.txtServiceName.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtServiceName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtServiceName.Enabled = false;
+            this.txtServiceName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceName.ForeColor = System.Drawing.Color.Black;
+            this.txtServiceName.Location = new System.Drawing.Point(133, 63);
+            this.txtServiceName.Name = "txtServiceName";
+            this.txtServiceName.Size = new System.Drawing.Size(160, 25);
+            this.txtServiceName.TabIndex = 128;
+            // 
+            // txtServiceID
+            // 
+            this.txtServiceID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtServiceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtServiceID.Enabled = false;
+            this.txtServiceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceID.ForeColor = System.Drawing.Color.Black;
+            this.txtServiceID.Location = new System.Drawing.Point(133, 24);
+            this.txtServiceID.Name = "txtServiceID";
+            this.txtServiceID.Size = new System.Drawing.Size(52, 25);
+            this.txtServiceID.TabIndex = 122;
+            // 
+            // txtPriceID
+            // 
+            this.txtPriceID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtPriceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPriceID.Enabled = false;
+            this.txtPriceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceID.ForeColor = System.Drawing.Color.Black;
+            this.txtPriceID.Location = new System.Drawing.Point(146, 22);
+            this.txtPriceID.Name = "txtPriceID";
+            this.txtPriceID.Size = new System.Drawing.Size(52, 25);
+            this.txtPriceID.TabIndex = 133;
+            // 
+            // txtTypeName
+            // 
+            this.txtTypeName.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtTypeName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTypeName.Enabled = false;
+            this.txtTypeName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTypeName.ForeColor = System.Drawing.Color.Black;
+            this.txtTypeName.Location = new System.Drawing.Point(227, 48);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(161, 25);
+            this.txtTypeName.TabIndex = 135;
+            // 
+            // txtTypeID
+            // 
+            this.txtTypeID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtTypeID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTypeID.Enabled = false;
+            this.txtTypeID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTypeID.ForeColor = System.Drawing.Color.Black;
+            this.txtTypeID.Location = new System.Drawing.Point(227, 12);
+            this.txtTypeID.Name = "txtTypeID";
+            this.txtTypeID.Size = new System.Drawing.Size(52, 25);
+            this.txtTypeID.TabIndex = 134;
+            // 
+            // addedname
+            // 
+            this.addedname.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addedname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addedname.Enabled = false;
+            this.addedname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedname.ForeColor = System.Drawing.Color.Black;
+            this.addedname.Location = new System.Drawing.Point(236, 91);
+            this.addedname.Name = "addedname";
+            this.addedname.Size = new System.Drawing.Size(178, 25);
+            this.addedname.TabIndex = 152;
+            // 
+            // addedID
+            // 
+            this.addedID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addedID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addedID.Enabled = false;
+            this.addedID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedID.ForeColor = System.Drawing.Color.Black;
+            this.addedID.Location = new System.Drawing.Point(175, 16);
+            this.addedID.Name = "addedID";
+            this.addedID.Size = new System.Drawing.Size(52, 25);
+            this.addedID.TabIndex = 148;
             // 
             // ucServices
             // 
@@ -975,7 +982,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFee)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addedprice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1030,20 +1037,20 @@
         public MyTextBox txtTypeName;
         public MyTextBox txtTypeID;
         private System.Windows.Forms.TabPage tabPage4;
-        public MyTextBox myTextBox2;
+        public MyTextBox addedname;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        public MyTextBox myTextBox1;
+        private System.Windows.Forms.NumericUpDown addedprice;
+        private System.Windows.Forms.ComboBox cboservname;
+        public MyTextBox addedID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnasclear;
+        private System.Windows.Forms.Button btnassave;
+        private System.Windows.Forms.Button btnasdelete;
+        private System.Windows.Forms.Button btnasedit;
+        private System.Windows.Forms.Button btnasadd;
+        private System.Windows.Forms.ListView lvadded;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
