@@ -262,10 +262,10 @@
             // 
             // btnManageEmp
             // 
-            this.btnManageEmp.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageEmp.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnManageEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageEmp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnManageEmp.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageEmp.ForeColor = System.Drawing.Color.White;
             this.btnManageEmp.Location = new System.Drawing.Point(451, 32);
             this.btnManageEmp.Name = "btnManageEmp";
             this.btnManageEmp.Size = new System.Drawing.Size(213, 113);
@@ -276,10 +276,10 @@
             // 
             // btnLogs
             // 
-            this.btnLogs.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnLogs.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogs.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogs.ForeColor = System.Drawing.Color.Black;
+            this.btnLogs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogs.ForeColor = System.Drawing.Color.White;
             this.btnLogs.Location = new System.Drawing.Point(451, 192);
             this.btnLogs.Name = "btnLogs";
             this.btnLogs.Size = new System.Drawing.Size(213, 113);
@@ -290,10 +290,10 @@
             // 
             // btnCustomer
             // 
-            this.btnCustomer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnCustomer.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.Location = new System.Drawing.Point(143, 194);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(213, 113);
@@ -304,10 +304,10 @@
             // 
             // btnManageUsers
             // 
-            this.btnManageUsers.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageUsers.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnManageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageUsers.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageUsers.ForeColor = System.Drawing.Color.Black;
+            this.btnManageUsers.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageUsers.ForeColor = System.Drawing.Color.White;
             this.btnManageUsers.Location = new System.Drawing.Point(143, 32);
             this.btnManageUsers.Name = "btnManageUsers";
             this.btnManageUsers.Size = new System.Drawing.Size(213, 113);
@@ -329,11 +329,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(436, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(315, 39);
+            this.label5.Size = new System.Drawing.Size(371, 38);
             this.label5.TabIndex = 30;
             this.label5.Text = "Logs and Maintenance";
             // 
