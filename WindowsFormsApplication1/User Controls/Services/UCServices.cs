@@ -12,11 +12,11 @@ namespace WindowsFormsApplication1
 {
     public partial class ucServices : UserControl
     {
-        classDatabaseConnect dbcon = new classDatabaseConnect(); bool sadd = false, sedit = false, padd = false, pedit = false, tadd = false, tedit = false;
+        classDatabaseConnect dbcon = new classDatabaseConnect(); bool sadd = false, sedit = false, padd = false, pedit = false, tadd = false, tedit = false,asedit = false,asadd = false;
 
         private void btnSAdd_Click(object sender, EventArgs e)
         {
-            sadd = true; btnSAdd.Enabled = false; btnSSave.Enabled = true; txtServiceName.Enabled = true;
+            asadd = true; btnasadd.Enabled = false; btnassave.Enabled = true; addedname.Enabled = true;
         }
 
         private void btnSDelete_Click(object sender, EventArgs e)
@@ -103,7 +103,8 @@ namespace WindowsFormsApplication1
 
         private void ucServices_Load(object sender, EventArgs e)
         {
-            btnSClear.PerformClick(); LoadPriceLV(); LoadVehicleTypeLV();LoadServiceCbo();LoadTypeCbo();
+            btnSClear.PerformClick(); LoadPriceLV(); LoadVehicleTypeLV();LoadServiceCbo();LoadTypeCbo(); LoadAddedLV();
+            Loadservname();
         }
 
 
@@ -323,6 +324,72 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void btnasdelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Added Charges?", "Services", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                query = "DELETE FROM serv_added_charges WHERE serv_addedID ='" + addedID.Text + "'";
+                dbcon.ManipulateData(query);
+                MessageBox.Show("Deleted a added charges", "Service");
+                btnPClear.PerformClick();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private void btnasedit_Click(object sender, EventArgs e)
+        {
+            btnasedit.Enabled = false; btnassave.Enabled = true; asedit = true; btnasdelete.Enabled = false; addedprice.Enabled = true;
+        }
+
+        private void btnassave_Click(object sender, EventArgs e)
+        {
+            if (addedname.Text.Trim() == "" || cboservname.Text.Trim() == "" ||addedprice.Text.Trim() == "")
+            {
+                MessageBox.Show("Please Provide Service ID, Added Charge Name, and Added Charge Fee", "Services");
+                cboServiceName.Focus();
+            }
+            else
+            {
+                if (asadd)
+                {
+                    asadd = true;
+                    query = "INSERT INTO serv_added_charges(serv_added_ID,service_ID,serv_added_name,serv_added_price) VALUES ('" + addedID.ToString() + "',(SELECT service_ID FROM service WHERE service_name='" + cboservname.Text + "'),'" + addedname.ToString() + "','" + addedprice.Value.ToString() + "')";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Added a new Service Extra Charge", "Services");
+                }
+                else if (asedit)
+                {
+                    pedit = false;
+                    query = "UPDATE serv_added_charges SET serv_added_price='" + addedprice.Value.ToString() + "' WHERE serv_added_ID='" + addedID.Text + "'";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Updated a service extra chrage price.", "Services");
+                }
+                btnasclear.PerformClick();
+            }
+        }
+
+        private void btnasclear_Click(object sender, EventArgs e)
+        {
+            LoadAddedLV(); addedID.Text = ""; addedname.Text = ""; cboservname.Text = ""; addedprice.Text = ""; btnasadd.Enabled = true; btnassave.Enabled = false; btnasdelete.Enabled = false; btnasedit.Enabled = false;cboservname.Enabled = false;addedprice.Enabled = false;
+        }
+
+        private void AddedLV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvadded.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lvadded.SelectedItems[0];
+                addedID.Text = item.SubItems[0].Text;
+                cboservname.Text = item.SubItems[1].Text;
+                addedname.Text = item.SubItems[2].Text;
+                addedprice.Value = Convert.ToDecimal(item.SubItems[3].Text);
+                btnasadd.Enabled = false; btnasedit.Enabled = true; btnasdelete.Enabled = true; btnassave.Enabled = false; asadd = false; asedit = false; cboservname.Enabled = false; addedprice.Enabled = false;
+            }
+        }
+
         private void btnPrint_Click(object sender, EventArgs e) {
 
             try {
@@ -345,6 +412,46 @@ namespace WindowsFormsApplication1
                 throw;
             }
            
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            asadd = true; btnasadd.Enabled = false; btnassave.Enabled = true; cboservname.Enabled = true; addedname.Enabled = true; addedprice.Enabled = true;
+        }
+        private void LoadAddedLV()
+        {
+            lvadded.Items.Clear();
+            try
+            {
+                query = "SELECT serv_added_ID,service_name,serv_added_name,serv_added_price FROM serv_added_charges,service WHERE serv_added_charges.service_ID=service.service_ID";
+                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
+                DataTable table = new DataTable("myTable");
+                mySqlDataAdapter.Fill(table);
+                lvPrices.View = View.Details;
+                ListViewItem iItem;
+                foreach (DataRow row in table.Rows)
+                {
+                    iItem = new ListViewItem();
+                    for (int i = 0; i < row.ItemArray.Length; i++)
+                    {
+                        if (i == 0)
+                            iItem.Text = row.ItemArray[i].ToString();
+                        else
+                            iItem.SubItems.Add(row.ItemArray[i].ToString());
+                    }
+                    lvadded.Items.Add(iItem);
+                }
+
+                dbcon.mysqlconnect.Close();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnPClear_Click(object sender, EventArgs e)
@@ -414,6 +521,27 @@ namespace WindowsFormsApplication1
                 while (reader.Read())
                 {
                     cboServiceName.Items.Add(reader.GetString(0));
+                }
+                //drpCat.Items = myCollection.ToArray();
+            }
+            dbcon.mysqlconnect.Close();
+        }
+        private void Loadservname()
+        {
+            cboservname.Items.Clear();
+            string query = "SELECT service_name FROM service";
+            dbcon.mysqlconnect.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
+            myCommand.CommandTimeout = 60;
+            MySqlDataReader reader;
+            reader = myCommand.ExecuteReader();
+            //List<string> myCollection = new List<string>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    cboservname.Items.Add(reader.GetString(0));
                 }
                 //drpCat.Items = myCollection.ToArray();
             }
