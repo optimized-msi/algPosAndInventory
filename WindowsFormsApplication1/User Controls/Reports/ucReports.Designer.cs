@@ -83,20 +83,20 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.listView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(902, 422);
+            this.tabPage1.Size = new System.Drawing.Size(902, 441);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inventory";
             // 
             // btnPay
             // 
-            this.btnPay.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnPay.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.Black;
-            this.btnPay.Location = new System.Drawing.Point(530, 23);
+            this.btnPay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(662, 21);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(135, 73);
             this.btnPay.TabIndex = 134;
@@ -109,9 +109,9 @@
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox3.ForeColor = System.Drawing.Color.Black;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(144, 78);
+            this.comboBox3.Location = new System.Drawing.Point(210, 88);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 33);
+            this.comboBox3.Size = new System.Drawing.Size(200, 31);
             this.comboBox3.TabIndex = 128;
             // 
             // comboBox2
@@ -120,9 +120,9 @@
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.ForeColor = System.Drawing.Color.Black;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(144, 41);
+            this.comboBox2.Location = new System.Drawing.Point(210, 51);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 33);
+            this.comboBox2.Size = new System.Drawing.Size(200, 31);
             this.comboBox2.TabIndex = 127;
             // 
             // comboBox1
@@ -131,41 +131,41 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(145, 5);
+            this.comboBox1.Location = new System.Drawing.Point(210, 14);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 33);
+            this.comboBox1.Size = new System.Drawing.Size(200, 31);
             this.comboBox1.TabIndex = 126;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(36, 75);
+            this.label2.Location = new System.Drawing.Point(73, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 21);
+            this.label2.Size = new System.Drawing.Size(30, 19);
             this.label2.TabIndex = 125;
             this.label2.Text = "To:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(36, 39);
+            this.label1.Location = new System.Drawing.Point(73, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 21);
+            this.label1.Size = new System.Drawing.Size(52, 19);
             this.label1.TabIndex = 124;
             this.label1.Text = "From:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(36, 8);
+            this.label4.Location = new System.Drawing.Point(73, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 21);
+            this.label4.Size = new System.Drawing.Size(100, 19);
             this.label4.TabIndex = 123;
             this.label4.Text = "Item Name:";
             // 
@@ -179,7 +179,7 @@
             this.columnHeader2,
             this.columnHeader11});
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.Location = new System.Drawing.Point(6, 114);
+            this.listView1.Location = new System.Drawing.Point(40, 137);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(757, 267);
             this.listView1.TabIndex = 12;
@@ -228,11 +228,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(411, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 39);
+            this.label5.Size = new System.Drawing.Size(443, 38);
             this.label5.TabIndex = 30;
             this.label5.Text = "Inventory and Sales Reports";
             // 
@@ -251,10 +251,10 @@
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.listView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(902, 422);
+            this.tabPage2.Size = new System.Drawing.Size(902, 441);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sales";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -308,11 +308,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(352, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 21);
+            this.label8.Size = new System.Drawing.Size(117, 19);
             this.label8.TabIndex = 132;
             this.label8.Text = "Gross Income:";
             // 
@@ -323,7 +323,7 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(124, 79);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(200, 33);
+            this.comboBox4.Size = new System.Drawing.Size(200, 31);
             this.comboBox4.TabIndex = 131;
             // 
             // comboBox5
@@ -333,7 +333,7 @@
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(124, 42);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(200, 33);
+            this.comboBox5.Size = new System.Drawing.Size(200, 31);
             this.comboBox5.TabIndex = 130;
             // 
             // comboBox6
@@ -343,39 +343,39 @@
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(125, 6);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(200, 33);
+            this.comboBox6.Size = new System.Drawing.Size(200, 31);
             this.comboBox6.TabIndex = 129;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(29, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 21);
+            this.label3.Size = new System.Drawing.Size(30, 19);
             this.label3.TabIndex = 128;
             this.label3.Text = "To:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(29, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 21);
+            this.label6.Size = new System.Drawing.Size(52, 19);
             this.label6.TabIndex = 127;
             this.label6.Text = "From:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(29, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 21);
+            this.label7.Size = new System.Drawing.Size(100, 19);
             this.label7.TabIndex = 126;
             this.label7.Text = "Item Name:";
             // 
@@ -390,9 +390,9 @@
             this.columnHeader8,
             this.columnHeader13});
             this.listView2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.Location = new System.Drawing.Point(6, 115);
+            this.listView2.Location = new System.Drawing.Point(6, 125);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(881, 267);
+            this.listView2.Size = new System.Drawing.Size(890, 267);
             this.listView2.TabIndex = 69;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -441,11 +441,11 @@
             // 
             this.tabInventory.Controls.Add(this.tabPage1);
             this.tabInventory.Controls.Add(this.tabPage2);
-            this.tabInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabInventory.Location = new System.Drawing.Point(177, 176);
+            this.tabInventory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabInventory.Location = new System.Drawing.Point(117, 134);
             this.tabInventory.Name = "tabInventory";
             this.tabInventory.SelectedIndex = 0;
-            this.tabInventory.Size = new System.Drawing.Size(910, 460);
+            this.tabInventory.Size = new System.Drawing.Size(910, 477);
             this.tabInventory.TabIndex = 59;
             // 
             // ucReports

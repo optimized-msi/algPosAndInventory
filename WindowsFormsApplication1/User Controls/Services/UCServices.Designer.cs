@@ -109,22 +109,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(17, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 19);
+            this.label3.Size = new System.Drawing.Size(113, 19);
             this.label3.TabIndex = 91;
             this.label3.Text = "Vehicle Type:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(18, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 19);
+            this.label2.Size = new System.Drawing.Size(134, 19);
             this.label2.TabIndex = 84;
             this.label2.Text = "Service Price ID.:";
             // 
@@ -132,22 +132,22 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(330, 53);
+            this.label4.Location = new System.Drawing.Point(355, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 19);
+            this.label4.Size = new System.Drawing.Size(101, 19);
             this.label4.TabIndex = 83;
             this.label4.Text = "Service Fee:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(17, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 19);
+            this.label6.Size = new System.Drawing.Size(122, 19);
             this.label6.TabIndex = 82;
             this.label6.Text = "Service Name:";
             // 
@@ -164,20 +164,44 @@
             this.tabPage3.Controls.Add(this.lvType);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(784, 389);
+            this.tabPage3.Size = new System.Drawing.Size(820, 453);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Vehicle Types";
             // 
+            // txtTypeName
+            // 
+            this.txtTypeName.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtTypeName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTypeName.Enabled = false;
+            this.txtTypeName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTypeName.ForeColor = System.Drawing.Color.Black;
+            this.txtTypeName.Location = new System.Drawing.Point(222, 71);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(161, 25);
+            this.txtTypeName.TabIndex = 135;
+            // 
+            // txtTypeID
+            // 
+            this.txtTypeID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtTypeID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTypeID.Enabled = false;
+            this.txtTypeID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTypeID.ForeColor = System.Drawing.Color.Black;
+            this.txtTypeID.Location = new System.Drawing.Point(222, 34);
+            this.txtTypeID.Name = "txtTypeID";
+            this.txtTypeID.Size = new System.Drawing.Size(52, 25);
+            this.txtTypeID.TabIndex = 134;
+            // 
             // btnVClear
             // 
-            this.btnVClear.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnVClear.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnVClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVClear.ForeColor = System.Drawing.Color.Black;
-            this.btnVClear.Location = new System.Drawing.Point(564, 231);
+            this.btnVClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVClear.ForeColor = System.Drawing.Color.White;
+            this.btnVClear.Location = new System.Drawing.Point(652, 257);
             this.btnVClear.Name = "btnVClear";
             this.btnVClear.Size = new System.Drawing.Size(102, 49);
             this.btnVClear.TabIndex = 132;
@@ -187,12 +211,12 @@
             // 
             // btnVSave
             // 
-            this.btnVSave.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnVSave.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnVSave.Enabled = false;
             this.btnVSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVSave.ForeColor = System.Drawing.Color.Black;
-            this.btnVSave.Location = new System.Drawing.Point(564, 163);
+            this.btnVSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVSave.ForeColor = System.Drawing.Color.White;
+            this.btnVSave.Location = new System.Drawing.Point(652, 191);
             this.btnVSave.Name = "btnVSave";
             this.btnVSave.Size = new System.Drawing.Size(102, 49);
             this.btnVSave.TabIndex = 131;
@@ -202,12 +226,12 @@
             // 
             // btnVDelete
             // 
-            this.btnVDelete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnVDelete.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnVDelete.Enabled = false;
             this.btnVDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnVDelete.Location = new System.Drawing.Point(564, 99);
+            this.btnVDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVDelete.ForeColor = System.Drawing.Color.White;
+            this.btnVDelete.Location = new System.Drawing.Point(652, 121);
             this.btnVDelete.Name = "btnVDelete";
             this.btnVDelete.Size = new System.Drawing.Size(102, 49);
             this.btnVDelete.TabIndex = 130;
@@ -217,12 +241,12 @@
             // 
             // btnVEdit
             // 
-            this.btnVEdit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnVEdit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnVEdit.Enabled = false;
             this.btnVEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnVEdit.Location = new System.Drawing.Point(445, 163);
+            this.btnVEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVEdit.ForeColor = System.Drawing.Color.White;
+            this.btnVEdit.Location = new System.Drawing.Point(533, 191);
             this.btnVEdit.Name = "btnVEdit";
             this.btnVEdit.Size = new System.Drawing.Size(102, 49);
             this.btnVEdit.TabIndex = 129;
@@ -232,11 +256,11 @@
             // 
             // btnVAdd
             // 
-            this.btnVAdd.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnVAdd.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnVAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnVAdd.Location = new System.Drawing.Point(445, 99);
+            this.btnVAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVAdd.ForeColor = System.Drawing.Color.White;
+            this.btnVAdd.Location = new System.Drawing.Point(533, 121);
             this.btnVAdd.Name = "btnVAdd";
             this.btnVAdd.Size = new System.Drawing.Size(102, 49);
             this.btnVAdd.TabIndex = 128;
@@ -252,9 +276,9 @@
             this.lvType.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvType.FullRowSelect = true;
             this.lvType.GridLines = true;
-            this.lvType.Location = new System.Drawing.Point(118, 95);
+            this.lvType.Location = new System.Drawing.Point(71, 121);
             this.lvType.Name = "lvType";
-            this.lvType.Size = new System.Drawing.Size(307, 219);
+            this.lvType.Size = new System.Drawing.Size(400, 264);
             this.lvType.TabIndex = 46;
             this.lvType.UseCompatibleStateImageBehavior = false;
             this.lvType.View = System.Windows.Forms.View.Details;
@@ -273,22 +297,22 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(121, 18);
+            this.label7.Location = new System.Drawing.Point(103, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 19);
+            this.label7.Size = new System.Drawing.Size(73, 19);
             this.label7.TabIndex = 39;
             this.label7.Text = "Type ID.:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(121, 54);
+            this.label9.Location = new System.Drawing.Point(103, 77);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 19);
+            this.label9.Size = new System.Drawing.Size(113, 19);
             this.label9.TabIndex = 38;
             this.label9.Text = "Vehicle Type:";
             // 
@@ -304,17 +328,17 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1174, 62);
+            this.panel1.Size = new System.Drawing.Size(1186, 62);
             this.panel1.TabIndex = 56;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(435, 9);
+            this.label5.Location = new System.Drawing.Point(469, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 39);
+            this.label5.Size = new System.Drawing.Size(144, 38);
             this.label5.TabIndex = 30;
             this.label5.Text = "Services";
             // 
@@ -324,11 +348,11 @@
             this.tabInventory.Controls.Add(this.tabPage2);
             this.tabInventory.Controls.Add(this.tabPage3);
             this.tabInventory.Controls.Add(this.tabPage4);
-            this.tabInventory.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabInventory.Location = new System.Drawing.Point(41, 89);
+            this.tabInventory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabInventory.Location = new System.Drawing.Point(194, 106);
             this.tabInventory.Name = "tabInventory";
             this.tabInventory.SelectedIndex = 0;
-            this.tabInventory.Size = new System.Drawing.Size(792, 427);
+            this.tabInventory.Size = new System.Drawing.Size(828, 489);
             this.tabInventory.TabIndex = 57;
             // 
             // tabPage1
@@ -344,21 +368,33 @@
             this.tabPage1.Controls.Add(this.lvServices);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(784, 389);
+            this.tabPage1.Size = new System.Drawing.Size(820, 453);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Services Offered";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // txtServiceName
+            // 
+            this.txtServiceName.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtServiceName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtServiceName.Enabled = false;
+            this.txtServiceName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceName.ForeColor = System.Drawing.Color.Black;
+            this.txtServiceName.Location = new System.Drawing.Point(241, 61);
+            this.txtServiceName.Name = "txtServiceName";
+            this.txtServiceName.Size = new System.Drawing.Size(160, 25);
+            this.txtServiceName.TabIndex = 128;
+            // 
             // btnSClear
             // 
-            this.btnSClear.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSClear.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSClear.ForeColor = System.Drawing.Color.Black;
-            this.btnSClear.Location = new System.Drawing.Point(505, 240);
+            this.btnSClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSClear.ForeColor = System.Drawing.Color.White;
+            this.btnSClear.Location = new System.Drawing.Point(661, 254);
             this.btnSClear.Name = "btnSClear";
             this.btnSClear.Size = new System.Drawing.Size(102, 49);
             this.btnSClear.TabIndex = 127;
@@ -368,12 +404,12 @@
             // 
             // btnSSave
             // 
-            this.btnSSave.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSSave.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSSave.Enabled = false;
             this.btnSSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSSave.Location = new System.Drawing.Point(505, 172);
+            this.btnSSave.ForeColor = System.Drawing.Color.White;
+            this.btnSSave.Location = new System.Drawing.Point(661, 182);
             this.btnSSave.Name = "btnSSave";
             this.btnSSave.Size = new System.Drawing.Size(102, 49);
             this.btnSSave.TabIndex = 126;
@@ -383,12 +419,12 @@
             // 
             // btnSDelete
             // 
-            this.btnSDelete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSDelete.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSDelete.Enabled = false;
             this.btnSDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnSDelete.Location = new System.Drawing.Point(505, 108);
+            this.btnSDelete.ForeColor = System.Drawing.Color.White;
+            this.btnSDelete.Location = new System.Drawing.Point(661, 108);
             this.btnSDelete.Name = "btnSDelete";
             this.btnSDelete.Size = new System.Drawing.Size(102, 49);
             this.btnSDelete.TabIndex = 125;
@@ -398,12 +434,12 @@
             // 
             // btnSEdit
             // 
-            this.btnSEdit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSEdit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSEdit.Enabled = false;
             this.btnSEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnSEdit.Location = new System.Drawing.Point(397, 172);
+            this.btnSEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSEdit.ForeColor = System.Drawing.Color.White;
+            this.btnSEdit.Location = new System.Drawing.Point(538, 182);
             this.btnSEdit.Name = "btnSEdit";
             this.btnSEdit.Size = new System.Drawing.Size(102, 49);
             this.btnSEdit.TabIndex = 124;
@@ -413,17 +449,29 @@
             // 
             // btnSAdd
             // 
-            this.btnSAdd.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSAdd.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnSAdd.Location = new System.Drawing.Point(397, 108);
+            this.btnSAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSAdd.ForeColor = System.Drawing.Color.White;
+            this.btnSAdd.Location = new System.Drawing.Point(538, 108);
             this.btnSAdd.Name = "btnSAdd";
             this.btnSAdd.Size = new System.Drawing.Size(102, 49);
             this.btnSAdd.TabIndex = 123;
             this.btnSAdd.Text = "Add";
             this.btnSAdd.UseVisualStyleBackColor = false;
             this.btnSAdd.Click += new System.EventHandler(this.btnSAdd_Click);
+            // 
+            // txtServiceID
+            // 
+            this.txtServiceID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtServiceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtServiceID.Enabled = false;
+            this.txtServiceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceID.ForeColor = System.Drawing.Color.Black;
+            this.txtServiceID.Location = new System.Drawing.Point(241, 24);
+            this.txtServiceID.Name = "txtServiceID";
+            this.txtServiceID.Size = new System.Drawing.Size(160, 25);
+            this.txtServiceID.TabIndex = 122;
             // 
             // lvServices
             // 
@@ -433,9 +481,9 @@
             this.lvServices.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvServices.FullRowSelect = true;
             this.lvServices.GridLines = true;
-            this.lvServices.Location = new System.Drawing.Point(32, 108);
+            this.lvServices.Location = new System.Drawing.Point(65, 108);
             this.lvServices.Name = "lvServices";
-            this.lvServices.Size = new System.Drawing.Size(314, 206);
+            this.lvServices.Size = new System.Drawing.Size(404, 280);
             this.lvServices.TabIndex = 46;
             this.lvServices.UseCompatibleStateImageBehavior = false;
             this.lvServices.View = System.Windows.Forms.View.Details;
@@ -444,7 +492,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Service ID.";
-            this.columnHeader1.Width = 89;
+            this.columnHeader1.Width = 97;
             // 
             // columnHeader2
             // 
@@ -454,22 +502,22 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(21, 24);
+            this.label8.Location = new System.Drawing.Point(113, 30);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 19);
+            this.label8.Size = new System.Drawing.Size(92, 19);
             this.label8.TabIndex = 39;
             this.label8.Text = "Service ID.:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(21, 63);
+            this.label1.Location = new System.Drawing.Point(113, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.Size = new System.Drawing.Size(122, 19);
             this.label1.TabIndex = 38;
             this.label1.Text = "Service Name:";
             // 
@@ -491,20 +539,20 @@
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(784, 389);
+            this.tabPage2.Size = new System.Drawing.Size(820, 453);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Services Prices";
             // 
             // btnPrint
             // 
-            this.btnPrint.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnPrint.BackColor = System.Drawing.Color.White;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnPrint.Location = new System.Drawing.Point(637, 43);
+            this.btnPrint.Location = new System.Drawing.Point(672, 38);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(102, 49);
             this.btnPrint.TabIndex = 138;
@@ -514,11 +562,11 @@
             // 
             // numFee
             // 
-            this.numFee.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.numFee.BackColor = System.Drawing.Color.RoyalBlue;
             this.numFee.Enabled = false;
             this.numFee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numFee.ForeColor = System.Drawing.Color.Black;
-            this.numFee.Location = new System.Drawing.Point(425, 46);
+            this.numFee.Location = new System.Drawing.Point(462, 50);
             this.numFee.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -537,7 +585,7 @@
             this.cboVehicleType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboVehicleType.ForeColor = System.Drawing.Color.Black;
             this.cboVehicleType.FormattingEnabled = true;
-            this.cboVehicleType.Location = new System.Drawing.Point(146, 94);
+            this.cboVehicleType.Location = new System.Drawing.Point(158, 91);
             this.cboVehicleType.Name = "cboVehicleType";
             this.cboVehicleType.Size = new System.Drawing.Size(178, 29);
             this.cboVehicleType.TabIndex = 136;
@@ -551,18 +599,30 @@
             this.cboServiceName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboServiceName.ForeColor = System.Drawing.Color.Black;
             this.cboServiceName.FormattingEnabled = true;
-            this.cboServiceName.Location = new System.Drawing.Point(146, 54);
+            this.cboServiceName.Location = new System.Drawing.Point(158, 50);
             this.cboServiceName.Name = "cboServiceName";
             this.cboServiceName.Size = new System.Drawing.Size(178, 29);
             this.cboServiceName.TabIndex = 135;
             // 
+            // txtPriceID
+            // 
+            this.txtPriceID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtPriceID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPriceID.Enabled = false;
+            this.txtPriceID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceID.ForeColor = System.Drawing.Color.Black;
+            this.txtPriceID.Location = new System.Drawing.Point(158, 18);
+            this.txtPriceID.Name = "txtPriceID";
+            this.txtPriceID.Size = new System.Drawing.Size(52, 25);
+            this.txtPriceID.TabIndex = 133;
+            // 
             // btnPClear
             // 
-            this.btnPClear.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnPClear.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnPClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPClear.ForeColor = System.Drawing.Color.Black;
-            this.btnPClear.Location = new System.Drawing.Point(637, 266);
+            this.btnPClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPClear.ForeColor = System.Drawing.Color.White;
+            this.btnPClear.Location = new System.Drawing.Point(672, 258);
             this.btnPClear.Name = "btnPClear";
             this.btnPClear.Size = new System.Drawing.Size(102, 49);
             this.btnPClear.TabIndex = 132;
@@ -572,12 +632,12 @@
             // 
             // btnPSave
             // 
-            this.btnPSave.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnPSave.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnPSave.Enabled = false;
             this.btnPSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPSave.ForeColor = System.Drawing.Color.Black;
-            this.btnPSave.Location = new System.Drawing.Point(637, 198);
+            this.btnPSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPSave.ForeColor = System.Drawing.Color.White;
+            this.btnPSave.Location = new System.Drawing.Point(672, 189);
             this.btnPSave.Name = "btnPSave";
             this.btnPSave.Size = new System.Drawing.Size(102, 49);
             this.btnPSave.TabIndex = 131;
@@ -587,12 +647,12 @@
             // 
             // btnPDelete
             // 
-            this.btnPDelete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnPDelete.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnPDelete.Enabled = false;
             this.btnPDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnPDelete.Location = new System.Drawing.Point(637, 134);
+            this.btnPDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPDelete.ForeColor = System.Drawing.Color.White;
+            this.btnPDelete.Location = new System.Drawing.Point(672, 134);
             this.btnPDelete.Name = "btnPDelete";
             this.btnPDelete.Size = new System.Drawing.Size(102, 49);
             this.btnPDelete.TabIndex = 130;
@@ -602,12 +662,12 @@
             // 
             // btnPEdit
             // 
-            this.btnPEdit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnPEdit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnPEdit.Enabled = false;
             this.btnPEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnPEdit.Location = new System.Drawing.Point(532, 198);
+            this.btnPEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPEdit.ForeColor = System.Drawing.Color.White;
+            this.btnPEdit.Location = new System.Drawing.Point(564, 189);
             this.btnPEdit.Name = "btnPEdit";
             this.btnPEdit.Size = new System.Drawing.Size(102, 49);
             this.btnPEdit.TabIndex = 129;
@@ -617,11 +677,11 @@
             // 
             // btnPAdd
             // 
-            this.btnPAdd.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnPAdd.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnPAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnPAdd.Location = new System.Drawing.Point(532, 134);
+            this.btnPAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPAdd.ForeColor = System.Drawing.Color.White;
+            this.btnPAdd.Location = new System.Drawing.Point(564, 134);
             this.btnPAdd.Name = "btnPAdd";
             this.btnPAdd.Size = new System.Drawing.Size(102, 49);
             this.btnPAdd.TabIndex = 128;
@@ -641,7 +701,7 @@
             this.lvPrices.GridLines = true;
             this.lvPrices.Location = new System.Drawing.Point(22, 129);
             this.lvPrices.Name = "lvPrices";
-            this.lvPrices.Size = new System.Drawing.Size(508, 221);
+            this.lvPrices.Size = new System.Drawing.Size(525, 261);
             this.lvPrices.TabIndex = 93;
             this.lvPrices.UseCompatibleStateImageBehavior = false;
             this.lvPrices.View = System.Windows.Forms.View.Details;
@@ -682,10 +742,10 @@
             this.tabPage4.Controls.Add(this.btnasadd);
             this.tabPage4.Controls.Add(this.lvadded);
             this.tabPage4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Location = new System.Drawing.Point(4, 32);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(784, 389);
+            this.tabPage4.Size = new System.Drawing.Size(820, 453);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Additional Charges";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -693,11 +753,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(47, 91);
+            this.label13.Location = new System.Drawing.Point(61, 97);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(155, 19);
+            this.label13.Size = new System.Drawing.Size(179, 19);
             this.label13.TabIndex = 151;
             this.label13.Text = "Additional Fee Name:";
             // 
@@ -734,33 +794,33 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(47, 18);
+            this.label10.Location = new System.Drawing.Point(61, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 19);
+            this.label10.Size = new System.Drawing.Size(137, 19);
             this.label10.TabIndex = 147;
             this.label10.Text = "Add. Charge ID.:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(440, 53);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(164, 19);
+            this.label11.Size = new System.Drawing.Size(186, 19);
             this.label11.TabIndex = 146;
             this.label11.Text = "Additional Service Fee:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(46, 48);
+            this.label12.Location = new System.Drawing.Point(61, 59);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 19);
+            this.label12.Size = new System.Drawing.Size(122, 19);
             this.label12.TabIndex = 145;
             this.label12.Text = "Service Name:";
             // 
@@ -967,7 +1027,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabInventory);
             this.Name = "ucServices";
-            this.Size = new System.Drawing.Size(1149, 536);
+            this.Size = new System.Drawing.Size(1186, 694);
             this.Load += new System.EventHandler(this.ucServices_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ucServices_MouseMove);
             this.tabPage3.ResumeLayout(false);
