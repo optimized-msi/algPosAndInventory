@@ -27,12 +27,12 @@ namespace WindowsFormsApplication1
 
         private void frmPosAddService_Load(object sender, EventArgs e)
         {
-            LoadCheckList(); LoadServiceName();LoadVehicleType();
+             LoadServiceName();LoadVehicleType();LoadCheckList();
         }
         private void LoadCheckList()
         {
             clbEmployee.Items.Clear();
-            string query = "SELECT CONCAT(emp_fName, ', ',emp_gName,' ,',emp_mInitial) FROM employee";
+            string query = "SELECT CONCAT(emp_fName,',',emp_gName,',',emp_mInitial) FROM Employee";
             dbcon.mysqlconnect.Open();
             MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
             myCommand.CommandTimeout = 60;
@@ -196,11 +196,12 @@ namespace WindowsFormsApplication1
             {
                 lblFee.Text = "";
             }
+            LoadclAdded();
         }
         private void LoadclAdded()
         {
             clbAddedService.Items.Clear();
-            string query = "SELECT CONCAT(serv_added_name,'---- P',serv_added_price) FROM serv_added_charges WHERE service_ID = '" + cboServiceName.Text + "'";
+            string query = "SELECT CONCAT(serv_added_name,'  -----  P',serv_added_price) FROM serv_added_charges";
             dbcon.mysqlconnect.Open();
             MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
             myCommand.CommandTimeout = 60;
@@ -214,11 +215,6 @@ namespace WindowsFormsApplication1
                 }
             }
             dbcon.mysqlconnect.Close();
-            if (cboServiceName.Text == "Carwash")
-            {
-                clbAddedService.Items.Add("Wax - P100.00");
-                clbAddedService.Items.Add("Soap - P200.00");
-            }
         }
 
         private void cboVehicleType_SelectedIndexChanged_1(object sender, EventArgs e)

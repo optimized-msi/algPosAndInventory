@@ -129,10 +129,10 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(620, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 72);
@@ -144,7 +144,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(91, 89);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 21);
@@ -156,7 +156,7 @@
             this.comboBox6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.ForeColor = System.Drawing.Color.Black;
+            this.comboBox6.ForeColor = System.Drawing.Color.White;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(173, 86);
             this.comboBox6.Name = "comboBox6";
@@ -167,7 +167,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(91, 50);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 21);
@@ -179,7 +179,7 @@
             this.comboBox7.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.ForeColor = System.Drawing.Color.Black;
+            this.comboBox7.ForeColor = System.Drawing.Color.White;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(173, 47);
             this.comboBox7.Name = "comboBox7";
@@ -190,7 +190,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(91, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 21);
@@ -202,7 +202,7 @@
             this.comboBox8.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.ForeColor = System.Drawing.Color.Black;
+            this.comboBox8.ForeColor = System.Drawing.Color.White;
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Location = new System.Drawing.Point(173, 7);
             this.comboBox8.Name = "comboBox8";
@@ -315,10 +315,10 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(623, 26);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 72);
@@ -331,7 +331,7 @@
             this.label11.AutoSize = true;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(94, 87);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(31, 21);
@@ -340,10 +340,10 @@
             // 
             // comboBox10
             // 
-            this.comboBox10.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox10.BackColor = System.Drawing.Color.RoyalBlue;
             this.comboBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox10.ForeColor = System.Drawing.Color.Black;
+            this.comboBox10.ForeColor = System.Drawing.Color.White;
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Location = new System.Drawing.Point(176, 84);
             this.comboBox10.Name = "comboBox10";
@@ -355,7 +355,7 @@
             this.label12.AutoSize = true;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(94, 48);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 21);
@@ -364,10 +364,10 @@
             // 
             // comboBox11
             // 
-            this.comboBox11.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox11.BackColor = System.Drawing.Color.RoyalBlue;
             this.comboBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox11.ForeColor = System.Drawing.Color.Black;
+            this.comboBox11.ForeColor = System.Drawing.Color.White;
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Location = new System.Drawing.Point(176, 45);
             this.comboBox11.Name = "comboBox11";
@@ -379,7 +379,7 @@
             this.label13.AutoSize = true;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(94, 5);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 21);
@@ -388,10 +388,10 @@
             // 
             // comboBox12
             // 
-            this.comboBox12.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox12.BackColor = System.Drawing.Color.RoyalBlue;
             this.comboBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox12.ForeColor = System.Drawing.Color.Black;
+            this.comboBox12.ForeColor = System.Drawing.Color.White;
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Location = new System.Drawing.Point(176, 5);
             this.comboBox12.Name = "comboBox12";
@@ -528,10 +528,10 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(629, 27);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(166, 72);
@@ -544,7 +544,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(100, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 21);
@@ -556,7 +556,7 @@
             this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(182, 85);
             this.comboBox1.Name = "comboBox1";
@@ -568,7 +568,7 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(100, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 21);
@@ -580,7 +580,7 @@
             this.comboBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(182, 46);
             this.comboBox2.Name = "comboBox2";
@@ -592,7 +592,7 @@
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(100, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 21);
@@ -604,7 +604,7 @@
             this.comboBox9.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.ForeColor = System.Drawing.Color.Black;
+            this.comboBox9.ForeColor = System.Drawing.Color.White;
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Location = new System.Drawing.Point(182, 6);
             this.comboBox9.Name = "comboBox9";
@@ -632,10 +632,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(619, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 72);
@@ -647,7 +647,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(95, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 21);
@@ -659,7 +659,7 @@
             this.comboBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.Black;
+            this.comboBox3.ForeColor = System.Drawing.Color.White;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(177, 86);
             this.comboBox3.Name = "comboBox3";
@@ -670,7 +670,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(95, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 21);
@@ -682,7 +682,7 @@
             this.comboBox4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.ForeColor = System.Drawing.Color.Black;
+            this.comboBox4.ForeColor = System.Drawing.Color.White;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(177, 47);
             this.comboBox4.Name = "comboBox4";
@@ -693,7 +693,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(95, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 21);
@@ -705,7 +705,7 @@
             this.comboBox5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.ForeColor = System.Drawing.Color.Black;
+            this.comboBox5.ForeColor = System.Drawing.Color.White;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(177, 7);
             this.comboBox5.Name = "comboBox5";
