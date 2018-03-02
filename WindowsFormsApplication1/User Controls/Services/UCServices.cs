@@ -422,6 +422,12 @@ namespace WindowsFormsApplication1
         {
             asadd = true; btnasadd.Enabled = false; btnassave.Enabled = true; cboservname.Enabled = true; addedname.Enabled = true; addedprice.Enabled = true;
         }
+
+        private void btnassave_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void LoadAddedLV()
         {
             lvadded.Items.Clear();

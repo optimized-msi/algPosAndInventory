@@ -78,20 +78,20 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.myTextBox2 = new MyTextBox();
+            this.addedname = new MyTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.myTextBox1 = new MyTextBox();
+            this.addedprice = new System.Windows.Forms.NumericUpDown();
+            this.cboservname = new System.Windows.Forms.ComboBox();
+            this.addedID = new MyTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnasclear = new System.Windows.Forms.Button();
+            this.btnassave = new System.Windows.Forms.Button();
+            this.btnasdelete = new System.Windows.Forms.Button();
+            this.btnasedit = new System.Windows.Forms.Button();
+            this.btnasadd = new System.Windows.Forms.Button();
+            this.lvadded = new System.Windows.Forms.ListView();
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -103,7 +103,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFee)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addedprice)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -727,20 +727,20 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.tabPage4.Controls.Add(this.myTextBox2);
+            this.tabPage4.Controls.Add(this.addedname);
             this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.numericUpDown1);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.myTextBox1);
+            this.tabPage4.Controls.Add(this.addedprice);
+            this.tabPage4.Controls.Add(this.cboservname);
+            this.tabPage4.Controls.Add(this.addedID);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.label11);
             this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.button1);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.button5);
-            this.tabPage4.Controls.Add(this.listView1);
+            this.tabPage4.Controls.Add(this.btnasclear);
+            this.tabPage4.Controls.Add(this.btnassave);
+            this.tabPage4.Controls.Add(this.btnasdelete);
+            this.tabPage4.Controls.Add(this.btnasedit);
+            this.tabPage4.Controls.Add(this.btnasadd);
+            this.tabPage4.Controls.Add(this.lvadded);
             this.tabPage4.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage4.Location = new System.Drawing.Point(4, 32);
             this.tabPage4.Name = "tabPage4";
@@ -749,17 +749,17 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Additional Charges";
             // 
-            // myTextBox2
+            // addedname
             // 
-            this.myTextBox2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.myTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.myTextBox2.Enabled = false;
-            this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.myTextBox2.Location = new System.Drawing.Point(237, 88);
-            this.myTextBox2.Name = "myTextBox2";
-            this.myTextBox2.Size = new System.Drawing.Size(178, 25);
-            this.myTextBox2.TabIndex = 152;
+            this.addedname.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addedname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addedname.Enabled = false;
+            this.addedname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedname.ForeColor = System.Drawing.Color.Black;
+            this.addedname.Location = new System.Drawing.Point(237, 88);
+            this.addedname.Name = "addedname";
+            this.addedname.Size = new System.Drawing.Size(178, 25);
+            this.addedname.TabIndex = 152;
             // 
             // label13
             // 
@@ -772,47 +772,47 @@
             this.label13.TabIndex = 151;
             this.label13.Text = "Additional Fee Name:";
             // 
-            // numericUpDown1
+            // addedprice
             // 
-            this.numericUpDown1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown1.Location = new System.Drawing.Point(632, 49);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.addedprice.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addedprice.Enabled = false;
+            this.addedprice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedprice.ForeColor = System.Drawing.Color.Black;
+            this.addedprice.Location = new System.Drawing.Point(632, 49);
+            this.addedprice.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(159, 29);
-            this.numericUpDown1.TabIndex = 150;
+            this.addedprice.Name = "addedprice";
+            this.addedprice.Size = new System.Drawing.Size(159, 29);
+            this.addedprice.TabIndex = 150;
             // 
-            // comboBox1
+            // cboservname
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(237, 53);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 29);
-            this.comboBox1.TabIndex = 149;
+            this.cboservname.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cboservname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboservname.Enabled = false;
+            this.cboservname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboservname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboservname.ForeColor = System.Drawing.Color.Black;
+            this.cboservname.FormattingEnabled = true;
+            this.cboservname.Location = new System.Drawing.Point(237, 53);
+            this.cboservname.Name = "cboservname";
+            this.cboservname.Size = new System.Drawing.Size(178, 29);
+            this.cboservname.TabIndex = 149;
             // 
-            // myTextBox1
+            // addedID
             // 
-            this.myTextBox1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.myTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.myTextBox1.Enabled = false;
-            this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.myTextBox1.Location = new System.Drawing.Point(237, 12);
-            this.myTextBox1.Name = "myTextBox1";
-            this.myTextBox1.Size = new System.Drawing.Size(52, 25);
-            this.myTextBox1.TabIndex = 148;
+            this.addedID.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.addedID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.addedID.Enabled = false;
+            this.addedID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedID.ForeColor = System.Drawing.Color.Black;
+            this.addedID.Location = new System.Drawing.Point(237, 12);
+            this.addedID.Name = "addedID";
+            this.addedID.Size = new System.Drawing.Size(52, 25);
+            this.addedID.TabIndex = 148;
             // 
             // label10
             // 
@@ -847,90 +847,91 @@
             this.label12.TabIndex = 145;
             this.label12.Text = "Service Name:";
             // 
-            // button1
+            // btnasclear
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(689, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 49);
-            this.button1.TabIndex = 144;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnasclear.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnasclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasclear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasclear.ForeColor = System.Drawing.Color.White;
+            this.btnasclear.Location = new System.Drawing.Point(689, 255);
+            this.btnasclear.Name = "btnasclear";
+            this.btnasclear.Size = new System.Drawing.Size(102, 49);
+            this.btnasclear.TabIndex = 144;
+            this.btnasclear.Text = "Clear";
+            this.btnasclear.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnassave
             // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(689, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 49);
-            this.button2.TabIndex = 143;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnassave.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnassave.Enabled = false;
+            this.btnassave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnassave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnassave.ForeColor = System.Drawing.Color.White;
+            this.btnassave.Location = new System.Drawing.Point(689, 184);
+            this.btnassave.Name = "btnassave";
+            this.btnassave.Size = new System.Drawing.Size(102, 49);
+            this.btnassave.TabIndex = 143;
+            this.btnassave.Text = "Save";
+            this.btnassave.UseVisualStyleBackColor = false;
+            this.btnassave.Click += new System.EventHandler(this.btnassave_Click_1);
             // 
-            // button3
+            // btnasdelete
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Enabled = false;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(689, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 49);
-            this.button3.TabIndex = 142;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnasdelete.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnasdelete.Enabled = false;
+            this.btnasdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasdelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasdelete.ForeColor = System.Drawing.Color.White;
+            this.btnasdelete.Location = new System.Drawing.Point(689, 120);
+            this.btnasdelete.Name = "btnasdelete";
+            this.btnasdelete.Size = new System.Drawing.Size(102, 49);
+            this.btnasdelete.TabIndex = 142;
+            this.btnasdelete.Text = "Delete";
+            this.btnasdelete.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnasedit
             // 
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button4.Enabled = false;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(567, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 49);
-            this.button4.TabIndex = 141;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnasedit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnasedit.Enabled = false;
+            this.btnasedit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasedit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasedit.ForeColor = System.Drawing.Color.White;
+            this.btnasedit.Location = new System.Drawing.Point(567, 184);
+            this.btnasedit.Name = "btnasedit";
+            this.btnasedit.Size = new System.Drawing.Size(102, 49);
+            this.btnasedit.TabIndex = 141;
+            this.btnasedit.Text = "Edit";
+            this.btnasedit.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnasadd
             // 
-            this.button5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(567, 120);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 49);
-            this.button5.TabIndex = 140;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnasadd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnasadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasadd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnasadd.ForeColor = System.Drawing.Color.White;
+            this.btnasadd.Location = new System.Drawing.Point(567, 120);
+            this.btnasadd.Name = "btnasadd";
+            this.btnasadd.Size = new System.Drawing.Size(102, 49);
+            this.btnasadd.TabIndex = 140;
+            this.btnasadd.Text = "Add";
+            this.btnasadd.UseVisualStyleBackColor = false;
             // 
-            // listView1
+            // lvadded
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvadded.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader12,
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
-            this.listView1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(50, 131);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(477, 269);
-            this.listView1.TabIndex = 130;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvadded.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvadded.FullRowSelect = true;
+            this.lvadded.GridLines = true;
+            this.lvadded.Location = new System.Drawing.Point(50, 131);
+            this.lvadded.Name = "lvadded";
+            this.lvadded.Size = new System.Drawing.Size(477, 269);
+            this.lvadded.TabIndex = 130;
+            this.lvadded.UseCompatibleStateImageBehavior = false;
+            this.lvadded.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader12
             // 
@@ -975,7 +976,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numFee)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addedprice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1030,20 +1031,20 @@
         public MyTextBox txtTypeName;
         public MyTextBox txtTypeID;
         private System.Windows.Forms.TabPage tabPage4;
-        public MyTextBox myTextBox2;
+        public MyTextBox addedname;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        public MyTextBox myTextBox1;
+        private System.Windows.Forms.NumericUpDown addedprice;
+        private System.Windows.Forms.ComboBox cboservname;
+        public MyTextBox addedID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnasclear;
+        private System.Windows.Forms.Button btnassave;
+        private System.Windows.Forms.Button btnasdelete;
+        private System.Windows.Forms.Button btnasedit;
+        private System.Windows.Forms.Button btnasadd;
+        private System.Windows.Forms.ListView lvadded;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
