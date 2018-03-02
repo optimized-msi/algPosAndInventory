@@ -748,6 +748,7 @@
             this.tabPage4.Size = new System.Drawing.Size(820, 453);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Additional Charges";
+<<<<<<< HEAD
             // 
             // addedname
             // 
@@ -760,6 +761,9 @@
             this.addedname.Name = "addedname";
             this.addedname.Size = new System.Drawing.Size(178, 25);
             this.addedname.TabIndex = 152;
+=======
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+>>>>>>> master
             // 
             // label13
             // 
@@ -801,6 +805,7 @@
             this.cboservname.Name = "cboservname";
             this.cboservname.Size = new System.Drawing.Size(178, 29);
             this.cboservname.TabIndex = 149;
+<<<<<<< HEAD
             // 
             // addedID
             // 
@@ -813,6 +818,8 @@
             this.addedID.Name = "addedID";
             this.addedID.Size = new System.Drawing.Size(52, 25);
             this.addedID.TabIndex = 148;
+=======
+>>>>>>> master
             // 
             // label10
             // 
@@ -932,6 +939,10 @@
             this.lvadded.TabIndex = 130;
             this.lvadded.UseCompatibleStateImageBehavior = false;
             this.lvadded.View = System.Windows.Forms.View.Details;
+<<<<<<< HEAD
+=======
+            this.lvadded.SelectedIndexChanged += new System.EventHandler(this.AddedLV_SelectedIndexChanged);
+>>>>>>> master
             // 
             // columnHeader12
             // 
