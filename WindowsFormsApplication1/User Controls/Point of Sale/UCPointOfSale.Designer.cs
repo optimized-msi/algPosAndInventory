@@ -46,7 +46,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.numQuan = new System.Windows.Forms.NumericUpDown();
             this.btnAddItem = new System.Windows.Forms.Button();
-            this.txtItemCode = new MyTextBox();
             this.numDiscount = new System.Windows.Forms.NumericUpDown();
             this.label21 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -58,22 +57,16 @@
             this.lblDiscAmount = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
             this.cboBarangay = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.txtContact = new MyTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCustMI = new MyTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCustGN = new MyTextBox();
-            this.txtCustFN = new MyTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtInvoiceNo = new MyTextBox();
             this.lvServices = new System.Windows.Forms.ListView();
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -98,6 +91,16 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cboCity = new System.Windows.Forms.ComboBox();
+            this.txtContact = new MyTextBox();
+            this.txtCustMI = new MyTextBox();
+            this.txtCustGN = new MyTextBox();
+            this.txtCustFN = new MyTextBox();
+            this.txtInvoiceNo = new MyTextBox();
+            this.txtItemCode = new MyTextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -330,19 +333,6 @@
             this.btnAddItem.UseVisualStyleBackColor = false;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // txtItemCode
-            // 
-            this.txtItemCode.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtItemCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtItemCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemCode.ForeColor = System.Drawing.Color.White;
-            this.txtItemCode.Location = new System.Drawing.Point(115, 21);
-            this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(252, 25);
-            this.txtItemCode.TabIndex = 105;
-            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
-            this.txtItemCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemCode_KeyDown);
-            // 
             // numDiscount
             // 
             this.numDiscount.BackColor = System.Drawing.Color.RoyalBlue;
@@ -469,6 +459,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.label31);
+            this.panel2.Controls.Add(this.label30);
+            this.panel2.Controls.Add(this.cboCity);
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.cboBarangay);
             this.panel2.Controls.Add(this.button3);
@@ -492,25 +485,13 @@
             this.panel2.TabIndex = 120;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
-            this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(1215, 41);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(140, 23);
-            this.label29.TabIndex = 136;
-            this.label29.Text = ",Zamboanga City";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
-            // 
             // cboBarangay
             // 
             this.cboBarangay.BackColor = System.Drawing.Color.RoyalBlue;
             this.cboBarangay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBarangay.ForeColor = System.Drawing.Color.White;
             this.cboBarangay.FormattingEnabled = true;
-            this.cboBarangay.Location = new System.Drawing.Point(1088, 31);
+            this.cboBarangay.Location = new System.Drawing.Point(1009, 30);
             this.cboBarangay.Name = "cboBarangay";
             this.cboBarangay.Size = new System.Drawing.Size(125, 33);
             this.cboBarangay.TabIndex = 135;
@@ -573,23 +554,12 @@
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click_1);
             // 
-            // txtContact
-            // 
-            this.txtContact.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContact.ForeColor = System.Drawing.Color.White;
-            this.txtContact.Location = new System.Drawing.Point(775, 33);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(188, 25);
-            this.txtContact.TabIndex = 129;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(1015, 39);
+            this.label18.Location = new System.Drawing.Point(936, 38);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(67, 19);
             this.label18.TabIndex = 128;
@@ -612,17 +582,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Name";
             // 
-            // txtCustMI
-            // 
-            this.txtCustMI.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtCustMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCustMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustMI.ForeColor = System.Drawing.Color.White;
-            this.txtCustMI.Location = new System.Drawing.Point(341, 24);
-            this.txtCustMI.Name = "txtCustMI";
-            this.txtCustMI.Size = new System.Drawing.Size(39, 25);
-            this.txtCustMI.TabIndex = 113;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -633,28 +592,6 @@
             this.label3.Size = new System.Drawing.Size(31, 19);
             this.label3.TabIndex = 112;
             this.label3.Text = "MI:";
-            // 
-            // txtCustGN
-            // 
-            this.txtCustGN.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtCustGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCustGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustGN.ForeColor = System.Drawing.Color.White;
-            this.txtCustGN.Location = new System.Drawing.Point(108, 52);
-            this.txtCustGN.Name = "txtCustGN";
-            this.txtCustGN.Size = new System.Drawing.Size(189, 25);
-            this.txtCustGN.TabIndex = 111;
-            // 
-            // txtCustFN
-            // 
-            this.txtCustFN.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtCustFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCustFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustFN.ForeColor = System.Drawing.Color.White;
-            this.txtCustFN.Location = new System.Drawing.Point(109, 22);
-            this.txtCustFN.Name = "txtCustFN";
-            this.txtCustFN.Size = new System.Drawing.Size(188, 25);
-            this.txtCustFN.TabIndex = 110;
             // 
             // label15
             // 
@@ -677,17 +614,6 @@
             this.label16.Size = new System.Drawing.Size(96, 19);
             this.label16.TabIndex = 108;
             this.label16.Text = "Given Name:";
-            // 
-            // txtInvoiceNo
-            // 
-            this.txtInvoiceNo.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtInvoiceNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInvoiceNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoiceNo.ForeColor = System.Drawing.Color.White;
-            this.txtInvoiceNo.Location = new System.Drawing.Point(97, 14);
-            this.txtInvoiceNo.Name = "txtInvoiceNo";
-            this.txtInvoiceNo.Size = new System.Drawing.Size(127, 25);
-            this.txtInvoiceNo.TabIndex = 126;
             // 
             // lvServices
             // 
@@ -906,6 +832,119 @@
             this.label28.TabIndex = 133;
             this.label28.Text = "P";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Location = new System.Drawing.Point(1136, 40);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(15, 23);
+            this.label29.TabIndex = 136;
+            this.label29.Text = ",";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
+            // 
+            // cboCity
+            // 
+            this.cboCity.BackColor = System.Drawing.Color.RoyalBlue;
+            this.cboCity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCity.ForeColor = System.Drawing.Color.White;
+            this.cboCity.FormattingEnabled = true;
+            this.cboCity.Location = new System.Drawing.Point(1157, 30);
+            this.cboCity.Name = "cboCity";
+            this.cboCity.Size = new System.Drawing.Size(168, 33);
+            this.cboCity.TabIndex = 137;
+            // 
+            // txtContact
+            // 
+            this.txtContact.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContact.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContact.ForeColor = System.Drawing.Color.White;
+            this.txtContact.Location = new System.Drawing.Point(775, 33);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(129, 25);
+            this.txtContact.TabIndex = 129;
+            // 
+            // txtCustMI
+            // 
+            this.txtCustMI.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtCustMI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustMI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustMI.ForeColor = System.Drawing.Color.White;
+            this.txtCustMI.Location = new System.Drawing.Point(341, 24);
+            this.txtCustMI.Name = "txtCustMI";
+            this.txtCustMI.Size = new System.Drawing.Size(39, 25);
+            this.txtCustMI.TabIndex = 113;
+            // 
+            // txtCustGN
+            // 
+            this.txtCustGN.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtCustGN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustGN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustGN.ForeColor = System.Drawing.Color.White;
+            this.txtCustGN.Location = new System.Drawing.Point(108, 52);
+            this.txtCustGN.Name = "txtCustGN";
+            this.txtCustGN.Size = new System.Drawing.Size(189, 25);
+            this.txtCustGN.TabIndex = 111;
+            // 
+            // txtCustFN
+            // 
+            this.txtCustFN.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtCustFN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustFN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustFN.ForeColor = System.Drawing.Color.White;
+            this.txtCustFN.Location = new System.Drawing.Point(109, 22);
+            this.txtCustFN.Name = "txtCustFN";
+            this.txtCustFN.Size = new System.Drawing.Size(188, 25);
+            this.txtCustFN.TabIndex = 110;
+            // 
+            // txtInvoiceNo
+            // 
+            this.txtInvoiceNo.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtInvoiceNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtInvoiceNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInvoiceNo.ForeColor = System.Drawing.Color.White;
+            this.txtInvoiceNo.Location = new System.Drawing.Point(97, 14);
+            this.txtInvoiceNo.Name = "txtInvoiceNo";
+            this.txtInvoiceNo.Size = new System.Drawing.Size(127, 25);
+            this.txtInvoiceNo.TabIndex = 126;
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtItemCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtItemCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemCode.ForeColor = System.Drawing.Color.White;
+            this.txtItemCode.Location = new System.Drawing.Point(115, 21);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(252, 25);
+            this.txtItemCode.TabIndex = 105;
+            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
+            this.txtItemCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemCode_KeyDown);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(1034, 62);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(73, 19);
+            this.label30.TabIndex = 138;
+            this.label30.Text = "Barangay";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(1214, 62);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(35, 19);
+            this.label31.TabIndex = 139;
+            this.label31.Text = "City";
+            // 
             // UCPointOfSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1025,6 +1064,9 @@
         public System.Windows.Forms.Label label28;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ComboBox cboBarangay;
+        private System.Windows.Forms.ComboBox cboCity;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
     }
 }
