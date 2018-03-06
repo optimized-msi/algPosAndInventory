@@ -422,6 +422,69 @@ namespace WindowsFormsApplication1
         {
             asadd = true; btnasadd.Enabled = false; btnassave.Enabled = true; cboservname.Enabled = true; addedname.Enabled = true; addedprice.Enabled = true;
         }
+
+        private void btnassave_Click_1(object sender, EventArgs e)
+        {
+            if (cboservname.Text.Trim() == "" || addedname.Text.Trim() == "" || addedprice.Text.Trim() == "")
+            {
+                MessageBox.Show("Please Provide Service, Added Service Charge, and Added Service Charge Fee", "Services");
+                cboServiceName.Focus();
+            }
+            else
+            {
+                if (asadd)
+                {
+                    asadd = false;
+                    query = "INSERT INTO serv_added_charges(service_ID,serv_added_name,serv_added_price) VALUES ((SELECT service_ID FROM service WHERE service_name='" + cboservname.Text + "'),'" + addedname.Text + "','" + addedprice.Value.ToString() + "')";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Added a new added service charge.", "Services");
+                }
+                else if (asedit)
+                {
+                    asedit = false;
+                    query = "UPDATE serv_added_charges SET serv_added_name, serv_added_price ='" + addedname.Text + "','" + addedprice.Value.ToString() + "' WHERE serv_added_ID='" + addedID.Text + "'";
+                    dbcon.ManipulateData(query);
+                    MessageBox.Show("Updated a service price.", "Services");
+                }
+                btnasclear.PerformClick();
+            }
+        }
+
+        private void btnasadd_Click(object sender, EventArgs e)
+        {
+            asadd = true; btnasadd.Enabled = false; btnassave.Enabled = true; addedprice.Enabled = true; cboservname.Enabled = true; addedname.Enabled = true;
+        }
+
+        private void btnasdelete_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this added service charge?", "Services", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                query = "DELETE FROM serv_added_charges WHERE serv_added_ID ='" + addedID.Text + "'";
+                dbcon.ManipulateData(query);
+                MessageBox.Show("Deleted a added service charge", "Service");
+                btnasclear.PerformClick();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do somethi
+            }
+        }
+        private void btnasedit_Click_1(object sender, EventArgs e)
+        {
+            btnasedit.Enabled = false; btnassave.Enabled = true; pedit = true; btnasdelete.Enabled = false; addedprice.Enabled = true;
+        }
+
+        private void btnasclear_Click_1(object sender, EventArgs e)
+        {
+            LoadAddedLV(); addedID.Text = ""; cboservname.Text = ""; addedname.Text = ""; addedprice.Text = ""; btnasadd.Enabled = true; btnassave.Enabled = false; btnasdelete.Enabled = false; btnasedit.Enabled = false; Loadservname();  cboservname.Enabled = false; addedname.Enabled = false; addedprice.Enabled = false;
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void LoadAddedLV()
         {
             lvadded.Items.Clear();

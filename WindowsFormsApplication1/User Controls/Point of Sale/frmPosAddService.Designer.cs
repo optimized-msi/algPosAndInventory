@@ -118,8 +118,8 @@
             this.myTextBox2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.myTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.myTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.myTextBox2.Location = new System.Drawing.Point(86, 83);
+            this.myTextBox2.ForeColor = System.Drawing.Color.White;
+            this.myTextBox2.Location = new System.Drawing.Point(87, 82);
             this.myTextBox2.Name = "myTextBox2";
             this.myTextBox2.Size = new System.Drawing.Size(127, 25);
             this.myTextBox2.TabIndex = 142;
@@ -128,8 +128,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(11, 88);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 19);
             this.label4.TabIndex = 141;
@@ -140,7 +140,7 @@
             this.myTextBox1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.myTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.myTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.myTextBox1.ForeColor = System.Drawing.Color.White;
             this.myTextBox1.Location = new System.Drawing.Point(87, 46);
             this.myTextBox1.Name = "myTextBox1";
             this.myTextBox1.Size = new System.Drawing.Size(127, 25);
@@ -150,7 +150,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(11, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 19);
@@ -169,9 +169,9 @@
             // 
             // cboVehicleType
             // 
-            this.cboVehicleType.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cboVehicleType.BackColor = System.Drawing.Color.RoyalBlue;
             this.cboVehicleType.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboVehicleType.ForeColor = System.Drawing.Color.Black;
+            this.cboVehicleType.ForeColor = System.Drawing.Color.White;
             this.cboVehicleType.FormattingEnabled = true;
             this.cboVehicleType.Location = new System.Drawing.Point(145, 176);
             this.cboVehicleType.Name = "cboVehicleType";
@@ -181,9 +181,9 @@
             // 
             // cboServiceName
             // 
-            this.cboServiceName.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cboServiceName.BackColor = System.Drawing.Color.RoyalBlue;
             this.cboServiceName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboServiceName.ForeColor = System.Drawing.Color.Black;
+            this.cboServiceName.ForeColor = System.Drawing.Color.White;
             this.cboServiceName.FormattingEnabled = true;
             this.cboServiceName.Location = new System.Drawing.Point(145, 142);
             this.cboServiceName.Name = "cboServiceName";
@@ -224,7 +224,7 @@
             this.txtPlateNo.BackColor = System.Drawing.Color.CornflowerBlue;
             this.txtPlateNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlateNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlateNo.ForeColor = System.Drawing.Color.Black;
+            this.txtPlateNo.ForeColor = System.Drawing.Color.White;
             this.txtPlateNo.Location = new System.Drawing.Point(87, 13);
             this.txtPlateNo.Name = "txtPlateNo";
             this.txtPlateNo.Size = new System.Drawing.Size(127, 25);
@@ -234,7 +234,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(47, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 19);
@@ -245,7 +245,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(395, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 19);
@@ -269,7 +269,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(11, 15);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(65, 19);
@@ -280,7 +280,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(6, 107);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(171, 26);
@@ -291,7 +291,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(33, 180);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(98, 19);
@@ -302,7 +302,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(33, 146);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(106, 19);

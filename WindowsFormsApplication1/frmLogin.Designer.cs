@@ -59,7 +59,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.RoyalBlue;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(64, 376);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(122, 21);
@@ -78,25 +78,27 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtUN
             // 
             this.txtUN.BackColor = System.Drawing.Color.RoyalBlue;
             this.txtUN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUN.ForeColor = System.Drawing.Color.Black;
+            this.txtUN.ForeColor = System.Drawing.Color.White;
             this.txtUN.Location = new System.Drawing.Point(158, 250);
             this.txtUN.Name = "txtUN";
             this.txtUN.Size = new System.Drawing.Size(159, 25);
             this.txtUN.TabIndex = 103;
             this.txtUN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUN.TextChanged += new System.EventHandler(this.txtUN_TextChanged);
             // 
             // txtPW
             // 
             this.txtPW.BackColor = System.Drawing.Color.RoyalBlue;
             this.txtPW.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPW.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPW.ForeColor = System.Drawing.Color.Black;
+            this.txtPW.ForeColor = System.Drawing.Color.White;
             this.txtPW.Location = new System.Drawing.Point(158, 304);
             this.txtPW.Name = "txtPW";
             this.txtPW.PasswordChar = '•';
@@ -108,10 +110,10 @@
             // 
             // btnOK
             // 
-            this.btnOK.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnOK.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.ForeColor = System.Drawing.Color.Black;
+            this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.Location = new System.Drawing.Point(203, 350);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(114, 47);
@@ -139,24 +141,26 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.RoyalBlue;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(64, 254);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 21);
             this.label7.TabIndex = 127;
             this.label7.Text = "Username:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(63, 304);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 128;
             this.label1.Text = "Password:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -164,18 +168,19 @@
             this.label2.BackColor = System.Drawing.Color.RoyalBlue;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(150, 9);
+            this.label2.Location = new System.Drawing.Point(170, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 47);
             this.label2.TabIndex = 129;
             this.label2.Text = "Login";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.RoyalBlue;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(253, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 84);
@@ -190,6 +195,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(345, 5);
             this.panel2.TabIndex = 131;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -198,6 +204,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(345, 5);
             this.panel3.TabIndex = 132;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // lblDateTime
             // 
@@ -208,6 +215,7 @@
             this.lblDateTime.Name = "lblDateTime";
             this.lblDateTime.Size = new System.Drawing.Size(0, 32);
             this.lblDateTime.TabIndex = 133;
+            this.lblDateTime.Click += new System.EventHandler(this.lblDateTime_Click);
             // 
             // panel1
             // 
@@ -225,6 +233,7 @@
             this.panel1.Controls.Add(this.txtUN);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 491);

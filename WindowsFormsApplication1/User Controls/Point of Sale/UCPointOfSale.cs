@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
         {
             txtItemCode.Focus();
             LoadBarangay();
+            LoadCity();
 
 
         }
@@ -312,7 +313,7 @@ namespace WindowsFormsApplication1
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0"; lblDiscAmount.Text = "0"; lblPaid.Text = "0"; lblTotalItems.Text = "0"; lblTotalService.Text = "0"; txtInvoiceNo.Text = ""; txtCustFN.Text = ""; txtCustGN.Text = ""; txtCustMI.Text = ""; cboBarangay.Text = ""; txtContact.Text = "";
+            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0"; lblDiscAmount.Text = "0"; lblPaid.Text = "0"; lblTotalItems.Text = "0"; lblTotalService.Text = "0"; txtInvoiceNo.Text = ""; txtCustFN.Text = ""; txtCustGN.Text = ""; txtCustMI.Text = ""; cboBarangay.Text = ""; txtContact.Text = ""; cboCity.Text = "";
             lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
         }
 
@@ -363,6 +364,24 @@ namespace WindowsFormsApplication1
             if (reader.HasRows) {
                 while (reader.Read()) {
                     cboBarangay.Items.Add(reader.GetString(0));
+                }
+            }
+            dbcon.mysqlconnect.Close();
+        }
+
+        private void LoadCity()
+        {
+            string query = "SELECT City FROM Address GROUP BY City";
+            dbcon.mysqlconnect.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
+            myCommand.CommandTimeout = 60;
+            MySqlDataReader reader;
+            reader = myCommand.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    cboCity.Items.Add(reader.GetString(0));
                 }
             }
             dbcon.mysqlconnect.Close();
