@@ -8,6 +8,6 @@ namespace WindowsFormsApplication1
 {
     class clsPosService
     {
-        public static string serviceID, serviceName, vehicleType, serviceFee, servicedBy, plateNo;
+        public static string serviceID, serviceName, vehicleType, color, model, serviceFee, servicedBy, servicedAdded, plateNo;
     }
 }
