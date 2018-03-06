@@ -20,11 +20,10 @@ namespace WindowsFormsApplication1
         }
         private void UserControl3_Load(object sender, EventArgs e)
         {
+            clsUser clsuser = new clsUser();
             txtItemCode.Focus();
-            LoadBarangay();
-            LoadCity();
-
-
+            //LoadCity();
+            lblCashierName.Text = clsuser.GetGName();
         }
         private void txtItemCode_KeyDown(object sender, KeyEventArgs e)
         {
@@ -123,10 +122,12 @@ namespace WindowsFormsApplication1
                ListViewItem iItem = new ListViewItem();
                iItem.Text = clsPosService.plateNo;
                iItem.SubItems.Add(clsPosService.vehicleType);
-               iItem.SubItems.Add(clsPosService.serviceName);
+               iItem.SubItems.Add(clsPosService.model);
+               iItem.SubItems.Add(clsPosService.color);
+                iItem.SubItems.Add(clsPosService.serviceName);
                iItem.SubItems.Add(clsPosService.serviceFee);
                iItem.SubItems.Add(clsPosService.servicedBy);
-
+               iItem.SubItems.Add(clsPosService.servicedAdded);
                 lvServices.Items.Add(iItem);
             }
             AddTotalService();
@@ -135,7 +136,7 @@ namespace WindowsFormsApplication1
             double total = 0.0;
             foreach (ListViewItem item in lvServices.Items)
             {
-                total = total+ (Convert.ToDouble(item.SubItems[3].Text.ToString()));
+                total = total+ (Convert.ToDouble(item.SubItems[5].Text.ToString()));
             }
             lblTotalService.Text = total.ToString();
             lblTotalAmount.Text = (Convert.ToDouble(lblTotalService.Text) + Convert.ToDouble(lblTotalItems.Text)).ToString();
@@ -229,35 +230,6 @@ namespace WindowsFormsApplication1
             AddTotalItem(); AddTotalService();
             btnRemove.Enabled = false;
         }
-
-        private void btnPay_Click(object sender, EventArgs e)
-        {
-            if (lvServices.Items.Count > 0 || lvItems.Items.Count > 0)
-            {
-                frmPosPay frmpospay = new frmPosPay();
-                if (lvServices.Items.Count>0 &&( txtCustFN.Text == "" || txtCustGN.Text == "" || cboBarangay.Text == "" || txtContact.Text == ""))
-                {
-                    MessageBox.Show("Please input name,address, and contact number","Point of Sale");
-                }
-                else
-                {
-                    clsPosItems.total = lblTotalAmount.Text;
-                    clsPosItems.totalItems = lblTotalItems.Text;
-                    clsPosItems.totalServices = lblTotalService.Text;
-                    clsPosItems.discount = numDiscount.Value.ToString();
-                    clsPosItems.totalDisc = lblDiscAmount.Text;
-                    clsPosItems.lvItems = lvItems;
-                    clsPosItems.lvServices = lvServices;
-                    
-                    frmpospay.ShowDialog();
-                }
-            }
-            else
-            {
-
-            }
-        }
-
         private void btnRemove_Click_1(object sender, EventArgs e)
         {
             if (lvItems.SelectedItems.Count > 0)
@@ -266,6 +238,7 @@ namespace WindowsFormsApplication1
                 {
                     lvItems.Items.Remove(eachItem);
                 }
+                AddTotalItem(); AddTotalService();
             }
             else if (lvServices.SelectedItems.Count > 0)
             {
@@ -273,9 +246,10 @@ namespace WindowsFormsApplication1
                 {
                     lvServices.Items.Remove(eachItem);
                 }
-            }
-            AddTotalItem(); AddTotalService();
-            btnRemove.Enabled = false;
+                AddTotalItem(); AddTotalService();
+            } else
+                MessageBox.Show("Select item/service to be removed", "Point of Sale" , MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -288,8 +262,7 @@ namespace WindowsFormsApplication1
             if (lvServices.Items.Count > 0 || lvItems.Items.Count > 0)
             {
                 frmPosPay frmpospay = new frmPosPay();
-                if (lvServices.Items.Count > 0 && (txtCustFN.Text == "" || txtCustGN.Text == "" || cboBarangay.Text == "" || txtContact.Text == ""))
-                {
+                if (lvServices.Items.Count > 0 && (cboCustName.Text == "")) {
                     MessageBox.Show("Please input name,address, and contact number", "Point of Sale");
                 }
                 else
@@ -309,12 +282,6 @@ namespace WindowsFormsApplication1
             {
 
             }
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0"; lblDiscAmount.Text = "0"; lblPaid.Text = "0"; lblTotalItems.Text = "0"; lblTotalService.Text = "0"; txtInvoiceNo.Text = ""; txtCustFN.Text = ""; txtCustGN.Text = ""; txtCustMI.Text = ""; cboBarangay.Text = ""; txtContact.Text = ""; cboCity.Text = "";
-            lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
         }
 
         private void lvItems_SelectedIndexChanged_1(object sender, EventArgs e) {
@@ -343,49 +310,26 @@ namespace WindowsFormsApplication1
         private void cboBarangay_SelectedIndexChanged(object sender, EventArgs e) {
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            txtItemCode.Clear();numQuan.Value = 1; lblTotalAmount.Text = "0"; lblBalance.Text = "0";lblDiscAmount.Text = "0";lblPaid.Text = "0";lblTotalItems.Text = "0";lblTotalService.Text = "0";txtInvoiceNo.Text = "";txtCustFN.Text = "";txtCustGN.Text = "";txtCustMI.Text = ""; cboBarangay.Text = "";txtContact.Text = "";
-            lvItems.Items.Clear(); lvServices.Items.Clear();btnRemove.Enabled = false;
-        }
-
         private void label29_Click(object sender, EventArgs e) {
 
         }
 
-        private void LoadBarangay() {
-            string query = "SELECT Barangay FROM Address ORDER BY Barangay";
-            dbcon.mysqlconnect.Open();
-            MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
-            myCommand.CommandTimeout = 60;
-            MySqlDataReader reader;
-            reader = myCommand.ExecuteReader();
-            if (reader.HasRows) {
-                while (reader.Read()) {
-                    cboBarangay.Items.Add(reader.GetString(0));
-                }
-            }
-            dbcon.mysqlconnect.Close();
+       
+
+        private void timer1_Tick(object sender, EventArgs e) {
+            lblDateAndTime.Text = DateTime.Now.ToString();
         }
 
-        private void LoadCity()
-        {
-            string query = "SELECT City FROM Address GROUP BY City";
-            dbcon.mysqlconnect.Open();
-            MySqlCommand myCommand = new MySqlCommand(query, dbcon.mysqlconnect);
-            myCommand.CommandTimeout = 60;
-            MySqlDataReader reader;
-            reader = myCommand.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    cboCity.Items.Add(reader.GetString(0));
-                }
-            }
-            dbcon.mysqlconnect.Close();
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            frmManageCustomer frmManageCustomer = new frmManageCustomer();
+            frmManageCustomer.ShowDialog();
         }
 
+        private void btnNewTrans_Click(object sender, EventArgs e) {
+            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0.00"; lblBalance.Text = "0.00"; lblDiscAmount.Text = "0.00"; lblPaid.Text = "0.00"; lblTotalItems.Text = "0.00"; lblTotalService.Text = "0.00"; lblAddress.Text = "-"; lblContact.Text = "-"; cboCustName.Text = ""; lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
+            //txtInvoiceNo.Text = GenerateInvoiceNo();
+        }
+
+       
     }
 }
