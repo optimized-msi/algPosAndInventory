@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
 {
     public class clsPosItems // to do: change name -clsPointOfSale
     {
-        public static string totalItems,totalServices,discount, total,totalDisc,custID;
+        public static string totalItems,totalServices,discount, total,totalDisc,custID,transID;
         public static ListView lvItems = new ListView();
         public static ListView lvServices = new ListView();
         classDatabaseConnect dbcon = new classDatabaseConnect();

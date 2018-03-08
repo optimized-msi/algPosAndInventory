@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1
                     clsPosItems.totalDisc = lblDiscAmount.Text;
                     clsPosItems.lvItems = lvItems;
                     clsPosItems.lvServices = lvServices;
-
+                    clsPosItems.transID = lblTransNo.Text;
                     frmpospay.ShowDialog();
                 }
             }
@@ -317,7 +317,7 @@ namespace WindowsFormsApplication1
         private void SelectInvoiceNo() {
             string[] result;
             result = clsPosItems.SelectInvoiceNo().ToArray();
-            lblInvoiceNo.Text = result[0];
+            lblTransNo.Text = result[0];
         }
         private void LoadCustCbo() {
             foreach(string item in clsPosItems.CboItem()) {

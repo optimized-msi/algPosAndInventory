@@ -59,7 +59,7 @@
             this.lblDiscAmount = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblInvoiceNo = new System.Windows.Forms.Label();
+            this.lblTransNo = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
@@ -467,7 +467,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.lblInvoiceNo);
+            this.panel2.Controls.Add(this.lblTransNo);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.lblAddress);
             this.panel2.Controls.Add(this.lblContact);
@@ -490,17 +490,17 @@
             this.panel2.Size = new System.Drawing.Size(1353, 464);
             this.panel2.TabIndex = 120;
             // 
-            // lblInvoiceNo
+            // lblTransNo
             // 
-            this.lblInvoiceNo.AutoSize = true;
-            this.lblInvoiceNo.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblInvoiceNo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceNo.ForeColor = System.Drawing.Color.White;
-            this.lblInvoiceNo.Location = new System.Drawing.Point(103, 16);
-            this.lblInvoiceNo.Name = "lblInvoiceNo";
-            this.lblInvoiceNo.Size = new System.Drawing.Size(16, 22);
-            this.lblInvoiceNo.TabIndex = 152;
-            this.lblInvoiceNo.Text = "-";
+            this.lblTransNo.AutoSize = true;
+            this.lblTransNo.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblTransNo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransNo.ForeColor = System.Drawing.Color.White;
+            this.lblTransNo.Location = new System.Drawing.Point(132, 15);
+            this.lblTransNo.Name = "lblTransNo";
+            this.lblTransNo.Size = new System.Drawing.Size(16, 22);
+            this.lblTransNo.TabIndex = 152;
+            this.lblTransNo.Text = "-";
             // 
             // linkLabel1
             // 
@@ -789,9 +789,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(7, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 19);
+            this.label2.Size = new System.Drawing.Size(119, 19);
             this.label2.TabIndex = 120;
-            this.label2.Text = "Invoice No.:";
+            this.label2.Text = "Transaction No.:";
             // 
             // label1
             // 
@@ -979,7 +979,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.Label lblInvoiceNo;
+        private System.Windows.Forms.Label lblTransNo;
         public System.Windows.Forms.ComboBox cboCustName;
     }
 }
