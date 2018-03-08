@@ -78,14 +78,29 @@ namespace WindowsFormsApplication1
         }
         public void DeleteProduct()
         {
+            //to do: soft delete
             dbcon.mysqlconnect.Open();
-            string query = "DELETE FROM products WHERE product_ID=@prodNo";
-            MySqlCommand cmd = new MySqlCommand(query, dbcon.mysqlconnect);
+            string query;
+            MySqlCommand cmd;
+            var now = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss");
+            query = "UPDATE products SET product_ID='" + now + "' WHERE product_ID=@prodNo";
+            cmd = new MySqlCommand(query, dbcon.mysqlconnect);
             cmd.Parameters.AddWithValue("@prodNo", prodNo);
             cmd.CommandTimeout = 60;
-            cmd.ExecuteReader();
+                    cmd.ExecuteReader();
             dbcon.mysqlconnect.Close();
-            System.Windows.Forms.MessageBox.Show("Deleted a product", "Inventory");
+            System.Windows.Forms.MessageBox.Show("Deleted a product", "Inventory",System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+        }
+        public System.Data.DataTable LoadData() {
+            dbcon.mysqlconnect.Open();
+            string query;
+            query = "SELECT product_ID,product_name,brand_name,product_desc,viscosity_name,oil_type, wheel_type, volume,unit FROM products,viscosity,brand WHERE products.viscosity_ID=viscosity.viscosity_ID AND products.brand_ID=brand.brand_ID AND date_deleted IS NULL";
+
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
+            System.Data.DataTable table = new System.Data.DataTable("myTable");
+            mySqlDataAdapter.Fill(table);
+            dbcon.mysqlconnect.Close();
+            return table;
         }
         public bool IsDuplicateProdId(){
             dbcon.mysqlconnect.Open();

@@ -114,3 +114,4 @@ C:\Users\johnm\Documents\GitHub\algPosAndInventory\WindowsFormsApplication1\obj\
 C:\Users\johnm\Documents\GitHub\algPosAndInventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCPointOfSale.resources
 C:\Users\johnm\Documents\GitHub\algPosAndInventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UCInventory.resources
 C:\Users\johnm\Documents\GitHub\algPosAndInventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\My PC\Desktop\SE\ALG-POS-and_Inventory\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmManageCustomer.resources

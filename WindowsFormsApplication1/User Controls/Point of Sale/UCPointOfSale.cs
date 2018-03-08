@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
         classDatabaseConnect dbcon = new classDatabaseConnect();
         string query = ""; bool lvIclick = false, lvSclick=false;
+        clsPosItems clsPosItems = new clsPosItems();
         public UCPointOfSale()
         {
             InitializeComponent();
@@ -23,7 +24,9 @@ namespace WindowsFormsApplication1
             clsUser clsuser = new clsUser();
             txtItemCode.Focus();
             //LoadCity();
+            LoadCustCbo();
             lblCashierName.Text = clsuser.GetGName();
+            SelectInvoiceNo();
         }
         private void txtItemCode_KeyDown(object sender, KeyEventArgs e)
         {
@@ -40,17 +43,15 @@ namespace WindowsFormsApplication1
         //3. for the total item - just add up all the total in the listview
         //4. add to the quantity if the user scans barcode that is already in the list view
         //5. result to be printed in the receipt will be based from the listview
+        
         private void SelectItem()
         {
             try
             {
-                query = "SELECT products.product_ID,product_name,product_desc,TRUNCATE(discounted_price,2),discount FROM products,product_price WHERE products.product_ID=product_price.product_ID AND products.product_ID='"+txtItemCode.Text+"'";
-                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
-                DataTable table = new DataTable("myTable");
-                mySqlDataAdapter.Fill(table);
+
+                DataTable table = clsPosItems.LoadData(txtItemCode.Text);
                 lvItems.View = View.Details;
                 ListViewItem iItem; double total = 0.0; bool isItemExisting = false;
-                //to do: surround w/ if to determine if datatable returns rows
                 if (table != null && table.Rows.Count>0)
                 {
                     if (!IsSameItem())
@@ -82,7 +83,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    MessageBox.Show("Barcode not existing","Point of Sale");
+                    MessageBox.Show("Barcode may not be found, no stocks in the inventory for the particular prodcut, or the product price is not set ","Point of Sale",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 txtItemCode.Clear(); numQuan.Value = 1;
                 dbcon.mysqlconnect.Close();
@@ -199,12 +200,6 @@ namespace WindowsFormsApplication1
         {
             numDiscount.Enabled = true;
         }
-
-        private void txtItemCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void lvServices_SelectedIndexChanged(object sender, EventArgs e)
         {
             lvSclick = true ;
@@ -263,7 +258,7 @@ namespace WindowsFormsApplication1
             {
                 frmPosPay frmpospay = new frmPosPay();
                 if (lvServices.Items.Count > 0 && (cboCustName.Text == "")) {
-                    MessageBox.Show("Please input name,address, and contact number", "Point of Sale");
+                    MessageBox.Show("Please provide customer information", "Point of Sale", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -283,7 +278,6 @@ namespace WindowsFormsApplication1
 
             }
         }
-
         private void lvItems_SelectedIndexChanged_1(object sender, EventArgs e) {
             if (lvItems.SelectedItems.Count > 0) {
                 ListViewItem item = lvItems.SelectedItems[0];
@@ -293,28 +287,10 @@ namespace WindowsFormsApplication1
                 btnRemove.Enabled = true;
             }
         }
-
-        private void lvServices_SelectedIndexChanged_1(object sender, EventArgs e) {
-
-        }
-
         private void UCPointOfSale_MouseMove(object sender, MouseEventArgs e) {
             frmMain.count = 0;
 
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void cboBarangay_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
-        private void label29_Click(object sender, EventArgs e) {
-
-        }
-
-       
 
         private void timer1_Tick(object sender, EventArgs e) {
             lblDateAndTime.Text = DateTime.Now.ToString();
@@ -325,11 +301,28 @@ namespace WindowsFormsApplication1
             frmManageCustomer.ShowDialog();
         }
 
-        private void btnNewTrans_Click(object sender, EventArgs e) {
-            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0.00"; lblBalance.Text = "0.00"; lblDiscAmount.Text = "0.00"; lblPaid.Text = "0.00"; lblTotalItems.Text = "0.00"; lblTotalService.Text = "0.00"; lblAddress.Text = "-"; lblContact.Text = "-"; cboCustName.Text = ""; lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false;
-            //txtInvoiceNo.Text = GenerateInvoiceNo();
+        private void cboCustName_SelectedIndexChanged(object sender, EventArgs e) {
+            string[] result;
+            result = clsPosItems.CustInf(cboCustName.Text).ToArray();
+            clsPosItems.custID = result[0].ToString();
+            lblContact.Text = result[1].ToString();
+            lblAddress.Text = result[2].ToString();
         }
 
-       
+        private void btnNewTrans_Click(object sender, EventArgs e) {
+
+            txtItemCode.Clear(); numQuan.Value = 1; lblTotalAmount.Text = "0.00"; lblBalance.Text = "0.00"; lblDiscAmount.Text = "0.00"; lblPaid.Text = "0.00"; lblTotalItems.Text = "0.00"; lblTotalService.Text = "0.00"; lblAddress.Text = "-"; lblContact.Text = "-"; cboCustName.Text = ""; lvItems.Items.Clear(); lvServices.Items.Clear(); btnRemove.Enabled = false; SelectInvoiceNo();
+            //txtInvoiceNo.Text = GenerateInvoiceNo();
+        }
+        private void SelectInvoiceNo() {
+            string[] result;
+            result = clsPosItems.SelectInvoiceNo().ToArray();
+            lblInvoiceNo.Text = result[0];
+        }
+        private void LoadCustCbo() {
+            foreach(string item in clsPosItems.CboItem()) {
+                cboCustName.Items.Add(item.ToString());
+            }
+        }
     }
 }
