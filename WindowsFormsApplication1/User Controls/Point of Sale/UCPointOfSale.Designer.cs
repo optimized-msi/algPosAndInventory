@@ -59,6 +59,7 @@
             this.lblDiscAmount = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblInvoiceNo = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
@@ -70,10 +71,11 @@
             this.btnPay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.txtInvoiceNo = new MyTextBox();
             this.lvServices = new System.Windows.Forms.ListView();
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -96,8 +98,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -339,7 +339,6 @@
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(252, 25);
             this.txtItemCode.TabIndex = 105;
-            this.txtItemCode.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
             this.txtItemCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemCode_KeyDown);
             // 
             // numDiscount
@@ -408,12 +407,12 @@
             // lblTotalAmount
             // 
             this.lblTotalAmount.AutoSize = true;
-            this.lblTotalAmount.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.lblTotalAmount.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmount.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblTotalAmount.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAmount.ForeColor = System.Drawing.Color.White;
             this.lblTotalAmount.Location = new System.Drawing.Point(1202, 74);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(20, 23);
+            this.lblTotalAmount.Size = new System.Drawing.Size(21, 22);
             this.lblTotalAmount.TabIndex = 123;
             this.lblTotalAmount.Text = "0";
             this.lblTotalAmount.Click += new System.EventHandler(this.lblTotalAmount_Click);
@@ -445,12 +444,12 @@
             // lblDiscAmount
             // 
             this.lblDiscAmount.AutoSize = true;
-            this.lblDiscAmount.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.lblDiscAmount.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscAmount.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblDiscAmount.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiscAmount.ForeColor = System.Drawing.Color.White;
             this.lblDiscAmount.Location = new System.Drawing.Point(1202, 112);
             this.lblDiscAmount.Name = "lblDiscAmount";
-            this.lblDiscAmount.Size = new System.Drawing.Size(20, 23);
+            this.lblDiscAmount.Size = new System.Drawing.Size(21, 22);
             this.lblDiscAmount.TabIndex = 127;
             this.lblDiscAmount.Text = "0";
             // 
@@ -468,6 +467,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.lblInvoiceNo);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.lblAddress);
             this.panel2.Controls.Add(this.lblContact);
@@ -479,7 +479,6 @@
             this.panel2.Controls.Add(this.btnPay);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnRemove);
-            this.panel2.Controls.Add(this.txtInvoiceNo);
             this.panel2.Controls.Add(this.lvServices);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label5);
@@ -490,7 +489,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1353, 464);
             this.panel2.TabIndex = 120;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // lblInvoiceNo
+            // 
+            this.lblInvoiceNo.AutoSize = true;
+            this.lblInvoiceNo.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblInvoiceNo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvoiceNo.ForeColor = System.Drawing.Color.White;
+            this.lblInvoiceNo.Location = new System.Drawing.Point(103, 16);
+            this.lblInvoiceNo.Name = "lblInvoiceNo";
+            this.lblInvoiceNo.Size = new System.Drawing.Size(16, 22);
+            this.lblInvoiceNo.TabIndex = 152;
+            this.lblInvoiceNo.Text = "-";
             // 
             // linkLabel1
             // 
@@ -559,6 +569,7 @@
             this.cboCustName.Name = "cboCustName";
             this.cboCustName.Size = new System.Drawing.Size(329, 33);
             this.cboCustName.TabIndex = 146;
+            this.cboCustName.SelectedIndexChanged += new System.EventHandler(this.cboCustName_SelectedIndexChanged);
             // 
             // cust
             // 
@@ -627,18 +638,6 @@
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click_1);
             // 
-            // txtInvoiceNo
-            // 
-            this.txtInvoiceNo.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtInvoiceNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInvoiceNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoiceNo.ForeColor = System.Drawing.Color.White;
-            this.txtInvoiceNo.Location = new System.Drawing.Point(89, 10);
-            this.txtInvoiceNo.Name = "txtInvoiceNo";
-            this.txtInvoiceNo.Size = new System.Drawing.Size(243, 25);
-            this.txtInvoiceNo.TabIndex = 126;
-            this.txtInvoiceNo.Text = "onload, auto generate invoice no";
-            // 
             // lvServices
             // 
             this.lvServices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -659,7 +658,6 @@
             this.lvServices.TabIndex = 125;
             this.lvServices.UseCompatibleStateImageBehavior = false;
             this.lvServices.View = System.Windows.Forms.View.Details;
-            this.lvServices.SelectedIndexChanged += new System.EventHandler(this.lvServices_SelectedIndexChanged_1);
             // 
             // columnHeader14
             // 
@@ -671,6 +669,14 @@
             // 
             this.columnHeader8.Text = "Vehicle Type";
             this.columnHeader8.Width = 148;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Model";
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Color";
             // 
             // columnHeader18
             // 
@@ -858,14 +864,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Model";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Color";
-            // 
             // UCPointOfSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -948,7 +946,6 @@
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRemove;
-        public MyTextBox txtInvoiceNo;
         private System.Windows.Forms.ListView lvServices;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader8;
@@ -974,7 +971,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ComboBox cboCustName;
         private System.Windows.Forms.Label cust;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblAddress;
@@ -983,5 +979,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Label lblInvoiceNo;
+        public System.Windows.Forms.ComboBox cboCustName;
     }
 }

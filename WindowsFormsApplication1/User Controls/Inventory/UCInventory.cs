@@ -27,9 +27,9 @@ namespace WindowsFormsApplication1
             //stocks
             LoadStockListView(); btnSClear.PerformClick(); LoadSupCbo(); btnSupClear.PerformClick();
             //supplier
-            buttonSupClear(); 
+            buttonSupClear();
             //product price
-
+            ProductPriceClear(); btnPriceClear.PerformClick();
             btnAdd.Enabled = true; btnSave.Enabled = false; btnEdit.Enabled = false; btnDelete.Enabled = false; ProductPriceClear();
         }
         private void LoadListView()
@@ -38,13 +38,7 @@ namespace WindowsFormsApplication1
             lvProducts.Items.Clear();
             try
             {
-                dbcon.mysqlconnect.Open();
-                string query;
-                query = "SELECT product_ID,product_name,brand_name,product_desc,viscosity_name,oil_type, wheel_type, volume,unit FROM products,viscosity,brand WHERE products.viscosity_ID=viscosity.viscosity_ID AND products.brand_ID=brand.brand_ID";
-
-                MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(query, dbcon.mysqlconnect);
-                DataTable table = new DataTable("myTable");
-                mySqlDataAdapter.Fill(table);
+                DataTable table = prod.LoadData();
                 lvProducts.View = View.Details;
                 ListViewItem iItem;
                 foreach (DataRow row in table.Rows)
@@ -59,8 +53,6 @@ namespace WindowsFormsApplication1
                     }
                     lvProducts.Items.Add(iItem);
                 }
-
-                dbcon.mysqlconnect.Close();
             }
             catch (Exception ex)
             {
@@ -392,7 +384,7 @@ namespace WindowsFormsApplication1
         }
         private void SClear()
         {
-            cboProd.Text = ""; txtStockNo.Text = "";numQuan.Minimum = 0;numDeduct.Minimum = 0;numQuan.Value = 0;numDeduct.Value = 0 ; txtSProdName.Text = "";txtReceived.Text = ""; txtSProdName.BackColor = Color.Firebrick; txtReceived.BackColor = Color.Firebrick; numSupPrice.Value = 0; cboSuppliers.Text = "";
+            cboProd.Text = ""; txtStockNo.Text = "";numQuan.Minimum = 0;numDeduct.Minimum = 0;numQuan.Value = 0;numDeduct.Value = 0 ; txtSProdName.Text = "";txtReceived.Text = ""; numSupPrice.Value = 0; cboSuppliers.Text = "";
         }
         private void SButtonLock()
         {
@@ -832,96 +824,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPriceProductID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPriceProductPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPriceDiscount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPriceDiscounted_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPriceProductName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtProdNo_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyCode == Keys.Enter) {
                 txtProdName.Focus();
@@ -934,6 +836,7 @@ namespace WindowsFormsApplication1
         
         private void ProductPriceClear() {
             LoadCboProductPrice(); lvPriceSupplier.Items.Clear(); cboPriceProductName.Text = ""; btnPriceSetPrice.Enabled = false; isPriceSet = false; LoadProductPrice(); lblPriceDiscount.Text = "0.00"; LoadProductPrice();
+            lvPriceProduct.Items.Clear();
         }
         private void LoadCboProductPrice() {
             cboPriceProductName.Items.Clear();

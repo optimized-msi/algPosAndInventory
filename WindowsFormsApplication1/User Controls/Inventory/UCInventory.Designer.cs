@@ -1486,7 +1486,6 @@
             this.tabPage4.Size = new System.Drawing.Size(1330, 565);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Product Price";
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // label40
             // 
@@ -1498,7 +1497,6 @@
             this.label40.Size = new System.Drawing.Size(30, 23);
             this.label40.TabIndex = 178;
             this.label40.Text = "%";
-            this.label40.Click += new System.EventHandler(this.label40_Click);
             // 
             // label39
             // 
@@ -1510,7 +1508,6 @@
             this.label39.Size = new System.Drawing.Size(21, 23);
             this.label39.TabIndex = 177;
             this.label39.Text = "P";
-            this.label39.Click += new System.EventHandler(this.label39_Click);
             // 
             // label38
             // 
@@ -1522,7 +1519,6 @@
             this.label38.Size = new System.Drawing.Size(21, 23);
             this.label38.TabIndex = 176;
             this.label38.Text = "P";
-            this.label38.Click += new System.EventHandler(this.label38_Click);
             // 
             // lblPriceDiscounted
             // 
@@ -1534,7 +1530,6 @@
             this.lblPriceDiscounted.Size = new System.Drawing.Size(53, 23);
             this.lblPriceDiscounted.TabIndex = 175;
             this.lblPriceDiscounted.Text = "0.00";
-            this.lblPriceDiscounted.Click += new System.EventHandler(this.lblPriceDiscounted_Click);
             // 
             // lblPriceDiscount
             // 
@@ -1546,7 +1541,6 @@
             this.lblPriceDiscount.Size = new System.Drawing.Size(53, 23);
             this.lblPriceDiscount.TabIndex = 174;
             this.lblPriceDiscount.Text = "0.00";
-            this.lblPriceDiscount.Click += new System.EventHandler(this.lblPriceDiscount_Click);
             // 
             // lblPriceProductPrice
             // 
@@ -1558,7 +1552,6 @@
             this.lblPriceProductPrice.Size = new System.Drawing.Size(53, 23);
             this.lblPriceProductPrice.TabIndex = 173;
             this.lblPriceProductPrice.Text = "0.00";
-            this.lblPriceProductPrice.Click += new System.EventHandler(this.lblPriceProductPrice_Click);
             // 
             // label34
             // 
@@ -1570,7 +1563,6 @@
             this.label34.Size = new System.Drawing.Size(179, 23);
             this.label34.TabIndex = 172;
             this.label34.Text = "Discounted Price:";
-            this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
             // label32
             // 
@@ -1582,7 +1574,6 @@
             this.label32.Size = new System.Drawing.Size(103, 23);
             this.label32.TabIndex = 171;
             this.label32.Text = "Discount:";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label33
             // 
@@ -1594,7 +1585,6 @@
             this.label33.Size = new System.Drawing.Size(144, 23);
             this.label33.TabIndex = 170;
             this.label33.Text = "Product Price:";
-            this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
             // lblPriceTotalStocks
             // 
@@ -1615,7 +1605,6 @@
             this.label31.Size = new System.Drawing.Size(117, 25);
             this.label31.TabIndex = 168;
             this.label31.Text = "Total Stocks:";
-            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // lblPriceProductName
             // 
@@ -1626,7 +1615,6 @@
             this.lblPriceProductName.Name = "lblPriceProductName";
             this.lblPriceProductName.Size = new System.Drawing.Size(0, 23);
             this.lblPriceProductName.TabIndex = 166;
-            this.lblPriceProductName.Click += new System.EventHandler(this.lblPriceProductName_Click);
             // 
             // lblPriceProductID
             // 
@@ -1637,7 +1625,6 @@
             this.lblPriceProductID.Name = "lblPriceProductID";
             this.lblPriceProductID.Size = new System.Drawing.Size(0, 23);
             this.lblPriceProductID.TabIndex = 165;
-            this.lblPriceProductID.Click += new System.EventHandler(this.lblPriceProductID_Click);
             // 
             // label9
             // 
@@ -1649,7 +1636,6 @@
             this.label9.Size = new System.Drawing.Size(152, 23);
             this.label9.TabIndex = 164;
             this.label9.Text = "Product Name:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -1661,7 +1647,6 @@
             this.label8.Size = new System.Drawing.Size(103, 23);
             this.label8.TabIndex = 161;
             this.label8.Text = "Discount:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // numPriceDiscount
             // 
@@ -1690,7 +1675,6 @@
             this.label10.Size = new System.Drawing.Size(138, 23);
             this.label10.TabIndex = 159;
             this.label10.Text = "Selling Price:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // numPriceSelling
             // 
@@ -1716,9 +1700,9 @@
             this.btnPriceSetPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPriceSetPrice.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPriceSetPrice.ForeColor = System.Drawing.Color.White;
-            this.btnPriceSetPrice.Location = new System.Drawing.Point(378, 365);
+            this.btnPriceSetPrice.Location = new System.Drawing.Point(378, 352);
             this.btnPriceSetPrice.Name = "btnPriceSetPrice";
-            this.btnPriceSetPrice.Size = new System.Drawing.Size(102, 49);
+            this.btnPriceSetPrice.Size = new System.Drawing.Size(102, 62);
             this.btnPriceSetPrice.TabIndex = 167;
             this.btnPriceSetPrice.Text = "Set Price";
             this.btnPriceSetPrice.UseVisualStyleBackColor = false;
@@ -1778,7 +1762,6 @@
             this.label28.Size = new System.Drawing.Size(121, 23);
             this.label28.TabIndex = 152;
             this.label28.Text = "Product ID:";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // cboPriceProductName
             // 
@@ -1802,7 +1785,6 @@
             this.label27.Size = new System.Drawing.Size(152, 23);
             this.label27.TabIndex = 149;
             this.label27.Text = "Product Name:";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // btnPriceClear
             // 
@@ -1810,9 +1792,9 @@
             this.btnPriceClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPriceClear.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPriceClear.ForeColor = System.Drawing.Color.White;
-            this.btnPriceClear.Location = new System.Drawing.Point(500, 365);
+            this.btnPriceClear.Location = new System.Drawing.Point(500, 351);
             this.btnPriceClear.Name = "btnPriceClear";
-            this.btnPriceClear.Size = new System.Drawing.Size(102, 49);
+            this.btnPriceClear.Size = new System.Drawing.Size(102, 63);
             this.btnPriceClear.TabIndex = 148;
             this.btnPriceClear.Text = "Clear";
             this.btnPriceClear.UseVisualStyleBackColor = false;
@@ -1871,7 +1853,7 @@
             this.Controls.Add(this.tabInventory);
             this.Controls.Add(this.panel1);
             this.Name = "UCInventory";
-            this.Size = new System.Drawing.Size(1330, 656);
+            this.Size = new System.Drawing.Size(1313, 639);
             this.Load += new System.EventHandler(this.UserControl4_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UCInventory_MouseMove);
             this.panel1.ResumeLayout(false);
